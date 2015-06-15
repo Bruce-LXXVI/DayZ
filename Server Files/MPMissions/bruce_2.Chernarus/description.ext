@@ -5,7 +5,7 @@ OnLoadIntro = "Welcome to Chernarus";
 OnLoadIntroTime = False;
 OnLoadMissionTime = False;
 disabledAI = true;
-//disableChannels[] = {0,2,6};
+disableChannels[] = {0,1,2,6};
 enableItemsDropping = 0;
 onPauseScript = "";
 briefing = 0;
@@ -25,3 +25,6 @@ diagRadio = 1;
 diagHit = 1;
 
 #include "\z\addons\dayz_code\gui\description.hpp"
+
+// Epoch Admin Tools
+#include "admintools\dialog.hpp"

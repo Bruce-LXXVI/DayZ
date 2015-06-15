@@ -3,11 +3,11 @@
 //Add the insttance id  of this server 
 dayZ_instance = 1; // The instance
 //Tag info this is shown to all players in the bottom left hand side of the screen 
-dayZ_serverName = "Bruce"; // Servername (country code + server number)
+dayZ_serverName = "playZ"; // Servername (country code + server number)
 
 //Gamesettings
 dayz_antihack = 0; // DayZ Antihack / 1 = enabled // 0 = disabled
-dayz_REsec = 1; // DayZ RE Security / 1 = enabled // 0 = disabled
+dayz_REsec = 0; // DayZ RE Security / 1 = enabled // 0 = disabled
 dayz_enableGhosting = false; //Enable disable the ghosting system.
 dayz_ghostTimer = 120; //Sets how long in seconds a player must be dissconnected before being able to login again.
 dayz_spawnselection = 1; //Turn on spawn selection 0 = random only spawns, 1 = Spawn choice based on limits
@@ -59,6 +59,10 @@ progressLoadingScreen 0.15;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";
 progressLoadingScreen 0.2;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\BIS_Effects\init.sqf";
+
+call compile preprocessFileLineNumbers "admintools\config.sqf"; // Epoch admin Tools config file
+call compile preprocessFileLineNumbers "admintools\variables.sqf"; // Epoch admin Tools variables
+
 progressLoadingScreen 0.25;
 initialized = true;
 
@@ -84,8 +88,12 @@ if (!isDedicated) then {
 
 	if (dayz_infectiousWaterholes) then { execVM "\z\addons\dayz_code\system\mission\chernarus\infectiousWaterholes\init.sqf"; };
 	if (dayz_antihack != 0) then {
-		execVM "\z\addons\dayz_code\system\mission\chernarus\security\init.sqf";
-		call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\antihack.sqf";
+		if ( !((getPlayerUID player) in AdminList) && !((getPlayerUID player) in ModList)) then 
+		{
+			execVM "\z\addons\dayz_code\system\mission\chernarus\security\init.sqf";
+			//call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\antihack.sqf";
+			call compile preprocessFileLineNumbers "admintools\antihack\antihack.sqf";
+		};
 	};
 	if (dayz_enableRules) then { execVM "rules.sqf"; };
 	if (!isNil "dayZ_serverName") then { execVM "\z\addons\dayz_code\system\watermark.sqf"; };
@@ -99,3 +107,8 @@ if (!isDedicated) then {
 	3 fadeMusic 1;
 	endLoadingScreen;
 };
+
+
+[] execVM "admintools\Activate.sqf"; // Epoch admin tools
+
+

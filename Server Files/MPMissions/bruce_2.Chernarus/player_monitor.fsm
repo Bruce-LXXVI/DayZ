@@ -1056,6 +1056,9 @@ class FSM
        "dayz_slowCheck = 	[] spawn player_spawn_2;" \n
        "Dayz_logonTime = daytime;" \n
        "Dayz_logonDate = dayz_Survived;" \n
+       "" \n
+       "dayz_animalCheck = 	[];" \n
+       "" \n
        "_position = getPosATL player;" \n
        "_radius = 200;" \n
        "//Current amounts" \n
