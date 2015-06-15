@@ -20,16 +20,16 @@ IF "%time:~0,1%" LSS "1" (
 )
 
 set version=1.
-set build=8.3
+set build=8.6.1
 
-set home=F:\Github\DayzMod-Public\DayZ
-set tools=F:\Github\ARMA2Tools\
-Set Deploy=F:\Github\Deployed\DayZ
+set home=.
+set tools=%home%\Tools\arma
+Set Deploy=%home%\Deploy
 :: set Dayz=%home%\@Dayz Not used
 Set ServerHive=%home%\SQF
 Set ClientCode=%home%\SQF
 Set Binaries=%home%\Binaries
-set ModName=@DayZ
+set ModName=@DayZ_Server
 set HiveName=@Hive
 
 
@@ -120,6 +120,7 @@ mkdir %deploy%\Addons
 
 echo (%date%) (%time%) ATTENTION: Creating Client side .PBO's 
 %tools%\cpbo.exe -y -p %ClientCode%\dayz_communityassets %Deploy%\Addons\dayz_communityassets.pbo
+%tools%\cpbo.exe -y -p %ClientCode%\dayz_communityweapons %Deploy%\Addons\dayz_communityweapons.pbo
 
 cd %home%
 TIMEOUT /T 2
@@ -213,6 +214,7 @@ echo (%date%) (%time%) ATTENTION: Creating Client side .PBO's
 %tools%\cpbo.exe -y -p %ClientCode%\dayz_code %Deploy%\%ModName%\Addons\dayz_code.pbo
 %tools%\cpbo.exe -y -p %ClientCode%\dayz %Deploy%\%ModName%\Addons\dayz.pbo
 %tools%\cpbo.exe -y -p %ClientCode%\dayz_communityassets %Deploy%\%ModName%\Addons\dayz_communityassets.pbo
+%tools%\cpbo.exe -y -p %ClientCode%\dayz_communityweapons %Deploy%\%ModName%\Addons\dayz_communityweapons.pbo
 %tools%\cpbo.exe -y -p %ClientCode%\community_crossbow %Deploy%\%ModName%\Addons\community_crossbow.pbo
 %tools%\cpbo.exe -y -p %ClientCode%\dayz_buildings %Deploy%\%ModName%\Addons\dayz_buildings.pbo
 
