@@ -148,15 +148,15 @@ SEE THE SCHEDULER_FAQ.txt for more info
 	<job id='0'>
 		<day>1,2,3,4,5,6,7</day>
 		<start>000030</start>
-		<runtime>001100</runtime>
+		<runtime>001500</runtime>
 		<loop>-1</loop>
 		<cmd>say -1 Please Report issues to http://playZ.rocks</cmd>
 	</job>
 
 	<job id='1'>
 		<day>1,2,3,4,5,6,7</day>
-		<start>000100</start>
-		<runtime>001300</runtime>
+		<start>000500</start>
+		<runtime>001500</runtime>
 		<loop>-1</loop>
 		<cmd>say -1 Warnung: Es wurden AI-Banditen gesichtet! Sie sind in Fahrzeugen, Helikoptern und zu Fuss unterwegs.</cmd>
 	</job>

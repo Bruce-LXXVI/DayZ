@@ -50,7 +50,7 @@
 		Give admins the same action menu above? (not really needed unless you are a playing admin)
 		Default: false
 	*/
-	ActionMenuAdmins = false;
+	ActionMenuAdmins = true;
 
 
 	/****** Bike variables ******/

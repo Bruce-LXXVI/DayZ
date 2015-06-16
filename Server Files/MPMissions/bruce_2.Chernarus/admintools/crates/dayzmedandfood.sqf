@@ -3,10 +3,10 @@ _LocalOrGlobal = _this select 0;
 _player = player;
 
 // Name of this crate
-_crateName = "DayZ Base Building";
+_crateName = "DayZ Medicine and Food";
 
 // Crate type. Possibilities: MedBox0, FoodBox0, BAF_BasicWeapons, USSpecialWeaponsBox, USSpecialWeapons_EP1, USVehicleBox, RUSpecialWeaponsBox, RUVehicleBox, etc.
-_classname = "FoodBox0";
+_classname = "Medbox1";
 
 // Tool use logger
 if(logMajorTool) then {
@@ -35,32 +35,27 @@ clearBackpackCargoGlobal _spawnCrate;
 
 // Add weapon-slot items to crate
 // Syntax: _spawnCrate addWeaponCargoGlobal ["ITEM", number-of-items];
-_spawnCrate addWeaponCargoGlobal ["ItemCrowbar", 5];
-_spawnCrate addWeaponCargoGlobal ["ItemDIY_metal", 5];
-_spawnCrate addWeaponCargoGlobal ["ItemDIY_wood", 5];
-_spawnCrate addWeaponCargoGlobal ["ItemDIY_gate", 5];
-_spawnCrate addWeaponCargoGlobal ["ItemEtool", 5];
+_spawnCrate addWeaponCargoGlobal ["ItemMatchbox", 5];
+_spawnCrate addWeaponCargoGlobal ["ItemKnife", 5];
 _spawnCrate addWeaponCargoGlobal ["ItemHatchet", 5];
-_spawnCrate addWeaponCargoGlobal ["ItemPickaxe", 5];
-_spawnCrate addWeaponCargoGlobal ["ItemToolbox", 5];
-_spawnCrate addWeaponCargoGlobal ["ItemSledgeHammer", 5];
 
 // Add magazine-slot items to crate
 // Syntax: _spawnCrate addMagazineCargoGlobal ["ITEM", number-of-items];
-_spawnCrate addMagazineCargoGlobal ["ItemPadlock", 5];
-_spawnCrate addMagazineCargoGlobal ["ItemLog", 50];
-_spawnCrate addMagazineCargoGlobal ["ItemPlank", 50];
-_spawnCrate addMagazineCargoGlobal ["ItemStone", 50];
-_spawnCrate addMagazineCargoGlobal ["equip_nails", 50];
-//_spawnCrate addMagazineCargoGlobal ["ItemMetalSheet", 50];
-_spawnCrate addMagazineCargoGlobal ["ItemSandbag", 50];
-_spawnCrate addMagazineCargoGlobal ["equip_metal_sheet_rusted", 50];
-_spawnCrate addMagazineCargoGlobal ["ItemTent", 5];
-_spawnCrate addMagazineCargoGlobal ["ItemDomeTent", 5];
-_spawnCrate addMagazineCargoGlobal ["ItemRSJ", 5];
-_spawnCrate addMagazineCargoGlobal ["equip_duct_tape", 5];
-_spawnCrate addMagazineCargoGlobal ["equip_rope", 5];
-_spawnCrate addMagazineCargoGlobal ["equip_string", 5];
+_spawnCrate addMagazineCargoGlobal ["bloodBagONEG", 50];
+_spawnCrate addMagazineCargoGlobal ["bloodTester", 50];
+_spawnCrate addMagazineCargoGlobal ["transfusionKit", 50];
+_spawnCrate addMagazineCargoGlobal ["ItemHeatPack", 5];
+_spawnCrate addMagazineCargoGlobal ["ItemAntibiotic", 50];
+_spawnCrate addMagazineCargoGlobal ["ItemMorphine", 50];
+_spawnCrate addMagazineCargoGlobal ["ItemEpinephrine", 50];
+_spawnCrate addMagazineCargoGlobal ["ItemPainkiller", 50];
+_spawnCrate addMagazineCargoGlobal ["ItemBandage", 50];
+_spawnCrate addMagazineCargoGlobal ["ItemAntibacterialWipe", 50];
+_spawnCrate addMagazineCargoGlobal ["ItemWaterbottleBoiled", 50];
+_spawnCrate addMagazineCargoGlobal ["FoodSteakCooked", 50];
+
+
+
 
 // Add only 1 backpack. The rest will fall out onto the ground. Do not use LargeGunBag here, the box will not hold it.
 _spawnCrate addBackpackCargoGlobal ["DZ_CivilBackpack_EP1", 1];
