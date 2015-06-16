@@ -37,6 +37,9 @@ if (!isNil "sm_done") then {
 	};
 
 
+	// Epoch Admin Tools
+	if (_object getVariable "MalSar" == 1) exitWith {};
+
 	if (!_parachuteWest) then {
 		//diag_log format["Object: %1, ObjectID: %2, ObjectUID: %3",_object,_objectID,_objectUID];
 
