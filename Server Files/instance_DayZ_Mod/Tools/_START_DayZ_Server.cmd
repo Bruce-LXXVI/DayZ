@@ -7,12 +7,12 @@ call "%MYDIR%\_SET_RCON_variables.cmd"
 cd "%A2OADIR%\"
 
 
-start "arma2" "arma2oaserver.exe" -port=2302 "-config=dayz_server_instance\server.cfg" "-cfg=dayz_server_instance\basic.cfg" "-profiles=dayz_server_instance" "-name=dayz_server_instance" "-pid=dayz_server_instance\dayz_server_instance.pid" "-ranking=dayz_server_instance\dayz_server_instance_ranking.log" "-mod=%A2DIR%;EXPANSION;ca;@Hive;@DayZ_Server"
+start "arma2" "arma2oaserver.exe" -port=2302 -ip=185.89.147.91 "-config=%INST_NAME%\server.cfg" "-cfg=%INST_NAME%\basic.cfg" "-profiles=%INST_NAME%" "-name=%INST_NAME%" "-pid=%INST_NAME%\%INST_NAME%.pid" "-ranking=%INST_NAME%\%INST_NAME%_ranking.log" "-mod=%A2DIR%;EXPANSION;ca;@Hive;@DayZ_Server"
 
 
-sleep 55
+sleep 35
 
-start "BEC" BEC\_runBEC.cmd
+start "BEC" "%MYDIR%\..\BEC\_runBEC.cmd"
 
 
 

@@ -153,6 +153,7 @@ SEE THE SCHEDULER_FAQ.txt for more info
 		<cmd>say -1 Please Report issues to http://playZ.rocks</cmd>
 	</job>
 
+	<!--
 	<job id='1'>
 		<day>1,2,3,4,5,6,7</day>
 		<start>000500</start>
@@ -160,13 +161,14 @@ SEE THE SCHEDULER_FAQ.txt for more info
 		<loop>-1</loop>
 		<cmd>say -1 Warnung: Es wurden AI-Banditen gesichtet! Sie sind in Fahrzeugen, Helikoptern und zu Fuss unterwegs.</cmd>
 	</job>
+	-->
 
-	<job id='2'>
+	<job id='1'>
 		<day>1,2,3,4,5,6,7</day>
 		<start>05:44:00</start>
 		<runtime>000000</runtime>
 		<loop>0</loop>
-		<cmd>C:\Program Files (x86)\Steam\steamapps\common\Arma 2 Operation Arrowhead\Tools\_RESTART_DayZ_Server_in_15min.cmd</cmd>
+		<cmd>D:\Steam\steamapps\common\Arma 2 Operation Arrowhead\dayz_server_instance\Tools\_RESTART_DayZ_Server_in_15min.cmd</cmd>
 	</job>
 
 </Scheduler>
