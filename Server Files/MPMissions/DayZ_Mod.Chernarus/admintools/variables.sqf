@@ -281,6 +281,7 @@ helpQueue = []; // Initialize help queue
 
 // Adds the admin build items to the allowed objects
 // Fixes permanent arma building spawn
-{dayz_allowedObjects = dayz_allowedObjects + [_x select 2];}forEach allBuildingList;
+if(isNil "dayz_allowedObjects") then {dayz_allowedObjects = [];};
+{dayz_allowedObjects = dayz_allowedObjects + [_x select 2];} forEach allBuildingList;
 
 diag_log("Admin Tools: variables.sqf loaded");

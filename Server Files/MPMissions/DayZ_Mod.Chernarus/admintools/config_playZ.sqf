@@ -50,7 +50,7 @@
 		Give admins the same action menu above? (not really needed unless you are a playing admin)
 		Default: false
 	*/
-	ActionMenuAdmins = false;
+	ActionMenuAdmins = true;
 
 
 	/****** Bike variables ******/
@@ -72,7 +72,7 @@
 	/****** Mozzie variables ******/
 
 	//Allow player to build a Mozzie?
-	AllowBuildMozzie = true;
+	AllowBuildMozzie = false;
 
 	// This option requires players to have a toolbox to build a Mozzie (consumes the toolbox)
 	RequireToolBoxMozzie = false;
@@ -82,16 +82,16 @@
 	RequirePartsMozzie = true;
 
 	// This option dictates if players are allowed to repack a mozzie to get their items back
-	AllowPackMozzie = true;
+	AllowPackMozzie = false;
 
 
 	/****** Misc ******/
 		
 	// Allow players to flip their vehicles rightside up
-	AllowFlipVehicle = true;
+	AllowFlipVehicle = false;
 		
 	// Allow players to commit suicide
-	AllowSuicide = true;
+	AllowSuicide = false;
 		
 	// Allow players to use the movement menu (dance)
 	AllowMovementMenu = true;

@@ -60,7 +60,7 @@ call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";
 progressLoadingScreen 0.2;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\BIS_Effects\init.sqf";
 
-call compile preprocessFileLineNumbers "admintools\config.sqf"; // Epoch admin Tools config file
+call compile preprocessFileLineNumbers "admintools\config_playZ.sqf"; // Epoch admin Tools config file
 call compile preprocessFileLineNumbers "admintools\variables.sqf"; // Epoch admin Tools variables
 
 progressLoadingScreen 0.25;

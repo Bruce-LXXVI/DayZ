@@ -168,7 +168,7 @@ SEE THE SCHEDULER_FAQ.txt for more info
 		<start>05:44:00</start>
 		<runtime>000000</runtime>
 		<loop>0</loop>
-		<cmd>D:\Steam\steamapps\common\Arma 2 Operation Arrowhead\dayz_server_instance\Tools\_RESTART_DayZ_Server_in_15min.cmd</cmd>
+		<cmd>D:\Steam\steamapps\common\Arma 2 Operation Arrowhead\instance_DayZ_Mod\Tools\_RESTART_DayZ_Server_in_15min.cmd</cmd>
 	</job>
 
 </Scheduler>
