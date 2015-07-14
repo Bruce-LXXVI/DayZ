@@ -13,7 +13,7 @@ diag_log "[DZAI] Reading DZAI configuration file.";
 
 //Enable or disable event logging to arma2oaserver.rpt. Debug level setting. 0: No debug output, 1: Basic Debug output, 2: Extended Debug output. (Default: 0)
 //Debug output may help finding additional information about DZAI's background behavior. This output is helpful when asking for help regarding bugs or unexpected behaviors.
-DZAI_debugLevel = 2;
+DZAI_debugLevel = 1;
 
 //Frequency of server monitor update to RPT log in seconds. The monitor periodically reports number of max/current AI units and dynamically spawned triggers into RPT log. (Default: 300, 0 = Disable reporting)										
 DZAI_monitorRate = 300;
@@ -182,7 +182,7 @@ DZAI_heliList = [
 ];
 
 //Difficulty level of air vehicle patrol units. Difficulty level also affects unit loadout and loot. Possible values: 0 to 3 (Default: 3)
-DZAI_heliUnitLevel = 3;
+DZAI_heliUnitLevel = 2;
 
 //Maximum number of gunner units per air vehicle. Limited by actual number of available gunner positions. (Default: 2)
 DZAI_heliGunnerUnits = 0;
@@ -203,7 +203,7 @@ DZAI_airWeapons = [
 --------------------------------------------------------------------------------------------------------------------*/	
 
 //Global maximum number of active AI land vehicle patrols. Set at 0 to disable (Default: 0).	
-DZAI_maxLandPatrols = 1;
+DZAI_maxLandPatrols = 2;
 
 //Set minimum and maximum wait time in seconds to respawn an AI vehicle patrol after vehicle is destroyed or disabled. (Default: Min 600, Max 900).
 DZAI_respawnTMinL = 600;

@@ -18,8 +18,8 @@ if((getPlayerUID player) in AdminList ||(getPlayerUID player) in ModList) then {
 	*/
 	
 	ActionMenu = ActionMenu + [["Action Menu >>", [], "#USER:ActionsMenu", -5, [["expression", ""]], "1", "1"]];
-	ActionMenu = ActionMenu + [["Fun Menu >>", [], "#USER:FunMenu", -5, [["expression", ""]], "1", "1"]];
-//	ActionMenu = ActionMenu + [["Movement Menu >>",[],"#USER:MovementMenu", -5,[["expression",""]],"1","1"]];
+//	ActionMenu = ActionMenu + [["Fun Menu >>", [], "#USER:FunMenu", -5, [["expression", ""]], "1", "1"]];
+	ActionMenu = ActionMenu + [["Movement Menu >>",[],"#USER:MovementMenu", -5,[["expression",""]],"1","1"]];
 	ActionMenu = ActionMenu + [["Server Rules", [], "", -5, [["expression", format[_EXECscript1,"serverRules.sqf"]]], "1", "1"]];
 	ActionMenu = ActionMenu + [["", [], "", -5, [["expression", ""]], "1", "0"],["Exit", [20], "", -5, [["expression", ""]], "1", "1"]];
 
