@@ -4,14 +4,17 @@
 	//Replace 111111111 with your ID. 
 	SuperAdminList = [
 	"76561198110330059", // Bruce
+	"999999999", // <player name>
 	"999999999" // <player name>
 	];
 	AdminList = [
 	"999999999", // <player name>
+	"999999999", // <player name>
 	"999999999" // <player name>
 	];
 	ModList = [
-	"76561198195290546", // Alice
+	//"76561198195290546", // Alice
+	"999999999", // <player name>
 	"999999999" // <player name>
 	];
 

@@ -112,9 +112,20 @@ if (!isDedicated) then {
 	3 fadeSound 1;
 	3 fadeMusic 1;
 	endLoadingScreen;
+
+
+	/* Debug Monitor */
+	if (isNil 'debugMonitor') then 
+	{
+		debugMonitor = false;
+		_nill = execvm "custom\debug_monitor.sqf";
+	};
+	/* Debug Monitor */
 };
 
 
 [] execVM "admintools\Activate.sqf"; // Epoch admin tools
 
+//Custom mapaddons
+[] execVM "mapaddons\test.sqf";
 
