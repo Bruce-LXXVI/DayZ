@@ -24,7 +24,7 @@ class Mission
 	class Intel
 	{
 		briefingName="DayZMod";
-		briefingDescription="DayZMod (bruce_2)";
+		briefingDescription="DayZMod (playZ)";
 		startWeather=0;
 		forecastWeather=0;
 		year=2015;
