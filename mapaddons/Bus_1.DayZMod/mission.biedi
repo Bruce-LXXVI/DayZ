@@ -1,0 +1,423 @@
+class _prefix_0
+{
+	objectType="prefix";
+	class Arguments
+	{
+	};
+};
+class _center_0
+{
+	objectType="center";
+	class Arguments
+	{
+		SIDE="west";
+	};
+};
+class _group_0
+{
+	objectType="group";
+	class Arguments
+	{
+		CENTER="_center_0";
+	};
+};
+class _unit_0
+{
+	objectType="unit";
+	class Arguments
+	{
+		POSITION="[4911.5371, 2123.7131, 0]";
+		GROUP="_group_0";
+		TYPE="BanditW1_DZ";
+		SKILL="0.60000002";
+		PLAYER="true";
+		LEADER="true";
+	};
+};
+class _vehicle_2
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[13128.2,10381.9,0]";
+		TYPE="Ikarus_TK_CIV_EP1";
+		AZIMUT="205.4845";
+		PARENT="";
+	};
+};
+class _waypoint_0
+{
+	objectType="waypoint";
+	class Arguments
+	{
+		POSITION="[13065.228, 10228.376, 0]";
+		GROUP="_group_0";
+	};
+};
+class _vehicle_14
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[13100.035, 10353.128, -1.8596649e-005]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_17
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[12978.129, 8359.0088, -8.1062317e-006]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_18
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[13287.419, 6961.9658, -0.00013113022]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_19
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[13458.568, 6253.623, 4.2438507e-005]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_20
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[13381.949, 5448.3105, 4.3392181e-005]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_21
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[12033.441, 3489.1321, 3.194809e-005]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_22
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[10881.695, 2753.395, 7.0571899e-005]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_23
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[10500.636, 2327.4365, 8.8691711e-005]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_24
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[10044.312, 2080.583, 9.9182129e-005]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_25
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[7967.4771, 3178.3748, 0.00014305115]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_26
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[7309.5215, 2730.1248, 2.4795532e-005]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_27
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[7035.7368, 2495.2661, 0.00014829636]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_28
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[6575.8452, 2881.9497, -3.8146973e-006]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_29
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[6405.46, 2682.3545, 5.7220459e-006]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_31
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[4542.2134, 2442.2568, 6.1988831e-006]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_32
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[3567.1011, 2452.0801, 6.6757202e-006]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_33
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[1833.5068, 2222.8921, 4.6730042e-005]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_34
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[1092.8208, 2362.468, 9.5367432e-007]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_35
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[1848.2321, 2223.7651, 4.2915344e-005]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_36
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[3555.5591, 2441.7156, 6.6757202e-006]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_37
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[4547.3013, 2434.5591, 5.2452087e-005]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_38
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[6335.6421, 2406.5798, 0.00032043457]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_39
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[6856.6782, 2354.676, 6.3896179e-005]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_40
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[7959.4185, 3173.9136, 6.1035156e-005]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_41
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[9980.9307, 2057.4424, 0.00030231476]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_42
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[10513.25, 2334.8142, -7.6293945e-006]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_43
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[10883.257, 2738.457, 1.1444092e-005]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_44
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[12028.229, 3482.8652, -1.001358e-005]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_45
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[13386.496, 5402.1387, 8.1062317e-006]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_46
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[13465.364, 6263.1367, 4.2915344e-006]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_47
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[13272.938, 7002.8833, 5.2452087e-006]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_48
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[12977.121, 8378.8184, 5.7220459e-006]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_49
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[12279.391, 8968.3184, 0.00019073486]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_50
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[12008.05, 9180.4473, 1.5258789e-005]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_51
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[12269.771, 9496.8311, 8.392334e-005]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_52
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[12974.933, 10222.065, 0.00012779236]";
+		TYPE="FlagCarrierBIS_EP1";
+		PARENT="";
+	};
+};
+class _postfix_0
+{
+	objectType="postfix";
+	class Arguments
+	{
+	};
+};
