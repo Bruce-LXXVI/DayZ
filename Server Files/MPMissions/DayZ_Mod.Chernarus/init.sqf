@@ -77,20 +77,24 @@ execVM "\z\addons\dayz_code\system\DynamicWeatherEffects.sqf";
 
 if (isServer) then {
 	//Bus Route
-	[true] execVM "busroute\init_bus.sqf";
+	//[true] execVM "busroute\init_bus.sqf";
+
+	// playZ Scheduler
+	execVM "playZ_scheduler\playZ_server_monitor.sqf"
 
 	execVM "\z\addons\dayz_server\system\server_monitor.sqf";
 	//Must be global spawned, So players dont fall thought buildings (might be best to spilt these to important, not important)
 };
 
-if (dayz_POIs) then { execVM "\z\addons\dayz_code\system\mission\chernarus\poi\init.sqf"; };
+//if (dayz_POIs) then { execVM "\z\addons\dayz_code\system\mission\chernarus\poi\init.sqf"; };
+if (dayz_POIs) then { execVM "custom\dayz_code\system\mission\chernarus\poi\init.sqf"; };
 
 if (!isDedicated) then {
 	//Bruce: load DZAI Client
 	_nul = [] execVM "DZAI_Client\dzai_initclient.sqf";
 
 	//Bus Route
-	[] execVM "busroute\player_axeBus.sqf";
+	//[] execVM "busroute\player_axeBus.sqf";
 
 	if (dayz_infectiousWaterholes) then { execVM "\z\addons\dayz_code\system\mission\chernarus\infectiousWaterholes\init.sqf"; };
 	if (dayz_antihack != 0) then {
