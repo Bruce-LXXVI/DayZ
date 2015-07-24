@@ -23,7 +23,7 @@
 		Enable/Disable weather/time change menu.
 		Important: This may cause server to always revert to mid-day on restart.
 	*/	
-		enableWeatherTimeChanger = false;
+		enableWeatherTimeChanger = true;
 
 
 	/*
@@ -38,7 +38,7 @@
 		logMinorTool = false;
 
 	
-	
+		broadcastToolUse = true;
 	
 	
 /************** Action Menu Variables **************/
