@@ -14,17 +14,17 @@ do
 			_x setVariable ["isAxeAIBus",2,false];
 			
 		//Nearby Survivors
-		_survivors = (position _x) nearEntities [["Survivor1_DZ","SurvivorW1_DZ","Survivor2_DZ","SurvivorW2_DZ","Camo1_DZ","Sniper1_DZ"],250];
-		
+		_survivors = (position _x) nearEntities [["Survivor1_DZ","SurvivorW1_DZ","Survivor2_DZ","SurvivorW2_DZ","Camo1_DZ","Sniper1_DZ","Survivor3_DZ"],250];
+
 			if(count _survivors >0)then{
-				if((_survivors select 0) distance axBus >2)then{
+				if((_survivors select 0) distance _x >2)then{
 				_axeBusDriver = driver _x;
 				_axeBusDriver stop true;
 				
-				axeBusLogic action ["useWeapon",_x,_axeBusDriver,0];
-				sleep .2;
-				axeBusLogic action ["useWeapon",_x,_axeBusDriver,0];
-				sleep .2;
+				//axeBusLogic action ["useWeapon",_x,_axeBusDriver,0];
+				//sleep .2;
+				//axeBusLogic action ["useWeapon",_x,_axeBusDriver,0];
+				//sleep .2;
 				
 				_axeBusDriver setBehaviour "STEALTH";
 				_axeBusDriver action ["LightOn",_x];
@@ -35,8 +35,8 @@ do
 				sleep .2;
 				_axeBusDriver action ["LightOff",_x];
 
-				axeBusLogic action ["useWeapon",_x,_axeBusDriver,0];
-				sleep .2;
+				//axeBusLogic action ["useWeapon",_x,_axeBusDriver,0];
+				//sleep .2;
 				_axeBusDriver setBehaviour "CARELESS";
 				_axeBusDriver stop false;
 				};
