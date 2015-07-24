@@ -102,7 +102,7 @@ F5Menu =
 		[format["Show Epoch Buildables: %1",AddBuildablesToMap], [4], "", -5, [["expression", "AddBuildablesToMap = !AddBuildablesToMap;changed = true;"]], "1", "1"],
 		[format["Show Plot Poles: %1",AddPlotPoleToMap], [3], "", -5, [["expression", "AddPlotPoleToMap = !AddPlotPoleToMap;changed = true;"]], "1", "1"],
 		[format["Show Player Storage: %1",AddStorageToMap], [4], "", -5, [["expression", "AddStorageToMap = !AddStorageToMap;changed = true;"]], "1", "1"],
-		[format["Show Epoch Missions: %1",AddCrashesToMap], [5], "", -5, [["expression", "AddCrashesToMap = !AddCrashesToMap;changed = true;"]], "1", "1"],
+		[format["Show Crash Sites: %1",AddCrashesToMap], [5], "", -5, [["expression", "AddCrashesToMap = !AddCrashesToMap;changed = true;"]], "1", "1"],
 		[format["Show Zombies: %1",AddZombieToMap], [6], "", -5, [["expression", "AddZombieToMap = !AddZombieToMap;changed = true;"]], "1", "1"],
 		[format["Show Players: %1",AddPlayersToMap], [7], "", -5, [["expression", "AddPlayersToMap = !AddPlayersToMap;changed = true;"]], "1", "1"],
 		[format["Show Locked Vehicles: %1",AddLockedVehiclesToMap], [8], "", -5, [["expression", "AddLockedVehiclesToMap = !AddLockedVehiclesToMap;changed = true;"]], "1", "1"],
@@ -327,7 +327,7 @@ While {enhancedESP2} do
 		
 		If (AddCrashesToMap && (delayTime == 0 || changed)) then 
 		{
-			crashList = allmissionobjects "UH1Wreck_DZ" + allmissionobjects "UH60Wreck_DZ" + allmissionobjects "UH60_NAVY_Wreck_DZ" + allmissionobjects "UH60_ARMY_Wreck_DZ" + allmissionobjects "UH60_NAVY_Wreck_burned_DZ" + allmissionobjects "UH60_ARMY_Wreck_burned_DZ" + allmissionobjects "Mass_grave_DZ" + allmissionobjects "Supply_Crate_DZE";
+			crashList = allmissionobjects "BMP2Wreck" + allmissionobjects "HMMWVWreck" + allmissionobjects "UralWreck" + allmissionobjects "T72Wreck" + allmissionobjects "LADAWreck" + allmissionobjects "UH1Wreck_DZ" + allmissionobjects "UH60Wreck_DZ" + allmissionobjects "UH60_NAVY_Wreck_DZ" + allmissionobjects "UH60_ARMY_Wreck_DZ" + allmissionobjects "UH60_NAVY_Wreck_burned_DZ" + allmissionobjects "UH60_ARMY_Wreck_burned_DZ" + allmissionobjects "Mass_grave_DZ" + allmissionobjects "Supply_Crate_DZE";
 			i2 = 0;
 			{
 				_name = gettext (configFile >> "CfgVehicles" >> (typeof _x) >> "displayName");
