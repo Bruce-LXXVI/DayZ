@@ -1,0 +1,90 @@
+-- ------------------------------------------------------------------------
+-- $Id: DB-DELTA.mysql 394 2015-06-12 08:36:52Z roland.rusch@fima.ch $
+
+
+
+
+
+
+-- ------------------------------------------------------------------------
+-- 2015-07-25 00:00
+CREATE TABLE `tOption` (
+  `optname` VARCHAR(20) NOT NULL,
+  `optvalue` VARCHAR(100) NOT NULL,
+  PRIMARY KEY  (`optname`)
+);
+INSERT INTO `tOption` (`optname` ,`optvalue`) VALUES ('dbversion', '2015-07-25 00:00');
+
+
+
+
+
+
+
+
+-- ------------------------------------------------------------------------
+-- 2015-07-25 14:00
+ALTER TABLE `object_data` CHANGE `ObjectID` `ObjectID` BIGINT(20) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `event_scheduler` ADD `id` INT NOT NULL AUTO_INCREMENT FIRST, ADD PRIMARY KEY (`id`) ;
+
+INSERT INTO `event_scheduler` (`id`, `System`, `LastRun`) VALUES (NULL, 'playZ_1min_scheduler', NULL);
+INSERT INTO `event_scheduler` (`id`, `System`, `LastRun`) VALUES (NULL, 'pPlayZ_UID2ID', NULL);
+INSERT INTO `event_scheduler` (`id`, `System`, `LastRun`) VALUES (NULL, 'pPlayZ_Cleanup', NULL);
+
+
+DELIMITER ;;
+CREATE PROCEDURE `pPlayZ_UID2ID`(IN `i` INT)
+    MODIFIES SQL DATA
+BEGIN
+# Server instance ID.
+#-----------------------------------------------
+	DECLARE sInstance VARCHAR(8) DEFAULT i;
+#-----------------------------------------------
+#Last Ran
+	update event_scheduler set LastRun = NOW() where System = "pPlayZ_UID2ID";
+#Starts Cleanup
+
+  UPDATE `object_data` SET `ObjectID`=`ObjectUID` WHERE `Instance`=sInstance AND `ObjectID`<>`ObjectUID`;
+
+END ;;
+DELIMITER ;
+
+
+DELIMITER ;;
+CREATE PROCEDURE `pPlayZ_Cleanup`(IN `i` INT)
+    MODIFIES SQL DATA
+BEGIN
+# Server instance ID.
+#-----------------------------------------------
+	DECLARE sInstance VARCHAR(8) DEFAULT i;
+#-----------------------------------------------
+#Last Ran
+	update event_scheduler set LastRun = NOW() where System = "pPlayZ_Cleanup";
+#Starts Cleanup
+
+  DELETE FROM `object_data` WHERE `Instance`=sInstance AND `Damage`>=1;
+
+END ;;
+DELIMITER ;
+
+DELIMITER ;;
+CREATE EVENT `playZ_1min_scheduler` ON SCHEDULE EVERY 1 MINUTE STARTS '2015-07-25 00:00:00' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
+	update event_scheduler set LastRun = NOW() where System = "playZ_1min_scheduler";
+	
+	CALL `pPlayZ_UID2ID`('1');
+	CALL `pPlayZ_Cleanup`('1');
+	
+END ;;
+DELIMITER ;
+
+UPDATE `tOption` SET `optvalue` = '2015-07-25 14:00' WHERE `optname`='dbversion';
+
+
+
+
+
+
+
+
+
+
