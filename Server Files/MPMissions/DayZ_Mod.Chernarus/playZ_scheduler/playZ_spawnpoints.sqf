@@ -50,7 +50,6 @@ PLAYZ_vehicle_spawns=
 ["90063662", "Old_bike_TK_CIV_EP1", [155,[12158.999,3468.7563,0]], [], []],
 ["88190045", "Old_bike_TK_INS_EP1", [250,[11984.01,3835.9231,0]], [], []],
 ["70759242", "Old_bike_TK_CIV_EP1", [255,[10153.068,2219.3547,0]], [], []],
-["89226080", "UH1H_DZ", [-24,[1400,9360,0]], [[[], []], [["ItemSodaMtngreen","ItemSodaMtngreenEmpty"], [1, 2]], [[], []]], [["motor",1],["elektronika",1],["mala vrtule",1],["velka vrtule",1]]],
 ["33852678", "UH1H_DZ", [133,[4211.8789,10735.168,0]], [[[], []], [["ItemSodaPeppsy"], [5]], [[], []]], [["motor",1],["elektronika",1],["mala vrtule",1],["velka vrtule",1]]],
 ["1585150", "UH1H_DZ", [198,[1836.38,8600.53,0]], [[[], []], [["ItemSodaPeppsy"], [5]], [[], []]], [["motor",1],["elektronika",1],["mala vrtule",1],["velka vrtule",1]]],
 ["6367723", "UH1H_DZ", [58,[10571.7,2220.3101,0.0015564]], [[[], []], [["ItemSodaPeppsy"], [5]], [[], []]], [["motor",1],["elektronika",1],["mala vrtule",1],["velka vrtule",1]]],
@@ -105,13 +104,17 @@ PLAYZ_vehicle_spawns=
 ["80289092", "BAF_Offroad_W", [322,[7201.5181,3034.3232,0]], [[[],[]],[["HandGrenade_West","SmokeShell","SmokeShellRed","SmokeShellYellow","SmokeShellGreen","ItemWaterbottle","30Rnd_556x45_Stanag","20Rnd_762x51_DMR","ItemTent"],[10,1,1,1,1,1,20,10,1]],[[],[]]], [["glass1",1],["glass2",1],["glass3",1],["motor",0.8],["palivo",0.8],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1],["sklo predni P",1],["sklo predni L",1],["karoserie",1],["wheel_1_4_steering",1],["wheel_2_4_steering",1],["wheel_1_3_steering",1],["wheel_2_3_steering",1],["glass4",1]]],
 ["53278043", "MH6J_DZ", [122,[10137.868,12049.376,-6.1035156e-005]], [[[],[]],[["1Rnd_Smoke_M203", "7Rnd_45ACP_1911", "30Rnd_556x45_StanagSD", "200Rnd_556x45_M249", "FoodCanPasta", "15Rnd_W1866_Slug", "5x_22_LR_17_HMR", "15Rnd_9x19_M9SD", "17Rnd_9x19_glock17", "100Rnd_762x51_M240", "6Rnd_45ACP", "8Rnd_9x18_Makarov"],[2,1,1,1,1,1,1,1,1,1,1,1]],[["DZ_Backpack_EP1"],[1]]], [["motor",1],["elektronika",1],["mala vrtule",1],["velka vrtule",1]]],
 ["25522943", "HMMWV_DZ", [0,[13441.056,12003.912,4.5776367e-005]], [[["AK_47_M"],[1]],[["PartWoodPile", "ItemBandage", "HandGrenade_west", "6Rnd_45ACP", "ItemEpinephrine", "8Rnd_B_Beneli_74Slug", "HandChemBlue", "8Rnd_B_Beneli_Pellets", "PartEngine", "17Rnd_9x19_glock17", "ItemTent"],[1,2,1,1,1,1,1,1,1,1,1]],[["DZ_CivilBackpack_EP1"],[1]]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
-["32124125", "AN2_DZ", [303,[5232.07,2208.32,3.338e-04]], [], []],
+["32124125", "AN2_DZ", [303,[5232.07,2208.32,0]], [], []],
 ["12466104", "Pickup_PK_INS", [12,[4662.13,10436,-3]], [[[],[]],[["HandGrenade_West","ItemWaterbottle","30Rnd_556x45_Stanag"],[5,1,6]],[[],[]]], [["glass1",1],["glass2",1],["glass3",1],["motor",0.8],["palivo",0.8],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1],["karoserie",1],["glass4",1]]],
 ["12700771", "Pickup_PK_INS", [-24,[7006.14,7717.57,-6]], [[[],[]],[["HandGrenade_West","ItemWaterbottle","30Rnd_556x45_Stanag"],[5,1,6]],[[],[]]], [["glass1",1],["glass2",1],["glass3",1],["motor",0.8],["palivo",0.8],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1],["karoserie",1],["glass4",1]]],
 ["36533865", "Offroad_DSHKM_INS", [363,[5337.62,8656.55,0]], [[[],[]],[[],[]],[[],[]]], [["glass1",1],["glass2",1],["glass3",1],["motor",0.8],["palivo",0.8],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1],["karoserie",1],["glass4",1]]],
 ["16462967", "Offroad_DSHKM_INS", [-169,[4625.61,9675.62,0]], [[[],[]],[[],[]],[[],[]]], [["glass1",1],["glass2",1],["glass3",1],["motor",0.8],["palivo",0.8],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1],["karoserie",1],["glass4",1]]],
-["32357215", "UAZ_RU", [91,[10710.3,11620.5,251.365]], [[[], []], [[], []], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]]
-
+["25522944", "HMMWV_DZ", [90,[5279.56,5519.67,0]], [[["AK_47_M"],[1]],[["PartWoodPile", "ItemBandage", "HandGrenade_west", "6Rnd_45ACP", "ItemEpinephrine", "8Rnd_B_Beneli_74Slug", "HandChemBlue", "8Rnd_B_Beneli_Pellets", "PartEngine", "17Rnd_9x19_glock17", "ItemTent"],[1,2,1,1,1,1,1,1,1,1,1]],[["DZ_CivilBackpack_EP1"],[1]]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
+["2001241", "SUV_DZ", [356,[9157.16,11019.5,0]], [[[], []], [["Pipebomb"], [1]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
+["30728145", "UAZ_Unarmed_TK_EP1", [128,[6406.39,6555.3,0]], [[[], []], [["20Rnd_762x51_DMR"], [5]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
+["1775294", "Tractor", [234,[5210.2,4204.39,0]], [[[], []], [["ItemWire", "ItemJerrycan"], [1, 1]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
+["32123933", "AN2_DZ", [79,[5149.6,2200.11,0]], [], []],
+["53502354", "TT650_Ins", [225,[9249.13,4993.38,0]], [[[], []], [["ItemJerrycan"], [1]], [[], []]], [["motor",1]]]
 
 
 

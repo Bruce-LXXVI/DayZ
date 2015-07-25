@@ -110,7 +110,7 @@ AS SQF FROM object_spawns;
 -- EXPORT Classnames for DayZ_SafeObjects
 -- ------------------------------------------------------------------------
 SET group_concat_max_len=18446744073709547520;
-SELECT GROUP_CONCAT(
+SELECT GROUP_CONCAT(DISTINCT
       '"',
     	Classname,
       '"'

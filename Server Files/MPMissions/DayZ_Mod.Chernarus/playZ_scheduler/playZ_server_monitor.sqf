@@ -36,17 +36,10 @@ if (!isServer || !isNil "PLAYZ_isActive") exitWith {};
 PLAYZ_isActive = true;
 PLAYZ_logname="[playZ]";
 
-PLAYZ_totalVehicles=100;
-PLAYZ_playerDistance=50;
-
-PLAYZ_deleteDestroyedVehiclesAfter=0;
-PLAYZ_respawnMissingVehicleAfter=0;
-PLAYZ_enableStaticSpawns=false;
-PLAYZ_enableDynamicSpawns=false;
-
+#include <playZ_config.sqf>
 #include <playZ_spawnpoints.sqf>
 
-PLAYZ_dynamic_vehicles = ["Ikarus", "AH6X_DZ"];
+PLAYZ_dynamic_vehicles = ["UAZ_Unarmed_TK_EP1", "UAZ_Unarmed_TK_CIV_EP1", "UAZ_Unarmed_UN_EP1", "UAZ_RU", "ATV_US_EP1", "ATV_CZ_EP1", "SkodaBlue", "Skoda", "SkodaGreen", "TT650_Ins", "TT650_TK_EP1", "TT650_TK_CIV_EP1", "Old_bike_TK_CIV_EP1", "Old_bike_TK_INS_EP1", "UH1H_DZ", "hilux1_civil_3_open", "Ikarus_TK_CIV_EP1", "Ikarus", "Tractor", "S1203_TK_CIV_EP1", "V3S_Civ", "UralCivil", "car_hatchback", "Fishing_Boat", "PBX", "Smallboat_1", "Volha_2_TK_CIV_EP1", "Volha_1_TK_CIV_EP1", "SUV_DZ", "car_sedan", "AH6X_DZ", "Mi17_DZ", "AN2_DZ", "BAF_Offroad_D", "BAF_Offroad_W", "MH6J_DZ", "HMMWV_DZ", "Pickup_PK_INS", "Offroad_DSHKM_INS"];
 
 waitUntil{initialized};
 uiSleep 100;
@@ -324,7 +317,7 @@ while {true} do {
 			_iVehCreated = _iVehCreated + 1;
 		} else {
 			diag_log format ["%1 NOT SPAWNING ===> veh=%2 | type=%6 | damage=%3 | pos=%4 | posGps=%5", PLAYZ_logname, 0, _damage, _pos, mapGridPosition _pos, _type];
-			diag_log format ["%1 objectID=%2 | objectUID=%3", PLAYZ_logname, 0, _objectUID];
+			diag_log format ["%1 objectID=%2 | objectUID=%3", PLAYZ_logname, _objectUID, _objectUID];
 		};
 	};
 
@@ -337,7 +330,7 @@ while {true} do {
 
 
 
-	uiSleep 30;
+	uiSleep PLAYZ_waitTimeBeforeNextRun;
 };
 
 
