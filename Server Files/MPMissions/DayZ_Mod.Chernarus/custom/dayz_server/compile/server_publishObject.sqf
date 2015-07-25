@@ -1,15 +1,13 @@
 #include "\z\addons\dayz_server\compile\server_toggle_debug.hpp"
 
-private ["_type ","_objectUID ","_characterID ","_object","_worldspace","_key", "_ownerArray", "_inventory", "_hitpoints", "_damage", "_fuel"];
+private ["_type","_objectUID","_characterID","_object","_worldspace","_key", "_ownerArray", "_inventory", "_hitpoints"];
 
-_characterID = _this select 0;
-_object = _this select 1;
-_worldspace = _this select 2;
-_inventory = _this select 3;
-if(count _this == 5) then {_hitpoints = _this select 4;};
-if(count _this == 6) then {_objectUID = _this select 5;};
-_damage = 0;
-_fuel = 0;
+_characterID =		_this select 0;
+_object = 		_this select 1;
+_worldspace = 	_this select 2;
+_inventory = 		_this select 3;
+_hitpoints = 		_this select 4;
+_objectUID = 		_this select 5;
 _type = typeOf _object;
 
 if ([_object, "Server"] call check_publishobject) then {
@@ -21,7 +19,7 @@ if ([_object, "Server"] call check_publishobject) then {
 	// we can't use getVariable because only the object creation is known from the server (position,direction,variables are not sync'ed yet)
 	//_characterID = _object getVariable [ "characterID", 0 ];
 	//_ownerArray = _object getVariable [ "ownerArray", [] ];
-	_key = format["CHILD:308:%1:%2:%3:%4:%5:%6:%7:%8:%9:", dayZ_instance, _type, _damage, _characterID, _worldspace, _inventory, _hitpoints, _fuel, _objectUID ];
+	_key = format["CHILD:308:%1:%2:%3:%4:%5:%6:%7:%8:%9:", dayZ_instance, _type, 0, _characterID, _worldspace, _inventory, _hitpoints, 0, _objectUID];
 
 	_key call server_hiveWrite;
 

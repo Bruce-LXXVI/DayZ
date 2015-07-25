@@ -145,6 +145,7 @@ SEE THE SCHEDULER_FAQ.txt for more info
 <Scheduler>
 	
 	<!-- this job will start after 15 seconds and will run every 45 sec. -->
+	<!--
 	<job id='0'>
 		<day>1,2,3,4,5,6,7</day>
 		<start>000030</start>
@@ -152,6 +153,7 @@ SEE THE SCHEDULER_FAQ.txt for more info
 		<loop>-1</loop>
 		<cmd>say -1 Please Report issues to http://playZ.rocks</cmd>
 	</job>
+	-->
 
 	<!--
 	<job id='1'>
@@ -163,7 +165,7 @@ SEE THE SCHEDULER_FAQ.txt for more info
 	</job>
 	-->
 
-	<job id='1'>
+	<job id='0'>
 		<day>1,2,3,4,5,6,7</day>
 		<start>05:44:00</start>
 		<runtime>000000</runtime>
