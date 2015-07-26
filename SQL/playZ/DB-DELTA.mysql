@@ -62,7 +62,7 @@ BEGIN
 	update event_scheduler set LastRun = NOW() where System = "pPlayZ_Cleanup";
 #Starts Cleanup
 
-  DELETE FROM `object_data` WHERE `Instance`=sInstance AND `Damage`>=1;
+  DELETE FROM `object_data` WHERE `Instance`=sInstance AND `CharacterID`=0 AND `Damage`>=1;
 
 END ;;
 DELIMITER ;

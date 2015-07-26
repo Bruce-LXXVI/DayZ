@@ -29,6 +29,7 @@ private [ "_directoryAsArray"
 		, "_newVeh"				// Das neue Vehikel, wenn es dann erstellt ist
 		, "_aliveUIDs"
 		, "_aliveIDs"
+		, "_classnameCounters"
 ];
 
 
@@ -38,8 +39,6 @@ PLAYZ_logname="[playZ]";
 
 #include <playZ_config.sqf>
 #include <playZ_spawnpoints.sqf>
-
-PLAYZ_dynamic_vehicles = ["UAZ_Unarmed_TK_EP1", "UAZ_Unarmed_TK_CIV_EP1", "UAZ_Unarmed_UN_EP1", "UAZ_RU", "ATV_US_EP1", "ATV_CZ_EP1", "SkodaBlue", "Skoda", "SkodaGreen", "TT650_Ins", "TT650_TK_EP1", "TT650_TK_CIV_EP1", "Old_bike_TK_CIV_EP1", "Old_bike_TK_INS_EP1", "UH1H_DZ", "hilux1_civil_3_open", "Ikarus_TK_CIV_EP1", "Ikarus", "Tractor", "S1203_TK_CIV_EP1", "V3S_Civ", "UralCivil", "car_hatchback", "Fishing_Boat", "PBX", "Smallboat_1", "Volha_2_TK_CIV_EP1", "Volha_1_TK_CIV_EP1", "SUV_DZ", "car_sedan", "AH6X_DZ", "Mi17_DZ", "AN2_DZ", "BAF_Offroad_D", "BAF_Offroad_W", "MH6J_DZ", "HMMWV_DZ", "Pickup_PK_INS", "Offroad_DSHKM_INS"];
 
 waitUntil{initialized};
 uiSleep 100;
@@ -56,15 +55,17 @@ while {true} do {
 	_iVehCreated = 0;
 	_aliveUIDs = [];
 	_aliveIDs = [];
+	_classnameCounters = [];
+	{_classnameCounters set [count _classnameCounters, 0]} forEach PLAYZ_limitedClasses;
+	_classnameOverlimit = [];
 
 	{
 		if ( _x isKindOf "AllVehicles" ) then {
 			_iVehTotal = _iVehTotal + 1;
 			
-
 			_damage = damage _x;
 			_pos = getPosASL _x;
-			//_posGps = (mapGridPosition getPos _x);
+			_type = typeOf _x;
 			_objectID = _x getVariable ["ObjectID","0"];
 			_objectUID = _x getVariable ["ObjectUID","0"];
 
@@ -72,22 +73,28 @@ while {true} do {
 			if( (_objectUID != "") && (_objectUID != "0") ) then {_aliveUIDs set [count _aliveUIDs, _objectUID];};
 			if( (_objectID != "") && (_objectID != "0") ) then {_aliveIDs set [count _aliveIDs, _objectID];};
 
-			//diag_log format ["%1 ===> veh=%2 | damage=%3 | pos=%4 | posGps=%5", PLAYZ_logname, _x, _damage, _pos, mapGridPosition _pos];
-			//diag_log format ["%1 objectID=%2 | objectUID=%3", PLAYZ_logname, _objectID, _newVehUID];
+			// Klasse limitiert?
+			_index = PLAYZ_limitedClasses find _type;
+			if(_index >= 0) then {_classnameCounters set [_index, ((_classnameCounters select _index) + 1)];};
 
-			// ist ein Spieler in der Nähe?
-			//_survivors = (position _x) nearEntities [["Survivor1_DZ","SurvivorW1_DZ","Survivor2_DZ","SurvivorW2_DZ","Camo1_DZ","Sniper1_DZ","Survivor3_DZ"],PLAYZ_playerDistance];
-			_survivors = [];
-			{
-				_dist=(getPosASL _x) distance _pos;
-				if( (isPlayer _x) && {(alive _x)} && (_dist < PLAYZ_playerDistance) ) then {
-					//diag_log format ["%1 playable unit %3 dist=%2", PLAYZ_logname, _dist, _x];
-					_survivors set [count _survivors, _x];
-				};
-			} forEach playableUnits;
+			// Stark beschädigte Fahrzeuge zerstören
+			if( (PLAYZ_destroyVehiclesMoreDamaged < 1) && (_damage >= PLAYZ_destroyVehiclesMoreDamaged) ) then {
+				_x setDamage 1;
+			};
 
 
+			// Zerstörte Fahrzeuge löschen
 			if ( _damage == 1 ) then {
+				// ist ein Spieler in der Nähe?
+				_survivors = [];
+				{
+					_dist=(getPosASL _x) distance _pos;
+					if( (isPlayer _x) && {(alive _x)} && (_dist < PLAYZ_playerDistance) ) then {
+						//diag_log format ["%1 playable unit %3 dist=%2", PLAYZ_logname, _dist, _x];
+						_survivors set [count _survivors, _x];
+					};
+				} forEach playableUnits;
+
 				if( count _survivors == 0 ) then {
 					diag_log format ["%1 DELETING ===> veh=%2 | damage=%3 | pos=%4 | posGps=%5", PLAYZ_logname, _x, _damage, _pos, mapGridPosition _pos];
 					diag_log format ["%1 objectID=%2 | objectUID=%3", PLAYZ_logname, _objectID, _objectUID];
@@ -109,6 +116,24 @@ while {true} do {
 
 //	diag_log format ["%1 _aliveUIDs=%2", PLAYZ_logname, _aliveUIDs];
 //	diag_log format ["%1 _aliveIDs=%2", PLAYZ_logname, _aliveIDs];
+//	diag_log format ["%1 _classnameCounters=%2", PLAYZ_logname, _classnameCounters];
+
+
+
+
+
+	// "Verbotene" Classnames vorbereiten
+	_classnameOverlimit = [];
+	{
+		if(PLAYZ_classLimits select _forEachIndex < _classnameCounters select _forEachIndex) then {
+			diag_log format ["%1 type=%2 | limit=%3 | count=%4 | OVER LIMIT!", PLAYZ_logname, _x, PLAYZ_classLimits select _forEachIndex, _classnameCounters select _forEachIndex];
+			_classnameOverlimit set [count _classnameOverlimit, _x];
+		} else {
+			diag_log format ["%1 type=%2 | limit=%3 | count=%4 | ok to spawn.", PLAYZ_logname, _x, PLAYZ_classLimits select _forEachIndex, _classnameCounters select _forEachIndex];
+		};
+	} forEach PLAYZ_limitedClasses;
+
+
 
 
 
@@ -116,8 +141,10 @@ while {true} do {
 	_staticVehSpawns = [];
 	{
 		_objectUID = _x select 0;
+		_type = _x select 1;
 		_pos = (_x select 2) select 1;
 		_playerNear = ({isPlayer _x} count (_pos nearEntities [["CAManBase","Land","Air"], PLAYZ_playerDistance]) > 0);
+		_vehiceNear = (count (_pos nearEntities ["AllVehicles", PLAYZ_staticSpawnOtherVehicleDistance]) > 0);
 
 		if( (_objectUID in _aliveUIDs) || (_objectUID in _aliveIDs) ) then {
 			//diag_log format ["%1 static spawn %2 (UID=%3): vehicle exists", PLAYZ_logname, _x select 1, _x select 0];
@@ -125,13 +152,20 @@ while {true} do {
 			if(_playerNear) then {
 				diag_log format ["%1 static spawn %2 (UID=%3): player near", PLAYZ_logname, _x select 1, _x select 0];
 			} else {
-				diag_log format ["%1 static spawn %2 (UID=%3): added to list", PLAYZ_logname, _x select 1, _x select 0];
-				_staticVehSpawns = _staticVehSpawns + [_x];
+				if(_type in _classnameOverlimit) then {
+					diag_log format ["%1 static spawn %2 (UID=%3): class over limit", PLAYZ_logname, _x select 1, _x select 0];
+				} else {
+					if(_vehiceNear) then {
+						diag_log format ["%1 static spawn %2 (UID=%3): vehicle near", PLAYZ_logname, _x select 1, _x select 0];
+					} else {
+						diag_log format ["%1 static spawn %2 (UID=%3): added to list", PLAYZ_logname, _x select 1, _x select 0];
+						_staticVehSpawns = _staticVehSpawns + [_x];
+					};
+				};
 			};
 		};
 
 	} forEach PLAYZ_vehicle_spawns;
-
 
 
 
@@ -172,9 +206,10 @@ while {true} do {
 			if( _dontSpawn ) then {
 		
 				// Fahrzeug aussuchen
+				
 				_newVehWorldspace=[round random 360, [((random 1000)+6000), ((random 1000)+7000), 0]];
 				_newVehSpawn set [0, _newVehWorldspace call dayz_objectUID2];
-				_newVehSpawn set [1, PLAYZ_dynamic_vehicles call BIS_fnc_selectRandom];
+				_newVehSpawn set [1, (PLAYZ_dynamicVehicles - _classnameOverlimit) call BIS_fnc_selectRandom];
 				_newVehSpawn set [2, _newVehWorldspace];
 				_newVehSpawn set [3, []];
 				_newVehSpawn set [4, []];
