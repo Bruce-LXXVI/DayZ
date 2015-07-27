@@ -6,8 +6,8 @@ _characterID =		_this select 0;
 _object = 		_this select 1;
 _worldspace = 	_this select 2;
 _inventory = 		_this select 3;
-_hitpoints = 		_this select 4;
-_objectUID = 		_this select 5;
+if(count _this > 4) then {_hitpoints = 		_this select 4;};
+if(count _this > 5) then {_objectUID = 		_this select 5;};
 _type = typeOf _object;
 
 if ([_object, "Server"] call check_publishobject) then {

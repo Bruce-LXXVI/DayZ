@@ -125,8 +125,8 @@ while {true} do {
 	// "Verbotene" Classnames vorbereiten
 	_classnameOverlimit = [];
 	{
-		if(PLAYZ_classLimits select _forEachIndex < _classnameCounters select _forEachIndex) then {
-			diag_log format ["%1 type=%2 | limit=%3 | count=%4 | OVER LIMIT!", PLAYZ_logname, _x, PLAYZ_classLimits select _forEachIndex, _classnameCounters select _forEachIndex];
+		if(PLAYZ_classLimits select _forEachIndex <= _classnameCounters select _forEachIndex) then {
+			diag_log format ["%1 type=%2 | limit=%3 | count=%4 | LIMIT REACHED!", PLAYZ_logname, _x, PLAYZ_classLimits select _forEachIndex, _classnameCounters select _forEachIndex];
 			_classnameOverlimit set [count _classnameOverlimit, _x];
 		} else {
 			diag_log format ["%1 type=%2 | limit=%3 | count=%4 | ok to spawn.", PLAYZ_logname, _x, PLAYZ_classLimits select _forEachIndex, _classnameCounters select _forEachIndex];
