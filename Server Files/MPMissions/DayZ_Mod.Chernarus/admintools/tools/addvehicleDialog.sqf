@@ -18,6 +18,7 @@ if (isNil "vhnlist") then
 		//				diag_log(_vehicle);
 		if (isClass _vehicle) then {
 			_veh_type = configName(_vehicle);
+			//if(!(_veh_type in DayZ_SafeObjects)) then {DayZ_SafeObjects set [count DayZ_SafeObjects, _veh_type];};
 			if ((getNumber(_vehicle >> "scope") == 2) and (getText(_vehicle >> "picture") != "") and (KINDOF_ARRAY(_veh_type,_kindOf)) and !(KINDOF_ARRAY(_veh_type,_filter))) then {
 				_textPart =	getText(configFile >> "cfgVehicles" >> _veh_type >> "displayName");
 				_image = (gettext (configFile >> "CfgVehicles" >> _veh_type >> "picture"));

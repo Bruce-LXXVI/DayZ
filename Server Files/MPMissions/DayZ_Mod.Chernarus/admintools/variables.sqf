@@ -1,5 +1,13 @@
 // Do not modify this file unless you know what you are doing
 
+
+EAT_logname="[EAT]";
+_directoryAsArray = toArray __FILE__;
+_directoryAsArray resize ((count _directoryAsArray) - 14);
+EAT_directory = toString _directoryAsArray;
+diag_log format ["%1 Initializing using base path %2", EAT_logname, EAT_directory];
+
+
 AdminList = AdminList + SuperAdminList; // add SuperAdmin to Admin
 AdminAndModList = AdminList + ModList; // Add all admin/mod into one list for easy call
 
@@ -218,65 +226,65 @@ helpQueue = []; // Initialize help queue
 		//Admin-Mod mode script calls
 			playerGodToggle = {
 				playerGod = !playerGod;
-				[] execVM "admintools\tools\AdminMode\GodModePlayer.sqf";
+				[] execVM format ["%1\tools\AdminMode\GodModePlayer.sqf", EAT_directory];
 			};
 			vehicleGodToggle = {
 				vehicleGod = !vehicleGod;
-				[] execVM "admintools\tools\AdminMode\GodModeVehicle.sqf";
+				[] execVM format ["%1\tools\AdminMode\GodModeVehicle.sqf", EAT_directory];
 			};
 			playerESPToggle = {
 				playerESP = !playerESP;
-				if(playerESP && enhancedESP) then {enhancedESP = false; [enhancedESP] execVM "admintools\tools\AdminMode\ESPenhanced.sqf";};
-				[] execVM "admintools\tools\AdminMode\ESPplayer.sqf";
+				if(playerESP && enhancedESP) then {enhancedESP = false; [enhancedESP] execVM format ["%1\tools\AdminMode\ESPenhanced.sqf", EAT_directory];};
+				[] execVM format ["%1\tools\AdminMode\ESPplayer.sqf", EAT_directory];
 			};
 			enhancedESPToggle = {
 				enhancedESP = !enhancedESP;
-				if(playerESP && enhancedESP) then {playerESP = false; [playerESP] execVM "admintools\tools\AdminMode\ESPplayer.sqf";};
-				[] execVM "admintools\tools\AdminMode\ESPenhanced.sqf";
+				if(playerESP && enhancedESP) then {playerESP = false; [playerESP] execVM format ["%1\tools\AdminMode\ESPplayer.sqf", EAT_directory];};
+				[] execVM format ["%1\tools\AdminMode\ESPenhanced.sqf", EAT_directory];
 			};
 			grassOffToggle = {
 				grassOff = !grassOff;
-				[] execVM "admintools\tools\AdminMode\GrassOFF.sqf";
+				[] execVM format ["%1\tools\AdminMode\GrassOFF.sqf", EAT_directory];
 			};
 			infAmmoToggle = {
 				infAmmo = !infAmmo;
-				[] execVM "admintools\tools\AdminMode\InfiniteAmmo.sqf";
+				[] execVM format ["%1\tools\AdminMode\InfiniteAmmo.sqf", EAT_directory];
 			};
 			speedBoostToggle = {
 				speedBoost = !speedBoost;
-				[] execVM "admintools\tools\AdminMode\speedboost.sqf";
+				[] execVM format ["%1\tools\AdminMode\speedboost.sqf", EAT_directory];
 			};
 			invisibilityToggle = {
 				invisibility = !invisibility;
-				[] execVM "admintools\tools\AdminMode\Invisibility.sqf";
+				[] execVM format ["%1\tools\AdminMode\Invisibility.sqf", EAT_directory];
 			};
 			flyingToggle = {
 				flying = !flying;
-				[] execVM "admintools\tools\AdminMode\Flying.sqf";
+				[] execVM format ["%1\tools\AdminMode\Flying.sqf", EAT_directory];
 			};
 			adminBuildToggle = {
 				adminBuild = !adminBuild;
-				[] execVM "admintools\tools\AdminMode\AdminFastBuild.sqf";
+				[] execVM format ["%1\tools\AdminMode\AdminFastBuild.sqf", EAT_directory];
 			};
 			
 		// Admin-mod mode toggle function
 			AdminToggle =
 			{
-				if (speedBoost) then {[] execVM "admintools\tools\AdminMode\speedboost.sqf";};
-				if (enhancedESP) then {[] execVM "admintools\tools\AdminMode\ESPenhanced.sqf";};
-				if (playerESP) then {[] execVM "admintools\tools\AdminMode\ESPplayer.sqf";};
-				if (invisibility) then {[] execVM "admintools\tools\AdminMode\Invisibility.sqf";};
-				if (infAmmo) then {[] execVM "admintools\tools\AdminMode\InfiniteAmmo.sqf";};
-				if (flying) then {[] execVM "admintools\tools\AdminMode\Flying.sqf";};
-				if (playerGod) then {[] execVM "admintools\tools\AdminMode\GodModePlayer.sqf";};
-				if (vehicleGod) then {[] execVM "admintools\tools\AdminMode\GodModeVehicle.sqf";};
-				if (grassOff) then {[] execVM "admintools\tools\AdminMode\GrassOFF.sqf";};
-				if (adminBuild) then {[] execVM "admintools\tools\AdminMode\AdminFastBuild.sqf";};
+				if (speedBoost) then {[] execVM format ["%1\tools\AdminMode\speedboost.sqf", EAT_directory];};
+				if (enhancedESP) then {[] execVM format ["%1\tools\AdminMode\ESPenhanced.sqf", EAT_directory];};
+				if (playerESP) then {[] execVM format ["%1\tools\AdminMode\ESPplayer.sqf", EAT_directory];};
+				if (invisibility) then {[] execVM format ["%1\tools\AdminMode\Invisibility.sqf", EAT_directory];};
+				if (infAmmo) then {[] execVM format ["%1\tools\AdminMode\InfiniteAmmo.sqf", EAT_directory];};
+				if (flying) then {[] execVM format ["%1\tools\AdminMode\Flying.sqf", EAT_directory];};
+				if (playerGod) then {[] execVM format ["%1\tools\AdminMode\GodModePlayer.sqf", EAT_directory];};
+				if (vehicleGod) then {[] execVM format ["%1\tools\AdminMode\GodModeVehicle.sqf", EAT_directory];};
+				if (grassOff) then {[] execVM format ["%1\tools\AdminMode\GrassOFF.sqf", EAT_directory];};
+				if (adminBuild) then {[] execVM format ["%1\tools\AdminMode\AdminFastBuild.sqf", EAT_directory];};
 			};
 	};
 
 /**************** overwrite epoch public variables ****************/
-	if(enableWeatherTimeChanger)then{"PVDZE_plr_SetDate" addPublicVariableEventHandler {};};
+	//if(enableWeatherTimeChanger) then {"PVDZE_plr_SetDate" addPublicVariableEventHandler {};};
 
 
 // Adds the admin build items to the allowed objects

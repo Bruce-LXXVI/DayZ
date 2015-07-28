@@ -10,8 +10,8 @@
 // Defines the default on and off for options
 if (isNil "playerGod") then {playerGod = true;};
 if (isNil "vehicleGod") then {vehicleGod = true;};
-if (isNil "playerESP") then {playerESP = true;};
-if (isNil "enhancedESP") then {enhancedESP = false;};
+if (isNil "playerESP") then {playerESP = false;};
+if (isNil "enhancedESP") then {enhancedESP = true;};
 if (isNil "grassOff") then {grassOff = true;};
 if (isNil "infAmmo") then {infAmmo = true;};
 if (isNil "speedBoost") then {speedBoost = false;};

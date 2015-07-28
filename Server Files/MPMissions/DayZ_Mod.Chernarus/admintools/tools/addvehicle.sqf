@@ -6,7 +6,7 @@ _pos = getPos vehicle _player;
 _pos = [(_pos select 0)+8*sin(_dir),(_pos select 1)+8*cos(_dir),0];
  
 cutText ["Starting Spawn...", "PLAIN DOWN"];
- 
+/*
 // First select key color
 _keyColor = ["Green","Red","Blue","Yellow","Black"] call BIS_fnc_selectRandom;
  
@@ -20,8 +20,8 @@ _config = _keySelected;
 _isOk = [_player,_config] call BIS_fnc_invAdd;
 
 waitUntil {!isNil "_isOk"};
-
-if (_isOk and _isKeyOK) then {
+*/
+if ( 1==1 ) then {
  
 	_dir = round(random 360); 
 	_helipad = nearestObjects [_player, ["HeliHCivil","HeliHempty"], 100];
@@ -34,14 +34,21 @@ if (_isOk and _isKeyOK) then {
 	
 	if(count _location != 0) then {
 		//place vehicle spawn marker (local)
-		_veh = createVehicle ["Sign_arrow_down_large_EP1", _location, [], 0, "CAN_COLLIDE"]; 
+		_veh = createVehicle [_vehtospawn, _location, [], 0, "CAN_COLLIDE"]; 
 		_location = (getPosATL _veh);
  
-		PVDZE_veh_Publish2 = [_veh,[_dir,_location],_vehtospawn,false,_keySelected,_player];
-		publicVariableServer  "PVDZE_veh_Publish2";
+		//PVDZE_veh_Publish2 = [_veh,[_dir,_location],_vehtospawn,false,_keySelected,_player];
+		//publicVariableServer  "PVDZE_veh_Publish2";
 		_player reveal _veh;
 		
-		cutText ["Vehicle spawned, key added to toolbelt.", "PLAIN DOWN"];
+		//dayz_serverObjectMonitor set [count dayz_serverObjectMonitor,_veh];
+		//[_veh, _vehtospawn] spawn server_updateObject;
+
+		// TODO: Hitpoints
+		PVDZ_obj_Publish = [0, _veh, [_dir,_location], []];
+		publicVariableServer "PVDZ_obj_Publish";
+
+		cutText ["Vehicle spawned.", "PLAIN DOWN"];
 
 		// Tool use logger
 		if(logMajorTool) then {
@@ -49,7 +56,7 @@ if (_isOk and _isKeyOK) then {
 			[] spawn {publicVariable "usageLogger";};
 		};
 	} else {
-		_removeitem = [_player, _config] call BIS_fnc_invRemove;
+		//_removeitem = [_player, _config] call BIS_fnc_invRemove;
 		cutText ["Could not find an area to spawn vehicle.", "PLAIN DOWN"];
 	};
 } else {

@@ -1,3 +1,6 @@
+/*
+ * Deletes an object from server and database
+ */
 private ["_delobj","_player","_objectID","_objectUID"];
 _player = player;
 
@@ -7,8 +10,8 @@ deleteVehicle _delobj;
 _objectID = _delobj getVariable ["ObjectID", "0"];
 _objectUID = _delobj getVariable ["ObjectUID", "0"];
 
-PVDZE_obj_Delete = [_objectID, _objectUID, (name _player)];
-publicVariableServer "PVDZE_obj_Delete";
+PVDZ_obj_Delete = [_objectID, _objectUID, (name _player)];
+publicVariableServer "PVDZ_obj_Delete";
 
 _dotxt = format["%1 Destroyed and Deleted", _delobj];
 titleText [_dotxt,"PLAIN DOWN"]; titleFadeOut 4;

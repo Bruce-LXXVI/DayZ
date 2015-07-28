@@ -32,10 +32,17 @@ _objectUID = _obj getVariable["ObjectUID","0"];
 		};
 
 		cutText ["Object deleted from database", "PLAIN DOWN",1];
-		PVDZE_obj_Delete = [_objectID,_objectUID,(name player)];
-		publicVariableServer "PVDZE_obj_Delete";
+
+
+		PVDZ_obj_Destroy = [_objectID,_objectUID];
+		publicVariableServer "PVDZ_obj_Destroy";
+
+		//PVDZE_obj_Delete = [_objectID,_objectUID,(name player)];
+		//publicVariableServer "PVDZE_obj_Delete";
+
 		if (isServer) then {
-			PVDZE_obj_Delete call server_deleteObj;
+			//PVDZE_obj_Delete call server_deleteObj;
+			PVDZ_obj_Delete call server_deleteObj;
 		};
 		deletevehicle _obj; 
 		breakout "exit";

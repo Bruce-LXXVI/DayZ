@@ -1,7 +1,7 @@
 private["_EXECgenTools","_EXECweapons","_EXECbackpacks","_EXECgear","_EXECcrates","_EXECadminBuild","_EXECbuildings","_EXECskins","_EXECdate","_EXECcloud","_EXECfog","_EXECtempVeh"];
 
 _EXECgenTools = 'player execVM "admintools\tools\%1"';
-_EXECweapons = '["%1","%2","%3"] execVM "admintools\weaponkits\WeaponKits.sqf"';
+_EXECweapons = '["%1","%2","%3"] execVM "' + EAT_directory + '\weaponkits\WeaponKits.sqf"';
 _EXECbackpacks = '["%1"] execVM "admintools\weaponkits\BackPack.sqf"';
 _EXECgear = 'player execVM "admintools\weaponkits\%1"';
 _EXECcrates = '["%1"] execVM "admintools\crates\%2"';
@@ -15,11 +15,11 @@ _EXECtempVeh = '["%1"] execVM "admintools\tools\addtempvehicle.sqf"';
 
 // Main menu
 if ((getPlayerUID player) in AdminList) then { // Administrators
-	epochmenustart = [["",true],["-- Epoch Admin Tools (Level: Admin) --", [], "", -5, [["expression", ""]], "1", "0"]];
+	epochmenustart = [["",true],["-- playZ Admin Tools (Level: Admin) --", [], "", -5, [["expression", ""]], "1", "0"]];
 	epochmenustart = epochmenustart + [["Admin Menu >>", [], "#USER:AdminMenu", -5, [["expression", ""]], "1", "1"]];
 	epochmenustart = epochmenustart + [["Vehicle Menu >>",[],"#USER:VehicleMenu",-5,[["expression",""]],"1","1"]];
 	epochmenustart = epochmenustart + [["Crate Menu >>",[],"#USER:CrateMenu",-5,[["expression",""]],"1","1"]];
-	epochmenustart = epochmenustart + [["Epoch Menu >>", [], "#USER:EpochMenu", -5, [["expression", ""]], "1", "1"]];
+//	epochmenustart = epochmenustart + [["Epoch Menu >>", [], "#USER:EpochMenu", -5, [["expression", ""]], "1", "1"]];
 	epochmenustart = epochmenustart + [["Weapon/Item Kits >>", [], "#USER:WeaponMenu", -5, [["expression", ""]], "1", "1"]];
 	epochmenustart = epochmenustart + [["Skin Change Menu >>", [], "#USER:AdminSkinsMenu", -5, [["expression", ""]], "1", "1"]];
 	if(enableWeatherTimeChanger)then{ epochmenustart = epochmenustart + [["Weather/Time Menu >>", [], "#USER:WTMenu", -5, [["expression", ""]], "1", "1"]];};
@@ -28,7 +28,7 @@ if ((getPlayerUID player) in AdminList) then { // Administrators
 	epochmenustart = epochmenustart + [["Main Menu", [20], "#USER:epochmenustart", -5, [["expression", ""]], "1", "1"]];
 } else {
 	if ((getPlayerUID player) in ModList) then { // Moderators
-		epochmenustart = [["",true],["-- Epoch Admin Tools (Level: Mod) --", [], "", -5, [["expression", ""]], "1", "0"]];
+		epochmenustart = [["",true],["-- playZ Admin Tools (Level: Mod) --", [], "", -5, [["expression", ""]], "1", "0"]];
 		epochmenustart = epochmenustart + [["Mod Menu >>", [], "#USER:ModMenu", -5, [["expression", ""]], "1", "1"]];
 		epochmenustart = epochmenustart + [["Temporary Vehicle Menu >>", [], "#USER:VehicleTempMenu", -5, [["expression", ""]], "1", "1"]];
 		epochmenustart = epochmenustart + [["Skin Change Menu >>", [], "#USER:AdminSkinsMenu", -5, [["expression", ""]], "1", "1"]];
@@ -74,7 +74,7 @@ VehicleMenu =
 ["",true],	
 	["Graphical Vehicle Menu", [],"", -5, [["expression", format[_EXECgenTools,"addvehicleDialog.sqf"]]], "1", "1"],
 	["Temporary Vehicle Menu >>", [], "#USER:VehicleTempMenu", -5, [["expression", ""]], "1", "1"],
-	["Locked Vehicle Menu >>", [], "#USER:VehiclekeyMenu", -5, [["expression", ""]], "1", "1"],
+//	["Locked Vehicle Menu >>", [], "#USER:VehiclekeyMenu", -5, [["expression", ""]], "1", "1"],
 	["Vehicle Tools >>", [], "#USER:VehicleTools", -5, [["expression", ""]], "1", "1"],
 	["", [], "", -5, [["expression", ""]], "1", "0"],
 		["Main Menu", [20], "#USER:epochmenustart", -5, [["expression", ""]], "1", "1"]
@@ -84,7 +84,7 @@ VehicleMenu =
 VehicleTools =
 [
 ["",true],	
-	["Vehicle Locator",[],"",-5,[["expression", format[_EXECgenTools,"vehicleLocator.sqf"]]], "1", "1"],
+//	["Vehicle Locator",[],"",-5,[["expression", format[_EXECgenTools,"vehicleLocator.sqf"]]], "1", "1"],
 	["Point to Repair (Temp)", [],"", -5, [["expression", format[_EXECgenTools,"PointToRepair.sqf"]]], "1", "1"],
 	["Point to Repair (Perm)", [],"", -5, [["expression", format[_EXECgenTools,"PointToRepairPERM.sqf"]]], "1", "1"],
 	["Point to Revive Vehicle",[],"", -5,[["expression", format[_EXECgenTools,"PointToReviveVeh.sqf"]]], "1", "1"],
@@ -266,10 +266,10 @@ CrateMenuPublic=[
 // These are set every other hour to keep the menu short
 WTMenu=[
 	["",true],
+	["Weather Menu >>",[],"#USER:WeatherMenu",-5,[["expression",""]], "1", "1"],
 	["Day Menu >>",[],"#USER:DayMenu",-5,[["expression",""]], "1", "1"],
 	["Full-Moon Nights Menu >>",[],"#USER:FullMoonNights",-5,[["expression",""]], "1", "1"],
 	["No-Moon Nights Menu >>",[],"#USER:NoMoonNights",-5,[["expression",""]], "1", "1"],
-	["Weather Menu >>",[],"#USER:WeatherMenu",-5,[["expression",""]], "1", "1"],
 	["", [], "", -5, [["expression", ""]], "1", "0"],
 		["Main Menu", [20], "#USER:epochmenustart", -5, [["expression", ""]], "1", "1"]
 ];

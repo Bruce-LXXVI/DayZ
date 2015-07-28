@@ -12,7 +12,9 @@ _player = player;
 
     if (_damage > 0) then {
 		_selection = getText(configFile >> "cfgVehicles" >> _type >> "HitPoints" >> _x >> "name");
-		[_vehicle,_selection,0] call object_setFixServer;
+		//[_vehicle,_selection,0] call fnc_veh_handleRepair;
+		PVDZ_veh_SF = [_vehicle, _selection, 0, true];
+		publicVariableServer "PVDZ_veh_SF";
 	};
 } count _hitpoints;
 

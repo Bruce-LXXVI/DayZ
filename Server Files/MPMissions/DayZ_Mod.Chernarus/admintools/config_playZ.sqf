@@ -119,4 +119,4 @@
 		
 
 		
-diag_log("Admin Tools: config.sqf loaded");
+diag_log("[EAT] config.sqf loaded");
