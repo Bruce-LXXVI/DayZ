@@ -1,3 +1,9 @@
+
+private [ "_text1"
+		, "_text2"
+		, "_cursor"
+];
+
 //Let Zeds know
 [player,4,true,(getPosATL player)] spawn player_alertZombies;
 
@@ -12,9 +18,9 @@ if(isNil "dayz_skilllevel") then {dayz_skilllevel = 0;};
 while {debugMonitor} do
 {
 
-if((getPlayerUID player) in AdminList ||(getPlayerUID player) in ModList) then { 
-	  
-	  hintSilent parseText format ["
+if( ((getPlayerUID player) in AdminList) || ((getPlayerUID player) in ModList) ) then { 
+	
+	_text1 = parseText format ["
 	<t size='0.95' font='Bitstream' align='left' >[%18]</t><t size='0.95' font='Bitstream' align='right'>[FPS: %10]</t><br/>
 	<t size='0.95' font='Bitstream' align='center' color='#FFBF00'>Survived %7 Days</t><br/>
 	<t size='0.95' font='Bitstream' align='left' >Players: %8</t><t size='0.95 'font='Bitstream' align='right'>Within 500m: %11</t><br/>
@@ -53,8 +59,44 @@ if((getPlayerUID player) in AdminList ||(getPlayerUID player) in ModList) then {
 	/* 21 */	(getPosASL player),
 	/* 22 */	(mapGridPosition getPos player),
 	/* 23 */	(count([6800, 9200, 0] nearEntities [["Ship"],25000])),
-	/* 24 */	(round(getDir player))
+	/* 24 */	(round(getDir (vehicle player)))
 ];
+
+
+	_cursor = cursorTarget;
+	_text2 = "";
+	if(!isNull _cursor) then {
+		_text2 = parseText format ["
+		<t size='0.95' font='Bitstream' align='left' >[%10]</t><t size='0.95' font='Bitstream' align='right'>.</t><br/>
+		<t size='0.95' font='Bitstream' align='center' color='#FFBF00'>%1</t><br/>
+		<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>ObjectID: </t><t size='0.95' font='Bitstream' align='right'>%2</t><br/>
+		<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>ObjectUID: </t><t size='0.95' font='Bitstream' align='right'>%3</t><br/>
+		<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>Damage: </t><t size='0.95' font='Bitstream' align='right'>%4</t><br/>
+		<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>Type: </t><t size='0.95' font='Bitstream' align='right'>%7</t><br/>
+		<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>PLAYZ_whenSpawned: </t><t size='0.95' font='Bitstream' align='right'>%8</t><br/>
+		<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>PLAYZ_whenDestroyed: </t><t size='0.95' font='Bitstream' align='right'>%9</t><br/>
+		<t size='0.95' font='Bitstream' align='left' >GPS: %11</t><t size='0.95' font='Bitstream' align='right'>DIR: %6</t><br/>
+		<t size='0.95'font='Bitstream'align='center' >%5</t><br/>",
+
+		/*  1 */	(_cursor),
+		/*  2 */	(_cursor getVariable ["ObjectID", "0"]), 
+		/*  3 */	(_cursor getVariable ["ObjectUID", "0"]),
+		/*  4 */	(damage _cursor),
+		/*  5 */	(getPosASL _cursor),
+		/*  6 */	(round getDir _cursor),
+		/*  7 */	(typeOf _cursor),
+		/*  8 */	(_cursor getVariable ["PLAYZ_whenSpawned", "0"]),
+		/*  9 */	(_cursor getVariable ["PLAYZ_whenDestroyed", "0"]),
+		/* 10 */	(gettext (configFile >> 'CfgVehicles' >> (typeof _cursor) >> 'displayName')),
+		/* 11 */	(mapGridPosition getPos _cursor),
+
+		/* __ */	0
+		];
+	} else {
+		_text2 = "Point";
+	};
+
+	hintSilent composeText[_text1, lineBreak, _text2];
 
 } else {
 
