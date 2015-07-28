@@ -33,11 +33,16 @@ private [ "_directoryAsArray"
 ];
 
 
+// Beenden, wenn nicht auf dem Server oder Fahrzeug-Management bereits läuft.
 if (!isServer || !isNil "PLAYZ_isActive") exitWith {};
 PLAYZ_isActive = true;
 PLAYZ_logname="[playZ]";
 
+// Konfiguration einlesen
 #include <playZ_config.sqf>
+if(isNil "PLAYZ_enableVehicleManagement") then {PLAYZ_enableVehicleManagement=false;};
+if (!PLAYZ_enableVehicleManagement) exitWith {};
+
 #include <playZ_spawnpoints.sqf>
 
 waitUntil{initialized};
@@ -56,7 +61,7 @@ while {true} do {
 	_aliveUIDs = [];
 	_aliveIDs = [];
 	_classnameCounters = [];
-	{_classnameCounters set [count _classnameCounters, 0]} forEach PLAYZ_limitedClasses;
+	{_classnameCounters set [count _classnameCounters, 0]} forEach PLAYZ_limitedClasses; // Ginge auch mit resize ;-)
 	_classnameOverlimit = [];
 
 	{
@@ -68,6 +73,7 @@ while {true} do {
 			_type = typeOf _x;
 			_objectID = _x getVariable ["ObjectID","0"];
 			_objectUID = _x getVariable ["ObjectUID","0"];
+			_whenDestroyed = _x getVariable ["PLAYZ_whenDestroyed", nil];
 
 			// die objectUID/objectID zur Liste hinzufügen
 			if( (_objectUID != "") && (_objectUID != "0") ) then {_aliveUIDs set [count _aliveUIDs, _objectUID];};
@@ -85,17 +91,26 @@ while {true} do {
 
 			// Zerstörte Fahrzeuge löschen
 			if ( _damage == 1 ) then {
-				// ist ein Spieler in der Nähe?
-				_survivors = [];
-				{
-					_dist=(getPosASL _x) distance _pos;
-					if( (isPlayer _x) && {(alive _x)} && (_dist < PLAYZ_playerDistance) ) then {
-						//diag_log format ["%1 playable unit %3 dist=%2", PLAYZ_logname, _dist, _x];
-						_survivors set [count _survivors, _x];
-					};
-				} forEach playableUnits;
 
-				if( count _survivors == 0 ) then {
+				// Per default löschen
+				_dontDelete=false;
+
+				// Zeit des Zerstörens setzen
+				if(isNil "_whenDestroyed") then {
+					_whenDestroyed = round diag_tickTime;
+					_x setVariable ["PLAYZ_whenDestroyed", _whenDestroyed, true];
+				};
+
+				// ist ein Spieler in der Nähe?
+				_playerNear = ({isPlayer _x} count (_pos nearEntities [["CAManBase","Land","Air"], PLAYZ_playerDistance]) > 0);
+				if( _playerNear ) then {_dontDelete=true; diag_log format ["%1 don't delete (player nearby)", PLAYZ_logname];};
+
+				// Timer abgelaufen?
+				if( (diag_tickTime - _whenDestroyed) < PLAYZ_deleteDestroyedVehiclesAfter ) then {
+					_dontDelete=true; diag_log format ["%1 don't delete (PLAYZ_deleteDestroyedVehiclesAfter)", PLAYZ_logname];
+				};
+
+				if( !_dontDelete ) then {
 					diag_log format ["%1 DELETING ===> veh=%2 | damage=%3 | pos=%4 | posGps=%5", PLAYZ_logname, _x, _damage, _pos, mapGridPosition _pos];
 					diag_log format ["%1 objectID=%2 | objectUID=%3", PLAYZ_logname, _objectID, _objectUID];
 
@@ -106,7 +121,7 @@ while {true} do {
 					diag_log [diag_ticktime, PLAYZ_logname, " Networked object, request to destroy", PVDZ_obj_Destroy];
 					_iVehDeleted = _iVehDeleted + 1;
 				} else {
-					diag_log format ["%1 Not deleted (player nearby)", PLAYZ_logname];
+					diag_log format ["%1 Not deleted", PLAYZ_logname];
 				};
 			};
 		};
@@ -293,14 +308,18 @@ while {true} do {
 			_newVeh = createVehicle [_type, _pos, [], 0, "NONE"];
 			_newVeh setDir _dir;
 			_newVeh setDamage _damage;
-			_newVeh setVariable ["lastUpdate",time];
+			_newVeh setVariable ["lastUpdate", time];
 			_newVeh setVariable ["ObjectUID", _objectUID, true];
 			_newVeh setVariable ["ObjectID", _objectUID, true];
 			_newVeh setVariable ["CharacterID", _ownerID, true];
 			_newVeh setVehicleVarName _objectUID;
 
+			// Zeit setzen
+			_newVeh setVariable ["PLAYZ_whenSpawned", round diag_tickTime, true];
+
+
 			//Dont add inventory for traps.
-			if (!(_newVeh isKindOf "TrapItems") And !(_newVeh iskindof "DZ_buildables")) then {
+			if( !(_newVeh isKindOf "TrapItems") AND !(_newVeh iskindof "DZ_buildables") AND !PLAYZ_staticSpawnAlwaysEmpty ) then {
 				_cargo = _inventory;
 				clearWeaponCargoGlobal  _newVeh;
 				clearMagazineCargoGlobal  _newVeh;
