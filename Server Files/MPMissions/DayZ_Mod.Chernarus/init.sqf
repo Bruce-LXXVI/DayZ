@@ -77,7 +77,7 @@ execVM "\z\addons\dayz_code\system\DynamicWeatherEffects.sqf";
 
 if (isServer) then {
 	//Bus Route
-	//[true] execVM "busroute\init_bus.sqf";
+	[true] execVM "busroute\init_bus.sqf";
 
 	// playZ Scheduler
 	execVM "playZ_scheduler\playZ_server_monitor.sqf"
@@ -94,7 +94,7 @@ if (!isDedicated) then {
 	_nul = [] execVM "DZAI_Client\dzai_initclient.sqf";
 
 	//Bus Route
-	//[] execVM "busroute\player_axeBus.sqf";
+	[] execVM "busroute\player_axeBus.sqf";
 
 	if (dayz_infectiousWaterholes) then { execVM "\z\addons\dayz_code\system\mission\chernarus\infectiousWaterholes\init.sqf"; };
 	if (dayz_antihack != 0) then {
