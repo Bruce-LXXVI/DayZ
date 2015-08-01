@@ -1,4 +1,4 @@
-private ["_marker","_vehicleType","_weapongrade","_unitGroup","_driver","_vehicle","_gunnerSpots","_markerPos","_markerSize","_isAirVehicle","_unitType","_vehSpawnPos","_isArmed","_maxUnits","_maxCargoUnits","_maxGunnerUnits","_keepLooking"];
+private ["_marker","_vehicleType","_weapongrade","_unitGroup","_driver","_vehicle","_gunnerSpots","_markerPos","_markerSize","_isAirVehicle","_unitType","_vehSpawnPos","_isArmed","_maxUnits","_maxCargoUnits","_maxGunnerUnits","_keepLooking","_objectUID"];
 
 if (!isServer) exitWith {};
 
@@ -79,7 +79,15 @@ if (_isAirVehicle) then {
 	_vehicle addEventHandler ["HandleDamage",{_this call DZAI_vHandleDamage}];
 };
 _vehicle allowCrewInImmobile (!_isAirVehicle);
+
+//if( DZAI_vehiclesLocked ) then {_vehicle setVehicleLock "LOCKED";}
+//else {_vehicle setVehicleLock "UNLOCKED";};
+
 _vehicle setVehicleLock "LOCKED";
+
+if( isNil "_objectUID" ) then {_objectUID = format ["%1%2%3%4", abs round((random 90)+10), abs round((random 900)+100), abs round((random 900)+100), abs round((random 900)+100)];};
+_vehicle setVariable [ "ObjectUID", _objectUID, true ];
+
 clearWeaponCargoGlobal _vehicle;
 clearMagazineCargoGlobal _vehicle;
 

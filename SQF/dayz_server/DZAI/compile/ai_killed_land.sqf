@@ -8,6 +8,13 @@ _vehicle = _unitGroup getVariable ["assignedVehicle",objNull];
 if (_groupIsEmpty) then {
 	if (_vehicle isKindOf "LandVehicle") then {
 		{_vehicle removeAllEventHandlers _x} count ["HandleDamage","Killed"];
+
+		if(!DZAI_vehiclesLocked) then
+		{
+			_vehicle call fnc_veh_ResetEH;
+			_vehicle setVehicleLock "UNLOCKED";
+		};
+
 		[_unitGroup,_vehicle] call DZAI_respawnAIVehicle;
 		if (DZAI_debugLevel > 0) then {diag_log format ["DZAI Debug: AI vehicle patrol destroyed, adding vehicle %1 to cleanup queue.",(typeOf _vehicle)];};
 	};

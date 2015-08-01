@@ -72,7 +72,7 @@ while {true} do {
 					};
 				} else {
 					if (_x isKindOf "AllVehicles") then {
-						if ((diag_tickTime - _deathTime) > VEHICLE_CLEANUP_FREQ) then {
+						if ( !DZAI_vehiclesLocked || ((diag_tickTime - _deathTime) > VEHICLE_CLEANUP_FREQ) ) then {
 							if (({isPlayer _x} count (_x nearEntities [["CAManBase","AllVehicles"],75])) == 0) then {
 								if (_x in DZAI_monitoredObjects) then {
 									{
@@ -84,7 +84,16 @@ while {true} do {
 								};
 								_x call _purgeEH;
 								//diag_log format ["DEBUG :: Deleting object %1 (type: %2).",_x,typeOf _x];
-								deleteVehicle _x;
+								
+								if(DZAI_vehiclesLocked) then
+								{
+									deleteVehicle _x;
+								} else
+								{
+									_x call fnc_veh_ResetEH;
+									_x setVehicleLock "UNLOCKED";
+								};
+
 								_vehiclesCleaned = _vehiclesCleaned + 1;
 							};
 						};
@@ -108,7 +117,16 @@ while {true} do {
 								deleteVehicle _x;
 							};
 						} forEach (crew _x);
-						deleteVehicle _x;
+
+						if(DZAI_vehiclesLocked) then
+						{
+							deleteVehicle _x;
+						} else
+						{
+							_x call fnc_veh_ResetEH;
+							_x setVehicleLock "UNLOCKED";
+						};
+
 						_vehiclesCleaned = _vehiclesCleaned + 1;
 						_nullObjects = _nullObjects + 1;
 					};
