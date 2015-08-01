@@ -1,8 +1,10 @@
 
-private [ "_text1"
-		, "_text2"
+private [ "_playZ_debug_text1"
+		, "_playZ_debug_text2"
 		, "_cursor"
 ];
+
+if (isNil 'debugMonitor') then { debugMonitor = false; };
 
 //Let Zeds know
 [player,4,true,(getPosATL player)] spawn player_alertZombies;
@@ -20,7 +22,7 @@ while {debugMonitor} do
 
 if( ((getPlayerUID player) in AdminList) || ((getPlayerUID player) in ModList) ) then { 
 	
-	_text1 = parseText format ["
+	_playZ_debug_text1 = parseText format ["
 	<t size='0.95' font='Bitstream' align='left' >[%18]</t><t size='0.95' font='Bitstream' align='right'>[FPS: %10]</t><br/>
 	<t size='0.95' font='Bitstream' align='center' color='#FFBF00'>Survived %7 Days</t><br/>
 	<t size='0.95' font='Bitstream' align='left' >Players: %8</t><t size='0.95 'font='Bitstream' align='right'>Within 500m: %11</t><br/>
@@ -64,9 +66,9 @@ if( ((getPlayerUID player) in AdminList) || ((getPlayerUID player) in ModList) )
 
 
 	_cursor = cursorTarget;
-	_text2 = "";
+	_playZ_debug_text2 = "";
 	if(!isNull _cursor) then {
-		_text2 = parseText format ["
+		_playZ_debug_text2 = parseText format ["
 		<t size='0.95' font='Bitstream' align='left' >[%10]</t><t size='0.95' font='Bitstream' align='right'>.</t><br/>
 		<t size='0.95' font='Bitstream' align='center' color='#FFBF00'>%1</t><br/>
 		<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>ObjectID: </t><t size='0.95' font='Bitstream' align='right'>%2</t><br/>
@@ -93,10 +95,10 @@ if( ((getPlayerUID player) in AdminList) || ((getPlayerUID player) in ModList) )
 		/* __ */	0
 		];
 	} else {
-		_text2 = "Point";
+		_playZ_debug_text2 = "Point";
 	};
 
-	hintSilent composeText[_text1, lineBreak, _text2];
+	hintSilent composeText[_playZ_debug_text1, lineBreak, _playZ_debug_text2];
 
 } else {
 
@@ -121,7 +123,7 @@ if( ((getPlayerUID player) in AdminList) || ((getPlayerUID player) in ModList) )
 
 	// You can delete the server website here line (entire line) if you want
 	// You can also delete the entire TeamSpeak IP line if you want
-	hintSilent parseText format ["
+	_playZ_debug_text1 = parseText format ["
 		<t size='1.25' font='Bitstream' align='center' color='#5882FA'>playZ DayZ Mod Server</t><br/>
 		<t size='1.05' font='Bitstream' align='center' color='#5882FA'>dayZ.playZ.rocks</t><br/> 
 		<t size='0.95' font='Bitstream' align='left' color='#FFBF00'></t><t size='0.95 'font='Bitstream' align='right'></t><br/>
@@ -145,7 +147,11 @@ if( ((getPlayerUID player) in AdminList) || ((getPlayerUID player) in ModList) )
 		(round diag_fps),
 		_hours,
 		_minutes
-];
-};
+		];
+
+		_playZ_debug_text2 = "";
+		hintSilent composeText[_playZ_debug_text1, lineBreak, _playZ_debug_text2];
+
+	};
 
 };
