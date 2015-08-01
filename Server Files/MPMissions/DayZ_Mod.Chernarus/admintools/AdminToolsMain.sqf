@@ -2,16 +2,16 @@ private["_EXECgenTools","_EXECweapons","_EXECbackpacks","_EXECgear","_EXECcrates
 
 _EXECgenTools = 'player execVM "admintools\tools\%1"';
 _EXECweapons = '["%1","%2","%3"] execVM "' + EAT_directory + '\weaponkits\WeaponKits.sqf"';
-_EXECbackpacks = '["%1"] execVM "admintools\weaponkits\BackPack.sqf"';
-_EXECgear = 'player execVM "admintools\weaponkits\%1"';
-_EXECcrates = '["%1"] execVM "admintools\crates\%2"';
-/* _EXECadminBuild */ if(isNil "snap_build") then {_EXECadminBuild = '["%1",false,true] execVM "admintools\tools\AdminBuild\adminBuild.sqf"';}else{_EXECadminBuild = '["%1",false,true] execVM "admintools\tools\AdminBuild\adminBuildPro.sqf"';}; // Auto-detect raymix's snap pro
-_EXECbuildings = 'player execVM "admintools\tools\AdminBuild\%1"';
-_EXECskins = '["%1"] execVM "admintools\tools\skinChanger.sqf"';
+_EXECbackpacks = '["%1"] execVM "' + EAT_directory + '\weaponkits\BackPack.sqf"';
+_EXECgear = 'player execVM "' + EAT_directory + '\weaponkits\%1"';
+_EXECcrates = '["%1"] execVM "' + EAT_directory + '\crates\%2"';
+/* _EXECadminBuild */ if(isNil "snap_build") then {_EXECadminBuild = '["%1",false,true] execVM "' + EAT_directory + '\tools\AdminBuild\adminBuild.sqf"';}else{_EXECadminBuild = '["%1",false,true] execVM "' + EAT_directory + '\tools\AdminBuild\adminBuildPro.sqf"';}; // Auto-detect raymix's snap pro
+_EXECbuildings = 'player execVM "' + EAT_directory + '\tools\AdminBuild\%1"';
+_EXECskins = '["%1"] execVM "' + EAT_directory + '\tools\skinChanger.sqf"';
 _EXECdate = 'EAT_SetDateServer = [%1,%2,%3,%4,0]; publicVariableServer "EAT_SetDateServer"';
 _EXECcloud = 'EAT_SetOvercastServer = %1; publicVariableServer "EAT_SetOvercastServer"';
 _EXECfog = 'EAT_SetFogServer = %1; publicVariableServer "EAT_SetFogServer"';
-_EXECtempVeh = '["%1"] execVM "admintools\tools\addtempvehicle.sqf"';
+_EXECtempVeh = '["%1"] execVM "' + EAT_directory + '\tools\addtempvehicle.sqf"';
 
 // Main menu
 if ((getPlayerUID player) in AdminList) then { // Administrators
@@ -73,7 +73,7 @@ VehicleMenu =
 [
 ["",true],	
 	["Graphical Vehicle Menu", [],"", -5, [["expression", format[_EXECgenTools,"addvehicleDialog.sqf"]]], "1", "1"],
-	["Temporary Vehicle Menu >>", [], "#USER:VehicleTempMenu", -5, [["expression", ""]], "1", "1"],
+//	["Temporary Vehicle Menu >>", [], "#USER:VehicleTempMenu", -5, [["expression", ""]], "1", "1"],
 //	["Locked Vehicle Menu >>", [], "#USER:VehiclekeyMenu", -5, [["expression", ""]], "1", "1"],
 	["Vehicle Tools >>", [], "#USER:VehicleTools", -5, [["expression", ""]], "1", "1"],
 	["", [], "", -5, [["expression", ""]], "1", "0"],
@@ -176,19 +176,11 @@ PrimaryWeaponMenu =[
 ["",true],
 	// Entry Format:["Name", [],"", -5, [["expression", format[_EXECweapons,"Gun_Calss_Name","Ammo_Class_Name","Explosive_Round_Class_Name"]]], "1", "1"],
 	// If there is no explosive 203 round then put "nil" in place of "Explosive_Round_Class_Name" 
-	["M4 Holo", [],"", -5, [["expression", format[_EXECweapons,"M4A1_HWS_GL","30Rnd_556x45_Stanag","1Rnd_HE_M203"]]], "1", "1"],
-	["M4 CCO SD", [],"", -5, [["expression", format[_EXECweapons,"M4A1_AIM_SD","30Rnd_556x45_StanagSD","nil"]]], "1", "1"],
-	["M4A1 GL SD Camo", [],"", -5, [["expression", format[_EXECweapons,"M4A1_HWS_GL_SD_Camo","30Rnd_556x45_StanagSD","1Rnd_HE_M203"]]], "1", "1"],
-	["Sa58V ACOG", [],"", -5, [["expression", format[_EXECweapons,"Sa58V_RCO_EP1","30Rnd_762x39_SA58","nil"]]], "1", "1"],
-//	["M16 ACOG", [],"", -5, [["expression", format[_EXECweapons,"m16a4_acg","30Rnd_556x45_Stanag","nil"]]], "1", "1"],
-	["Aks Kobra", [],"", -5, [["expression", format[_EXECweapons,"AKS_74_kobra","30Rnd_545x39_AK","nil"]]], "1", "1"],
-	["FN FAL", [],"", -5, [["expression", format[_EXECweapons,"FN_FAL","20Rnd_762x51_FNFAL","nil"]]], "1", "1"],
-//	["Pecheneg 50 cal", [],"", -5, [["expression", format[_EXECweapons,"Pecheneg_DZ","100Rnd_762x54_PK","nil"]]], "1", "1"],
-	["Mk 48", [],"", -5, [["expression", format[_EXECweapons,"Mk_48_DES_EP1","100Rnd_762x51_M240","nil"]]], "1", "1"],
-	["AS50", [],"", -5, [["expression", format[_EXECweapons,"BAF_AS50_scoped","5Rnd_127x99_AS50","nil"]]], "1", "1"],
-	[".338 LAPUA", [],"", -5, [["expression", format[_EXECweapons,"BAF_LRR_scoped","5Rnd_86x70_L115A1","nil"]]], "1", "1"],
-	["DMR", [],"", -5, [["expression", format[_EXECweapons,"DMR","20Rnd_762x51_DMR","nil"]]], "1", "1"],
-	["M14 Aim", [],"", -5, [["expression", format[_EXECweapons,"M14_EP1","20Rnd_762x51_DMR","nil"]]], "1", "1"],
+	["M4 CCO SD", [],"", -5, [["expression", format[_EXECweapons,"M4A1_CCO_SD_DZ","30Rnd_556x45_StanagSD","nil"]]], "1", "1"],
+	["M4 CCO SD GL", [],"", -5, [["expression", format[_EXECweapons,"M4A1_GL_CCO_SD_DZ","30Rnd_556x45_StanagSD","1Rnd_HE_M203"]]], "1", "1"],
+	["M14 Aim", [],"", -5, [["expression", format[_EXECweapons,"M14_CCO_DZ","20Rnd_762x51_DMR","nil"]]], "1", "1"],
+	["DMR Camo", [],"", -5, [["expression", format[_EXECweapons,"DMR_Gh_DZ","20Rnd_762x51_DMR","nil"]]], "1", "1"],
+	["Mk 48 CCO", [],"", -5, [["expression", format[_EXECweapons,"Mk48_CCO_DZ","100Rnd_762x51_M240","nil"]]], "1", "1"],
 	["", [], "", -5, [["expression", ""]], "1", "0"],
 		["Secondary Weapons", [], "#USER:SecondaryWeaponMenu", -5, [["expression", ""]], "1", "1"],
 		["Main Menu", [20], "#USER:epochmenustart", -5, [["expression", ""]], "1", "1"]
@@ -197,12 +189,17 @@ PrimaryWeaponMenu =[
 // Sidearm weapons like the Makarov
 SecondaryWeaponMenu =[
 ["",true],
-	["PDW SD", [],"", -5, [["expression", format[_EXECweapons,"UZI_SD_EP1","30Rnd_9x19_UZI_SD"]]], "1", "1"],
-	["PDW", [],"", -5, [["expression", format[_EXECweapons,"UZI_EP1","30Rnd_9x19_UZI"]]], "1", "1"],
-	["Glock", [],"", -5, [["expression", format[_EXECweapons,"glock17_EP1","17Rnd_9x19_glock17"]]], "1", "1"],
-	["M9 SD", [],"", -5, [["expression", format[_EXECweapons,"M9SD","15Rnd_9x19_M9SD"]]], "1", "1"],
-	["Makarov", [],"", -5, [["expression", format[_EXECweapons,"Makarov","8Rnd_9x18_Makarov"]]], "1", "1"],
-	["Makarov SD", [],"", -5, [["expression", format[_EXECweapons,"MakarovSD","8Rnd_9x18_Makarov"]]], "1", "1"],
+	["PDW", [],"", -5, [["expression", format[_EXECweapons,"PDW_DZ","30Rnd_9x19_UZI"]]], "1", "1"],
+	["M9", [],"", -5, [["expression", format[_EXECweapons,"M9_DZ","15Rnd_9x19_M9"]]], "1", "1"],
+	["M9 SD", [],"", -5, [["expression", format[_EXECweapons,"M9_SD_DZ","15Rnd_9x19_M9SD"]]], "1", "1"],
+	["Glock", [],"", -5, [["expression", format[_EXECweapons,"G17_DZ","17Rnd_9x19_glock17"]]], "1", "1"],
+	["Glock SD", [],"", -5, [["expression", format[_EXECweapons,"G17_SD_DZ","17Rnd_9x19_glock17SD"]]], "1", "1"],
+	["Glock Flashlight", [],"", -5, [["expression", format[_EXECweapons,"G17_FL_DZ","17Rnd_9x19_glock17"]]], "1", "1"],
+	["Glock SD Flashlight", [],"", -5, [["expression", format[_EXECweapons,"G17_SD_FL_DZ","17Rnd_9x19_glock17SD"]]], "1", "1"],
+	["Makarov", [],"", -5, [["expression", format[_EXECweapons,"Makarov_DZ","8Rnd_9x18_Makarov"]]], "1", "1"],	
+	["Makarov SD", [],"", -5, [["expression", format[_EXECweapons,"Makarov_SD_DZ","8Rnd_9x18_MakarovSD"]]], "1", "1"],
+	["M1911", [],"", -5, [["expression", format[_EXECweapons,"M1911_DZ","7Rnd_45ACP_1911"]]], "1", "1"],
+	["Revolver", [],"", -5, [["expression", format[_EXECweapons,"Revolver_DZ","6Rnd_45ACP"]]], "1", "1"],
 		["Gear/Items", [], "#USER:GearMenu", -5, [["expression", ""]], "1", "1"],
 		["Main Menu", [20], "#USER:epochmenustart", -5, [["expression", ""]], "1", "1"]
 ];
@@ -212,8 +209,8 @@ GearMenu=[
 ["",true],
 	["ToolBelt gear", [],"", -5, [["expression", format[_EXECgear,"toolBeltItems.sqf"]]], "1", "1"],
 	["Medical gear", [],"", -5, [["expression", format[_EXECgear,"medical.sqf"]]], "1", "1"],
-	["Alice Pack", [],"", -5, [["expression", format[_EXECbackpacks,"DZ_ALICE_Pack_EP1"]]], "1", "1"],
-	["Large Gun Bag", [],"", -5, [["expression", format[_EXECbackpacks,"DZ_LargeGunBag_EP1"]]], "1", "1"],
+	["Czech Back Pack", [],"", -5, [["expression", format[_EXECbackpacks,"DZ_CivilBackpack_EP1"]]], "1", "1"],
+//	["Large Gun Bag", [],"", -5, [["expression", format[_EXECbackpacks,"DZ_LargeGunBag_EP1"]]], "1", "1"],
 	["Delete all gear", [],"", -5, [["expression", format[_EXECgear,"removeGear.sqf"]]], "1", "1"],
 		["", [], "", -5, [["expression", ""]], "1", "0"],
 		["Main Menu", [20], "#USER:epochmenustart", -5, [["expression", ""]], "1", "1"]

@@ -1,8 +1,8 @@
 // Toolbelt items required to build
-_GearAdd = (vehicle player);
-_GearAdd addWeapon 'ItemHatchet_DZE';
-_GearAdd addWeapon 'ItemKnife';
-_GearAdd addWeapon 'ItemMatchbox_DZE';
-_GearAdd addWeapon 'ItemEtool';
-_GearAdd addWeapon 'ItemToolbox';
-_GearAdd addWeapon 'ItemCrowbar';
+_player = (vehicle player);
+_player addWeapon 'ItemHatchet_DZE';
+_player addWeapon 'ItemKnife';
+_player addWeapon 'ItemMatchbox_DZE';
+_player addWeapon 'ItemEtool';
+_player addWeapon 'ItemToolbox';
+_player addWeapon 'ItemCrowbar';

@@ -1,6 +1,6 @@
-_GearRemove = (vehicle player);
-removeAllWeapons _GearRemove;
-removeAllItems _GearRemove;
-removebackpack _GearRemove;
+_player = (vehicle player);
+removeAllWeapons _player;
+removeAllItems _player;
+removebackpack _player;
 
 cutText ["Gear deleted!", "PLAIN"];

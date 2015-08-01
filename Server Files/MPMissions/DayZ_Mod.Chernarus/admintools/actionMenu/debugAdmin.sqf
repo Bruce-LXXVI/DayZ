@@ -4,7 +4,7 @@ if (isNil 'debugMonitor') then {
 	_nill = execvm "custom\debug_monitor.sqf";
 } else {
 	debugMonitor = !debugMonitor;
-	hintSilent '';
+	hintSilent "";
 	_nill = execvm "custom\debug_monitor.sqf";
 };
 

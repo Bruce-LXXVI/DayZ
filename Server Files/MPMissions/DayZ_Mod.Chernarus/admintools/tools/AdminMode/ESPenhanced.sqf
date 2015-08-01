@@ -25,7 +25,7 @@ if (isNil "AddLockedVehiclesToMap") then {AddLockedVehiclesToMap = true;};
 if (isNil "AddPlotPoleToMap") then {AddPlotPoleToMap = false;};
 if (isNil "AddStorageToMap") then {AddStorageToMap = false;};
 if (isNil "AddBuildablesToMap") then {AddBuildablesToMap = false;};
-if (isNil "AddCrashesToMap") then {AddCrashesToMap = false;};
+if (isNil "AddCrashesToMap") then {AddCrashesToMap = true;};
 // END OF CONFIG
 
 
@@ -99,8 +99,8 @@ F5Menu =
 		["",true],
 		["Toggle options:(current state)", [-1], "", -5, [["expression", ""]], "1", "0"],
 		[format["Show Dead Bodies: %1",AddDeadPlayersToMap], [2], "", -5, [["expression", "AddDeadPlayersToMap = !AddDeadPlayersToMap;changed = true;"]], "1", "1"],
-		[format["Show Epoch Buildables: %1",AddBuildablesToMap], [4], "", -5, [["expression", "AddBuildablesToMap = !AddBuildablesToMap;changed = true;"]], "1", "1"],
-		[format["Show Plot Poles: %1",AddPlotPoleToMap], [3], "", -5, [["expression", "AddPlotPoleToMap = !AddPlotPoleToMap;changed = true;"]], "1", "1"],
+		[format["Show Buildables: %1",AddBuildablesToMap], [4], "", -5, [["expression", "AddBuildablesToMap = !AddBuildablesToMap;changed = true;"]], "1", "1"],
+//		[format["Show Plot Poles: %1",AddPlotPoleToMap], [3], "", -5, [["expression", "AddPlotPoleToMap = !AddPlotPoleToMap;changed = true;"]], "1", "1"],
 		[format["Show Player Storage: %1",AddStorageToMap], [4], "", -5, [["expression", "AddStorageToMap = !AddStorageToMap;changed = true;"]], "1", "1"],
 		[format["Show Crash Sites: %1",AddCrashesToMap], [5], "", -5, [["expression", "AddCrashesToMap = !AddCrashesToMap;changed = true;"]], "1", "1"],
 		[format["Show Zombies: %1",AddZombieToMap], [6], "", -5, [["expression", "AddZombieToMap = !AddZombieToMap;changed = true;"]], "1", "1"],

@@ -1,6 +1,15 @@
 private ["_gun","_ammo","_HEammo","_gear","_gunOne","_gunTwo","_player"];
 //_handGuns = ["UZI_SD_EP1","glock17_EP1","revolver_EP1","revolver_gold_EP1","UZI_EP1","Sa61_EP1","M9","M9SD","Colt1911","Makarov","MakarovSD"];
-_handGuns = ["glock17_EP1","revolver_EP1","UZI_EP1","Sa61_EP1","M9","M9SD","Colt1911","Makarov","MakarovSD"];
+//_handGuns = ["glock17_EP1","revolver_EP1","UZI_EP1","Sa61_EP1","M9","M9SD","Colt1911","Makarov","MakarovSD"];
+_handGuns = [
+"G17_DZ","G17_FL_DZ","G17_SD_DZ","G17_SD_FL_DZ",
+"M1911_DZ",
+"M9_DZ","M9_SD_DZ",
+"Makarov_DZ","Makarov_SD_DZ",
+"PDW_DZ",
+"Revolver_DZ"
+];
+
 _gun = _this select 0;
 _ammo = _this select 1;
 _HEammo = _this select 2;

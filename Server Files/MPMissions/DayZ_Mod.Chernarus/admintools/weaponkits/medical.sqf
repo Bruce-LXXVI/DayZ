@@ -1,11 +1,11 @@
 // Medical supplies and one food/drink
-_GearAdd = (vehicle player);
-_GearAdd addMagazine 'ItemMorphine';
-_GearAdd addMagazine 'ItemEpinephrine';
-_GearAdd addMagazine 'ItemAntibiotic';
-_GearAdd addMagazine 'ItemBloodbag';
-_GearAdd addMagazine 'ItemPainkiller';
-_GearAdd addMagazine 'ItemSodaPepsi';
-_GearAdd addMagazine 'FoodSteakCooked';
-_GearAdd addMagazine 'ItemBandage';
-_GearAdd addMagazine 'ItemBandage';
+_player = (vehicle player);
+_player addMagazine 'ItemMorphine';
+_player addMagazine 'ItemEpinephrine';
+_player addMagazine 'ItemAntibiotic';
+_player addMagazine 'ItemBloodbag';
+_player addMagazine 'ItemPainkiller';
+_player addMagazine 'ItemSodaPepsi';
+_player addMagazine 'FoodSteakCooked';
+_player addMagazine 'ItemBandage';
+_player addMagazine 'ItemBandage';
