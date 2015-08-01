@@ -47,15 +47,15 @@ DZAI_useHealthSystem = true;
 
 //Minimum and maximum AI blood level to spawn each unit with. Each individual unit will have a randomized blood level within this range. Upper limit: 12000 blood (Default: [10000,12000])
 //Note: No effect if DZAI_useHealthSystem is false
-DZAI_unitBloodLevel = [10000,12000];
+DZAI_unitBloodLevel = [6000,8000];
 
 //Amount of blood restored from a full self-heal. One-third of the total amount is restored 3 times every 3 seconds. Note: Applies to infantry-type AI units. (Default: 6000)
 //Note: No effect if DZAI_useHealthSystem is false
-DZAI_unitHealAmount = 6000;
+DZAI_unitHealAmount = 4000;
 
 //Below this blood level, AI may decide to heal themselves for amount specified by DZAI_unitHealAmount. Healing requires 9 seconds to fully complete and can be interrupted by knocking the unit unconscious. (Default: 5000)
 //Note: No effect if DZAI_useHealthSystem is false
-DZAI_lowBloodLevel = 5000;
+DZAI_lowBloodLevel = 3000;
 
 //Enable or disable zombie attraction to AI weapon sounds. No effect if DZAI_zombieEnemy is set to false. Enabling this option may impact server performance as a script is run for each AI bullet fired.
 //Note: AI cannot be attacked or damaged by zombies.(Default: false)		
@@ -105,7 +105,7 @@ DZAI_respawnTimeMin = 300;
 DZAI_respawnTimeMax = 600;
 
 //Time to allow spawned AI units to exist in seconds before being despawned when no players are present in a trigger area. Applies to both static AI and custom spawned AI (Default: 120)										
-DZAI_despawnWait = 120;										
+DZAI_despawnWait = 300;										
 
 //Respawn limits. Set to -1 for unlimited respawns. (Default: -1 for each).
 DZAI_respawnLimit0 = -1; 	//Respawn limit for low level AI found in low-value areas (Default: -1)
@@ -143,7 +143,7 @@ DZAI_heliReinforceChance = 0.50;
 DZAI_dynAreaBlacklist = [];
 
 //Time to wait before despawning all AI units in dynamic spawn area when no players are present. (Default: 120)
-DZAI_dynDespawnWait = 120;
+DZAI_dynDespawnWait = 300;
 
 //Enable or disable dynamic spawn-free zones of 600m radius around player spawn areas. (Default: false)
 DZAI_freshSpawnSafeArea = true;
@@ -156,7 +156,7 @@ DZAI_freshSpawnSafeArea = true;
 DZAI_maxRandomSpawns = 0;
 
 //Time to wait before despawning all AI units in random spawn area when no players are present. (Default: 120)
-DZAI_randDespawnWait = 120;
+DZAI_randDespawnWait = 300;
 
 //Array of area blacklist markers. Players within marker areas will not be targeted for random AI spawns (Example: ["BlacklistArea1","BlacklistArea2","BlacklistArea3"])
 //Epoch: DZAI will automatically set up 200m-radius blacklist areas around each trader area.
@@ -206,15 +206,23 @@ DZAI_airWeapons = [
 //Global maximum number of active AI land vehicle patrols. Set at 0 to disable (Default: 0).	
 DZAI_maxLandPatrols = 2;
 
+DZAI_vehiclesLocked = false;
+
 //Set minimum and maximum wait time in seconds to respawn an AI vehicle patrol after vehicle is destroyed or disabled. (Default: Min 600, Max 900).
 DZAI_respawnTMinL = 600;
 DZAI_respawnTMaxL = 900;
 
 //Classnames of land vehicle types to use, with the maximum amount of each type to spawn.
 DZAI_vehList = [
-	["UAZ_Unarmed_TK_EP1",2],
-	["SUV_DZ",2],
-	["Pickup_PK_INS",2]
+	["UAZ_Unarmed_TK_EP1",1],
+	["SUV_DZ",1],
+	["Pickup_PK_INS",1],
+	["SkodaBlue",1],
+	["S1203_TK_CIV_EP1",1],
+	["Volha_2_TK_CIV_EP1",1],
+	["BAF_Offroad_W",1],
+	["HMMWV_DZ",1],
+	["car_hatchback",1]
 ];
 
 //Difficulty level of land vehicle patrol units. Difficulty level also affects unit loadout and loot. Possible values: 0 to 3 (Default: 3)
