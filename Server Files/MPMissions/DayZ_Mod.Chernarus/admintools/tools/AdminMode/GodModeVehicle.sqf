@@ -38,8 +38,11 @@ while{alive (vehicle player) && vehicleGod2} do
 
 	// Disable god mode for a vehicle only if it was on
 	if(!isNil "_playerVehicle") then {
-		_playerVehicle removeAllEventHandlers "handleDamage";
-		_playerVehicle addEventHandler ["handleDamage", {_this select 2}];
+
+//		_playerVehicle removeAllEventHandlers "handleDamage";
+//		_playerVehicle addEventHandler ["handleDamage", {_this select 2}];
+
+		_playerVehicle call fnc_veh_ResetEH;
 		_playerVehicle allowDamage true;
 		
 		fnc_usec_damageVehicle = compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\fn_damageHandlerVehicle.sqf";
@@ -51,13 +54,16 @@ while{alive (vehicle player) && vehicleGod2} do
 
 // Disable god mode for a vehicle only if it was on
 if(!isNil "_playerVehicle") then {
-    _playerVehicle removeAllEventHandlers "handleDamage";
-    _playerVehicle addEventHandler ["handleDamage", {_this select 2}];
-    _playerVehicle allowDamage true;
 
-    fnc_usec_damageVehicle = compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\fn_damageHandlerVehicle.sqf";
-    vehicle_handleDamage = compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\vehicle_handleDamage.sqf";
-    vehicle_handleKilled = compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\vehicle_handleKilled.sqf";
+//	_playerVehicle removeAllEventHandlers "handleDamage";
+//	_playerVehicle addEventHandler ["handleDamage", {_this select 2}];
+
+	_playerVehicle call fnc_veh_ResetEH;
+	_playerVehicle allowDamage true;
+
+//	fnc_usec_damageVehicle = compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\fn_damageHandlerVehicle.sqf";
+	vehicle_handleDamage = compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\vehicle_handleDamage.sqf";
+	vehicle_handleKilled = compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\vehicle_handleKilled.sqf";
 };
 	// Tool use logger
 	if(logMajorTool) then {

@@ -6,11 +6,10 @@
 */
 
 "Server Rules" hintC parseText format ["
-<t size='1.1' shadow='1'align='left' color='#FFFFFF'>No basing in high loot areas</t><br/>
+<t size='1.1' shadow='1'align='left' color='#FFFFFF'>Server News</t><br/>
 <t size='.7' shadow='1'align='left' color='#FFFFFF'></t><br/>
-<t size='1.1' shadow='1'align='left' color='#FFFFFF'></t><br/>
-<t size='.7' shadow='1'align='left' color='#FFFFFF'></t><br/>
-<t size='1.1' shadow='1'align='left' color='#FFFFFF'></t><br/>
+<t size='1.1' shadow='1'align='left' color='#FFFFFF'>AI (Land-)Vehicles can be taken by killing all AI of the Group.</t><br/>
+<t size='1.1' shadow='1'align='left' color='#FFFFFF'>The Vehicle will be persistent.</t><br/>
 <t size='.7' shadow='1'align='left' color='#FFFFFF'></t><br/>
 <t size='1.1' shadow='1'align='left' color='#FFFFFF'>No mic in side chat</t><br/>
 <t size='.7' shadow='1'align='left' color='#FFFFFF'></t><br/>
