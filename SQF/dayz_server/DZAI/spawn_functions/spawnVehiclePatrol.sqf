@@ -85,8 +85,9 @@ _vehicle allowCrewInImmobile (!_isAirVehicle);
 
 _vehicle setVehicleLock "LOCKED";
 
-if( isNil "_objectUID" ) then {_objectUID = format ["%1%2%3%4", abs round((random 90)+10), abs round((random 900)+100), abs round((random 900)+100), abs round((random 900)+100)];};
+if( isNil "_objectUID" ) then {_objectUID = format ["9%1%2%3", abs round((random 90)+10), abs round((random 900)+100), abs round((random 900)+100)];};
 _vehicle setVariable [ "ObjectUID", _objectUID, true ];
+_vehicle setVariable [ "ObjectID", "0", true ];
 
 clearWeaponCargoGlobal _vehicle;
 clearMagazineCargoGlobal _vehicle;

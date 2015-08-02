@@ -85,13 +85,12 @@ while {true} do {
 								_x call _purgeEH;
 								//diag_log format ["DEBUG :: Deleting object %1 (type: %2).",_x,typeOf _x];
 								
-								if(DZAI_vehiclesLocked) then
+								if(locked _x) then
 								{
 									deleteVehicle _x;
 								} else
 								{
-									_x call fnc_veh_ResetEH;
-									_x setVehicleLock "UNLOCKED";
+									diag_log format ["[DZAI]: Vehicle %1 is unlocked.", _x];
 								};
 
 								_vehiclesCleaned = _vehiclesCleaned + 1;
