@@ -280,9 +280,9 @@ while {true} do {
 
 		_dir = _newVehWorldspace select 0;
 		_pos = _newVehWorldspace select 1;
-		_ownerID = 0;
+		_ownerID = "0";
 		_damage = 0;
-		_fuel = 0.5;
+		_fuel = (round (random 40) + 5) / 100;
 
 
 		// Gründe für Nicht-Spawn?
@@ -310,7 +310,7 @@ while {true} do {
 			_newVeh setDamage _damage;
 			_newVeh setVariable ["lastUpdate", time];
 			_newVeh setVariable ["ObjectUID", _objectUID, true];
-			_newVeh setVariable ["ObjectID", _objectUID, true];
+			_newVeh setVariable ["ObjectID", "0", true];
 			_newVeh setVariable ["CharacterID", _ownerID, true];
 			_newVeh setVehicleVarName _objectUID;
 
@@ -319,7 +319,7 @@ while {true} do {
 
 
 			//Dont add inventory for traps.
-			if( !(_newVeh isKindOf "TrapItems") AND !(_newVeh iskindof "DZ_buildables") AND !PLAYZ_staticSpawnAlwaysEmpty ) then {
+			if( !(_newVeh isKindOf "TrapItems") && !(_newVeh iskindof "DZ_buildables") && !PLAYZ_staticSpawnAlwaysEmpty ) then {
 				_cargo = _inventory;
 				clearWeaponCargoGlobal  _newVeh;
 				clearMagazineCargoGlobal  _newVeh;
@@ -342,9 +342,12 @@ while {true} do {
 						};
 					} forEach _magItemTypes;
 				} forEach _cargo;
+			} else 
+			{
+				_inventory=[[[],[]],[[],[]],[[],[]]];
 			};
-		
-		
+
+
 			{
 				_selection = _x select 0;
 				_dam = _x select 1;
@@ -360,10 +363,10 @@ while {true} do {
 			diag_log format ["%1 SPAWNING ===> veh=%2 | type=%6 | damage=%3 | pos=%4 | posGps=%5", PLAYZ_logname, _newVeh, _damage, getPosASL _newVeh, (mapGridPosition getPos _newVeh), _type];
 			diag_log format ["%1 objectID=%2 | objectUID=%3", PLAYZ_logname, _newVeh getVariable ["ObjectID","0"], _objectUID];
 
-			dayz_serverObjectMonitor set [count dayz_serverObjectMonitor,_newVeh];
-			[_newVeh, _type] spawn server_updateObject;
+			//dayz_serverObjectMonitor set [count dayz_serverObjectMonitor,_newVeh];
+			//[_newVeh, _type] spawn server_updateObject;
 
-			PVDZ_obj_Publish = [_ownerID, _newVeh, [round getDir _newVeh, getPosATL _newVeh], _inventory, _hitpoints, _objectUID];
+			PVDZ_obj_Publish = [_ownerID, _newVeh, [round getDir _newVeh, getPosATL _newVeh], _inventory, _hitpoints, _objectUID, damage _newVeh, fuel _newVeh];
 			publicVariableServer "PVDZ_obj_Publish";
 			diag_log [diag_ticktime, PLAYZ_logname, " New Networked object, request to save to hive. PVDZ_obj_Publish:", PVDZ_obj_Publish];
 

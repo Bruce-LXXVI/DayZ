@@ -57,7 +57,7 @@ if ((getPlayerUID player) in AdminAndModList) then {
 			if (_veh != vehicle player) then
 			{
 				_veh removeAction _idx;
-				_idx = -1;      
+				_idx = -1;
 			};
 			Sleep 2;
 		};

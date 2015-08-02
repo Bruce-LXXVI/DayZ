@@ -80,7 +80,10 @@ if (isServer) then {
 	//[true] execVM "busroute\init_bus.sqf";
 
 	// playZ Scheduler
-	execVM "playZ_scheduler\playZ_server_monitor.sqf"
+	execVM "playZ_scheduler\playZ_server_monitor.sqf";
+
+	//Custom mapaddons
+	[] execVM "mapaddons\test.sqf";
 
 	execVM "\z\addons\dayz_server\system\server_monitor.sqf";
 	//Must be global spawned, So players dont fall thought buildings (might be best to spilt these to important, not important)
@@ -126,6 +129,4 @@ if (!isDedicated) then {
 
 [] execVM "admintools\Activate.sqf"; // Epoch admin tools
 
-//Custom mapaddons
-[] execVM "mapaddons\test.sqf";
 
