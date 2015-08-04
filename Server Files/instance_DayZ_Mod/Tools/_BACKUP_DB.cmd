@@ -1,14 +1,12 @@
 @ECHO OFF
-:: $Id: wssbackup.cmd 48 2009-07-13 11:54:21Z rr@nci.ch $
+SET MYDIR=%~dp0
+call "%MYDIR%\_SET_RCON_variables.cmd"
 
 SET DBUSER="backup"
 SET DBPASS="xxxxxxx"
 SET DBNAME=dayzmod
-SET DSTPATH=..\DB-Backup
+SET DSTPATH=..\Backup
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-:: Setzt die TIMESTAMP im Format YYYY-MM-DD_HHMMSS
-for /f %%f in ('c:\bin\date.exe +%%Y-%%m-%%d_%%H%%M%%S') do set TIMESTAMP=%%f
 
 SET BACKUPFILE=%DSTPATH%\DB_%DBNAME%_%TIMESTAMP%
 

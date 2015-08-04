@@ -3,6 +3,13 @@ SET MYDIR=%~dp0
 call "%MYDIR%\_SET_RCON_variables.cmd"
 
 
+SET BACKUPDIR="%MYDIR%\..\Backup\%TIMESTAMP%\"
+mkdir %BACKUPDIR%
+move "%MYDIR%\..\*.rpt" %BACKUPDIR%
+move "%MYDIR%\..\*.log" %BACKUPDIR%
+move "%MYDIR%\..\BattlEye\*.log" %BACKUPDIR%
+
+
 %A2OADRIVE%
 cd "%A2OADIR%\"
 
