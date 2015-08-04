@@ -30,4 +30,4 @@
 //Set to 1 to log only for the sake of people using older dayz versions, will set to 5 or remove at a later time.
 1 R_M136_AT
 1 CZ_VestPouch_EP1
-1 "" !(^z_) !=zZombie_Base !=Sheep !=Hen !(^Cow) !=WildBoar !=Rabbit
+1 "" !(^z_) !=zZombie_Base !=Goat !=Sheep !=Hen !(^Cow) !=WildBoar !=Rabbit !=Blood_Trail_DZ !=WeaponHolder
