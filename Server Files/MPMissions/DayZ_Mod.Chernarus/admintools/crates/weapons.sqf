@@ -34,9 +34,9 @@ clearMagazineCargoGlobal _spawnCrate;
 clearBackpackCargoGlobal _spawnCrate;
 
 // Add gear
-{_spawnCrate addWeaponCargoGlobal _x;}forEach weaponCrateWeapons;
-{_spawnCrate addMagazineCargoGlobal _x;}forEach weaponCrateMagazines;
-_spawnCrate addBackpackCargoGlobal ["DZ_LargeGunBag_EP1", 1];
+{_spawnCrate addWeaponCargoGlobal _x;} forEach weaponCrateWeapons;
+{_spawnCrate addMagazineCargoGlobal _x;} forEach weaponCrateMagazines;
+_spawnCrate addBackpackCargoGlobal ["DZ_CivilBackpack_EP1", 1];
 
 // Send text to spawner only
 titleText [format[_crateName + " spawned!"],"PLAIN DOWN"]; titleFadeOut 4;
@@ -48,9 +48,7 @@ delaymenu =
 	["",true],
 	["Select delay", [-1], "", -5, [["expression", ""]], "1", "0"],
 	["", [-1], "", -5, [["expression", ""]], "1", "0"],
-	["30 seconds", [], "", -5, [["expression", "selectDelay=30;"]], "1", "1"],
 	["1 min", [], "", -5, [["expression", "selectDelay=60;"]], "1", "1"],
-	["3 min", [], "", -5, [["expression", "selectDelay=180;"]], "1", "1"],
 	["5 min", [], "", -5, [["expression", "selectDelay=300;"]], "1", "1"],
 	["10 min", [], "", -5, [["expression", "selectDelay=600;"]], "1", "1"],
 	["30 min", [], "", -5, [["expression", "selectDelay=1800;"]], "1", "1"],
