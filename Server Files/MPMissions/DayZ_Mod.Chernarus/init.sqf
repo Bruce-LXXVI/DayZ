@@ -83,7 +83,7 @@ if (isServer) then {
 	execVM "playZ_scheduler\playZ_server_monitor.sqf";
 
 	//Custom mapaddons
-	[] execVM "mapaddons\test.sqf";
+	[] execVM "mapaddons\init.sqf";
 
 	execVM "\z\addons\dayz_server\system\server_monitor.sqf";
 	//Must be global spawned, So players dont fall thought buildings (might be best to spilt these to important, not important)
