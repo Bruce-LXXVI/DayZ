@@ -4,11 +4,13 @@
 PLAYZ_vehicle_spawns=
 [
 
+/*
 [
 "41787451", "Ikarus", [223,[6288.416, 7834.3521,0]],
 [[[],[]],[["ItemSodaPeppsy"],[3]],[[],[]]],
 [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]
 ],
+*/
 
 [
 "41787452", "AH6X_DZ", [108,[6350, 7813,0]],
@@ -17,7 +19,7 @@ PLAYZ_vehicle_spawns=
 ],
 
 ["30728533", "UAZ_Unarmed_TK_EP1", [0,[12140.168, 12622.802,0]], [[[], []], [["20Rnd_762x51_DMR"], [5]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
-["26883451", "UAZ_Unarmed_TK_CIV_EP1", [0,[6279.4966, 7810.3691,0]], [[[], []], [["20Rnd_762x51_DMR"], [5]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
+["26883451", "tractorOld", [360,[6357.04, 7778.56,0]], [], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
 ["42231659", "UAZ_Unarmed_UN_EP1", [45,[6865.2432,2481.6943,0]], [[[], []], [["30Rnd_556x45_StanagSD"], [5]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
 ["30507947", "UAZ_RU", [157,[3693.0386, 5969.1489,0]], [[[], []], [["HandGrenade_west"], [2]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
 ["37699964", "UAZ_Unarmed_TK_CIV_EP1", [223,[4817.6572, 2556.5034,0]], [[[], []], [["20Rnd_762x51_DMR"], [5]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
@@ -62,7 +64,7 @@ PLAYZ_vehicle_spawns=
 ["36741707", "Ikarus", [245,[4580.3203,4515.9282,0]], [[[], []], [["PartWheel", "ItemSodaPeppsy"], [1, 3]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
 ["45939219", "Ikarus_TK_CIV_EP1", [333,[6040.0923,7806.5439,0]], [[[], []], [["ItemWatch", "ItemSodaPeppsy"], [1, 3]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
 ["19470979", "Ikarus", [76,[10314.745, 2147.5374,0]], [[[], []], [["PartWheel", "ItemSodaPeppsy"], [1, 3]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
-["59537240", "Ikarus_TK_CIV_EP1", [59,[6705.8887, 2991.9358,0]], [[[], []], [["ItemWatch", "ItemSodaPeppsy"], [1, 3]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
+["59537240", "Ikarus_TK_CIV_EP1", [318,[6576.03, 2856.83,0]], [[[], []], [["ItemWatch", "ItemSodaPeppsy"], [1, 3]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
 ["39273268", "Tractor", [195,[9681.8213,8947.2354,0]], [[[], []], [["ItemWire", "ItemJerrycan"], [1, 1]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
 ["17754622", "Tractor", [262,[3825.1318,8941.4873,0]], [[[], []], [["ItemWire", "ItemJerrycan"], [1, 1]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
 ["70953310", "Tractor", [19,[11246.52, 7534.7954,0]], [[[], []], [["ItemWire", "ItemJerrycan"], [1, 1]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
@@ -112,7 +114,7 @@ PLAYZ_vehicle_spawns=
 ["2001241", "SUV_DZ", [356,[9157.16,11019.5,0]], [[[], []], [["Pipebomb"], [1]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
 ["30728145", "UAZ_Unarmed_TK_EP1", [128,[6406.39,6555.3,0]], [[[], []], [["20Rnd_762x51_DMR"], [5]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
 ["1775294", "Tractor", [234,[5210.2,4204.39,0]], [[[], []], [["ItemWire", "ItemJerrycan"], [1, 1]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
-["32123933", "AN2_DZ", [79,[5149.6,2200.11,0]], [], []],
+["32123933", "AN2_2_DZ", [79,[5149.6,2200.11,0]], [], []],
 ["53502354", "TT650_Ins", [225,[9249.13,4993.38,0]], [[[], []], [["ItemJerrycan"], [1]], [[], []]], [["motor",1]]]
 
 

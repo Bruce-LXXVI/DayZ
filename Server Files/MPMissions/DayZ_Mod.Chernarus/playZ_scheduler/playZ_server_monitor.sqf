@@ -321,9 +321,9 @@ while {true} do {
 			//Dont add inventory for traps.
 			if( !(_newVeh isKindOf "TrapItems") && !(_newVeh iskindof "DZ_buildables") && !PLAYZ_staticSpawnAlwaysEmpty ) then {
 				_cargo = _inventory;
-				clearWeaponCargoGlobal  _newVeh;
-				clearMagazineCargoGlobal  _newVeh;
-				clearBackpackCargoGlobal  _newVeh;	 
+				clearWeaponCargoGlobal _newVeh;
+				clearMagazineCargoGlobal _newVeh;
+				clearBackpackCargoGlobal _newVeh;
 				_config = ["CfgWeapons", "CfgMagazines", "CfgVehicles" ];
 				{
 					_magItemTypes = _x select 0;
@@ -344,6 +344,9 @@ while {true} do {
 				} forEach _cargo;
 			} else 
 			{
+				clearWeaponCargoGlobal _newVeh;
+				clearMagazineCargoGlobal _newVeh;
+				clearBackpackCargoGlobal _newVeh;
 				_inventory=[[[],[]],[[],[]],[[],[]]];
 			};
 

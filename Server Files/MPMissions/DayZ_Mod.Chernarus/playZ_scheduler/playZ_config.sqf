@@ -54,7 +54,7 @@ PLAYZ_enableStaticSpawns=true;
 //PLAYZ_respawnMissingVehicleAfter=60; // NICHT IMPLEMENTIERT //
 
 // Static spawn nur, wenn anderes Fahrzeug innerhalb x Meter
-PLAYZ_staticSpawnOtherVehicleDistance=15;
+PLAYZ_staticSpawnOtherVehicleDistance=25;
 
 // Static spawn Fahrzeuge sind immer ohne loot
 PLAYZ_staticSpawnAlwaysEmpty=true;
