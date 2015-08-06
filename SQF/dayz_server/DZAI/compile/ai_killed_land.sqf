@@ -13,6 +13,8 @@ if (_groupIsEmpty) then {
 		{
 			_vehicle call fnc_veh_ResetEH;
 			_vehicle setVehicleLock "UNLOCKED";
+			_vehicle setFuel (round (random 70) + 10) / 100;
+
 			diag_log format ["[DZAI]: Vehicle %1 is now unlocked.", _vehicle];
 			[_vehicle] spawn {
 				private ["_vehicle", "_hitpoints", "_damage", "_array", "_allFixed", "_hit", "_selection", "_inventory"];
@@ -43,7 +45,7 @@ if (_groupIsEmpty) then {
 					_vehicle setDamage 0;
 				};
 
-				PVDZ_obj_Publish = [0, _vehicle, [round getDir _vehicle, getPosATL _vehicle], _inventory, _array, _vehicle getVariable["objectUID", "0"], damage _vehicle, (round (random 70) + 10) / 100 ];
+				PVDZ_obj_Publish = [0, _vehicle, [round getDir _vehicle, getPosATL _vehicle], _inventory, _array, _vehicle getVariable["objectUID", "0"], damage _vehicle, fuel _vehicle ];
 				publicVariableServer "PVDZ_obj_Publish";
 				diag_log format ["[DZAI]: New Networked object, request to save to hive. PVDZ_obj_Publish: %1", PVDZ_obj_Publish];
 
