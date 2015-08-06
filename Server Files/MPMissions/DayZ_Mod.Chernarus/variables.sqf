@@ -653,7 +653,10 @@ if(!isDedicated) then {
 //Loot
 	r_player_divideinvehicle = 0;
 	dayz_currentWeaponHolders = 0;
-	dayz_maxMaxWeaponHolders = 80;	
+
+	// playZ
+	//dayz_maxMaxWeaponHolders = 80;
+	dayz_maxMaxWeaponHolders = 180;
 	dayz_inVehicle = false;
 	dayzGearSave = false;
 	dayz_unsaved = false;
