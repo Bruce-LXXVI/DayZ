@@ -1,9 +1,13 @@
 private["_axeBusDriver","_nrBuses","_getInEvent","_getOutEvent","_survivors"];
 _nrBuses=[];
+
+//_axeBusVehicleType = "Ikarus_TK_CIV_EP1";
+_axeBusVehicleType = "SUV_DZ";
+
 while {alive player}
 do
 {
-	while {count _nrBuses <1}do{_nrBuses = nearestObjects [getPos player, ["Ikarus_TK_CIV_EP1"], 600];sleep 3;};
+	while {count _nrBuses < 1} do {_nrBuses = nearestObjects [getPos player, [_axeBusVehicleType], 600]; sleep 3; };
 	
 	{
 		if(_x getVariable["isAxeAIBus",0]==1)then{	
@@ -42,6 +46,6 @@ do
 				};
 			};
 		};
-	}forEach _nrBuses;
+	} forEach _nrBuses;
 _nrBuses=[];
 };
