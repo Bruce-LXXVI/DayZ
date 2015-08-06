@@ -83,6 +83,47 @@ UPDATE `tOption` SET `optvalue` = '2015-07-25 14:00' WHERE `optname`='dbversion'
 
 
 
+-- ------------------------------------------------------------------------
+-- 2015-07-29 22:00
+ALTER TABLE `player_login` ADD INDEX(`datestamp`);
+ALTER TABLE `player_login` ADD INDEX(`CharacterID`);
+ALTER TABLE `player_login` ADD INDEX(`PlayerUID`);
+
+CREATE VIEW `playz_player_logins` AS 
+select `player_login`.`datestamp` AS `datestamp`,`player_data`.`playerName` AS `playerName`,`player_data`.`playerUID` AS `playerUID` from ((`player_data` left join `player_login` on((`player_data`.`playerUID` = `player_login`.`PlayerUID`))) left join `character_data` on((`character_data`.`CharacterID` = `player_login`.`CharacterID`))) order by `player_login`.`datestamp` desc;
+
+CREATE VIEW `playz_player_login_count` AS 
+select `player_data`.`playerName` AS `playerName`,`player_data`.`playerUID` AS `playerUID`,max(`player_login`.`datestamp`) AS `last_login`,min(`player_login`.`datestamp`) AS `first_login`,count(`player_login`.`LoginID`) AS `login_count` from ((`player_data` left join `player_login` on((`player_data`.`playerUID` = `player_login`.`PlayerUID`))) left join `character_data` on((`character_data`.`CharacterID` = `player_login`.`CharacterID`))) group by `player_data`.`playerUID` order by `last_login` desc;
+
+UPDATE `tOption` SET `optvalue` = '2015-07-29 22:00' WHERE `optname`='dbversion';
+
+
+
+
+
+
+-- ------------------------------------------------------------------------
+-- 2015-07-30 22:00
+ALTER TABLE `object_data`
+MODIFY COLUMN `Hitpoints`  longtext NOT NULL;
+UPDATE `tOption` SET `optvalue` = '2015-07-30 22:00' WHERE `optname`='dbversion';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
