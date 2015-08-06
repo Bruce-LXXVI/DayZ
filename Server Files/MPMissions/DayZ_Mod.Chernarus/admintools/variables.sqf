@@ -307,7 +307,8 @@ helpQueue = []; // Initialize help queue
 ["", 5],
 ["", 5],
 */
-["ItemMachete", 5]
+["ItemMachete", 5],
+["NVGoggles", 5]
 ];
 	weaponCrateMagazines = [
 ["5Rnd_762x51_M24", 20],
