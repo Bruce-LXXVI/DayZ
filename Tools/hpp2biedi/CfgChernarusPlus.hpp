@@ -1,4 +1,10 @@
 //Example
+
+/*
+ * Dies ist ein Kommentar
+ * mit mehreren Zeilen
+ */
+
 	class Balota {
 		type = "NameVillage";
 		position[] = {4528, 2465};
@@ -26,6 +32,11 @@
 			onFire = 0;
 		};
 		
+		/*
+		 * Dies ist ein Kommentar
+		 * mit mehreren Zeilen
+		 */
+
 		class Object3 {
 			type = "UralWreck";
 			position[] = {4821.26, 2520.95, 0};
