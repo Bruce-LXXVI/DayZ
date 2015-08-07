@@ -4,8 +4,8 @@
 	waitUntil{initialized};
 	uiSleep 100;
 
-	//_axeBusVehicleType = "Ikarus_TK_CIV_EP1";
-	_axeBusVehicleType = "SUV_DZ";
+	_axeBusVehicleType = "Ikarus_TK_CIV_EP1";
+	//_axeBusVehicleType = "SUV_DZ";
 
 	_axeBusUnit = objNull;
 	_axeBusGroup = createGroup RESISTANCE;
@@ -92,7 +92,6 @@
 		} else {
 			_newVeh setVariable ["ObjectUID", _forEachIndex + 100000, true];
 		};
-		dayz_serverObjectMonitor set [count dayz_serverObjectMonitor, _newVeh];
 	} forEach _axeBusRouteWaypoints;
 
 

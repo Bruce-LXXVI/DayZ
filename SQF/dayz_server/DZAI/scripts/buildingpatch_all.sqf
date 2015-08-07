@@ -3,6 +3,8 @@ private ["_startTime","_generatorStr","_cfgLocation","_locationArray","_config",
 _generatorStr = format ["CfgTownGenerator%1",worldName];
 _configExists = ((isClass (configFile >> _generatorStr)) or {isClass (configFile >> "CfgTownGenerator")});
 
+_configExists=false;
+
 if (_configExists) then {
 	_startTime = diag_tickTime;
 

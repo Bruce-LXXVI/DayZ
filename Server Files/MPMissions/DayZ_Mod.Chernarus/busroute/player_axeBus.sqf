@@ -1,8 +1,8 @@
 private["_axeBusDriver","_nrBuses","_getInEvent","_getOutEvent","_survivors"];
 _nrBuses=[];
 
-//_axeBusVehicleType = "Ikarus_TK_CIV_EP1";
-_axeBusVehicleType = "SUV_DZ";
+_axeBusVehicleType = "Ikarus_TK_CIV_EP1";
+//_axeBusVehicleType = "SUV_DZ";
 
 while {alive player}
 do
