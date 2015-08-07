@@ -60,7 +60,7 @@
 5  igodokxtt 
 5  MedMen 
 5  Metallica 
-5  MY_KEYDOWN_FNC
+5  MY_KEYDOWN_FNC !"private[\"_vehicle\",\"_nos\"" !"_this select 1 call MY_KEYDOWN_FNC;false;"
 5  myvar23
 5  ProDayz 
 5  Shadowy_NONRE 
