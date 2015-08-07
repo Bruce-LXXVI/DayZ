@@ -94,7 +94,7 @@ _countr = 0;
 			{(typeName (_i select 1)) == "SCALAR"} &&
 			{(typeName (_i select 2)) == "SCALAR"}) then {
 			_pos = _i;
-			_wsDone = true;					
+			_wsDone = true;
 		};
 	};
 	if (!_wsDone) then {

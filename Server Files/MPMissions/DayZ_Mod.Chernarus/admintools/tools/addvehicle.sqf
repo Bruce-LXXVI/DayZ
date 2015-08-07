@@ -1,4 +1,7 @@
-private ["_veh","_location","_isOk","_vehtospawn","_dir","_pos","_helipad","_keyColor","_keyNumber","_keySelected","_isKeyOK","_config","_player"];
+private ["_veh","_location","_isOk","_vehtospawn","_dir","_pos","_helipad",
+"_keyColor","_keyNumber","_keySelected","_isKeyOK","_config","_player",
+"_inventory","_hitpoints","_damage","_array","_allFixed","_hit","_selection","_objectUID"
+];
 _vehtospawn = _this select 0;
 _player = player;
 _dir = getdir vehicle _player;
@@ -36,18 +39,60 @@ if ( 1==1 ) then {
 		//place vehicle spawn marker (local)
 		_veh = createVehicle [_vehtospawn, _location, [], 0, "CAN_COLLIDE"]; 
 		_location = (getPosATL _veh);
- 
-		//PVDZE_veh_Publish2 = [_veh,[_dir,_location],_vehtospawn,false,_keySelected,_player];
-		//publicVariableServer  "PVDZE_veh_Publish2";
+		_veh setVariable ["lastUpdate", time];
+		_veh setVariable ["CharacterID", "0", true];
+
+		if( isNil "_objectUID" ) then {_objectUID = format ["7%1%2%3", abs round((random 90)+10), abs round((random 900)+100), abs round((random 900)+100)];};
+		_veh setVariable [ "ObjectUID", _objectUID, true ];
+		_veh setVariable [ "ObjectID", _objectUID, true ];
+		_veh setVariable ["lastUpdate", time];
+
+		_inventory = [
+			getWeaponCargo _veh,
+			getMagazineCargo _veh,
+			getBackpackCargo _veh
+		];
+
+		_hitpoints = _veh call vehicle_getHitpoints;
+		_damage = damage _veh;
+		_array = [];
+		_allFixed = true;
+		{
+			_hit = [_veh,_x] call object_getHit;
+			_selection = getText (configFile >> "CfgVehicles" >> (typeOf _veh) >> "HitPoints" >> _x >> "name");
+			if (_hit > 0) then {
+					_allFixed = false;
+					_array set [count _array,[_selection,_hit]];
+			} else {
+					_array set [count _array,[_selection,0]]; 
+			};
+		} forEach _hitpoints;
+
+		if (_allFixed) then {
+			_veh setDamage 0;
+		};
+
+		//_veh call fnc_veh_ResetEH;
+		//dayz_serverIDMonitor set [count dayz_serverIDMonitor, _objectUID];
+		//dayz_serverObjectMonitor set [count dayz_serverObjectMonitor, _veh];
+		//needUpdate_objects set [count needUpdate_objects, _veh];
+		
+		_veh call fnc_veh_ResetEH;
+
+		PVDZ_obj_Publish = [0, _veh, [round getDir _veh, _location], _inventory, _array, _veh getVariable["objectUID", "0"], damage _veh, fuel _veh];
+		publicVariable "PVDZ_obj_Publish";
+		diag_log format ["[EAT]: New Networked object, request to save to hive. PVDZ_obj_Publish: %1", PVDZ_obj_Publish];
+
+		if (!isServer) then {
+			PVDZ_veh_Save = [_veh, "all", true];
+			publicVariable "PVDZ_veh_Save";
+		}
+		else {
+			[_veh, "all", true] call server_updateObject;
+		};
+
 		_player reveal _veh;
 		
-		//dayz_serverObjectMonitor set [count dayz_serverObjectMonitor,_veh];
-		//[_veh, _vehtospawn] spawn server_updateObject;
-
-		// TODO: Hitpoints
-		PVDZ_obj_Publish = [0, _veh, [_dir,_location], []];
-		publicVariableServer "PVDZ_obj_Publish";
-
 		cutText ["Vehicle spawned.", "PLAIN DOWN"];
 
 		// Tool use logger

@@ -310,7 +310,7 @@ while {true} do {
 			_newVeh setDamage _damage;
 			_newVeh setVariable ["lastUpdate", time];
 			_newVeh setVariable ["ObjectUID", _objectUID, true];
-			_newVeh setVariable ["ObjectID", "0", true];
+			_newVeh setVariable ["ObjectID", _objectUID, true];
 			_newVeh setVariable ["CharacterID", _ownerID, true];
 			_newVeh setVehicleVarName _objectUID;
 
@@ -355,7 +355,7 @@ while {true} do {
 				_selection = _x select 0;
 				_dam = _x select 1;
 				if ((_selection in dayZ_explosiveParts and _dam > 0.8) && (!(_newVeh isKindOf "Air"))) then {_dam = 0.8};
-
+				//if( PLAYZ_staticSpawnFullyRepaired ) then { _dam=0; };
 				[_newVeh,_selection,_dam] call fnc_veh_setFixServer;
 			} forEach _hitpoints;
 			
@@ -366,8 +366,8 @@ while {true} do {
 			diag_log format ["%1 SPAWNING ===> veh=%2 | type=%6 | damage=%3 | pos=%4 | posGps=%5", PLAYZ_logname, _newVeh, _damage, getPosASL _newVeh, (mapGridPosition getPos _newVeh), _type];
 			diag_log format ["%1 objectID=%2 | objectUID=%3", PLAYZ_logname, _newVeh getVariable ["ObjectID","0"], _objectUID];
 
-			//dayz_serverObjectMonitor set [count dayz_serverObjectMonitor,_newVeh];
-			//[_newVeh, _type] spawn server_updateObject;
+			//dayz_serverObjectMonitor set [count dayz_serverObjectMonitor, _newVeh];
+			[_newVeh, "position", true] spawn server_updateObject;
 
 			PVDZ_obj_Publish = [_ownerID, _newVeh, [round getDir _newVeh, getPosATL _newVeh], _inventory, _hitpoints, _objectUID, damage _newVeh, fuel _newVeh];
 			publicVariableServer "PVDZ_obj_Publish";

@@ -49,13 +49,6 @@ if (_groupIsEmpty) then {
 				publicVariableServer "PVDZ_obj_Publish";
 				diag_log format ["[DZAI]: New Networked object, request to save to hive. PVDZ_obj_Publish: %1", PVDZ_obj_Publish];
 
-				/*
-				waitUntil { _vehicle in dayz_serverObjectMonitor };
-				sleep 5;
-				diag_log format ["[DZAI]: Update object: %1", _vehicle];
-				needUpdate_objects set [count needUpdate_objects, _vehicle];
-				[_vehicle, "all", true] call server_updateObject;
-				*/
 			};
 		};
 
