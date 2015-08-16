@@ -1775,6 +1775,7 @@ if (true) then
   _this setPos [11422.331, 11385.788, -6.1035156e-005];
 };
 
+/* static spawn
 _vehicle_303 = objNull;
 if (true) then
 {
@@ -1783,7 +1784,8 @@ if (true) then
   _this setDir 34.585735;
   _this setPos [11449.582, 11399.745, -0.00018310547];
 };
-
+*/
+/* static spawn
 _vehicle_305 = objNull;
 if (true) then
 {
@@ -1792,7 +1794,7 @@ if (true) then
   _this setDir 35.229729;
   _this setPos [11451.595, 11397.107, -6.1035156e-005];
 };
-
+*/
 _vehicle_306 = objNull;
 if (true) then
 {

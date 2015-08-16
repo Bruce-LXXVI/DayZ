@@ -127,7 +127,7 @@ if (true) then
 _vehicle_52 = objNull;
 if (true) then
 {
-  _this = createVehicle ["MAP_Mil_Barracks_i", [6291.3032, 7846.2075, 0.18149972], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_Mil_Barracks_i", [6291.3032, 7846.2075, 0.18149972], [], 0, "CAN_COLLIDE"];
   _vehicle_52 = _this;
   _this setDir 121.09711;
   _this setPos [6291.3032, 7846.2075, 0.18149972];
@@ -136,7 +136,7 @@ if (true) then
 _vehicle_53 = objNull;
 if (true) then
 {
-  _this = createVehicle ["MAP_Mil_Barracks_i", [6299.4478, 7841.48, 0.12410849], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_Mil_Barracks_i", [6299.4478, 7841.48, 0.12410849], [], 0, "CAN_COLLIDE"];
   _vehicle_53 = _this;
   _this setDir 121.15833;
   _this setPos [6299.4478, 7841.48, 0.12410849];
