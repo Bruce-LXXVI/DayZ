@@ -194,7 +194,7 @@ class _vehicle_52
 	class Arguments
 	{
 		POSITION="[6291.3032, 7846.2075, 0.18149972]";
-		TYPE="MAP_Mil_Barracks_i";
+		TYPE="Land_Mil_Barracks_i";
 		AZIMUT="121.09711";
 		PARENT="";
 	};
@@ -205,7 +205,7 @@ class _vehicle_53
 	class Arguments
 	{
 		POSITION="[6299.4478, 7841.48, 0.12410849]";
-		TYPE="MAP_Mil_Barracks_i";
+		TYPE="Land_Mil_Barracks_i";
 		AZIMUT="121.15833";
 		PARENT="";
 	};
