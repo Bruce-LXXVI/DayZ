@@ -134,7 +134,13 @@
 			case 2: {["Remington870_lamp","8Rnd_B_Beneli_74Slug"]}; 
 		};
 		
-		"BAF_Soldier_L_DDPM" createUnit [_unitpos, _axeBusGroup, "_axeBusUnit=this;",0.6,"Private"];
+		if( x == 1 ) then {
+			//"Policeman" createUnit [_unitpos, _axeBusGroup, "_axeBusUnit=this;",0.6,"Private"];
+			_axeBusUnit = _axeBusGroup createUnit ["Policeman", _axeBus, [], 20, "CARGO"];
+		} else {
+			//"BAF_Soldier_L_DDPM" createUnit [_unitpos, _axeBusGroup, "_axeBusUnit=this;",0.6,"Private"];
+			_axeBusUnit = _axeBusGroup createUnit ["BAF_Soldier_L_DDPM", _axeBus, [], 20, "CARGO"];
+		};
 		
 		_axeBusUnit enableAI "TARGET";
 		_axeBusUnit enableAI "AUTOTARGET";
@@ -169,7 +175,7 @@
 		_axeBusUnit setSkill ["commanding",1];
 		_axeBusUnit setSkill ["general",1];
 		
-		if(x==1) then {
+		if(x > 1) then {
 			_axeBusUnit assignAsCargo _axeBus;
 			_axeBusUnit moveInCargo _axeBus;
 			_axeBusUnit addEventHandler ["HandleDamage", {false}];
@@ -193,6 +199,9 @@
 	//Monitor Bus
 	while {alive _axeBus} do {
 	//diag_log format ["AXLOG:BUS: Tick:%1",time];
+
+		
+
 		//Fuel Bus
 		if(fuel _axeBus < 0.2) then {
 			_axeBus setFuel 0.3;
@@ -206,11 +215,13 @@
 		};
 		
 		//Monitor Driver
-		if((driver _axeBus != _axeBusDriver)||(driver _axeBus != _axeBusUnit)) then {
-			diag_log format ["AXLOG:BUS: Driver Required: %1",driver _axeBus];
-			diag_log format ["AXLOG:BUS: units left: %1",count units _axeBusGroup];
+		if((driver _axeBus != _axeBusDriver) || (driver _axeBus != _axeBusUnit)) then {
+			//diag_log format ["AXLOG:BUS: Driver Required: %1",driver _axeBus];
+			//diag_log format ["AXLOG:BUS: units left: %1",count units _axeBusGroup];
+			//_axeBusUnit = _axeBusGroup createUnit ["BAF_Soldier_L_DDPM", _axeBus, [], 20, "CARGO"];
 			units _axeBusGroup select 0 assignAsDriver _axeBus;
 			units _axeBusGroup select 0 moveInDriver _axeBus;
+			_axeBusDriver = driver _axeBus;
 		};
 
 		//Clear Zeds (WORKING - But zeds vanish, not ideal maybe pass to player)
