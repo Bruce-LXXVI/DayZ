@@ -10,6 +10,7 @@
 #include "stary.sqf"
 
 // by Larry/Philipp Trautmann <Trautmann400@web.de>
+// and Bruce <bruce@playz.rocks>
 #include "nwaf.sqf"
 
 // by Larry/Philipp Trautmann <Trautmann400@web.de>

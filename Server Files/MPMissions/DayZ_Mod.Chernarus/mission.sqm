@@ -236,7 +236,7 @@ class Mission
 
 
 
-
+	/*
 	class Vehicles
 	{
 		items=1;
@@ -251,9 +251,11 @@ class Mission
 			skill=0.60000002;
 		};
 	};
+	*/
+	
 	class Sensors
 	{
-		items=17;
+		items=18;
 		class Item0
 		{
 			position[]={13391.466,10.101187,6604.7324};
@@ -497,11 +499,30 @@ class Mission
 		};
 		class Item16
 		{
-			position[]={4238.939,339,10922.089};
-			a=10;
-			b=10;
+			position[]={4754.44, 339, 10151};
+			a=6;
+			b=6;
+			activationBy="ANY";
+			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
+			expCond="this and ((getpos (thislist select 0)) select 2 < 1)";
+			expActiv="_xhandle= [(thislist select 0)] execVM ""scripts\MZ_reload.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item17
+		{
+			position[]={4744.92, 339, 10165.4};
+			a=6;
+			b=6;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			expCond="this and ((getpos (thislist select 0)) select 2 < 1)";
+			expActiv="_xhandle= [(thislist select 0)] execVM ""scripts\MZ_reload.sqf"";";
 			class Effects
 			{
 			};

@@ -4,13 +4,15 @@
 PLAYZ_vehicle_spawns=
 [
 
+
+
+/* Fahrzeuge Rebellen */
 /*
-[
-"41787451", "Ikarus", [223,[6288.416, 7834.3521,0]],
-[[[],[]],[["ItemSodaPeppsy"],[3]],[[],[]]],
-[["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]
-],
+["630728533", "SUV_DZ", [35, [11449.582, 11399.745, 0]], [[[], []], [["Pipebomb"], [1]], [[], []]], [["palivo",0],["motor",0],["karoserie",0],["wheel_1_1_steering",0],["wheel_1_2_steering",0],["wheel_2_1_steering",0],["wheel_2_2_steering",0]]],
+["630728534", "HMMWV_DZ", [35, [11451.595, 11397.107, 0]], [[[],[]],[[],[]],[[],[]]], [["palivo",0],["motor",0],["karoserie",0],["wheel_1_1_steering",0],["wheel_1_2_steering",0],["wheel_2_1_steering",0],["wheel_2_2_steering",0]]],
 */
+
+
 
 [
 "41787452", "AH6X_DZ", [108,[6350, 7813,0]],
