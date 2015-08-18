@@ -56,7 +56,8 @@ call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\publicEH.sqf";
 progressLoadingScreen 0.1;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\medical\setup_functions_med.sqf";
 progressLoadingScreen 0.15;
-call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";
+//call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";
+call compile preprocessFileLineNumbers "custom\dayz_code\init\compiles.sqf";
 progressLoadingScreen 0.2;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\BIS_Effects\init.sqf";
 
@@ -77,7 +78,7 @@ execVM "\z\addons\dayz_code\system\DynamicWeatherEffects.sqf";
 
 if (isServer) then {
 	//Bus Route
-	[true] execVM "busroute\init_bus.sqf";
+	//[true] execVM "busroute\init_bus.sqf";
 
 	// playZ Scheduler
 	execVM "playZ_scheduler\playZ_server_monitor.sqf";
@@ -97,7 +98,7 @@ if (!isDedicated) then {
 	_nul = [] execVM "DZAI_Client\dzai_initclient.sqf";
 
 	//Bus Route
-	[] execVM "busroute\player_axeBus.sqf";
+	//[] execVM "busroute\player_axeBus.sqf";
 
 	if (dayz_infectiousWaterholes) then { execVM "\z\addons\dayz_code\system\mission\chernarus\infectiousWaterholes\init.sqf"; };
 	if (dayz_antihack != 0) then {
@@ -128,5 +129,8 @@ if (!isDedicated) then {
 
 
 [] execVM "admintools\Activate.sqf"; // Epoch admin tools
+
+// playZ Bus Route
+execVM "playZ_busroute\route_test_bor\PZBUS_init.sqf";
 
 
