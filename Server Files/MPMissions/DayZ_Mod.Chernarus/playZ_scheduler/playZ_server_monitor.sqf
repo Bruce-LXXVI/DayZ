@@ -121,7 +121,7 @@ while {true} do {
 					diag_log [diag_ticktime, PLAYZ_logname, " Networked object, request to destroy", PVDZ_obj_Destroy];
 					_iVehDeleted = _iVehDeleted + 1;
 				} else {
-					diag_log format ["%1 Not deleted", PLAYZ_logname];
+					diag_log format ["%1 Not deleted: %2", PLAYZ_logname, _x];
 				};
 			};
 		};
