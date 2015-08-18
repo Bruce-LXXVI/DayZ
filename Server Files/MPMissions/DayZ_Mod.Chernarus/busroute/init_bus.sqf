@@ -122,6 +122,7 @@
 	_axeBus setVariable ["isAxeAIBus",1,true];
 	_axeBus setVariable ["MalSar",1,true];
 	_axeBus setVariable ["Sarge",1,true];
+	_axeBus setVariable ["PlayZ_salvage_disabled", 1, true];
 	
 	//Create Driver and Drivers Mate
 	for [{ x=1 },{ x <3 },{ x = x + 1; }] do {
