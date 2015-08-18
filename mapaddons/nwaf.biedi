@@ -1266,27 +1266,6 @@ class _vehicle_229
 		PARENT="";
 	};
 };
-class _vehicle_232
-{
-	objectType="vehicle";
-	class Arguments
-	{
-		POSITION="[4050.1008, 11774.269, 3.0517578e-005]";
-		TYPE="RUSpecialWeaponsBox";
-		AZIMUT="90.109055";
-		PARENT="";
-	};
-};
-class _vehicle_233
-{
-	objectType="vehicle";
-	class Arguments
-	{
-		POSITION="[4051.7854, 11773.528, -3.0517578e-005]";
-		TYPE="RUBasicWeaponsBox";
-		PARENT="";
-	};
-};
 class _vehicle_237
 {
 	objectType="vehicle";
