@@ -217,7 +217,7 @@ DZAI_respawnTMaxL = 900;
 DZAI_vehList = [
 	["UAZ_Unarmed_TK_EP1",1],
 	["SUV_DZ",1],
-	["Pickup_PK_INS",1],
+	//["Pickup_PK_INS",1],
 	["SkodaBlue",1],
 	["S1203_TK_CIV_EP1",1],
 	["Volha_2_TK_CIV_EP1",1],
