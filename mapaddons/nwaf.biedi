@@ -241,7 +241,7 @@ class _vehicle_47
 	class Arguments
 	{
 		POSITION="[4351.9048, 10995.605, -9.1552734e-005]";
-		TYPE="MAP_A_BuildingWIP";
+		TYPE="Land_A_BuildingWIP";
 		AZIMUT="-121.14427";
 		PARENT="";
 	};
@@ -263,7 +263,7 @@ class _vehicle_57
 	class Arguments
 	{
 		POSITION="[4364.2368, 10954.313]";
-		TYPE="MAP_Ind_Workshop01_02";
+		TYPE="Land_Ind_Workshop01_02";
 		AZIMUT="-29.507385";
 		PARENT="";
 	};

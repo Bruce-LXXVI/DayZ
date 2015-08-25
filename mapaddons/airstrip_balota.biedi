@@ -84,7 +84,7 @@ class _vehicle_12
 	class Arguments
 	{
 		POSITION="[4784.4111, 2297.7227, 2.4795532e-005]";
-		TYPE="Land_Barrack2_EP1";
+		TYPE="Barrack2";
 		AZIMUT="-67.829002";
 		PARENT="";
 	};
@@ -95,7 +95,7 @@ class _vehicle_13
 	class Arguments
 	{
 		POSITION="[4787.356, 2304.2805, 2.0980835e-005]";
-		TYPE="Land_Barrack2_EP1";
+		TYPE="Barrack2";
 		AZIMUT="-66.55677";
 		PARENT="";
 	};
