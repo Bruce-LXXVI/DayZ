@@ -176,17 +176,18 @@ DZAI_respawnTMaxA = 900;
 
 //Classnames of air vehicle types to use, with the maximum amount of each type to spawn.
 DZAI_heliList = [
-	["UH1H_DZ",1],
-//	["Mi17_DZ",1],
-	["AH6X_DZ",1],
-	["AN2_DZ",1]
+	["UH1H_DZ", 1],
+//	["Mi17_DZ", 1],
+	["AH6X_DZ", 1],
+	["AN2_DZ", 1],
+	["MH6J_DZ", 1]
 ];
 
 //Difficulty level of air vehicle patrol units. Difficulty level also affects unit loadout and loot. Possible values: 0 to 3 (Default: 3)
-DZAI_heliUnitLevel = 2;
+DZAI_heliUnitLevel = 3;
 
 //Maximum number of gunner units per air vehicle. Limited by actual number of available gunner positions. (Default: 2)
-DZAI_heliGunnerUnits = 0;
+DZAI_heliGunnerUnits = 1;
 
 //Specify vehicle weapon for air vehicles that are unarmed by default. DZAI will arm these air vehicles with the specified weapons upon spawning each vehicle.
 //Weapon classnames are verified. If the classname is invalid (banned or nonexistent), it will not be added to the vehicle.
@@ -232,7 +233,7 @@ DZAI_vehUnitLevel = 3;
 DZAI_vehGunnerUnits = 0;
 
 //Maximum number of cargo units per land vehicle. Limited by actual number of available cargo positions. (Default: 3)
-DZAI_vehCargoUnits = 0;
+DZAI_vehCargoUnits = 1;
 
 
 /*	AI Vehicle (Air & Land) Settings
