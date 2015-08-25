@@ -56,7 +56,7 @@ _spawnCrate addMagazineCargoGlobal ["ItemSandbag", 50];
 _spawnCrate addMagazineCargoGlobal ["equip_metal_sheet_rusted", 50];
 _spawnCrate addMagazineCargoGlobal ["ItemTent", 5];
 _spawnCrate addMagazineCargoGlobal ["ItemDomeTent", 5];
-_spawnCrate addMagazineCargoGlobal ["ItemRSJ", 5];
+//_spawnCrate addMagazineCargoGlobal ["ItemRSJ", 5];
 _spawnCrate addMagazineCargoGlobal ["equip_duct_tape", 5];
 _spawnCrate addMagazineCargoGlobal ["equip_rope", 5];
 _spawnCrate addMagazineCargoGlobal ["equip_string", 5];
