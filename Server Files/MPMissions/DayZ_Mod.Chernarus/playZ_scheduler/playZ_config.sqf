@@ -42,8 +42,8 @@ PLAYZ_deleteDestroyedVehiclesAfter=21601; // 6h
 PLAYZ_totalVehicles=200;
 
 // Fahrzeugklassen, die in ihrer Anzahl limitiert sind
-PLAYZ_limitedClasses = ["UH1H_DZ", "AH6X_DZ", "Mi17_DZ", "AN2_DZ", "AN2_2_DZ", "MH6J_DZ", "HMMWV_DZ", "SUV_DZ", "Offroad_DSHKM_INS", "Pickup_PK_INS"];
-PLAYZ_classLimits    = [2        , 2        , 2        , 5       , 2         , 1        , 3         , 3       , 3                  , 3];
+PLAYZ_limitedClasses = ["UH1H_DZ", "UH1H_2_DZ", "AH6X_DZ", "Mi17_DZ", "AN2_DZ", "AN2_2_DZ", "MH6J_DZ", "HMMWV_DZ", "SUV_DZ", "Offroad_DSHKM_INS", "Pickup_PK_INS"];
+PLAYZ_classLimits    = [2        , 0          , 2        , 2        , 3       , 3         , 1        , 3         , 3       , 3                  , 3];
 
 
 ////////////////////////////////////////
