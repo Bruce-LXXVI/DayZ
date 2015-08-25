@@ -187,7 +187,7 @@ DZAI_heliList = [
 DZAI_heliUnitLevel = 3;
 
 //Maximum number of gunner units per air vehicle. Limited by actual number of available gunner positions. (Default: 2)
-DZAI_heliGunnerUnits = 1;
+DZAI_heliGunnerUnits = 0;
 
 //Specify vehicle weapon for air vehicles that are unarmed by default. DZAI will arm these air vehicles with the specified weapons upon spawning each vehicle.
 //Weapon classnames are verified. If the classname is invalid (banned or nonexistent), it will not be added to the vehicle.
