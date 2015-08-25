@@ -74,6 +74,8 @@ if (_finished) then {
 	_veh setVariable ["MalSar",1,true];
 	_veh setVariable ["ObjectID", "1", true];
 	_veh setVariable ["ObjectUID", "1", true];
+	_veh setVariable ["ObjectUID", "1", true];
+	_veh setVariable ["PlayZ_salvage_disabled", 1, true];
 	clearMagazineCargoGlobal _veh;
 	clearWeaponCargoGlobal _veh;
 
