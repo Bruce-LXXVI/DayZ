@@ -656,7 +656,7 @@ if(!isDedicated) then {
 
 	// playZ
 	//dayz_maxMaxWeaponHolders = 80;
-	dayz_maxMaxWeaponHolders = 180;
+	dayz_maxMaxWeaponHolders = 100;
 	dayz_inVehicle = false;
 	dayzGearSave = false;
 	dayz_unsaved = false;
