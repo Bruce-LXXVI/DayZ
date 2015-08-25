@@ -30,7 +30,7 @@ PLAYZ_destroyVehiclesMoreDamaged=1;
 ////////////////////////////////////////
 
 // Zerstörte Fahrzeuge nach x Sekunden löschen
-PLAYZ_deleteDestroyedVehiclesAfter=600;
+PLAYZ_deleteDestroyedVehiclesAfter=21601; // 6h
 
 
 
@@ -42,8 +42,8 @@ PLAYZ_deleteDestroyedVehiclesAfter=600;
 PLAYZ_totalVehicles=200;
 
 // Fahrzeugklassen, die in ihrer Anzahl limitiert sind
-PLAYZ_limitedClasses = ["UH1H_DZ", "AH6X_DZ", "Mi17_DZ", "AN2_DZ", "AN2_2_DZ", "MH6J_DZ", "HMMWV_DZ", "SUV_DZ"];
-PLAYZ_classLimits    = [3        , 2        , 3        , 5       , 2         , 1        , 3         , 3 ];
+PLAYZ_limitedClasses = ["UH1H_DZ", "AH6X_DZ", "Mi17_DZ", "AN2_DZ", "AN2_2_DZ", "MH6J_DZ", "HMMWV_DZ", "SUV_DZ", "Offroad_DSHKM_INS", "Pickup_PK_INS"];
+PLAYZ_classLimits    = [2        , 2        , 2        , 5       , 2         , 1        , 3         , 3       , 3                  , 3];
 
 
 ////////////////////////////////////////
