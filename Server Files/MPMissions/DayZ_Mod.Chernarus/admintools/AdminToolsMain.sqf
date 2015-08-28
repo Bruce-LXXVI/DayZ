@@ -42,15 +42,15 @@ AdminMenu =
 [
 ["",true],
 	["Admin Mode (F4 for options)",[],"", -5,[["expression",format[_EXECgenTools,"AdminMode\adminMode.sqf"]]],"1","1"],
-	["Point to Repair(Perm)",[],"", -5,[["expression", format[_EXECgenTools,"PointToRepairPERM.sqf"]]], "1", "1"],
+	["Teleport Menu >>",[],"#USER:TeleportMenu", -5, [["expression", ""]], "1", "1"],
 	["Point to Delete(Perm)",[],"", -5,[["expression",format[_EXECgenTools,"DatabaseRemove.sqf"]]],"1","1"],
+	["Point to Repair(Perm)",[],"", -5,[["expression", format[_EXECgenTools,"PointToRepairPERM.sqf"]]], "1", "1"],
 	["Spectate player (F6 to cancel)",[],"", -5,[["expression", format[_EXECgenTools,"spectate.sqf"]]], "1", "1"],
 //	["Safe Zone Create/Delete",[],"", -5, [["expression", format[_EXECgenTools,"SafeZoneArea.sqf"]]], "1", "1"],
 	["Zombie Shield",[],"", -5,[["expression",format[_EXECgenTools,"zombieshield.sqf"]]],"1","1"],
 	["Zombie Spawner", [], "", -5, [["expression", format[_EXECgenTools,"zombieSpawn.sqf"]]], "1", "1"],
 	["Heal Players",[],"", -5, [["expression", format[_EXECgenTools,"healp.sqf"]]], "1", "1"],
 	["Send Server Message",[],"", -5,[["expression",format[_EXECgenTools,"messageDialog.sqf"]]],"1","1"],
-	["Teleport Menu >>",[],"#USER:TeleportMenu", -5, [["expression", ""]], "1", "1"],
 	["Humanity Menu >>",[],"#USER:HumanityMenu", -5, [["expression", ""]], "1", "1"],
 	["", [], "", -5,[["expression", ""]], "1", "0"],
 		["Main Menu", [20], "#USER:epochmenustart", -5, [["expression", ""]], "1", "1"]
@@ -59,11 +59,11 @@ ModMenu =
 [
 ["",true],
 	["Mod Mode (F4 for options)",[],"", -5,[["expression",format[_EXECgenTools,"AdminMode\modMode.sqf"]]],"1","1"],
-	["Point to Repair (Temp)",[],"",-5,[["expression", format[_EXECgenTools,"PointToRepair.sqf"]]], "1", "1"],
+	["Teleport Menu >>",[],"#USER:TeleportMenu", -5, [["expression", ""]], "1", "1"],
 	["Point to Delete (Perm)",[],"",-5,[["expression",format[_EXECgenTools,"DatabaseRemove.sqf"]]],"1","1"],
+	["Point to Repair (Temp)",[],"",-5,[["expression", format[_EXECgenTools,"PointToRepair.sqf"]]], "1", "1"],
 	["Spectate player (F6 to cancel)",[],"", -5,[["expression", format[_EXECgenTools,"spectate.sqf"]]], "1", "1"],
 	["Heal Players",[],"",-5,[["expression", format[_EXECgenTools,"healp.sqf"]]], "1", "1"],
-	["Teleport Menu >>",[],"#USER:TeleportMenu", -5, [["expression", ""]], "1", "1"],
 	["", [], "", -5,[["expression", ""]], "1", "0"],
 		["Main Menu",[20], "#USER:epochmenustart", -5, [["expression", ""]], "1", "1"]
 ];
@@ -176,6 +176,7 @@ PrimaryWeaponMenu =[
 ["",true],
 	// Entry Format:["Name", [],"", -5, [["expression", format[_EXECweapons,"Gun_Calss_Name","Ammo_Class_Name","Explosive_Round_Class_Name"]]], "1", "1"],
 	// If there is no explosive 203 round then put "nil" in place of "Explosive_Round_Class_Name" 
+	["G36K Camo SD", [],"", -5, [["expression", format[_EXECweapons,"G36K_Camo_SD_DZ","30Rnd_556x45_G36SD","nil"]]], "1", "1"],
 	["M4 CCO SD", [],"", -5, [["expression", format[_EXECweapons,"M4A1_CCO_SD_DZ","30Rnd_556x45_StanagSD","nil"]]], "1", "1"],
 	["M4 CCO SD GL", [],"", -5, [["expression", format[_EXECweapons,"M4A1_GL_CCO_SD_DZ","30Rnd_556x45_StanagSD","1Rnd_HE_M203"]]], "1", "1"],
 	["M14 Aim", [],"", -5, [["expression", format[_EXECweapons,"M14_CCO_DZ","20Rnd_762x51_DMR","nil"]]], "1", "1"],
