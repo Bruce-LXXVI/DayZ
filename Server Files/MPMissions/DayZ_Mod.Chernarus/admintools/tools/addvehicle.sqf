@@ -44,7 +44,7 @@ if ( 1==1 ) then {
 
 		if( isNil "_objectUID" ) then {_objectUID = format ["7%1%2%3", abs round((random 90)+10), abs round((random 900)+100), abs round((random 900)+100)];};
 		_veh setVariable [ "ObjectUID", _objectUID, true ];
-		//_veh setVariable [ "ObjectID", _objectUID, true ];
+		_veh setVariable [ "ObjectID", _objectUID, true ];
 		_veh setVariable ["lastUpdate", time];
 
 		_inventory = [
