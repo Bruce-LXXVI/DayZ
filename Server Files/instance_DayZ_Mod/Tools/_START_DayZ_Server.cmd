@@ -14,7 +14,7 @@ move "%MYDIR%\..\BattlEye\*.log" %BACKUPDIR%
 cd "%A2OADIR%\"
 
 
-start "arma2" "arma2oaserver.exe" -port=2302 -ip=185.89.147.91 "-config=%INST_NAME%\server.cfg" "-cfg=%INST_NAME%\basic.cfg" "-profiles=%INST_NAME%" "-name=%INST_NAME%" "-pid=%INST_NAME%\%INST_NAME%.pid" "-ranking=%INST_NAME%\%INST_NAME%_ranking.log" "-mod=%A2DIR%;EXPANSION;ca;@Hive;@DayZ_Server"
+start "arma2 SERVER" "arma2oaserver.exe" -port=2302 -ip=185.89.147.91 "-config=%INST_NAME%\server.cfg" "-cfg=%INST_NAME%\basic.cfg" "-profiles=%INST_NAME%" "-name=%INST_NAME%" "-pid=%INST_NAME%\%INST_NAME%.pid" "-ranking=%INST_NAME%\%INST_NAME%_ranking.log" "-mod=%A2DIR%;EXPANSION;ca;@Hive;@DayZ_Server"
 
 
 sleep 35
