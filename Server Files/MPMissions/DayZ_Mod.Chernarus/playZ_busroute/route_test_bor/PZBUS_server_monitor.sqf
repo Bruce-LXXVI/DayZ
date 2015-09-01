@@ -35,6 +35,7 @@ diag_log format ["%1 Initializing using base path %2.", PZBUS_logname, PZBUS_dir
 
 
 PZBUS_fnc_setupUnit = {
+	private ["_unit"];
 	diag_log format ["%1 setting up %2", PZBUS_logname, _this];
 
 	_unit = _this select 0;

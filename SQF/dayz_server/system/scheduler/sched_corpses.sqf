@@ -38,7 +38,7 @@ sched_corpses = {
 				_delQtyZ = _delQtyZ + 1;
 			}
 			else {
-				if( (_x isKindOf "CAManBase") && (_x getVariable ["DZAI_deathTime", -1] == -1) ) then {
+				if( (_x isKindOf "CAManBase") && (_x getVariable ["DZAI_deathTime", -1] == -1) && (_x getVariable ["PlayZ_cleanup_disabled", -1] == -1) ) then {
 					_deathTime = _x getVariable ["sched_co_deathTime", -1];
 					if (_deathTime == -1) then {
 						_deathPos = _x getVariable [ "deathPos", getMarkerPos "respawn_west" ];
