@@ -21,7 +21,7 @@ if ((getPlayerUID player) in AdminList) then { // Administrators
 	epochmenustart = epochmenustart + [["Crate Menu >>",[],"#USER:CrateMenu",-5,[["expression",""]],"1","1"]];
 //	epochmenustart = epochmenustart + [["Epoch Menu >>", [], "#USER:EpochMenu", -5, [["expression", ""]], "1", "1"]];
 	epochmenustart = epochmenustart + [["Weapon/Item Kits >>", [], "#USER:WeaponMenu", -5, [["expression", ""]], "1", "1"]];
-	epochmenustart = epochmenustart + [["Skin Change Menu >>", [], "#USER:AdminSkinsMenu", -5, [["expression", ""]], "1", "1"]];
+//	epochmenustart = epochmenustart + [["Skin Change Menu >>", [], "#USER:AdminSkinsMenu", -5, [["expression", ""]], "1", "1"]];
 	if(enableWeatherTimeChanger)then{ epochmenustart = epochmenustart + [["Weather/Time Menu >>", [], "#USER:WTMenu", -5, [["expression", ""]], "1", "1"]];};
 	epochmenustart = epochmenustart + [["Player Ticket Menu >>", [], "", -5, [["expression", format[_EXECgenTools,"contactAdminTickets.sqf"]]], "1", "1"]];
 	epochmenustart = epochmenustart + [["", [], "", -5, [["expression", ""]], "1", "0"]];
@@ -29,9 +29,10 @@ if ((getPlayerUID player) in AdminList) then { // Administrators
 } else {
 	if ((getPlayerUID player) in ModList) then { // Moderators
 		epochmenustart = [["",true],["-- playZ Admin Tools (Level: Mod) --", [], "", -5, [["expression", ""]], "1", "0"]];
-		epochmenustart = epochmenustart + [["Mod Menu >>", [], "#USER:ModMenu", -5, [["expression", ""]], "1", "1"]];
-		epochmenustart = epochmenustart + [["Temporary Vehicle Menu >>", [], "#USER:VehicleTempMenu", -5, [["expression", ""]], "1", "1"]];
-		epochmenustart = epochmenustart + [["Skin Change Menu >>", [], "#USER:AdminSkinsMenu", -5, [["expression", ""]], "1", "1"]];
+//		epochmenustart = epochmenustart + [["Mod Menu >>", [], "#USER:ModMenu", -5, [["expression", ""]], "1", "1"]];
+		epochmenustart = epochmenustart + [["Kick player", [], "", -5, [["expression", format[_EXECgenTools,"KickPlayer.sqf"]]], "1", "1"]];
+//		epochmenustart = epochmenustart + [["Temporary Vehicle Menu >>", [], "#USER:VehicleTempMenu", -5, [["expression", ""]], "1", "1"]];
+//		epochmenustart = epochmenustart + [["Skin Change Menu >>", [], "#USER:AdminSkinsMenu", -5, [["expression", ""]], "1", "1"]];
 		epochmenustart = epochmenustart + [["Player Ticket Menu >>", [], "", -5, [["expression", format[_EXECgenTools,"contactAdminTickets.sqf"]]], "1", "1"]];
 		epochmenustart = epochmenustart + [["", [], "", -5, [["expression", ""]], "1", "0"]];
 		epochmenustart = epochmenustart + [["Main Menu", [20], "#USER:epochmenustart", -5, [["expression", ""]], "1", "1"]];
@@ -43,15 +44,16 @@ AdminMenu =
 ["",true],
 	["Admin Mode (F4 for options)",[],"", -5,[["expression",format[_EXECgenTools,"AdminMode\adminMode.sqf"]]],"1","1"],
 	["Teleport Menu >>",[],"#USER:TeleportMenu", -5, [["expression", ""]], "1", "1"],
+	["Spectate player (F6 to cancel)",[],"", -5,[["expression", format[_EXECgenTools,"spectate.sqf"]]], "1", "1"],
+	["Heal Players",[],"", -5, [["expression", format[_EXECgenTools,"healp.sqf"]]], "1", "1"],
+	["Humanity Menu >>",[],"#USER:HumanityMenu", -5, [["expression", ""]], "1", "1"],
+	["Kick player",[],"", -5, [["expression", format[_EXECgenTools, "KickPlayer.sqf"]]], "1", "1"],
 	["Point to Delete(Perm)",[],"", -5,[["expression",format[_EXECgenTools,"DatabaseRemove.sqf"]]],"1","1"],
 	["Point to Repair(Perm)",[],"", -5,[["expression", format[_EXECgenTools,"PointToRepairPERM.sqf"]]], "1", "1"],
-	["Spectate player (F6 to cancel)",[],"", -5,[["expression", format[_EXECgenTools,"spectate.sqf"]]], "1", "1"],
 //	["Safe Zone Create/Delete",[],"", -5, [["expression", format[_EXECgenTools,"SafeZoneArea.sqf"]]], "1", "1"],
 	["Zombie Shield",[],"", -5,[["expression",format[_EXECgenTools,"zombieshield.sqf"]]],"1","1"],
 	["Zombie Spawner", [], "", -5, [["expression", format[_EXECgenTools,"zombieSpawn.sqf"]]], "1", "1"],
-	["Heal Players",[],"", -5, [["expression", format[_EXECgenTools,"healp.sqf"]]], "1", "1"],
 	["Send Server Message",[],"", -5,[["expression",format[_EXECgenTools,"messageDialog.sqf"]]],"1","1"],
-	["Humanity Menu >>",[],"#USER:HumanityMenu", -5, [["expression", ""]], "1", "1"],
 	["", [], "", -5,[["expression", ""]], "1", "0"],
 		["Main Menu", [20], "#USER:epochmenustart", -5, [["expression", ""]], "1", "1"]
 ];
@@ -60,10 +62,11 @@ ModMenu =
 ["",true],
 	["Mod Mode (F4 for options)",[],"", -5,[["expression",format[_EXECgenTools,"AdminMode\modMode.sqf"]]],"1","1"],
 	["Teleport Menu >>",[],"#USER:TeleportMenu", -5, [["expression", ""]], "1", "1"],
-	["Point to Delete (Perm)",[],"",-5,[["expression",format[_EXECgenTools,"DatabaseRemove.sqf"]]],"1","1"],
-	["Point to Repair (Temp)",[],"",-5,[["expression", format[_EXECgenTools,"PointToRepair.sqf"]]], "1", "1"],
 	["Spectate player (F6 to cancel)",[],"", -5,[["expression", format[_EXECgenTools,"spectate.sqf"]]], "1", "1"],
-	["Heal Players",[],"",-5,[["expression", format[_EXECgenTools,"healp.sqf"]]], "1", "1"],
+	["Kick player",[],"", -5, [["expression", format[_EXECgenTools, "KickPlayer.sqf"]]], "1", "1"],
+	["Point to Delete (Perm)",[],"",-5,[["expression",format[_EXECgenTools,"DatabaseRemove.sqf"]]],"1","1"],
+//	["Point to Repair (Temp)",[],"",-5,[["expression", format[_EXECgenTools,"PointToRepair.sqf"]]], "1", "1"],
+//	["Heal Players",[],"",-5,[["expression", format[_EXECgenTools,"healp.sqf"]]], "1", "1"],
 	["", [], "", -5,[["expression", ""]], "1", "0"],
 		["Main Menu",[20], "#USER:epochmenustart", -5, [["expression", ""]], "1", "1"]
 ];
