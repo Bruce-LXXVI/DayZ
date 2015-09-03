@@ -128,9 +128,18 @@ if (!isDedicated) then {
 };
 
 
-[] execVM "admintools\Activate.sqf"; // Epoch admin tools
-
 // playZ Bus Route
 //execVM "playZ_busroute\route_test_bor\PZBUS_init.sqf";
+
+// playZ side voice killer
+execVM "playZ_antisidevoice\playZ_antisidevoice_player_monitor.sqf";
+
+// playZ kicker
+execVM "playZ_kicker\playZ_kicker_player_monitor.sqf";
+
+
+
+[] execVM "admintools\Activate.sqf"; // Epoch admin tools
+
 
 
