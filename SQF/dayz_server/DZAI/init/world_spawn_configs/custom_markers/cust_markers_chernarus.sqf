@@ -27,3 +27,38 @@
 //----------------------------Add your custom markers below this line ----------------------------
 
 
+	_this = createMarker ["playznwafbandits", [4533.834, 10281.643, 0]];
+	_this setMarkerShape "ELLIPSE";
+	_this setMarkerType "Empty";
+	_this setMarkerBrush "Solid";
+	_this setMarkerSize [900, 900];
+	_this setMarkerAlpha 0;
+	_playznwafbandits = _this;
+
+	_this = createMarker ["playzneafbandits", [12088.825, 12679.601, 0]];
+	_this setMarkerShape "ELLIPSE";
+	_this setMarkerType "Empty";
+	_this setMarkerBrush "Solid";
+	_this setMarkerSize [500, 500];
+	_this setMarkerAlpha 0;
+	_playzneafbandits = _this;
+
+	_this = createMarker ["playzstaryhelibandits", [6755.0913, 8117.0234, 0]];
+	_this setMarkerShape "ELLIPSE";
+	_this setMarkerType "Empty";
+	_this setMarkerBrush "Solid";
+	_this setMarkerSize [3000, 3000];
+	_this setMarkerAlpha 0;
+	_playzneafbandits = _this;
+
+	_this = createMarker ["playzklenbandits", [11399.737, 11361.586, 0]];
+	_this setMarkerShape "ELLIPSE";
+	_this setMarkerType "Empty";
+	_this setMarkerBrush "Solid";
+	_this setMarkerSize [400, 400];
+	_this setMarkerAlpha 0;
+	_playzklenbandits = _this;
+
+
+
+

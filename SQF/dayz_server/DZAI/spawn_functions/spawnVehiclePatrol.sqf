@@ -79,10 +79,6 @@ if (_isAirVehicle) then {
 	_vehicle addEventHandler ["HandleDamage",{_this call DZAI_vHandleDamage}];
 };
 _vehicle allowCrewInImmobile (!_isAirVehicle);
-
-//if( DZAI_vehiclesLocked ) then {_vehicle setVehicleLock "LOCKED";}
-//else {_vehicle setVehicleLock "UNLOCKED";};
-
 _vehicle setVehicleLock "LOCKED";
 
 if( isNil "_objectUID" ) then {_objectUID = format ["9%1%2%3", abs round((random 90)+10), abs round((random 900)+100), abs round((random 900)+100)];};

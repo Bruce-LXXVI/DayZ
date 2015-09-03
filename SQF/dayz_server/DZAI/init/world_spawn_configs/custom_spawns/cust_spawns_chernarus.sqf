@@ -42,6 +42,46 @@
 //----------------------------Add your custom spawn definitions below this line ----------------------------
 
 
+	[
+		"playznwafbandits",		//This is the marker name to be used as the patrol and spawning area.
+		"Offroad_DSHKM_INS",	//Insert a vehicle classname here. Acceptable vehicle types: Air or Land vehicles. Spawn will be cancelled if classname is invalid or banned.
+		[3,1],					//Set number of passenger and gunner units here. A driver unit will always be created. DZAI will not add more units to a vehicle than the vehicle type allows. Only land vehicles may have passenger units.
+		1,						//Weapon grade setting. 1 = weapon chosen from Military loot table (see below for explanation of Weapon Grade)
+		true,					//(OPTIONAL)* Respawn setting. True: AI will respawn with vehicle after a specified time. False: AI and vehicle will not respawn after being destroyed. (Default)
+		1800					//(OPTIONAL)* Respawn time. Number of seconds to wait until AI and vehicle are respawned. (Default: 600). Timer begins after AI group is wiped out or vehicle is destroyed, whichever comes first.
+	] call DZAI_spawn_vehicle;
+
+
+	[
+		"playzneafbandits",		//This is the marker name to be used as the patrol and spawning area.
+		3, 						//This trigger will spawn a group of 2 AI units.
+		1,						//Weapon grade setting. 1 = weapon chosen from Military loot table (see below for explanation of Weapon Grade)
+		true					//(OPTIONAL)* Respawn setting. True: AI spawned will respawn (Default). False: AI will not respawn. Spawn area will be deleted when all units have been killed.
+	] call DZAI_spawn_units;
+
+
+	[
+		"playzstaryhelibandits",//This is the marker name to be used as the patrol and spawning area.
+		"UH1H_2_DZ",			//Insert a vehicle classname here. Acceptable vehicle types: Air or Land vehicles. Spawn will be cancelled if classname is invalid or banned.
+		[1,2],					//Set number of passenger and gunner units here. A driver unit will always be created. DZAI will not add more units to a vehicle than the vehicle type allows. Only land vehicles may have passenger units.
+		1,						//Weapon grade setting. 1 = weapon chosen from Military loot table (see below for explanation of Weapon Grade)
+		true,					//(OPTIONAL)* Respawn setting. True: AI will respawn with vehicle after a specified time. False: AI and vehicle will not respawn after being destroyed. (Default)
+		1800					//(OPTIONAL)* Respawn time. Number of seconds to wait until AI and vehicle are respawned. (Default: 600). Timer begins after AI group is wiped out or vehicle is destroyed, whichever comes first.
+	] call DZAI_spawn_vehicle;
+
+/*
+	[
+		"playzklenbandits",		//This is the marker name to be used as the patrol and spawning area.
+		"UH1H_2_DZ",			//Insert a vehicle classname here. Acceptable vehicle types: Air or Land vehicles. Spawn will be cancelled if classname is invalid or banned.
+		[1,2],					//Set number of passenger and gunner units here. A driver unit will always be created. DZAI will not add more units to a vehicle than the vehicle type allows. Only land vehicles may have passenger units.
+		1,						//Weapon grade setting. 1 = weapon chosen from Military loot table (see below for explanation of Weapon Grade)
+		false,					//(OPTIONAL)* Respawn setting. True: AI will respawn with vehicle after a specified time. False: AI and vehicle will not respawn after being destroyed. (Default)
+		600						//(OPTIONAL)* Respawn time. Number of seconds to wait until AI and vehicle are respawned. (Default: 600). Timer begins after AI group is wiped out or vehicle is destroyed, whichever comes first.
+	] call DZAI_spawn_vehicle;
+*/
+
+
+
 
 
 

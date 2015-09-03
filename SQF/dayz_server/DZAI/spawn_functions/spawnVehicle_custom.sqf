@@ -1,4 +1,4 @@
-private ["_marker","_vehicleType","_weapongrade","_unitGroup","_driver","_vehicle","_gunnerSpots","_markerPos","_markerSize","_isAirVehicle","_unitType","_vehSpawnPos","_isArmed","_maxUnits","_maxCargoUnits","_maxGunnerUnits","_keepLooking"];
+private ["_marker","_vehicleType","_weapongrade","_unitGroup","_driver","_vehicle","_gunnerSpots","_markerPos","_markerSize","_isAirVehicle","_unitType","_vehSpawnPos","_isArmed","_maxUnits","_maxCargoUnits","_maxGunnerUnits","_keepLooking","_objectUID"];
 
 if (!isServer) exitWith {};
 
@@ -79,6 +79,12 @@ if (_isAirVehicle) then {
 };
 _vehicle allowCrewInImmobile (!_isAirVehicle);
 _vehicle setVehicleLock "LOCKED";
+
+if( isNil "_objectUID" ) then {_objectUID = format ["9%1%2%3", abs round((random 90)+10), abs round((random 900)+100), abs round((random 900)+100)];};
+_vehicle setVariable ["ObjectUID", _objectUID, true];
+_vehicle setVariable ["ObjectID", _objectUID, true];
+_vehicle setVariable ["lastUpdate", time];
+_vehicle setVariable ["CharacterID", "0", true];
 clearWeaponCargoGlobal _vehicle;
 clearMagazineCargoGlobal _vehicle;
 
