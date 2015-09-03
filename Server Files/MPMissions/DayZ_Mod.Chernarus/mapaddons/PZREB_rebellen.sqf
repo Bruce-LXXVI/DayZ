@@ -875,6 +875,7 @@ if (true) then
   _this setPos [11438.153, 11400.793, 0.060168941];
 };
 
+/*
 _vehicle_124 = objNull;
 if (true) then
 {
@@ -882,7 +883,8 @@ if (true) then
   _vehicle_124 = _this;
   _this setPos [11463.534, 11391.09, -0.00015258789];
 };
-
+*/
+/*
 _vehicle_125 = objNull;
 if (true) then
 {
@@ -906,7 +908,7 @@ if (true) then
   _vehicle_127 = _this;
   _this setPos [11465.995, 11387.736, 3.0517578e-005];
 };
-
+*/
 _vehicle_128 = objNull;
 if (true) then
 {
@@ -1011,6 +1013,7 @@ if (true) then
   _this setPos [11459.451, 11386.303, 6.1035156e-005];
 };
 
+/*
 _vehicle_142 = objNull;
 if (true) then
 {
@@ -1018,7 +1021,8 @@ if (true) then
   _vehicle_142 = _this;
   _this setPos [11397.617, 11409.51, 0.00015258789];
 };
-
+*/
+/*
 _vehicle_143 = objNull;
 if (true) then
 {
@@ -1034,7 +1038,7 @@ if (true) then
   _vehicle_144 = _this;
   _this setPos [11395.703, 11411.612, -6.1035156e-005];
 };
-
+*/
 _vehicle_148 = objNull;
 if (true) then
 {
@@ -1795,6 +1799,7 @@ if (true) then
   _this setPos [11451.595, 11397.107, -6.1035156e-005];
 };
 */
+/*
 _vehicle_306 = objNull;
 if (true) then
 {
@@ -1803,7 +1808,8 @@ if (true) then
   _this setDir -150.38139;
   _this setPos [11415.463, 11348.72, -6.1035156e-005];
 };
-
+*/
+/*
 _vehicle_308 = objNull;
 if (true) then
 {
@@ -1812,7 +1818,8 @@ if (true) then
   _this setDir -95.927605;
   _this setPos [11497.541, 11370.396];
 };
-
+*/
+/*
 _vehicle_309 = objNull;
 if (true) then
 {
@@ -1821,7 +1828,8 @@ if (true) then
   _this setDir -57.792183;
   _this setPos [11470.734, 11352.207];
 };
-
+*/
+/*
 _vehicle_312 = objNull;
 if (true) then
 {
@@ -1830,7 +1838,8 @@ if (true) then
   _this setDir -93.957443;
   _this setPos [11497.697, 11364.762];
 };
-
+*/
+/*
 _vehicle_313 = objNull;
 if (true) then
 {
@@ -1839,7 +1848,9 @@ if (true) then
   _this setDir 165.29796;
   _this setPos [11403.532, 11412.938, -3.0517578e-005];
 };
+*/
 
+/*
 _vehicle_314 = objNull;
 if (true) then
 {
@@ -1848,7 +1859,12 @@ if (true) then
   _this setDir 83.489456;
   _this setPos [11383.561, 11390.43];
 };
+*/
 
 processInitCommands;
+
+
+execVM "mapaddons\PZREB_rebellen_server_monitor.sqf";
+
 
 

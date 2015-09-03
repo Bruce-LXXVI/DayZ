@@ -14,7 +14,7 @@
 #include "nwaf.sqf"
 
 // by Larry/Philipp Trautmann <Trautmann400@web.de>
-//#include "rebellen.sqf"
+//#include "PZREB_rebellen.sqf"
 
 
 #include "fires.sqf"
