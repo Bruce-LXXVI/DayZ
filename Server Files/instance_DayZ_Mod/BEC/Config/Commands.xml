@@ -493,5 +493,42 @@
 		<desc>USAGE :: !math Int+Int :: INFO -> Do simple bat math!.</desc>
 	</command>	
 	
+	
+	
+	
+	
+	<!-- 
+		Kick player
+	-->
+	<command id="26">
+		<name>!kpl</name>
+		<group>10</group>
+		<cmd>kick</cmd>
+		<time></time>
+		<text>Decision By Admin: _name_</text>
+		<desc>USAGE :: !kick name :: INFO -> Kick a player.</desc>
+	</command>
+	
+	
+	
+	<!-- 
+		Ban player for 15min
+	-->
+	<command id="27">
+		<name>!bpl</name>
+		<group>10</group>
+		<cmd>ban</cmd>
+		<time>15</time>
+		<text>You got a ban by : _name_ , come back in 15min</text>
+		<desc>USAGE :: !bpl name :: INFO -> Ban a player for 15min.</desc>
+	</command>	
+	
+	
+	
+	
+	
+	
+	
+	
 
 </BeCommands>

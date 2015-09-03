@@ -25,10 +25,17 @@
 	</admin>
 	
 	<admin id="1">
-		<name>Bruce</name>
-		<guid>23e6a6324ca856989430d495b6528cba</guid>
-		<group>0</group>
-		<groupname>Super Admin</groupname>
+		<name>Alice</name>
+		<guid>b2c43caef8b4da2db85f410f1ac63624</guid>
+		<group>10</group>
+		<groupname>Moderator</groupname>
+	</admin>
+	
+	<admin id="2">
+		<name>[REWE]SpitzKopfLarry</name>
+		<guid>fc8a6a2bd00f85a0068d9b26b2346f16</guid>
+		<group>10</group>
+		<groupname>Moderator</groupname>
 	</admin>
 	
 </BEAdmins>
