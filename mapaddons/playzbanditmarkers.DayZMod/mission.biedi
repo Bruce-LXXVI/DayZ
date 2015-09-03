@@ -1,0 +1,103 @@
+class _prefix_0
+{
+	objectType="prefix";
+	class Arguments
+	{
+	};
+};
+class _marker_0
+{
+	objectType="marker";
+	class Arguments
+	{
+		POSITION="[4533.834, 10281.643, -339]";
+		NAME="";
+		MARKER_TYPE="ELLIPSE";
+		TYPE="Empty";
+		COLOR="ColorRed";
+		FILL="Solid";
+		A="900";
+		B="900";
+	};
+};
+class _center_0
+{
+	objectType="center";
+	class Arguments
+	{
+		SIDE="west";
+	};
+};
+class _group_0
+{
+	objectType="group";
+	class Arguments
+	{
+		CENTER="_center_0";
+	};
+};
+class _unit_0
+{
+	objectType="unit";
+	class Arguments
+	{
+		POSITION="[4579.021, 10214.774, 0]";
+		GROUP="_group_0";
+		TYPE="BanditW1_DZ";
+		SKILL="0.60000002";
+		PLAYER="true";
+		LEADER="true";
+	};
+};
+class _marker_1
+{
+	objectType="marker";
+	class Arguments
+	{
+		POSITION="[6755.0913, 8117.0234]";
+		NAME="";
+		MARKER_TYPE="ELLIPSE";
+		TYPE="Empty";
+		COLOR="ColorPink";
+		FILL="Solid";
+		A="3000";
+		B="3000";
+	};
+};
+class _marker_2
+{
+	objectType="marker";
+	class Arguments
+	{
+		POSITION="[12088.825, 12679.601]";
+		NAME="";
+		MARKER_TYPE="ELLIPSE";
+		TYPE="Empty";
+		COLOR="ColorGreen";
+		FILL="Solid";
+		A="500";
+		B="500";
+	};
+};
+class _marker_3
+{
+	objectType="marker";
+	class Arguments
+	{
+		POSITION="[11399.737, 11361.586]";
+		NAME="";
+		MARKER_TYPE="ELLIPSE";
+		TYPE="Empty";
+		COLOR="ColorBlue";
+		FILL="Solid";
+		A="400";
+		B="400";
+	};
+};
+class _postfix_0
+{
+	objectType="postfix";
+	class Arguments
+	{
+	};
+};
