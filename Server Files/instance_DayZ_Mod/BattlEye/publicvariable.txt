@@ -1,5 +1,5 @@
 //new
-5  !=(remExField|remExFP) !=(PVCDZ_obj_GutBody|drn_AskServerDynamicWeatherEventArgs|BIS_effects_gepv|dayzLoad|achievement|dayzFlies) !=PVDZ_(drg_(RaDrag|RaLW|RLact)|getTickTime|hlt_Bleed|obj_(Delete|Publish|RoadFlare|Destroy|Fire)|objgather_Delete|veh_S(ave|F)) !=PVDZ_(plr_(Death|Discorem|Login[12]|LoginRecord|Save)|Server(_changeOwner|_Simulation|StoreVar)|receiveVar|sec_atp) !=PVDZ_playerMedicalSync !=PVDZ_(send(|Unconscious)) !=BIS_MPF_logic !=PVDZ_Server_LogIt !=PVDZ_obj_Fire !=PVDZ_Server_process(Code|SetAccessCode) !=cba_network_joinN !=cba_versioning_mismatch !=usageLogger !=EAT_serverMessageServer !=usecBandage !=usecTransfuse !=usecMorphine !=usecPainK !=usecAntibiotics !=PVDZE_obj_Delete !=EAT_SetOvercastServer !=EAT_SetDateServer !=EAT_SetFogServer !=EAT_contactAdminServer !=EAT_teleportFixServer
+5  !=(remExField|remExFP) !=(PVCDZ_obj_GutBody|drn_AskServerDynamicWeatherEventArgs|BIS_effects_gepv|dayzLoad|achievement|dayzFlies) !=PVDZ_(drg_(RaDrag|RaLW|RLact)|getTickTime|hlt_Bleed|obj_(Delete|Publish|RoadFlare|Destroy|Fire)|objgather_Delete|veh_S(ave|F)) !=PVDZ_(plr_(Death|Discorem|Login[12]|LoginRecord|Save)|Server(_changeOwner|_Simulation|StoreVar)|receiveVar|sec_atp) !=PVDZ_playerMedicalSync !=PVDZ_(send(|Unconscious)) !=BIS_MPF_logic !=PVDZ_Server_LogIt !=PVDZ_obj_Fire !=PVDZ_Server_process(Code|SetAccessCode) !=cba_network_joinN !=cba_versioning_mismatch !=usageLogger !=EAT_serverMessageServer !=usecBandage !=usecTransfuse !=usecMorphine !=usecPainK !=usecAntibiotics !=PVDZE_obj_Delete !=EAT_SetOvercastServer !=EAT_SetDateServer !=EAT_SetFogServer !=EAT_contactAdminServer !=EAT_teleportFixServer !=useBroadcaster
 
 ////////////////////////// Broadcast PV with EH
 1=PVDZ_drg_RaDrag
@@ -31,6 +31,7 @@
 
 ////////////////////////// Admin Tools
 1 usageLogger
+1 useBroadcaster
 1 EAT_serverMessageServer
 1 (^usec)
 1 PVDZE_obj_Delete
