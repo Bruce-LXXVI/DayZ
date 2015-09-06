@@ -218,11 +218,10 @@ DZAI_vehList = [
 	["SUV_DZ",1],
 	["HMMWV_DZ",1],
 	["UAZ_Unarmed_TK_EP1",2],
-	["BAF_Offroad_W",2],
-	["SkodaBlue",4],
+	["LandRover_CZ_EP1",2],
+	["SkodaRed",4],
 	["S1203_TK_CIV_EP1",4],
-	["Volha_2_TK_CIV_EP1",4],
-	["car_hatchback",4]
+	["hilux1_civil_1_open",4]
 ];
 
 //Difficulty level of land vehicle patrol units. Difficulty level also affects unit loadout and loot. Possible values: 0 to 3 (Default: 3)
