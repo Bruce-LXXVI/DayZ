@@ -10,9 +10,11 @@ private [ "_directoryAsArray"
 		, "_pos"				// Position
 		, "_objectID"			
 		, "_objectUID"
+		, "_objectUIDOld"
 		, "_survivors"			// Spieler in der Nähe
 		, "_playerNear"			// Spieler in der Nähe
 		, "_staticVehSpawns"	// Array der static spawn points
+		, "_staticPrioVehSpawns"// Array der static spawn points mit hoher Priorität
 		, "_runVehSpawner"		// Killswitch für den Vehikel-Spawner
 		, "_iSpawnerTerminator"	// Killcounter für den Vehikel-Spawner
 		, "_dontSpawn"			// Merker für Entscheidung: spawn oder nicht spawn
@@ -30,6 +32,8 @@ private [ "_directoryAsArray"
 		, "_aliveUIDs"
 		, "_aliveIDs"
 		, "_classnameCounters"
+		, "_hasMoved"
+		, "_isResetter"			// Fahrzeug, das immer wieder resettet wird
 ];
 
 
@@ -51,7 +55,10 @@ uiSleep 100;
 _directoryAsArray = toArray __FILE__;
 _directoryAsArray resize ((count _directoryAsArray) - 25);
 PLAYZ_directory = toString _directoryAsArray;
-diag_log format ["%1 Initializing using base path %2.", PLAYZ_logname, PLAYZ_directory];
+diag_log format ["%1 Initializing using base path %2", PLAYZ_logname, PLAYZ_directory];
+
+PLAYZ_fnc_spawnVehicle = compile preprocessFileLineNumbers format["%1\playZ_fnc_spawnVehicle.sqf", PLAYZ_directory];
+
 
 while {true} do {
 	diag_log format ["%1 ======================================================", PLAYZ_logname];
@@ -74,6 +81,16 @@ while {true} do {
 			_objectID = _x getVariable ["ObjectID","0"];
 			_objectUID = _x getVariable ["ObjectUID","0"];
 			_whenDestroyed = _x getVariable ["PLAYZ_whenDestroyed", nil];
+			_playerNear = ({isPlayer _x} count (_pos nearEntities [["CAManBase","Land","Air"], PLAYZ_playerDistance]) > 0);
+			_vehiceNear = (count (_pos nearEntities ["AllVehicles", PLAYZ_staticSpawnOtherVehicleDistance]) > 0);
+			//_isResetter = ((parseNumber _objectUID) >= 280000000) && ((parseNumber _objectUID) < 290000000);
+			_isResetter = false;
+			_isPrio =     ((parseNumber _objectUID) >= 290000000) && ((parseNumber _objectUID) < 300000000);
+			if( (count (_x getVariable ["PLAYZ_spawnpos", []])) < 3 ) then {
+				_hasMoved = false;
+			} else {
+				_hasMoved = (_x getVariable ["PLAYZ_spawnpos", []]) distance _x > 20;
+			};
 
 			// die objectUID/objectID zur Liste hinzufügen
 			if( (_objectUID != "") && (_objectUID != "0") ) then {_aliveUIDs set [count _aliveUIDs, _objectUID];};
@@ -83,9 +100,17 @@ while {true} do {
 			_index = PLAYZ_limitedClasses find _type;
 			if(_index >= 0) then {_classnameCounters set [_index, ((_classnameCounters select _index) + 1)];};
 
-			// Stark beschädigte Fahrzeuge zerstören
-			if( (PLAYZ_destroyVehiclesMoreDamaged < 1) && (_damage >= PLAYZ_destroyVehiclesMoreDamaged) ) then {
-				_x setDamage 1;
+			// Stark beschädigte / Reset- Fahrzeuge zerstören
+			if(	alive _x && (
+					((PLAYZ_destroyVehiclesMoreDamaged < 1) && (_damage >= PLAYZ_destroyVehiclesMoreDamaged))
+					|| (_hasMoved && _isResetter)
+				)) then {
+				if( _playerNear ) then {
+					diag_log format ["%1 don't destroy %2 (player nearby)", PLAYZ_logname, _x];
+				} else {
+					diag_log format ["%1 blowing up %2", PLAYZ_logname, _x];
+					_x setDamage 1;
+				}
 			};
 
 
@@ -102,7 +127,6 @@ while {true} do {
 				};
 
 				// ist ein Spieler in der Nähe?
-				_playerNear = ({isPlayer _x} count (_pos nearEntities [["CAManBase","Land","Air"], PLAYZ_playerDistance]) > 0);
 				if( _playerNear ) then {_dontDelete=true; diag_log format ["%1 don't delete (player nearby)", PLAYZ_logname];};
 
 				// Timer abgelaufen?
@@ -125,7 +149,7 @@ while {true} do {
 				};
 			};
 		};
-	} forEach vehicles;
+	} count vehicles;
 
 
 
@@ -154,27 +178,65 @@ while {true} do {
 
 	// static spawn points vorbereiten
 	_staticVehSpawns = [];
+	_staticPrioVehSpawns = [];
 	{
 		_objectUID = _x select 0;
+		_objectUIDOld = "N/A";
 		_type = _x select 1;
 		_pos = (_x select 2) select 1;
 		_playerNear = ({isPlayer _x} count (_pos nearEntities [["CAManBase","Land","Air"], PLAYZ_playerDistance]) > 0);
 		_vehiceNear = (count (_pos nearEntities ["AllVehicles", PLAYZ_staticSpawnOtherVehicleDistance]) > 0);
+		//_isResetter = ((parseNumber _objectUID) >= 280000000) && ((parseNumber _objectUID) < 290000000);
+		_isResetter = false;
+		_isPrio =     ((parseNumber _objectUID) >= 290000000) && ((parseNumber _objectUID) < 300000000);
 
-		if( (_objectUID in _aliveUIDs) || (_objectUID in _aliveIDs) ) then {
+		// Alte ObjectUID berechnen
+		if( ((parseNumber _objectUID) >= 200000000) && ((parseNumber _objectUID) < 300000000) ) then {
+			_objectUIDOld = [];
+			{
+				if( _foreachIndex > 0 ) then {
+					_objectUIDOld set [_foreachIndex - 1, (toArray _objectUID) select _foreachIndex];
+				}
+			} forEach (toArray _objectUID);
+			_objectUIDOld = toString _objectUIDOld;
+			//diag_log format ["%1 _objectUID=%2 | _objectUIDOld=%3", PLAYZ_logname, _objectUID, _objectUIDOld];
+		};
+
+		// PLAYZ_spawnpos setzen
+		{
+			private ["_oID", "_oUID"];
+			if ( (_x isKindOf "AllVehicles") && ( count (_x getVariable ["PLAYZ_spawnpos", []]) < 3 ) ) then {
+				_oID = _x getVariable ["ObjectID","0"];
+				_oUID = _x getVariable ["ObjectUID","0"];
+				if( (_objectUID == _oID) || (_objectUID == _oUID) || (_objectUIDOld == _oID) || (_objectUIDOld == _oUID) ) then {
+					_x setVariable ["PLAYZ_spawnpos", _pos, true];
+				};
+			}
+		} count vehicles;
+
+		if( 		(_objectUID in _aliveUIDs) || (_objectUID in _aliveIDs) 
+				||	(_objectUIDOld in _aliveUIDs) || (_objectUIDOld in _aliveIDs)
+			) then {
 			//diag_log format ["%1 static spawn %2 (UID=%3): vehicle exists", PLAYZ_logname, _x select 1, _x select 0];
 		} else {
-			if(_playerNear) then {
-				diag_log format ["%1 static spawn %2 (UID=%3): player near", PLAYZ_logname, _x select 1, _x select 0];
+			if( _isPrio ) then {
+				// Hohe Prio
+				diag_log format ["%1 PRIORITY static spawn %2 (UID=%3): added to list", PLAYZ_logname, _x select 1, _x select 0];
+				_staticPrioVehSpawns = _staticPrioVehSpawns + [_x];
 			} else {
-				if(_type in _classnameOverlimit) then {
-					diag_log format ["%1 static spawn %2 (UID=%3): class over limit", PLAYZ_logname, _x select 1, _x select 0];
+				// Normale Prio
+				if(_playerNear) then {
+					diag_log format ["%1 static spawn %2 (UID=%3): player near", PLAYZ_logname, _x select 1, _x select 0];
 				} else {
-					if(_vehiceNear) then {
-						diag_log format ["%1 static spawn %2 (UID=%3): vehicle near", PLAYZ_logname, _x select 1, _x select 0];
+					if(_type in _classnameOverlimit) then {
+						diag_log format ["%1 static spawn %2 (UID=%3): class over limit", PLAYZ_logname, _x select 1, _x select 0];
 					} else {
-						diag_log format ["%1 static spawn %2 (UID=%3): added to list", PLAYZ_logname, _x select 1, _x select 0];
-						_staticVehSpawns = _staticVehSpawns + [_x];
+						if(_vehiceNear) then {
+							diag_log format ["%1 static spawn %2 (UID=%3): vehicle near", PLAYZ_logname, _x select 1, _x select 0];
+						} else {
+							diag_log format ["%1 static spawn %2 (UID=%3): added to list", PLAYZ_logname, _x select 1, _x select 0];
+							_staticVehSpawns = _staticVehSpawns + [_x];
+						};
 					};
 				};
 			};
@@ -197,6 +259,12 @@ while {true} do {
 		_newVehSpawn = [];
 
 
+		// Zuerst alle Prio spawns
+		{
+			_newVeh = _x call PLAYZ_fnc_spawnVehicle;
+			_iVehCreated = _iVehCreated + 1;
+		} count _staticPrioVehSpawns;
+
 
 		// Zuerst einen static spawn point versuchen
 		if(PLAYZ_enableStaticSpawns) then {
@@ -213,60 +281,6 @@ while {true} do {
 		} else {
 			diag_log format ["%1 static spawns disabled.", PLAYZ_logname];
 		};
-
-
-
-		// Dynamischen spawn point versuchen
-		if(PLAYZ_enableDynamicSpawns) then {
-			if( _dontSpawn ) then {
-		
-				// Fahrzeug aussuchen
-				
-				_newVehWorldspace=[round random 360, [((random 1000)+6000), ((random 1000)+7000), 0]];
-				_newVehSpawn set [0, _newVehWorldspace call dayz_objectUID2];
-				_newVehSpawn set [1, (PLAYZ_dynamicVehicles - _classnameOverlimit) call BIS_fnc_selectRandom];
-				_newVehSpawn set [2, _newVehWorldspace];
-				_newVehSpawn set [3, []];
-				_newVehSpawn set [4, []];
-
-				diag_log format ["%1 picked dynamic spawn %2 (%3).", PLAYZ_logname, _newVehSpawn select 1, _newVehSpawn select 0];
-
-		/*	call {
-				if (_vehicleType isKindOf "Air") exitWith {
-					//Note: no cargo units for air vehicles
-					_maxGunnerUnits = DZAI_heliGunnerUnits;
-					_weapongrade = DZAI_heliUnitLevel call DZAI_getWeapongrade;
-					_vehSpawnPos = [(getMarkerPos "DZAI_centerMarker"),300 + (random((getMarkerSize "DZAI_centerMarker") select 0)),random(360),1] call SHK_pos;
-					_vehSpawnPos set [2,150];
-					_spawnMode = "FLY";
-				};
-				if (_vehicleType isKindOf "LandVehicle") exitWith {
-					_maxGunnerUnits = DZAI_vehGunnerUnits;
-					_maxCargoUnits = DZAI_vehCargoUnits;
-					_weapongrade = DZAI_vehUnitLevel call DZAI_getWeapongrade;
-					while {_keepLooking} do {
-						_vehSpawnPos = [(getMarkerPos "DZAI_centerMarker"),300 + random((getMarkerSize "DZAI_centerMarker") select 0),random(360),0,[2,750]] call SHK_pos;
-						if ((count _vehSpawnPos) > 1) then {
-							_playerNear = ({isPlayer _x} count (_vehSpawnPos nearEntities [["CAManBase","Land","Air"], 300]) > 0);
-							if(!_playerNear) then {
-								_keepLooking = false;	//Found road position, stop searching
-							};
-						} else {
-							if (DZAI_debugLevel > 0) then {diag_log format ["DZAI Debug: Unable to find road position to spawn AI %1. Retrying in 30 seconds.",_vehicleType]};
-							uiSleep 30; //Couldnt find road, search again in 30 seconds.
-						};
-					};
-				};
-				_error = true;
-			}; */
-
-				// Ok, dynamic spawn gefunden => also doch spawnen
-				_dontSpawn=false;
-			};
-		} else {
-			diag_log format ["%1 dynamic spawns disabled.", PLAYZ_logname];
-		};
-
 
 		// Aufgeben: Es wurden keine spawn points gefunden.
 		if( _dontSpawn || (count _newVehSpawn < 4) ) exitWith {diag_log format ["%1 no spawn points found.", PLAYZ_logname];};
@@ -298,89 +312,21 @@ while {true} do {
 		if( _playerNear ) then {_dontSpawn=true; diag_log format ["%1 find another spawn point (player nearby)", PLAYZ_logname];};
 
 		// sind andere vehicles in der unmittelbaren Nähe?
-		_vehicles = _pos nearEntities ["AllVehicles", 15];
+		_vehicles = _pos nearEntities ["AllVehicles", 10];
 		if( count _vehicles > 0 ) then {_dontSpawn=true; diag_log format ["%1 find another spawn point (vehicle nearby)", PLAYZ_logname];};
 
 
 
 		if( !_dontSpawn ) then {
 
-			_newVeh = createVehicle [_type, _pos, [], 0, "NONE"];
-			_newVeh setDir _dir;
-			_newVeh setDamage _damage;
-			_newVeh setVariable ["lastUpdate", time];
-			_newVeh setVariable ["ObjectUID", _objectUID, true];
-			_newVeh setVariable ["ObjectID", _objectUID, true];
-			_newVeh setVariable ["CharacterID", _ownerID, true];
-			_newVeh setVehicleVarName _objectUID;
-
-			// Zeit setzen
-			_newVeh setVariable ["PLAYZ_whenSpawned", round diag_tickTime, true];
-
-
-			//Dont add inventory for traps.
-			if( !(_newVeh isKindOf "TrapItems") && !(_newVeh iskindof "DZ_buildables") && !PLAYZ_staticSpawnAlwaysEmpty ) then {
-				_cargo = _inventory;
-				clearWeaponCargoGlobal _newVeh;
-				clearMagazineCargoGlobal _newVeh;
-				clearBackpackCargoGlobal _newVeh;
-				_config = ["CfgWeapons", "CfgMagazines", "CfgVehicles" ];
-				{
-					_magItemTypes = _x select 0;
-					_magItemQtys = _x select 1;
-					_i = _forEachIndex;
-					{
-						if ((isClass(configFile >> (_config select _i) >> _x)) &&
-							{(getNumber(configFile >> (_config select _i) >> _x >> "stopThis") != 1)}) then {
-							if (_forEachIndex < count _magItemQtys) then {
-								switch (_i) do {
-									case 0: { _newVeh addWeaponCargoGlobal [_x,(_magItemQtys select _forEachIndex)]; }; 
-									case 1: { _newVeh addMagazineCargoGlobal [_x,(_magItemQtys select _forEachIndex)]; }; 
-									case 2: { _newVeh addBackpackCargoGlobal [_x,(_magItemQtys select _forEachIndex)]; }; 
-								};
-							};
-						};
-					} forEach _magItemTypes;
-				} forEach _cargo;
-			} else 
-			{
-				clearWeaponCargoGlobal _newVeh;
-				clearMagazineCargoGlobal _newVeh;
-				clearBackpackCargoGlobal _newVeh;
-				_inventory=[[[],[]],[[],[]],[[],[]]];
-			};
-
-
-			{
-				_selection = _x select 0;
-				_dam = _x select 1;
-				if ((_selection in dayZ_explosiveParts and _dam > 0.8) && (!(_newVeh isKindOf "Air"))) then {_dam = 0.8};
-				//if( PLAYZ_staticSpawnFullyRepaired ) then { _dam=0; };
-				[_newVeh,_selection,_dam] call fnc_veh_setFixServer;
-			} forEach _hitpoints;
-			
-			_newVeh setvelocity [0,0,1];
-			_newVeh setFuel _fuel;
-			_newVeh call fnc_veh_ResetEH;
-
-			diag_log format ["%1 SPAWNING ===> veh=%2 | type=%6 | damage=%3 | pos=%4 | posGps=%5", PLAYZ_logname, _newVeh, _damage, getPosASL _newVeh, (mapGridPosition getPos _newVeh), _type];
-			diag_log format ["%1 objectID=%2 | objectUID=%3", PLAYZ_logname, _newVeh getVariable ["ObjectID","0"], _objectUID];
-
-			//dayz_serverObjectMonitor set [count dayz_serverObjectMonitor, _newVeh];
-			[_newVeh, "position", true] spawn server_updateObject;
-
-			PVDZ_obj_Publish = [_ownerID, _newVeh, [round getDir _newVeh, getPosATL _newVeh], _inventory, _hitpoints, _objectUID, damage _newVeh, fuel _newVeh];
-			publicVariableServer "PVDZ_obj_Publish";
-			diag_log [diag_ticktime, PLAYZ_logname, " New Networked object, request to save to hive. PVDZ_obj_Publish:", PVDZ_obj_Publish];
-
-			_aliveUIDs set [count _aliveUIDs, _objectUID];
+			_newVeh = _newVehSpawn call PLAYZ_fnc_spawnVehicle;
 			_iVehCreated = _iVehCreated + 1;
+
 		} else {
 			diag_log format ["%1 NOT SPAWNING ===> veh=%2 | type=%6 | damage=%3 | pos=%4 | posGps=%5", PLAYZ_logname, 0, _damage, _pos, mapGridPosition _pos, _type];
 			diag_log format ["%1 objectID=%2 | objectUID=%3", PLAYZ_logname, _objectUID, _objectUID];
 		};
 	};
-
 
 
 	
