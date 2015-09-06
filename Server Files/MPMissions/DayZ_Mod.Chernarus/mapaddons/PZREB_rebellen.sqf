@@ -1864,7 +1864,18 @@ if (true) then
 processInitCommands;
 
 
-execVM "mapaddons\PZREB_rebellen_server_monitor.sqf";
+[] spawn {
+	private ["_i"];
+	_i=0;
+	while {isDedicated} do {
+		_i = _i + 1;
+		diag_log format ["[PZREB] Mission run #%1.", _i];
+		call compile preprocessFileLineNumbers "mapaddons\PZREB_rebellen_server_monitor.sqf";
+		sleep 7200;
+	};
+
+};
+
 
 
 
