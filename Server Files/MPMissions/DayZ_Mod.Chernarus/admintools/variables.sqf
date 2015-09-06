@@ -7,6 +7,14 @@ _directoryAsArray resize ((count _directoryAsArray) - 14);
 EAT_directory = toString _directoryAsArray;
 diag_log format ["%1 Initializing using base path %2", EAT_logname, EAT_directory];
 
+// Wait for getPlayerUID player
+if( !isDedicated ) then {
+	waitUntil { getPlayerUID player != "" };
+	diag_log format ["%1 getPlayerUID player OK (%2). Starting...", EAT_logname, getPlayerUID player];
+} else {
+	diag_log format ["%1 getPlayerUID player not necessary on server (%2). Starting...", EAT_logname, getPlayerUID player];
+};
+
 
 AdminList = AdminList + SuperAdminList; // add SuperAdmin to Admin
 AdminAndModList = AdminList + ModList; // Add all admin/mod into one list for easy call
@@ -394,6 +402,9 @@ helpQueue = []; // Initialize help queue
 	
 	
 /********************** Admin/Mod functions/variables **********************/
+//diag_log format ["[EAT] getPlayerUID player=%1 | AdminAndModList=%2", getPlayerUID player, AdminAndModList];
+AdminToggle = {diag_log format ["[EAT] Function AdminToggle not defined for player %1", getPlayerUID player];};
+
 	if ((getPlayerUID player) in AdminAndModList) then {
 	
 		//Admin-Mod mode script calls
@@ -465,4 +476,4 @@ helpQueue = []; // Initialize help queue
 if(isNil "dayz_allowedObjects") then {dayz_allowedObjects = [];};
 {dayz_allowedObjects = dayz_allowedObjects + [_x select 2];} forEach allBuildingList;
 
-diag_log("Admin Tools: variables.sqf loaded");
+diag_log("[EAT] variables.sqf loaded");

@@ -37,6 +37,9 @@ if ( 1==1 ) then {
 	
 	if(count _location != 0) then {
 		//place vehicle spawn marker (local)
+		if(!(_vehtospawn in DayZ_SafeObjects)) then {
+			diag_log format ["[EAT] WARNING: Type %1 is not in DayZ_SafeObjects.", _vehtospawn];
+		};
 		_veh = createVehicle [_vehtospawn, _location, [], 0, "CAN_COLLIDE"]; 
 		_location = (getPosATL _veh);
 		_veh setVariable ["lastUpdate", time];

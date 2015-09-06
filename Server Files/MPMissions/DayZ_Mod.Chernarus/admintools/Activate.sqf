@@ -8,6 +8,8 @@ waitUntil {!isNil "dayz_animalCheck"}; // Wait for the character to load all req
 diag_log format ["%1 dayz_animalCheck OK. Now waiting for keyboard_keys.", EAT_logname];
 waitUntil {!isNil "keyboard_keys"};
 diag_log format ["%1 keyboard_keys OK. Starting...", EAT_logname];
+waitUntil { getPlayerUID player != "" };
+diag_log format ["%1 getPlayerUID player OK (%2). Starting...", EAT_logname, getPlayerUID player];
 
 // Give players action menu
 if((ActionMenuPlayers && !((getPlayerUID player) in AdminAndModList)) || (ActionMenuAdmins && ((getPlayerUID player) in AdminAndModList))) then {
