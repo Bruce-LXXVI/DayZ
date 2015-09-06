@@ -68,32 +68,71 @@ if( ((getPlayerUID player) in AdminList) || ((getPlayerUID player) in ModList) )
 	_cursor = cursorTarget;
 	_playZ_debug_text2 = "";
 	if(!isNull _cursor) then {
-		_playZ_debug_text2 = parseText format ["
-		<t size='0.95' font='Bitstream' align='left' >[%10]</t><t size='0.95' font='Bitstream' align='right'>.</t><br/>
-		<t size='0.95' font='Bitstream' align='center' color='#FFBF00'>%1</t><br/>
-		<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>ObjectID: </t><t size='0.95' font='Bitstream' align='right'>%2</t><br/>
-		<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>ObjectUID: </t><t size='0.95' font='Bitstream' align='right'>%3</t><br/>
-		<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>Damage: </t><t size='0.95' font='Bitstream' align='right'>%4</t><br/>
-		<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>Type: </t><t size='0.95' font='Bitstream' align='right'>%7</t><br/>
-		<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>PLAYZ_whenSpawned: </t><t size='0.95' font='Bitstream' align='right'>%8</t><br/>
-		<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>PLAYZ_whenDestroyed: </t><t size='0.95' font='Bitstream' align='right'>%9</t><br/>
-		<t size='0.95' font='Bitstream' align='left' >GPS: %11</t><t size='0.95' font='Bitstream' align='right'>DIR: %6</t><br/>
-		<t size='0.95'font='Bitstream'align='center' >%5</t><br/>",
 
-		/*  1 */	(_cursor),
-		/*  2 */	(_cursor getVariable ["ObjectID", "0"]), 
-		/*  3 */	(_cursor getVariable ["ObjectUID", "0"]),
-		/*  4 */	(damage _cursor),
-		/*  5 */	(getPosASL _cursor),
-		/*  6 */	(round getDir _cursor),
-		/*  7 */	(typeOf _cursor),
-		/*  8 */	(_cursor getVariable ["PLAYZ_whenSpawned", "0"]),
-		/*  9 */	(_cursor getVariable ["PLAYZ_whenDestroyed", "0"]),
-		/* 10 */	(gettext (configFile >> 'CfgVehicles' >> (typeof _cursor) >> 'displayName')),
-		/* 11 */	(mapGridPosition getPos _cursor),
+		if ( _cursor isKindOf "AllVehicles" ) then {
 
-		/* __ */	0
-		];
+			_playZ_debug_text2 = parseText format ["
+			<t size='0.95' font='Bitstream' align='left' >[%10]</t><t size='0.95' font='Bitstream' align='right'>.</t><br/>
+			<t size='0.95' font='Bitstream' align='center' color='#FFBF00'>%1</t><br/>
+			<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>ObjectID: </t><t size='0.95' font='Bitstream' align='right'>%2</t><br/>
+			<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>ObjectUID: </t><t size='0.95' font='Bitstream' align='right'>%3</t><br/>
+			<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>Damage: </t><t size='0.95' font='Bitstream' align='right'>%4</t><br/>
+			<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>Fuel: </t><t size='0.95' font='Bitstream' align='right'>%12</t><br/>
+			<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>Type: </t><t size='0.95' font='Bitstream' align='right'>%7</t><br/>
+			<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>PLAYZ_whenSpawned: </t><t size='0.95' font='Bitstream' align='right'>%8</t><br/>
+			<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>PLAYZ_whenDestroyed: </t><t size='0.95' font='Bitstream' align='right'>%9</t><br/>
+			<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>PLAYZ_spawnpos: </t><t size='0.95' font='Bitstream' align='right'>%13</t><br/>
+			<t size='0.95' font='Bitstream' align='left' >GPS: %11</t><t size='0.95' font='Bitstream' align='right'>DIR: %6</t><br/>
+			<t size='0.95'font='Bitstream'align='center' >%5</t><br/>",
+	
+			/*  1 */	(_cursor),
+			/*  2 */	(_cursor getVariable ["ObjectID", "0"]), 
+			/*  3 */	(_cursor getVariable ["ObjectUID", "0"]),
+			/*  4 */	(damage _cursor),
+			/*  5 */	(getPosASL _cursor),
+			/*  6 */	(round getDir _cursor),
+			/*  7 */	(typeOf _cursor),
+			/*  8 */	(_cursor getVariable ["PLAYZ_whenSpawned", "0"]),
+			/*  9 */	(_cursor getVariable ["PLAYZ_whenDestroyed", "0"]),
+			/* 10 */	(gettext (configFile >> 'CfgVehicles' >> (typeof _cursor) >> 'displayName')),
+			/* 11 */	(mapGridPosition getPos _cursor),
+			/* 12 */	(fuel _cursor),
+			/* 13 */	(_cursor getVariable ["PLAYZ_spawnpos", "[]"]),
+	
+			/* __ */	0
+			];
+
+		} else {
+
+			_playZ_debug_text2 = parseText format ["
+			<t size='0.95' font='Bitstream' align='left' >[%12]</t><t size='0.95' font='Bitstream' align='right'>.</t><br/>
+			<t size='0.95' font='Bitstream' align='center' color='#FFBF00'>%1</t><br/>
+			<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>Damage: </t><t size='0.95' font='Bitstream' align='right'>%4</t><br/>
+			<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>Disp. Name: </t><t size='0.95' font='Bitstream' align='right'>%10</t><br/>
+			<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>Type: </t><t size='0.95' font='Bitstream' align='right'>%7</t><br/>
+			<t size='0.95' font='Bitstream' align='left' >GPS: %11</t><t size='0.95' font='Bitstream' align='right'>DIR: %6</t><br/>
+			<t size='0.95'font='Bitstream'align='center' >%5</t><br/>",
+	
+			/*  1 */	(_cursor),
+			/*  2 */	(_cursor getVariable ["ObjectID", "0"]), 
+			/*  3 */	(_cursor getVariable ["ObjectUID", "0"]),
+			/*  4 */	(damage _cursor),
+			/*  5 */	(getPosASL _cursor),
+			/*  6 */	(round getDir _cursor),
+			/*  7 */	(typeOf _cursor),
+			/*  8 */	(_cursor getVariable ["PLAYZ_whenSpawned", "0"]),
+			/*  9 */	(_cursor getVariable ["PLAYZ_whenDestroyed", "0"]),
+			/* 10 */	(gettext (configFile >> 'CfgVehicles' >> (typeof _cursor) >> 'displayName')),
+			/* 11 */	(mapGridPosition getPos _cursor),
+			/* 12 */	(name _cursor),
+	
+			/* __ */	0
+			];
+
+		};
+
+
+
 	} else {
 		_playZ_debug_text2 = "Point";
 	};
