@@ -69,7 +69,7 @@ if( ((getPlayerUID player) in AdminList) || ((getPlayerUID player) in ModList) )
 	_playZ_debug_text2 = "";
 	if(!isNull _cursor) then {
 
-		if ( _cursor isKindOf "AllVehicles" ) then {
+		if ( /*_cursor isKindOf "AllVehicles"*/ true ) then {
 
 			_playZ_debug_text2 = parseText format ["
 			<t size='0.95' font='Bitstream' align='left' >[%10]</t><t size='0.95' font='Bitstream' align='right'>.</t><br/>
