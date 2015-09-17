@@ -203,6 +203,7 @@ while {true} do {
 		};
 
 		// PLAYZ_spawnpos setzen
+		/* ZU LANGSAM
 		{
 			private ["_oID", "_oUID"];
 			if ( (_x isKindOf "AllVehicles") && ( count (_x getVariable ["PLAYZ_spawnpos", []]) < 3 ) ) then {
@@ -213,6 +214,7 @@ while {true} do {
 				};
 			}
 		} count vehicles;
+		*/
 
 		if( 		(_objectUID in _aliveUIDs) || (_objectUID in _aliveIDs) 
 				||	(_objectUIDOld in _aliveUIDs) || (_objectUIDOld in _aliveIDs)

@@ -38,6 +38,7 @@ clearBackpackCargoGlobal _spawnCrate;
 _spawnCrate addWeaponCargoGlobal ["ItemMatchbox", 5];
 _spawnCrate addWeaponCargoGlobal ["ItemKnife", 5];
 _spawnCrate addWeaponCargoGlobal ["ItemHatchet", 5];
+_spawnCrate addWeaponCargoGlobal ["ItemRadio", 5];
 
 // Add magazine-slot items to crate
 // Syntax: _spawnCrate addMagazineCargoGlobal ["ITEM", number-of-items];
@@ -53,6 +54,8 @@ _spawnCrate addMagazineCargoGlobal ["ItemBandage", 50];
 _spawnCrate addMagazineCargoGlobal ["ItemAntibacterialWipe", 50];
 _spawnCrate addMagazineCargoGlobal ["ItemWaterbottleBoiled", 50];
 _spawnCrate addMagazineCargoGlobal ["FoodSteakCooked", 50];
+_spawnCrate addMagazineCargoGlobal ["ItemSodaRocketFuel", 50];
+_spawnCrate addMagazineCargoGlobal ["FoodCanBoneboy", 50];
 
 
 
