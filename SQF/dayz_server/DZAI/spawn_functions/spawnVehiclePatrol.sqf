@@ -86,6 +86,7 @@ _vehicle setVariable [ "ObjectUID", _objectUID, true ];
 _vehicle setVariable [ "ObjectID", _objectUID, true ];
 _vehicle setVariable ["lastUpdate", time];
 _vehicle setVariable ["CharacterID", "0", true];
+_vehicle setVariable ["PlayZ_salvage_disabled", 1, true];
 clearWeaponCargoGlobal _vehicle;
 clearMagazineCargoGlobal _vehicle;
 

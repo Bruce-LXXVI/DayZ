@@ -1,4 +1,4 @@
-private ["_victim","_vehicle","_unitGroup","_groupIsEmpty"];
+private ["_victim","_vehicle","_unitGroup","_groupIsEmpty", "_vehicleObjectUID"];
 
 _victim = _this select 0;
 _unitGroup = _this select 1;
@@ -9,11 +9,15 @@ if (_groupIsEmpty) then {
 	if (_vehicle isKindOf "LandVehicle") then {
 		{_vehicle removeAllEventHandlers _x} count ["HandleDamage","Killed"];
 
-		if(!DZAI_vehiclesLocked) then
+		_vehicleObjectUID = parseNumber (_vehicle getVariable ["ObjectUID", "0"]);
+		diag_log format ["[DZAI]: Vehicle %1 has ObjectUID %2", _vehicle, _vehicleObjectUID];
+
+		if( !DZAI_vehiclesLocked && (_vehicleObjectUID > 0) ) then
 		{
 			_vehicle call fnc_veh_ResetEH;
 			_vehicle setVehicleLock "UNLOCKED";
 			_vehicle setFuel (round (random 70) + 10) / 100;
+			_vehicle setVariable ["PlayZ_salvage_disabled", 0, true];
 
 			diag_log format ["[DZAI]: Vehicle %1 is now unlocked.", _vehicle];
 			[_vehicle] spawn {

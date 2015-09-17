@@ -81,10 +81,11 @@ _vehicle allowCrewInImmobile (!_isAirVehicle);
 _vehicle setVehicleLock "LOCKED";
 
 if( isNil "_objectUID" ) then {_objectUID = format ["9%1%2%3", abs round((random 90)+10), abs round((random 900)+100), abs round((random 900)+100)];};
-_vehicle setVariable ["ObjectUID", _objectUID, true];
-_vehicle setVariable ["ObjectID", _objectUID, true];
+_vehicle setVariable ["ObjectUID", "0", true];
+_vehicle setVariable ["ObjectID", "0", true];
 _vehicle setVariable ["lastUpdate", time];
 _vehicle setVariable ["CharacterID", "0", true];
+_vehicle setVariable ["PlayZ_salvage_disabled", 1, true];
 clearWeaponCargoGlobal _vehicle;
 clearMagazineCargoGlobal _vehicle;
 
