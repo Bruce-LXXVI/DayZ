@@ -225,3 +225,10 @@ dayz_reseed = {
 };
 
 call compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\fa_hiveMaintenance.sqf";
+
+/* DZGM */
+currentInvites = [];
+publicVariable "currentInvites";
+"currentInvites" addPublicVariableEventHandler {publicVariable "currentInvites";};
+
+

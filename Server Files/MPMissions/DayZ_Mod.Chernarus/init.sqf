@@ -25,6 +25,13 @@ dayz_DamageMultiplier = 1; //Damage Multiplier for Zombies.
 dayz_temperature_override = false; // Set to true to disable all temperature changes.
 
 
+//disable greeting menu 
+player setVariable ["BIS_noCoreConversations", true];
+//disable radio messages to be heard and shown in the left lower corner of the screen
+enableRadio false;
+// May prevent "how are you civillian?" messages from NPC
+enableSentences false;
+
 
 
 // DO NOT EDIT BELOW HERE //
@@ -115,6 +122,10 @@ if (!isDedicated) then {
 	//execFSM "\z\addons\dayz_code\system\player_monitor.fsm";
 	//Bruce: load mission player_monitor
 	execFSM "player_monitor.fsm";
+
+	/* DZGM */
+	execVM "dzgm\init.sqf";
+
 	waituntil {scriptDone progress_monitor};
 	cutText ["","BLACK IN", 3];
 	3 fadeSound 1;
