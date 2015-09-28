@@ -72,16 +72,17 @@ if (!isDedicated) then {
 
 initialized = false;
 call compile preprocessFileLineNumbers "\nst\ns_dayz\code\init\variables.sqf"; //Initilize the Variables (IMPORTANT: Must happen very early)
-//call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";
+call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";
 call compile preprocessFileLineNumbers "PLAYZ\dayz_code\init\variables.sqf";
 progressLoadingScreen 0.05;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\publicEH.sqf";
 progressLoadingScreen 0.1;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\medical\setup_functions_med.sqf";
 progressLoadingScreen 0.15;
-call compile preprocessFileLineNumbers "\nst\ns_dayz\code\init\compiles.sqf"; //Compile regular functions
-//call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";
+call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";
 call compile preprocessFileLineNumbers "PLAYZ\dayz_code\init\compiles.sqf";
+call compile preprocessFileLineNumbers "PLAYZ\ns_dayz\code\init\compiles.sqf";
+
 
 progressLoadingScreen 0.2;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\BIS_Effects\init.sqf";
@@ -128,7 +129,7 @@ BIS_Effects_startEvent = {
 };
 
 if (dayz_REsec == 1) then { call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\REsec.sqf"; };
-execVM "\z\addons\dayz_code\system\DynamicWeatherEffects.sqf";
+//execVM "\z\addons\dayz_code\system\DynamicWeatherEffects.sqf";
 
 if ((!isServer) && (isNull player) ) then
 {
