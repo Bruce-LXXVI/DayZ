@@ -23,9 +23,14 @@ aiKills = 1;
 diagRadio = 1;
 diagHit = 1;
 
-#include "\z\addons\dayz_code\gui\description.hpp"
+// DZGM #include "\z\addons\dayz_code\gui\description.hpp"
+#include "PLAYZ\dayz_code\gui\description.hpp"
+#include "PLAYZ\dayz_code\gui\dzgm\extra_rc.hpp"
+#include "dzgm\groupManagement.hpp"
 
+// PlayZ Classnames
+#include "PLAYZ\Configs\CfgVehiclesPlayZ.hpp"
 
 // Epoch Admin Tools
-#include "admintools\dialog.hpp"
+#include "PLAYZ\admintools\dialog.hpp"
 

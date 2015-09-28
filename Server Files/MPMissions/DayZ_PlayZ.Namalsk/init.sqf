@@ -57,7 +57,7 @@ dayz_preloadFinished=nil;
 onPreloadStarted "diag_log [diag_tickTime, 'onPreloadStarted']; dayz_preloadFinished = false;";
 onPreloadFinished "diag_log [diag_tickTime, 'onPreloadFinished']; if (!isNil 'init_keyboard') then { [] spawn init_keyboard; }; dayz_preloadFinished = true;";
 
-with uiNameSpace do {RscDMSLoad=nil;}; // autologon at next logon
+//with uiNameSpace do {RscDMSLoad=nil;}; // autologon at next logon
 
 if (!isDedicated) then {
 	enableSaving [false, false];
@@ -72,24 +72,31 @@ if (!isDedicated) then {
 
 initialized = false;
 call compile preprocessFileLineNumbers "\nst\ns_dayz\code\init\variables.sqf"; //Initilize the Variables (IMPORTANT: Must happen very early)
-call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";
+//call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";
+call compile preprocessFileLineNumbers "PLAYZ\dayz_code\init\variables.sqf";
 progressLoadingScreen 0.05;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\publicEH.sqf";
 progressLoadingScreen 0.1;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\medical\setup_functions_med.sqf";
 progressLoadingScreen 0.15;
-//call compile preprocessFileLineNumbers "\nst\ns_dayz\code\init\compiles.sqf"; //Compile regular functions
-call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";
+call compile preprocessFileLineNumbers "\nst\ns_dayz\code\init\compiles.sqf"; //Compile regular functions
+//call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";
+call compile preprocessFileLineNumbers "PLAYZ\dayz_code\init\compiles.sqf";
 
 progressLoadingScreen 0.2;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\BIS_Effects\init.sqf";
 progressLoadingScreen 0.25;
+
+/*
+ * INITIALIZE playZ scripts and modules
+ */
+call compile preprocessFileLineNumbers "PLAYZ\playZ_init.sqf";
+
 initialized = true;
 
-call compile preprocessFileLineNumbers "admintools\config_playZ.sqf"; // Epoch admin Tools config file
-call compile preprocessFileLineNumbers "admintools\variables.sqf"; // Epoch admin Tools variables
 
-[] execVM "admintools\Activate.sqf"; // Epoch admin tools
+
+
 
 /* BIS_Effects_* fixes from Dwarden */
 BIS_Effects_EH_Killed = compile preprocessFileLineNumbers "\z\addons\dayz_code\system\BIS_Effects\killed.sqf";
