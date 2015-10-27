@@ -1,0 +1,41 @@
+respawn = "BASE";
+respawndelay = 5;
+onLoadMission= "DayZ Namalsk";
+OnLoadIntro = "Welcome to Namalsk";
+OnLoadIntroTime = False;
+OnLoadMissionTime = False;
+disabledAI = true;
+disableChannels[] = {0,2,3,6};
+enableItemsDropping = 0;
+onPauseScript = "";
+briefing = 0;
+debriefing = 0;
+//loadScreen = "\nst\ns_dayz\data\dayznamalsk_logo_ca.paa";
+loadScreen = "PLAYZ\dayz_code\gui\loadingscreen5.jpg";
+
+class Header
+{
+	gameType = COOP;			//DM, Team, Coop, ...
+	minPlayers = 1;				//Min # of players the mission supports
+	maxPlayers = 50;			//Max # of players the mission supports
+};
+
+aiKills = 1;
+diagRadio = 1;
+diagHit = 1;
+
+// DZGM #include "\z\addons\dayz_code\gui\description.hpp"
+#include "PLAYZ\dayz_code\gui\description.hpp"
+#include "PLAYZ\dayz_code\gui\dzgm\extra_rc.hpp"
+#include "dzgm\groupManagement.hpp"
+
+// PlayZ Classnames
+#include "PLAYZ\Configs\CfgVehiclesPlayZ.hpp"
+
+// Epoch Admin Tools
+#include "PLAYZ\admintools\dialog.hpp"
+
+// ESS
+#include "spawn\class.hpp"
+#include "spawn\halo.hpp"
+#include "spawn\spawn.hpp"
