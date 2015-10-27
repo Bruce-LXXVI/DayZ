@@ -327,7 +327,7 @@ While {enhancedESP2} do
 		
 		If (AddCrashesToMap && (delayTime == 0 || changed)) then 
 		{
-			crashList = allmissionobjects "BMP2Wreck" + allmissionobjects "HMMWVWreck" + allmissionobjects "UralWreck" + allmissionobjects "T72Wreck" + allmissionobjects "LADAWreck" + allmissionobjects "UH1Wreck_DZ" + allmissionobjects "UH60Wreck_DZ" + allmissionobjects "UH60_NAVY_Wreck_DZ" + allmissionobjects "UH60_ARMY_Wreck_DZ" + allmissionobjects "UH60_NAVY_Wreck_burned_DZ" + allmissionobjects "UH60_ARMY_Wreck_burned_DZ" + allmissionobjects "Mass_grave_DZ" + allmissionobjects "Supply_Crate_DZE";
+			crashList = allmissionobjects "BMP2Wreck" + allmissionobjects "HMMWVWreck" + allmissionobjects "UralWreck" + allmissionobjects "T72Wreck" + allmissionobjects "LADAWreck" + allmissionobjects "UH1Wreck_DZ" + allmissionobjects "UH60Wreck_DZ" + allmissionobjects "UH60_NAVY_Wreck_DZ" + allmissionobjects "UH60_ARMY_Wreck_DZ" + allmissionobjects "UH60_NAVY_Wreck_burned_DZ" + allmissionobjects "UH60_ARMY_Wreck_burned_DZ" + allmissionobjects "Mass_grave_DZ" + allmissionobjects "Supply_Crate_DZE" + allmissionobjects "Mi8Wreck_DZ";
 			i2 = 0;
 			{
 				_name = gettext (configFile >> "CfgVehicles" >> (typeof _x) >> "displayName");

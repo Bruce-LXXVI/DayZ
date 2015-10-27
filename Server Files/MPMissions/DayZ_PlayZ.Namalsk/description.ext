@@ -10,7 +10,8 @@ enableItemsDropping = 0;
 onPauseScript = "";
 briefing = 0;
 debriefing = 0;
-loadScreen = "\nst\ns_dayz\data\dayznamalsk_logo_ca.paa";
+//loadScreen = "\nst\ns_dayz\data\dayznamalsk_logo_ca.paa";
+loadScreen = "PLAYZ\dayz_code\gui\loadingscreen5.jpg";
 
 class Header
 {
@@ -34,3 +35,7 @@ diagHit = 1;
 // Epoch Admin Tools
 #include "PLAYZ\admintools\dialog.hpp"
 
+// ESS
+#include "spawn\class.hpp"
+#include "spawn\halo.hpp"
+#include "spawn\spawn.hpp"

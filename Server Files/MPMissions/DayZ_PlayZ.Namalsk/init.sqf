@@ -27,7 +27,8 @@ dayz_antihack = 0; // DayZ Antihack / 1 = enabled // 0 = disabled
 dayz_REsec = 1; // DayZ RE Security / 1 = enabled // 0 = disabled
 dayz_enableGhosting = false; //Enable disable the ghosting system.
 dayz_ghostTimer = 120; //Sets how long in seconds a player must be dissconnected before being able to login again.
-dayz_spawnselection = 1; //Turn on spawn selection 0 = random only spawns, 1 = Spawn choice based on limits
+dayz_spawnselection = 0; //Turn on spawn selection 0 = random only spawns, 1 = Spawn choice based on limits
+dayz_paraSpawn = false;
 dayz_spawncarepkgs_clutterCutter = 0; //0 =  loot hidden in grass, 1 = loot lifted and 2 = no grass
 dayz_spawnCrashSite_clutterCutter = 0;	// heli crash options 0 =  loot hidden in grass, 1 = loot lifted and 2 = no grass
 dayz_spawnInfectedSite_clutterCutter = 0; // infected base spawn... 0: loot hidden in grass, 1: loot lifted, 2: no grass 
@@ -71,9 +72,10 @@ if (!isDedicated) then {
 };
 
 initialized = false;
-call compile preprocessFileLineNumbers "\nst\ns_dayz\code\init\variables.sqf"; //Initilize the Variables (IMPORTANT: Must happen very early)
+
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";
 call compile preprocessFileLineNumbers "PLAYZ\dayz_code\init\variables.sqf";
+call compile preprocessFileLineNumbers "PLAYZ\ns_dayz\code\init\variables.sqf"; //Initilize the Variables (IMPORTANT: Must happen very early)
 progressLoadingScreen 0.05;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\publicEH.sqf";
 progressLoadingScreen 0.1;
@@ -128,13 +130,10 @@ BIS_Effects_startEvent = {
 	(_this select 1) call BIS_Effects_startEvent;
 };
 
-if (dayz_REsec == 1) then { call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\REsec.sqf"; };
-//execVM "\z\addons\dayz_code\system\DynamicWeatherEffects.sqf";
-
 if ((!isServer) && (isNull player) ) then
 {
-waitUntil {!isNull player};
-waitUntil {time > 3};
+	waitUntil {!isNull player};
+	waitUntil {time > 3};
 };
 
 if ((!isServer) && (player != player)) then
@@ -148,7 +147,6 @@ if (isServer) then {
 	//Must be global spawned, So players dont fall thought buildings (might be best to spilt these to important, not important)
 };
 
-//if (dayz_POIs) then { execVM "\z\addons\dayz_code\system\mission\chernarus\poi\init.sqf"; };
 
 if (!isDedicated) then {
 	if (isClass (configFile >> "CfgBuildingLootNamalsk")) then {
@@ -169,16 +167,25 @@ if (!isDedicated) then {
 	//	execVM "\z\addons\dayz_code\system\mission\chernarus\security\init.sqf";
 	//	call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\antihack.sqf";
 	//};
-		
+
+	_playerMonitor = [] execVM "PLAYZ\dayz_code\system\player_monitor.sqf";
+
+	// ESS
+	execVM "spawn\start.sqf";
+
 	if (dayz_enableRules) then { execVM "rules.sqf"; };
 	if (!isNil "dayZ_serverName") then { execVM "\z\addons\dayz_code\system\watermark.sqf"; };
 	execVM "\z\addons\dayz_code\compile\client_plantSpawner.sqf";
-	execFSM "\z\addons\dayz_code\system\player_monitor.fsm";
+	
+
 	waituntil {scriptDone progress_monitor};
 	cutText ["","BLACK IN", 3];
 	3 fadeSound 1;
 	3 fadeMusic 1;
 	endLoadingScreen;
+
+
+
 };
 
 

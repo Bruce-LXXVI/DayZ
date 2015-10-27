@@ -368,6 +368,25 @@ helpQueue = []; // Initialize help queue
 ["PipeBomb", 20]
 ];
 
+
+if(PLAYZ_worldname == "namalsk") then {
+	weaponCrateWeapons = weaponCrateWeapons + [
+
+["nsw_er7s", 5],
+["nsw_er7a", 5],
+["nsw_er7mm", 20]
+
+
+//["KSVK_DZN", 5],
+//["5Rnd_127x108_KSVK", 20]
+
+
+//["57mmLauncher_NAC", 5],
+//["14Rnd_57mm_NAC", 20]
+
+	];
+};
+
 	
 /**************************** Common Functions ****************************/
 

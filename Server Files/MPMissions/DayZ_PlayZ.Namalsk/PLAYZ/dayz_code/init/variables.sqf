@@ -7,7 +7,48 @@ DayZ_SafeObjects = ["WoodenGate_1","WoodenGate_2","WoodenGate_3","WoodenGate_4",
 "UralCivil2", "Ural_INS", "Ural_CDF", "UAZ_CDF", "LandRover_TK_CIV_EP1", "LandRover_CZ_EP1", "UralOpen_INS", "smallboat_2", "SkodaRed", "datsun1_civil_1_open", "datsun1_civil_2_covered", "datsun1_civil_3_open", "hilux1_civil_1_open", "hilux1_civil_2_covered",
 "Lada1", "Lada2", "LadaLM", "M1030", "M1030_US_DES_EP1", "TT650_Civ", "TT650_Gue", "Ural_TK_CIV_EP1", "Lada1_TK_CIV_EP1", "Lada2_TK_CIV_EP1", "hilux1_civil_3_open_EP1", "Old_moto_TK_Civ_EP1",
 "SUV_TK_CIV_EP1", "SUV_TK_EP1", "VolhaLimo_TK_CIV_EP1", "SUV_PMC", "UH1H_DZ2"
-,"policecar", "Ka60_NAC", "Ka60_GL_NAC"
+,"policecar", "Ka60_NAC", "Ka60_GL_NAC", "Mi17_Civilian_Nam", "nac_BTR90"
 ];
+
+dayz_CBLConfigName = "CfgBuildingLoot";
+
+// init global arrays for Loot Chances
+call compile preprocessFileLineNumbers "PLAYZ\dayz_code\init\loot_init.sqf";
+
+//if(!isDedicated) then {
+	//Establish Location Streaming
+	diag_log format["[PLAYZ] dayz_Locations=%1", dayz_Locations];
+
+	_funcGetLocation =
+	{
+		dayz_Locations = [];
+		for "_i" from 0 to ((count _this) - 1) do
+		{
+			private ["_location","_config","_locHdr","_position","_size","_type"];
+			//Get Location Data from config
+			_config = (_this select _i);
+			_position = getArray (_config >> "position");
+			_locHdr = configName _config;
+			_size = getNumber (_config >> "size");
+			dayz_Locations set [count dayz_Locations, [_position,_locHdr,_size]];
+		};
+	};
+	_cfgLocation = configFile >> format["CfgTownGenerator%1", worldName];
+	_cfgLocation call _funcGetLocation;
+
+	dayz_Locations set [count dayz_Locations, [
+		getArray (configFile >> "CfgWorlds" >> "Namalsk" >> "center")
+		, "Namalsk"
+		, 12800
+	]];
+
+	diag_log format["[PLAYZ] dayz_Locations=%1", dayz_Locations];
+
+//};
+
+
+// ESS
+{AllPlayers set [count AllPlayers,_x];} count ["Citizen3","CZ_Soldier_DES_EP1","Rocket_DZ","TK_INS_Soldier_EP1","US_Soldier_EP1","Villager1","Worker1"];
+DayZ_SafeObjects set [count DayZ_SafeObjects,"ParachuteC"];
 
 

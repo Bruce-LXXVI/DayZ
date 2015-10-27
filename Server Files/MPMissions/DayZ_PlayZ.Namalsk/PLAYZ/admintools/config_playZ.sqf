@@ -16,8 +16,8 @@
 	"999999999" // <player name>
 	];
 	ModList = [
-	"76561198195290546", // Alice
-	"76561198077752978", // Spitzkopflarry
+	//"76561198195290546", // Alice
+	//"76561198077752978", // Spitzkopflarry
 	"999999999" // <player name>
 	];
 
