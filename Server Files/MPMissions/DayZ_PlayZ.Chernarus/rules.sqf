@@ -12,8 +12,8 @@ _messages = [
 		["Website/Forums", "http://playZ.rocks"],
 		["Server Rules", "Duping, glitching or using any<br />exploit will result in a<br />permanent ban."],
 		["Server Rules", "No Talking in side."],
-		["Server Rules", "Hackers will be banned permanently<br />Respect others"],
-		["News", "Finally online!<br />Take care. There are still some bugs.<br />"]
+		["Server Rules", "Hackers will be banned permanently<br />Respect others"]
+//		["News", "Finally online!<br />Take care. There are still some bugs.<br />"]
 ];
  
 _timeout = 5;

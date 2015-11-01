@@ -7,18 +7,6 @@
 
 //REALLY IMPORTANT VALUES
 dayZ_instance = 1; // The instance
-dayzHiveRequest = [];
-initialized = false;
-dayz_previousID = 0;
-
-dzn_ns_bloodsucker = true;		// Make this false for disabling bloodsucker spawn
-dzn_ns_bloodsucker_den = 70;	// Spawn chance of bloodsuckers, max 400, ignore if dzn_ns_bloodsucker set to false
-ns_blowout = true;			// Make this false for disabling random EVR discharges (blowout module)
-ns_blowout_dayz = true;		// Leave this always true or it will create a very huuuge mess
-ns_blow_delaymod = 1;		// Multiplier of times between each EVR dischargers, 1x value default (normal pre-0.74 times)
-dayzNam_buildingLoot = "CfgBuildingLootNamalsk";	// can be CfgBuildingLootNamalskNOER7 (function of this pretty obvious), CfgBuildingLootNamalskNO50s (CfgBuildingLootNamalskNOER7 + no 50 cals), CfgBuildingLootNamalskNOSniper (CfgBuildingLootNamalskNOER7 + no sniper rifles), default is CfgBuildingLootNamalsk
-
-
 //Tag info this is shown to all players in the bottom left hand side of the screen 
 dayZ_serverName = "playZ"; // Servername (country code + server number)
 
@@ -35,19 +23,20 @@ dayz_spawnInfectedSite_clutterCutter = 0; // infected base spawn... 0: loot hidd
 dayz_enableRules = true; //Enables a nice little news/rules feed on player login (make sure to keep the lists quick).
 dayz_quickSwitch = false; //Turns on forced animation for weapon switch. (hotkeys 1,2,3) False = enable animations, True = disable animations
 dayz_bleedingeffect = 3; //1= blood on the ground, 2= partical effect, 3 = both.
-dayz_ForcefullmoonNights = false; // Forces night time to be full moon.
-dayz_POIs = true;
+dayz_ForcefullmoonNights = true; // Forces night time to be full moon.
+dayz_POIs = true;	// Add lootpos in new POI (trains/ruins mainly). The loot focused on construction.
 dayz_infectiousWaterholes = true;
 dayz_DamageMultiplier = 1; //Damage Multiplier for Zombies.
 
-dayz_maxGlobalZeds = 500; //Limit the total zeds server wide.
-dayz_attackRange = 3; // attack range of zeds vehicles are * 2 of this number
 dayz_temperature_override = false; // Set to true to disable all temperature changes.
 
 
-
-
-
+//disable greeting menu 
+player setVariable ["BIS_noCoreConversations", true];
+//disable radio messages to be heard and shown in the left lower corner of the screen
+enableRadio false;
+// May prevent "how are you civillian?" messages from NPC
+enableSentences false;
 
 
 
@@ -75,7 +64,7 @@ initialized = false;
 
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";
 call compile preprocessFileLineNumbers "PLAYZ\dayz_code\init\variables.sqf";
-call compile preprocessFileLineNumbers "PLAYZ\ns_dayz\code\init\variables.sqf"; //Initilize the Variables (IMPORTANT: Must happen very early)
+//call compile preprocessFileLineNumbers "PLAYZ\ns_dayz\code\init\variables.sqf"; //Initilize the Variables (IMPORTANT: Must happen very early)
 progressLoadingScreen 0.05;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\publicEH.sqf";
 progressLoadingScreen 0.1;
@@ -83,7 +72,7 @@ call compile preprocessFileLineNumbers "\z\addons\dayz_code\medical\setup_functi
 progressLoadingScreen 0.15;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";
 call compile preprocessFileLineNumbers "PLAYZ\dayz_code\init\compiles.sqf";
-call compile preprocessFileLineNumbers "PLAYZ\ns_dayz\code\init\compiles.sqf";
+//call compile preprocessFileLineNumbers "PLAYZ\ns_dayz\code\init\compiles.sqf";
 
 
 progressLoadingScreen 0.2;
@@ -97,11 +86,12 @@ call compile preprocessFileLineNumbers "PLAYZ\playZ_init.sqf";
 
 initialized = true;
 
-
-
+// Custom Loadout does not work
+// [] execVM "scripts\loadout.sqf";
 
 
 /* BIS_Effects_* fixes from Dwarden */
+/* BRAUCHTS NICHT MEHR
 BIS_Effects_EH_Killed = compile preprocessFileLineNumbers "\z\addons\dayz_code\system\BIS_Effects\killed.sqf";
 BIS_Effects_AirDestruction = compile preprocessFileLineNumbers "\z\addons\dayz_code\system\BIS_Effects\AirDestruction.sqf";
 BIS_Effects_AirDestructionStage2 = compile preprocessFileLineNumbers "\z\addons\dayz_code\system\BIS_Effects\AirDestructionStage2.sqf";
@@ -125,22 +115,10 @@ BIS_Effects_startEvent = {
 		};
 	};
 };
+*/
 
-"BIS_effects_gepv" addPublicVariableEventHandler {
-	(_this select 1) call BIS_Effects_startEvent;
-};
-
-if ((!isServer) && (isNull player) ) then
-{
-	waitUntil {!isNull player};
-	waitUntil {time > 3};
-};
-
-if ((!isServer) && (player != player)) then
-{
-  waitUntil {player == player};
-  waitUntil {time > 3};
-};
+if (dayz_REsec == 1) then { call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\REsec.sqf"; };
+execVM "\z\addons\dayz_code\system\DynamicWeatherEffects.sqf";
 
 if (isServer) then {
 	execVM "\z\addons\dayz_server\system\server_monitor.sqf";
@@ -149,6 +127,7 @@ if (isServer) then {
 
 
 if (!isDedicated) then {
+	/*
 	if (isClass (configFile >> "CfgBuildingLootNamalsk")) then {
 		0 fadeSound 0;
 		waitUntil {!isNil "dayz_loadScreenMsg"};
@@ -161,6 +140,7 @@ if (!isDedicated) then {
 		0 fadeSound 0;
 		0 cutText ["You are running an incorrect version of DayZ: Namalsk, please download newest version from http://www.nightstalkers.cz/", "BLACK"];
 	};
+	*/
 
 	//if (dayz_infectiousWaterholes) then { execVM "\z\addons\dayz_code\system\mission\chernarus\infectiousWaterholes\init.sqf"; };
 	//if (dayz_antihack != 0) then {
@@ -173,6 +153,15 @@ if (!isDedicated) then {
 	// ESS
 	execVM "spawn\start.sqf";
 
+	if (dayz_infectiousWaterholes) then { execVM "\z\addons\dayz_code\system\mission\chernarus\infectiousWaterholes\init.sqf"; };
+	if (dayz_antihack != 0) then {
+		if ( !((getPlayerUID player) in AdminList) && !((getPlayerUID player) in ModList)) then 
+		{
+			execVM "\z\addons\dayz_code\system\mission\chernarus\security\init.sqf";
+			//call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\antihack.sqf";
+			call compile preprocessFileLineNumbers "PLAYZ\admintools\antihack\antihack.sqf";
+		};
+	};
 	if (dayz_enableRules) then { execVM "rules.sqf"; };
 	if (!isNil "dayZ_serverName") then { execVM "\z\addons\dayz_code\system\watermark.sqf"; };
 	execVM "\z\addons\dayz_code\compile\client_plantSpawner.sqf";
@@ -190,4 +179,3 @@ if (!isDedicated) then {
 
 
 
-//#include "\nst\ns_dayz\code\system\REsec.sqf"
