@@ -12,7 +12,7 @@ briefing = 0;
 debriefing = 0;
 
 //loadScreen = "\z\addons\dayz_code\gui\loadingscreen.paa";
-loadScreen = "PLAYZ\dayz_code\gui\loadingscreen5.jpg";
+loadScreen = "PLAYZ\dayz_code\gui\loadingscreen6.jpg";
 
 class Header
 {

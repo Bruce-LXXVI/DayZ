@@ -3,7 +3,7 @@ SET MYDIR=%~dp0
 call "%MYDIR%\_SET_RCON_variables.cmd"
 
 SET DBUSER="backup"
-SET DBPASS="DCT8KpSNs9nBKrcj"
+SET DBPASS="xxxxxxxxxxxxx"
 SET DBNAME=dayz_chernarus
 SET DSTPATH=..\Backup
 
