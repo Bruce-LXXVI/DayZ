@@ -1,4 +1,4 @@
-private ["_date","_year","_month","_day","_hour","_minute","_date1","_hiveResponse","_key","_objectCount","_dir","_point","_i","_action","_dam","_selection","_wantExplosiveParts","_entity","_worldspace","_damage","_booleans","_rawData","_ObjectID","_class","_CharacterID","_inventory","_hitpoints","_fuel","_id","_objectArray","_script","_result","_outcome"];
+private ["_date","_year","_month","_day","_hour","_minute","_date1","_hiveResponse","_key","_objectCount","_dir","_point","_i","_action","_dam","_selection","_wantExplosiveParts","_entity","_worldspace","_damage","_booleans","_rawData","_ObjectID","_class","_CharacterID","_inventory","_hitpoints","_fuel","_id","_objectArray","_script","_result","_outcome","_typePlayZ"];
 []execVM "\z\addons\dayz_server\system\s_fps.sqf"; //server monitor FPS (writes each ~181s diag_fps+181s diag_fpsmin*)
 #include "\z\addons\dayz_server\compile\server_toggle_debug.hpp"
 
@@ -108,13 +108,24 @@ _countr = 0;
 		
 		DayZ_nonCollide = ["TentStorage","TentStorage","TentStorage0","TentStorage1","TentStorage2","TentStorage3","TentStorage4","StashSmall","StashSmall1","StashSmall2","StashSmall3","StashSmall4","StashMedium","StashMedium1","StashMedium2","StashMedium3", "StashMedium4", "DomeTentStorage", "DomeTentStorage0", "DomeTentStorage1", "DomeTentStorage2", "DomeTentStorag3", "DomeTentStorage4", "CamoNet_DZ"];
 		
+		_typePlayZ = _type;
+		if( !isClass(configFile >> "CfgVehicles" >> _type) ) then {
+			diag_log format ["%1 WARNING: class %2 not found.", PLAYZ_logname, _type];
+			
+			if( isClass(missionConfigFile >> "CfgVehicles" >> _type) ) then {
+				_type = configName( inheritsFrom (missionConfigFile >> "CfgVehicles" >> _type) );
+				diag_log format ["%1 %2 is a PlayZ classname. Spawning a %3.", PLAYZ_logname, _typePlayZ, _type];
+			};
+		};
+
 		//Create it
 		_object = createVehicle [_type, _pos, [], 0, if (_type in DayZ_nonCollide) then {"NONE"} else {"CAN_COLLIDE"}];
 		_object setVariable ["lastUpdate",time];
 		_object setVariable ["ObjectID", _idKey, true];
 		dayz_serverIDMonitor set [count dayz_serverIDMonitor,_idKey];
 		_object setVariable ["CharacterID", _ownerID, true];
-		
+		_object setVariable ["PLAYZ_classname", _typePlayZ, true];
+
 		_object setdir _dir;
 		_object setDamage _damage;
 		
@@ -122,6 +133,15 @@ _countr = 0;
 			[_object,"position",true] call server_updateObject;
 		};
 		
+
+		if( (_typePlayZ != "") && (_typePlayZ != _type) ) then {
+			_type = _typePlayZ;
+			if(isNil "PZC_handlePlayZClass") then {PZC_handlePlayZClass = [];};
+			PZC_handlePlayZClass set [count PZC_handlePlayZClass, _object];
+			publicVariable "PZC_handlePlayZClass";
+		};
+
+
 		if (_type == "Base_Fire_DZ") then { _object spawn base_fireMonitor; };
 		
 		//Dont add inventory for traps.
@@ -135,7 +155,7 @@ _countr = 0;
 				_magItemTypes = _x select 0;
 				_magItemQtys = _x select 1;
 				_i = _forEachIndex;
-				{    
+				{
 				/*
 					if (_x == "Crossbow") then { _x = "Crossbow_DZ" }; // Convert Crossbow to Crossbow_DZ
 					if (_x == "BoltSteel") then { _x = "WoodenArrow" }; // Convert BoltSteel to WoodenArrow
