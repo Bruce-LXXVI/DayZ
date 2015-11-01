@@ -21,9 +21,9 @@
 		<name>Bruce</name>
 		<guid>ed30fbe34394152e7e7891f5002c084b</guid>
 		<group>0</group>
-		<groupname>Super Admin</groupname>
+		<groupname>Admin</groupname>
 	</admin>
-	
+	<!--
 	<admin id="1">
 		<name>Alice</name>
 		<guid>b2c43caef8b4da2db85f410f1ac63624</guid>
@@ -37,5 +37,5 @@
 		<group>10</group>
 		<groupname>Moderator</groupname>
 	</admin>
-	
+	-->
 </BEAdmins>
