@@ -14,6 +14,13 @@ class CfgPatches {
 			NEcorner[] = {14400,13560};
 			spawnRadius = 6000;
 		};
+		//TODO: Correct it!
+		class Namalsk:CAWorld { 
+			center[] = {5508, 9034}; // x y
+			SWcorner[] = {0, 0};
+			NEcorner[] = {12800, 12800};
+			spawnRadius = 4000;
+		};
 		
 		class AllVehicles {
 			// location types where vehicles will be spawned
