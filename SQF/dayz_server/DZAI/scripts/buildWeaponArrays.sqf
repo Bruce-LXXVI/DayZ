@@ -45,7 +45,7 @@ DZAI_banAIWeapons = nil;
 
 //Compatibility with Namalsk's selectable loot table feature.
 if (isNil "dayzNam_buildingLoot") then {
-	_cfgBuildingLoot = "cfgBuildingLoot";
+	_cfgBuildingLoot = dayz_CBLConfigName;
 	if (isClass (_lootConfigFile >> _cfgBuildingLoot >> "Barracks")) then {
 		(_bldgClasses select 2) set [((_bldgClasses select 2) find "MilitarySpecial"),"Barracks"];
 	};
