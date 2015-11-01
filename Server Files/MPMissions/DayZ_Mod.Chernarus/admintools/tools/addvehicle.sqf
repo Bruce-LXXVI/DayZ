@@ -1,6 +1,6 @@
 private ["_veh","_location","_isOk","_vehtospawn","_dir","_pos","_helipad",
 "_keyColor","_keyNumber","_keySelected","_isKeyOK","_config","_player",
-"_inventory","_hitpoints","_damage","_array","_allFixed","_hit","_selection","_objectUID"
+"_inventory","_hitpoints","_damage","_array","_allFixed","_hit","_selection","_objectUID","_typePlayZ"
 ];
 _vehtospawn = _this select 0;
 _player = player;
@@ -40,15 +40,30 @@ if ( 1==1 ) then {
 		if(!(_vehtospawn in DayZ_SafeObjects)) then {
 			diag_log format ["[EAT] WARNING: Type %1 is not in DayZ_SafeObjects.", _vehtospawn];
 		};
+/*
+		_typePlayZ = _vehtospawn;
+		if( !isClass(configFile >> "CfgVehicles" >> _vehtospawn) ) then {
+			diag_log format ["%1 WARNING: class %2 not found.", "[EAT]", _vehtospawn];
+			
+			if( isClass(missionConfigFile >> "CfgVehicles" >> _vehtospawn) ) then {
+				_vehtospawn = configName( inheritsFrom (missionConfigFile >> "CfgVehicles" >> _vehtospawn) );
+				diag_log format ["%1 %2 is a PlayZ classname. Spawning a %3.", "[EAT]", _typePlayZ, _vehtospawn];
+			};
+		};
+*/
+		PLAYZ_server_createVehicle=[_vehtospawn, _location, [], 0, "CAN_COLLIDE", "7"];
+		publicVariableServer "PLAYZ_server_createVehicle";
+/*
 		_veh = createVehicle [_vehtospawn, _location, [], 0, "CAN_COLLIDE"]; 
 		_location = (getPosATL _veh);
 		_veh setVariable ["lastUpdate", time];
 		_veh setVariable ["CharacterID", "0", true];
 
 		if( isNil "_objectUID" ) then {_objectUID = format ["7%1%2%3", abs round((random 90)+10), abs round((random 900)+100), abs round((random 900)+100)];};
-		_veh setVariable [ "ObjectUID", _objectUID, true ];
-		_veh setVariable [ "ObjectID", _objectUID, true ];
+		_veh setVariable ["ObjectUID", _objectUID, true ];
+		_veh setVariable ["ObjectID", _objectUID, true ];
 		_veh setVariable ["lastUpdate", time];
+		_veh setVariable ["PLAYZ_classname", _typePlayZ, true];
 
 		_inventory = [
 			getWeaponCargo _veh,
@@ -95,7 +110,7 @@ if ( 1==1 ) then {
 		};
 
 		_player reveal _veh;
-		
+		*/
 		cutText ["Vehicle spawned.", "PLAIN DOWN"];
 
 		// Tool use logger

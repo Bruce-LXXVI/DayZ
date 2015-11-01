@@ -36,7 +36,6 @@ private [ "_directoryAsArray"
 		, "_isResetter"			// Fahrzeug, das immer wieder resettet wird
 ];
 
-
 // Beenden, wenn nicht auf dem Server oder Fahrzeug-Management bereits läuft.
 if (!isServer || !isNil "PLAYZ_isActive") exitWith {};
 PLAYZ_isActive = true;

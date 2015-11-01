@@ -26,6 +26,9 @@ if (isNil "vhnlist") then
 			};
 		};
 	};
+	vhnlist set [count vhnlist,["SUV_Pink_PLAYZ", "SUV Pink", ""]];
+	vhnlist set [count vhnlist,["SUV_Camo_PLAYZ", "SUV Camo", ""]];
+	vhnlist set [count vhnlist,["UH1H_Red_PLAYZ", "UH1H Red", ""]];
 	titleText ["List is ready...","PLAIN DOWN"];titleFadeOut 2;
 };
 

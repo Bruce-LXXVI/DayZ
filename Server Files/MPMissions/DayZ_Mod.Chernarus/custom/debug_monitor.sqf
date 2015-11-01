@@ -81,7 +81,7 @@ if( ((getPlayerUID player) in AdminList) || ((getPlayerUID player) in ModList) )
 			<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>Type: </t><t size='0.95' font='Bitstream' align='right'>%7</t><br/>
 			<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>PLAYZ_whenSpawned: </t><t size='0.95' font='Bitstream' align='right'>%8</t><br/>
 			<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>PLAYZ_whenDestroyed: </t><t size='0.95' font='Bitstream' align='right'>%9</t><br/>
-			<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>PLAYZ_spawnpos: </t><t size='0.95' font='Bitstream' align='right'>%13</t><br/>
+			<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>PLAYZ_classname: </t><t size='0.95' font='Bitstream' align='right'>%13</t><br/>
 			<t size='0.95' font='Bitstream' align='left' >GPS: %11</t><t size='0.95' font='Bitstream' align='right'>DIR: %6</t><br/>
 			<t size='0.95'font='Bitstream'align='center' >%5</t><br/>",
 	
@@ -97,7 +97,7 @@ if( ((getPlayerUID player) in AdminList) || ((getPlayerUID player) in ModList) )
 			/* 10 */	(gettext (configFile >> 'CfgVehicles' >> (typeof _cursor) >> 'displayName')),
 			/* 11 */	(mapGridPosition getPos _cursor),
 			/* 12 */	(fuel _cursor),
-			/* 13 */	(_cursor getVariable ["PLAYZ_spawnpos", "[]"]),
+			/* 13 */	(_cursor getVariable ["PLAYZ_classname", "N/A"]),
 	
 			/* __ */	0
 			];

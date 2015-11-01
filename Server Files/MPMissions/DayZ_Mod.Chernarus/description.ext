@@ -11,7 +11,8 @@ onPauseScript = "";
 briefing = 0;
 debriefing = 0;
 
-loadScreen = "\z\addons\dayz_code\gui\loadingscreen.paa";
+//loadScreen = "\z\addons\dayz_code\gui\loadingscreen.paa";
+loadScreen = "custom\dayz_code\gui\loadingscreen5.jpg";
 
 class Header
 {
@@ -24,6 +25,11 @@ aiKills = 1;
 diagRadio = 1;
 diagHit = 1;
 
+
+// PlayZ Classnames
+#include "custom\Configs\CfgVehiclesPlayZ.hpp"
+
+
 // DZGM #include "\z\addons\dayz_code\gui\description.hpp"
 #include "custom\dayz_code\gui\description.hpp"
 
@@ -33,3 +39,6 @@ diagHit = 1;
 // DZGM
 #include "custom\extra_rc.hpp"
 #include "dzgm\groupManagement.hpp"
+
+
+

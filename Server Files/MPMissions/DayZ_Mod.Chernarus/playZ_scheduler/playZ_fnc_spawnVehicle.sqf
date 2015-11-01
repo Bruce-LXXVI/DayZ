@@ -1,6 +1,6 @@
 
 private ["_newVeh", "_objectUID", "_type", "_newVehWorldspace", "_inventory", "_hitpoints", "_dir", "_pos", "_ownerID"
-	, "_damage", "_fuel", "_isPrio"
+	, "_damage", "_fuel", "_isPrio", "_typePlayZ"
 ];
 
 _objectUID = _this select 0;
@@ -21,7 +21,18 @@ _isResetter = ((parseNumber _objectUID) >= 280000000) && ((parseNumber _objectUI
 _isPrio =     ((parseNumber _objectUID) >= 290000000) && ((parseNumber _objectUID) < 300000000);
 _hasMoved =   false;
 
-if( !(_type in DayZ_SafeObjects) ) then { diag_log format ["%1 WARNING: Type %2 is not in DayZ_SafeObjects.", PLAYZ_logname, _vehtospawn]; };
+if( !(_type in DayZ_SafeObjects) ) then { diag_log format ["%1 WARNING: Type %2 is not in DayZ_SafeObjects.", PLAYZ_logname, _type]; };
+
+_typePlayZ = _type;
+if( !isClass(configFile >> "CfgVehicles" >> _type) ) then {
+	diag_log format ["%1 WARNING: class %2 not found.", PLAYZ_logname, _type];
+	
+	if( isClass(missionConfigFile >> "CfgVehicles" >> _type) ) then {
+		_type = configName( inheritsFrom (missionConfigFile >> "CfgVehicles" >> _type) );
+		diag_log format ["%1 %2 is a PlayZ classname. Spawning a %3.", PLAYZ_logname, _typePlayZ, _type];
+	};
+};
+
 
 _newVeh = createVehicle [_type, _pos, [], 0, "NONE"];
 _newVeh setDir _dir;
@@ -31,6 +42,7 @@ _newVeh setVariable ["ObjectUID", _objectUID, true];
 _newVeh setVariable ["ObjectID", _objectUID, true];
 _newVeh setVariable ["CharacterID", _ownerID, true];
 _newVeh setVariable ["PLAYZ_spawnpos", _pos, true];
+_newVeh setVariable ["PLAYZ_classname", _typePlayZ, true];
 _newVeh setVehicleVarName _objectUID;
 
 // Zeit setzen

@@ -41,7 +41,7 @@ dayz_preloadFinished=nil;
 onPreloadStarted "diag_log [diag_tickTime, 'onPreloadStarted']; dayz_preloadFinished = false;";
 onPreloadFinished "diag_log [diag_tickTime, 'onPreloadFinished']; if (!isNil 'init_keyboard') then { [] spawn init_keyboard; }; dayz_preloadFinished = true;";
 
-with uiNameSpace do {RscDMSLoad=nil;}; // autologon at next logon
+//with uiNameSpace do {RscDMSLoad=nil;}; // autologon at next logon
 
 if (!isDedicated) then {
 	enableSaving [false, false];
@@ -55,21 +55,21 @@ if (!isDedicated) then {
 };
 
 initialized = false;
-//call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";
+call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";
 //Bruce: load mission variables
-call compile preprocessFileLineNumbers "variables.sqf";
+//call compile preprocessFileLineNumbers "variables.sqf";
 progressLoadingScreen 0.05;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\publicEH.sqf";
 progressLoadingScreen 0.1;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\medical\setup_functions_med.sqf";
 progressLoadingScreen 0.15;
-//call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";
-call compile preprocessFileLineNumbers "custom\dayz_code\init\compiles.sqf";
+call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";
+//call compile preprocessFileLineNumbers "custom\dayz_code\init\compiles.sqf";
 progressLoadingScreen 0.2;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\BIS_Effects\init.sqf";
 
-call compile preprocessFileLineNumbers "admintools\config_playZ.sqf"; // Epoch admin Tools config file
-call compile preprocessFileLineNumbers "admintools\variables.sqf"; // Epoch admin Tools variables
+//call compile preprocessFileLineNumbers "admintools\config_playZ.sqf"; // Epoch admin Tools config file
+//call compile preprocessFileLineNumbers "admintools\variables.sqf"; // Epoch admin Tools variables
 
 progressLoadingScreen 0.25;
 initialized = true;
@@ -78,6 +78,7 @@ initialized = true;
 // [] execVM "scripts\loadout.sqf";
 
 
+	execVM "PLAYZ\init.sqf";
 
 
 if (dayz_REsec == 1) then { call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\REsec.sqf"; };
@@ -85,27 +86,27 @@ execVM "\z\addons\dayz_code\system\DynamicWeatherEffects.sqf";
 
 if (isServer) then {
 	//Bus Route
-	[true] execVM "busroute\init_bus.sqf";
+	//[true] execVM "busroute\init_bus.sqf";
 
 	// playZ Scheduler
-	execVM "playZ_scheduler\playZ_server_monitor.sqf";
+	//execVM "playZ_scheduler\playZ_server_monitor.sqf";
 
 	//Custom mapaddons
-	[] execVM "mapaddons\init.sqf";
+	//[] execVM "mapaddons\init.sqf";
 
 	execVM "\z\addons\dayz_server\system\server_monitor.sqf";
 	//Must be global spawned, So players dont fall thought buildings (might be best to spilt these to important, not important)
 };
 
 //if (dayz_POIs) then { execVM "\z\addons\dayz_code\system\mission\chernarus\poi\init.sqf"; };
-if (dayz_POIs) then { execVM "custom\dayz_code\system\mission\chernarus\poi\init.sqf"; };
+//if (dayz_POIs) then { execVM "custom\dayz_code\system\mission\chernarus\poi\init.sqf"; };
 
 if (!isDedicated) then {
 	//Bruce: load DZAI Client
 	_nul = [] execVM "DZAI_Client\dzai_initclient.sqf";
 
 	//Bus Route
-	[] execVM "busroute\player_axeBus.sqf";
+	//[] execVM "busroute\player_axeBus.sqf";
 
 	if (dayz_infectiousWaterholes) then { execVM "\z\addons\dayz_code\system\mission\chernarus\infectiousWaterholes\init.sqf"; };
 	if (dayz_antihack != 0) then {
@@ -124,7 +125,9 @@ if (!isDedicated) then {
 	execFSM "player_monitor.fsm";
 
 	/* DZGM */
-	execVM "dzgm\init.sqf";
+	//execVM "dzgm\init.sqf";
+
+	//execVM "playZ_vehicles\playZ_vehicles_player_monitor.sqf";
 
 	waituntil {scriptDone progress_monitor};
 	cutText ["","BLACK IN", 3];
@@ -134,7 +137,7 @@ if (!isDedicated) then {
 
 
 	/* Debug Monitor */
-	_nill = execvm "custom\debug_monitor.sqf";
+	//_nill = execVM "custom\debug_monitor.sqf";
 	/* Debug Monitor */
 };
 
@@ -143,14 +146,14 @@ if (!isDedicated) then {
 //execVM "playZ_busroute\route_test_bor\PZBUS_init.sqf";
 
 // playZ side voice killer
-execVM "playZ_antisidevoice\playZ_antisidevoice_player_monitor.sqf";
+//execVM "playZ_antisidevoice\playZ_antisidevoice_player_monitor.sqf";
 
 // playZ kicker
-execVM "playZ_kicker\playZ_kicker_player_monitor.sqf";
+//execVM "playZ_kicker\playZ_kicker_player_monitor.sqf";
 
 
 
-[] execVM "admintools\Activate.sqf"; // Epoch admin tools
+//[] execVM "admintools\Activate.sqf"; // Epoch admin tools
 
 
 
