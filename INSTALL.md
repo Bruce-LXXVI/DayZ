@@ -37,7 +37,7 @@ Vorlage aus `Server Files` in das Instanz-Verzeichnis kopieren.
 Datenbank
 ---------
 Datenbank anlegen für die Instanz. Leere DB unter `SQL\playZ\INITIAL_*.sql`.
-Backup-Benutzer einrichten.
+Backup-Benutzer einrichten (Benötigte Rechte auf DB: `SELECT` und `SHOW VIEW`.
 Ereignis `playZ_1min_scheduler` aktivieren.
 
 
