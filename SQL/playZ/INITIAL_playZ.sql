@@ -766,7 +766,7 @@ ALTER TABLE `logs`
 -- AUTO_INCREMENT für Tabelle `object_data`
 --
 ALTER TABLE `object_data`
-  MODIFY `ObjectID` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `ObjectID` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3000000000;
 --
 -- AUTO_INCREMENT für Tabelle `object_data_deleted`
 --
