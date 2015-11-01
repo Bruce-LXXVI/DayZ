@@ -35,7 +35,7 @@ dayz_spawnInfectedSite_clutterCutter = 0; // infected base spawn... 0: loot hidd
 dayz_enableRules = true; //Enables a nice little news/rules feed on player login (make sure to keep the lists quick).
 dayz_quickSwitch = false; //Turns on forced animation for weapon switch. (hotkeys 1,2,3) False = enable animations, True = disable animations
 dayz_bleedingeffect = 3; //1= blood on the ground, 2= partical effect, 3 = both.
-dayz_ForcefullmoonNights = false; // Forces night time to be full moon.
+dayz_ForcefullmoonNights = true; // Forces night time to be full moon.
 dayz_POIs = true;
 dayz_infectiousWaterholes = true;
 dayz_DamageMultiplier = 1; //Damage Multiplier for Zombies.
@@ -45,6 +45,12 @@ dayz_attackRange = 3; // attack range of zeds vehicles are * 2 of this number
 dayz_temperature_override = false; // Set to true to disable all temperature changes.
 
 
+//disable greeting menu 
+player setVariable ["BIS_noCoreConversations", true];
+//disable radio messages to be heard and shown in the left lower corner of the screen
+enableRadio false;
+// May prevent "how are you civillian?" messages from NPC
+enableSentences false;
 
 
 
@@ -94,41 +100,7 @@ progressLoadingScreen 0.25;
  * INITIALIZE playZ scripts and modules
  */
 call compile preprocessFileLineNumbers "PLAYZ\playZ_init.sqf";
-
 initialized = true;
-
-
-
-
-
-/* BIS_Effects_* fixes from Dwarden */
-BIS_Effects_EH_Killed = compile preprocessFileLineNumbers "\z\addons\dayz_code\system\BIS_Effects\killed.sqf";
-BIS_Effects_AirDestruction = compile preprocessFileLineNumbers "\z\addons\dayz_code\system\BIS_Effects\AirDestruction.sqf";
-BIS_Effects_AirDestructionStage2 = compile preprocessFileLineNumbers "\z\addons\dayz_code\system\BIS_Effects\AirDestructionStage2.sqf";
-
-BIS_Effects_globalEvent = {
-	BIS_effects_gepv = _this;
-	publicVariable "BIS_effects_gepv";
-	_this call BIS_Effects_startEvent;
-};
-
-BIS_Effects_startEvent = {
-	switch (_this select 0) do {
-		case "AirDestruction": {
-				[_this select 1] spawn BIS_Effects_AirDestruction;
-		};
-		case "AirDestructionStage2": {
-				[_this select 1, _this select 2, _this select 3] spawn BIS_Effects_AirDestructionStage2;
-		};
-		case "Burn": {
-				[_this select 1, _this select 2, _this select 3, false, true] spawn BIS_Effects_Burn;
-		};
-	};
-};
-
-"BIS_effects_gepv" addPublicVariableEventHandler {
-	(_this select 1) call BIS_Effects_startEvent;
-};
 
 if ((!isServer) && (isNull player) ) then
 {
