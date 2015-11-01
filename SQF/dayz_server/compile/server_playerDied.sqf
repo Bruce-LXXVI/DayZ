@@ -16,6 +16,9 @@ dayz_died set [count dayz_died, _playerID];
 
 _newObject setVariable["processedDeath",diag_tickTime];
 _newObject setVariable ["bodyName", _playerName, true];
+/* ESS */
+_newObject setVariable ["bodyUID", _playerID, true];
+
 _pos = getPosATL _newObject;
 if (_pos select 2 < 0.1) then { _pos set [2,0]; }; // force to follow the terrain slope in sched_corpses.sqf
 _newObject setVariable [ "deathPos", _pos];

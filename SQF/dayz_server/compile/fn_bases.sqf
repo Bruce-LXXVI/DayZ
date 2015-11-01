@@ -23,16 +23,30 @@ private ["_clutter","_index","_lootMaxRadius2","_itemType","_position","_item","
 	
 	_nearByTents = nearestObjects [_basePos, ["IC_Tent"],_lootMaxRadius];
 	_countnearbytents = count(_nearByTents);
-	
+
+	_lootTable = ["InfectedCamps"] call BIS_fnc_selectRandom;
+
 	_i = 0;
 	{ 
 	_i = 0;
 		while {(_i < ((round(random _randomLoot)) + _guaranteedLoot))} do { //timeout
-			//create loot
-			//diag_log (_rndloot);
-			_itemTypes = [] + getArray (configFile >> "CfgBuildingLoot" >> "InfectedCamps" >> "lootType");
-			_CBLBase = dayz_CBLBase find "InfectedCamps";
-			_weights =	dayz_CBLChances select _CBLBase;
+			_itemTypes = [] + getArray (configFile >> dayz_CBLConfigName >> _lootTable >> "lootType");
+			_lootTable = toLower _lootTable;
+			_CBLBase = dayz_CBLBase find _lootTable;
+
+			while {_CBLBase < 0} do {
+				diag_log format["[PLAYZ] NOT FOUND: _lootTable=%1 | _CBLBase=%2", _lootTable, _CBLBase];
+				_lootTable = toLower (["ResidentialNamalsk", "MilitaryNamalskWinter", "MilitarySpecialNamalsk", "MilitarySpecialNamalskWinter"] call BIS_fnc_selectRandom);
+				_CBLBase = dayz_CBLBase find _lootTable;
+				diag_log format["[PLAYZ] USING INSTEAD: _lootTable=%1 | _CBLBase=%2", _lootTable, _CBLBase];
+			};
+
+			_weights = [0];
+			if( (count dayz_CBLChances) > _CBLBase ) then {
+				_weights = dayz_CBLChances select _CBLBase;
+				//diag_log format["[PLAYZ] _CBLBase=%1 | _weights=%2", _CBLBase, _weights];
+			};
+
 			_cntWeights = count _weights;
 			_index1 = floor(random _cntWeights);
 			_index2 = _weights select _index1;

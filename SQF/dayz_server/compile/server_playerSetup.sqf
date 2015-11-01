@@ -191,6 +191,13 @@ if (count _stats > 0) then {
 	_playerObj setVariable["headShots_CHK",0];
 };
 
+/* ESS */
+if (_randomSpot) then {
+	if (!isDedicated) then {endLoadingScreen;};
+	_debug = getMarkerpos "respawn_west";
+	_worldspace = [0,[_debug select 0,_debug select 1,0.3]];
+};
+/* ESS
 if (_randomSpot) then {
 	private["_counter","_position","_isNear","_isZero","_mkr"];
 	if (!isDedicated) then {
@@ -236,6 +243,7 @@ if (_randomSpot) then {
 	};
 	_worldspace = [0,_position];
 };
+*/
 
 //Record player for management
 dayz_players set [count dayz_players,_playerObj];
@@ -251,7 +259,8 @@ if (!isNil "faco_hook_playerSetup") then {
 	_playerObj call faco_sendSecret;
 };
 
-PVCDZ_plr_Login2 = [_worldspace,_state,_Achievements];
+/* ESS PVCDZ_plr_Login2 = [_worldspace,_state,_Achievements]; */
+PVCDZ_plr_Login2 = [_worldspace,_state,_Achievements,_randomSpot];
 _clientID = owner _playerObj;
 _clientID publicVariableClient "PVCDZ_plr_Login2";
 _clientID publicVariableClient "PVCDZ_plr_plantSpawner";

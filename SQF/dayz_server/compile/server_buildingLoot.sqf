@@ -11,7 +11,7 @@ _obj = _this select 0;
 _gref = _this select 1;
 
 _type = typeOf _obj;
-_config = configFile >> "CfgBuildingLoot" >> _type;
+_config = configFile >> dayz_CBLConfigName >> _type;
 _pos = [] + getArray (_config >> "lootPos");
 _itemTypes = [] + getArray (_config >> "lootType");
 _lootChance = getNumber (_config >> "lootChance");

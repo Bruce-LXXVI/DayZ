@@ -73,7 +73,7 @@ fa_spawninventory = {
 
 	_partType = _this select 0;
 	_partChance = _this select 1;
-	_config = configFile >> "CfgBuildingLoot" >> "HeliCrash";
+	_config = configFile >> dayz_CBLConfigName >> "HeliCrash";
 	// append parts to loot item
 	_itemType =	(getArray (_config >> "itemType"));
 	{ _itemType set [count _itemType, [_x,"object"]] } forEach _partType;
@@ -380,7 +380,7 @@ fa_server_locationCheck = {
 
 	_point = _this select 0;
 	_rad = _this select 1;
-	_config = configFile >> "CfgTownGeneratorChernarus";
+	_config = configFile >> format["CfgTownGenerator%1", worldName];
 	
 	if (count _point >= 2) then {
 		for "_i" from (count _config -1) to 0 step -1 do {

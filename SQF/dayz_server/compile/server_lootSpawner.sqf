@@ -17,7 +17,7 @@ _seeded = 0;
 //diag_log format ["Server Loot Spawn Active. Total Buildings: %1",_nearbycount];
 {
 	_type = typeOf _x;
-	_config = configFile >> "CfgBuildingLoot" >> _type;
+	_config = configFile >> dayz_CBLConfigName >> _type;
 	_canSpawn = isClass (_config);
 	_checkLoot = ((count (getArray (_config >> "lootPos"))) > 0);
 

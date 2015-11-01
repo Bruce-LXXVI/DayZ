@@ -67,7 +67,7 @@ while {1 == 1} do {
 		deleteVehicle _crash; // delete local vehicle used for get width and length
 
 		if (count _position >= 2) then {
-			diag_log format["CRASHSPAWNER: Spawning '%1' with loot table '%2' at %3", _crashName, _lootTable, str(_position)];
+			diag_log format["CRASHSPAWNER: Spawning '%1' with loot table '%2' at %3 (GPS:%4)", _crashName, _lootTable, str(_position), str(mapGridPosition _position)];
 
 			_position set [2,0];
 			_crash = createVehicle ["ClutterCutter_small_2_EP1", _position, [], 0, "CAN_COLLIDE"]; // used to get modelToWorld
@@ -77,13 +77,36 @@ while {1 == 1} do {
 
             for "_x" from ((round(random _randomizedLoot)) + _guaranteedLoot) to 1 step -1  do {
 				//create loot
-				_itemTypes = [] + getArray (configFile >> "CfgBuildingLoot" >> _lootTable >> "lootType");
+				_itemTypes = [] + getArray (configFile >> dayz_CBLConfigName >> _lootTable >> "lootType");
+				_lootTable = toLower _lootTable;
 				_CBLBase = dayz_CBLBase find _lootTable;
-				_weights = dayz_CBLChances select _CBLBase;
+
+				while {_CBLBase < 0} do {
+					diag_log format["[PLAYZ] NOT FOUND: _lootTable=%1 | _CBLBase=%2", _lootTable, _CBLBase];
+					_lootTable = toLower (["HeliCrashNamalsk", "MilitaryNamalskWinter", "MilitarySpecialNamalsk", "MilitarySpecialNamalskWinter"] call BIS_fnc_selectRandom);
+					_CBLBase = dayz_CBLBase find _lootTable;
+					diag_log format["[PLAYZ] USING INSTEAD: _lootTable=%1 | _CBLBase=%2", _lootTable, _CBLBase];
+				};
+
+				_weights = [0];
+				if( (count dayz_CBLChances) > _CBLBase ) then {
+					_weights = dayz_CBLChances select _CBLBase;
+					//diag_log format["[PLAYZ] _CBLBase=%1 | _weights=%2", _CBLBase, _weights];
+				};
+
 				_cntWeights = count _weights;
 				_index1 = floor(random _cntWeights);
 				_index2 = _weights select _index1;
-				_itemType = _itemTypes select _index2;
+
+				if( (count _itemTypes) > _index2 ) then {
+					_itemType = _itemTypes select _index2;
+				} else {
+					diag_log format["[PLAYZ] INDEX OUT OF BOUNDS: _index2=%1 | _itemTypes=%2", _index2, _itemTypes];
+					_index2 = 0;
+					_itemTypes = [["", "helicrashnamalsk", 1]];
+					_itemType = _itemTypes select _index2;
+					diag_log format["[PLAYZ] USING INSTEAD: _index2=%1 | _itemTypes=%2", _index2, _itemTypes];
+				};
 
 				_lootpos = [];
 				for [{_y = 0}, {_y < 10 && ((count _lootpos) == 0)}, {_y = _y + 1}] do {

@@ -21,18 +21,44 @@ if (isDedicated) then {
 		if (_randomvehicle == "Misc_cargo_cont_net2") then { _num = round(random 6) + 4; };
 		if (_randomvehicle == "Misc_cargo_cont_net3") then { _num = round(random 12) + 5; };
 
-		diag_log("DEBUG: Spawning a " + str (_randomvehicle) + " at " + str(_position) + " with loot type " + str(_vehicleloottype) + " With total loot drops = " + str(_num));
+		diag_log("DEBUG: Spawning a " + str (_randomvehicle) + " at " + str(_position) + " (GPS:" + str(mapGridPosition _position) + ") with loot type " + str(_vehicleloottype) + " With total loot drops = " + str(_num));
 
 		//waituntil {!isnil "fnc_buildWeightedArray"};
 
 		for "_pkg" from _num to 1 step -1 do {
-			_itemTypes = [] + getArray (configFile >> "CfgBuildingLoot" >> _vehicleloottype >> "lootType");
+			_itemTypes = [] + getArray (configFile >> dayz_CBLConfigName >> _vehicleloottype >> "lootType");
 			_CBLBase = dayz_CBLBase find _vehicleloottype;
-			_weights = dayz_CBLChances select _CBLBase;
+			if(_CBLBase == -1) then {
+				_vehicleloottype = toLower _vehicleloottype;
+				_CBLBase = dayz_CBLBase find _vehicleloottype;
+				while {_CBLBase < 0} do {
+					diag_log format["[PLAYZ] NOT FOUND: _vehicleloottype=%1 | dayz_CBLBase=%2", _vehicleloottype, dayz_CBLBase];
+					_vehicleloottype = toLower (["ResidentialNamalsk", "SuperMarketNamalsk", "HospitalNamalsk", "MilitaryNamalskWinter"] call BIS_fnc_selectRandom);
+					_CBLBase = dayz_CBLBase find _vehicleloottype;
+					diag_log format["[PLAYZ] USING INSTEAD: _vehicleloottype=%1 | _CBLBase=%2", _vehicleloottype, _CBLBase];
+				};
+			};
+
+			_weights = [0];
+			if( (count dayz_CBLChances) > _CBLBase ) then {
+				_weights = dayz_CBLChances select _CBLBase;
+				//diag_log format["[PLAYZ] _CBLBase=%1 | _weights=%2", _CBLBase, _weights];
+			};
+
+
 			_cntWeights = count _weights;
 			_index1 = floor(random _cntWeights);
 			_index2 = _weights select _index1;
-			_itemType = _itemTypes select _index2;
+
+			if( (count _itemTypes) > _index2 ) then {
+				_itemType = _itemTypes select _index2;
+			} else {
+				diag_log format["[PLAYZ] INDEX OUT OF BOUNDS: _index2=%1 | _itemTypes=%2", _index2, _itemTypes];
+				_index2 = 0;
+				_itemTypes = [["", "supermarketnamalsk", 1]];
+				_itemType = _itemTypes select _index2;
+				diag_log format["[PLAYZ] USING INSTEAD: _index2=%1 | _itemTypes=%2", _index2, _itemTypes];
+			};
 
 			_lootpos = [];
 			for [{_y = 0}, {_y < 10 && ((count _lootpos) == 0)}, {_y = _y + 1}] do {
