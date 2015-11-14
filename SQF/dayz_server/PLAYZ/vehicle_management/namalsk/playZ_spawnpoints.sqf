@@ -40,8 +40,8 @@ PLAYZ_vehicle_spawns=
 ["200000032", "Old_bike_TK_CIV_EP1", [6,[4877.88,6215.15,0.00143814]], [], []],
 ["200000033", "PBX", [228,[6044.81,6760.48,2.24013]], [[[], []], [["ItemFlashlightRed"], [1]], [["DZ_Backpack_EP1"], [1]]], [["motor",0.7]]],
 ["200000034", "UralCivil2", [126,[7647.15,7406.74,0.00144958]], [[[], []], [["PartWheel", "ItemToolbox", "ItemTankTrap"], [1, 1, 1]], [[], []]], [["palivo",0.5],["motor",0],["karoserie",0],["wheel_1_1_steering",0],["wheel_1_2_steering",0],["wheel_2_1_steering",0],["wheel_2_2_steering",1]]],
-["200000035", "UralCivil", [1,[4991.09,8165.97,0.00148773]], [[[], []], [["PartWheel", "ItemToolbox", "ItemTankTrap"], [1, 1, 1]], [[], []]], [["palivo",0.5],["motor",0],["karoserie",0],["wheel_1_1_steering",0],["wheel_1_2_steering",0],["wheel_2_1_steering",0],["wheel_2_2_steering",1]]]
-["200000036", "SUV_Pink_PLAYZ", [185, [5793.81, 8650.78, 0]], [[[], []], [["Pipebomb"], [1]], [[], []]], [["palivo",0],["motor",0],["karoserie",0],["wheel_1_1_steering",0],["wheel_1_2_steering",0],["wheel_2_1_steering",0],["wheel_2_2_steering",0]]],
+["200000035", "UralCivil", [1,[4991.09,8165.97,0.00148773]], [[[], []], [["PartWheel", "ItemToolbox", "ItemTankTrap"], [1, 1, 1]], [[], []]], [["palivo",0.5],["motor",0],["karoserie",0],["wheel_1_1_steering",0],["wheel_1_2_steering",0],["wheel_2_1_steering",0],["wheel_2_2_steering",1]]],
+["200000036", "SUV_Pink_PLAYZ", [185, [5793.81, 8650.78, 0]], [[[], []], [["Pipebomb"], [1]], [[], []]], [["palivo",0],["motor",0],["karoserie",0],["wheel_1_1_steering",0],["wheel_1_2_steering",0],["wheel_2_1_steering",0],["wheel_2_2_steering",0]]]
 
 ];
 

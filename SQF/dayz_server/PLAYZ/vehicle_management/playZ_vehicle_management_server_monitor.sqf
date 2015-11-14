@@ -48,7 +48,7 @@ uiSleep 100;
 _directoryAsArray = toArray __FILE__;
 _directoryAsArray resize ((count _directoryAsArray) - 44);
 PLAYZ_directory = toString _directoryAsArray;
-diag_log format ["%1 Initializing using base path %2", PLAYZ_logname, PLAYZ_directory];
+diag_log format ["%1 Initializing world %3 using base path %2", PLAYZ_logname, PLAYZ_directory, PLAYZ_worldname];
 
 // Konfiguration einlesen
 //#include <playZ_config.sqf>
