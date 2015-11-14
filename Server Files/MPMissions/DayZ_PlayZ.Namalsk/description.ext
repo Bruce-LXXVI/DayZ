@@ -11,7 +11,7 @@ onPauseScript = "";
 briefing = 0;
 debriefing = 0;
 //loadScreen = "\nst\ns_dayz\data\dayznamalsk_logo_ca.paa";
-loadScreen = "PLAYZ\dayz_code\gui\loadingscreen5.jpg";
+loadScreen = "PLAYZ\dayz_code\gui\loadingscreen6.jpg";
 
 class Header
 {
