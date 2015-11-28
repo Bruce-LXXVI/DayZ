@@ -14,5 +14,5 @@ echo.
 echo.
 echo Shutting down...
 %RCON% -cmd "#shutdown" -cmd "exit"
-sleep 5
+sleep 10
 
