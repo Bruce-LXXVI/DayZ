@@ -24,7 +24,8 @@ private [
 ];
 
 _inUID = _this select 0;
-_inUIDNum = parseNumber _inUID;
+// Temp vehicle is a "Reset vehicle"
+_inUIDNum = if( isNil "_inUID" ) then { 28 } else { parseNumber _inUID };
 if( _inUIDNum >= 200000000 ) then {
 	// real UID given => seems to be a permanent vehicle
 	_objectUID = _inUID;
@@ -32,9 +33,9 @@ if( _inUIDNum >= 200000000 ) then {
 	if( (_inUIDNum > 0) && (_inUIDNum < 100) ) then {
 		// UID prefix given => create random UID for this permanent vehicle
 		if(_inUIDNum < 10) then {
-			_objectUID = format ["%1%2%3%4", _inUID, abs round((random 90)+10), abs round((random 900)+100), abs round((random 900)+100)];
+			_objectUID = format ["%1%2%3%4", _inUIDNum, abs round((random 90)+10), abs round((random 900)+100), abs round((random 900)+100)];
 		} else {
-			_objectUID = format ["%1%2%3%4", _inUID, abs round((random 90)+10), abs round((random 90)+10), abs round((random 900)+100)];
+			_objectUID = format ["%1%2%3%4", _inUIDNum, abs round((random 90)+10), abs round((random 90)+10), abs round((random 900)+100)];
 		};
 	} else {
 		// no UID/prefix given => create temporary vehicle

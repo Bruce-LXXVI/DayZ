@@ -44,6 +44,9 @@ private [
 _objectUID = [(_this select 5)] call PLAYZ_fnc_objectUID;
 _isTemp = if( isNil "_objectUID" ) then {true} else {false};
 
+if(_isTemp) then {_objectUID="0";};
+diag_log format ["%1 PLAYZ_fnc_createVehicle ===> _objectUID=%2 | _isTemp=%3", PLAYZ_logname, _objectUID, _isTemp];
+
 // check type
 _typePlayZ = _this select 0;
 _type = [_typePlayZ] call PLAYZ_fnc_realClassname;
@@ -92,10 +95,10 @@ _newVeh = createVehicle [_type, _pos, _markers, _placement, _special];
 _newVeh setDir _dir;
 _newVeh setDamage _damage;
 _newVeh setVariable ["lastUpdate", time];
-if(!_isTemp) then {
+//if(!_isTemp) then {
 	_newVeh setVariable ["ObjectUID", _objectUID, true];
 	_newVeh setVariable ["ObjectID", _objectUID, true];
-};
+//};
 _newVeh setVariable ["CharacterID", _ownerID, true];
 _newVeh setVariable ["PLAYZ_spawnpos", _pos, true];
 _newVeh setVariable ["PLAYZ_classname", _typePlayZ, true];
@@ -161,7 +164,7 @@ if(!_isTemp) then {
 
 PVDZ_obj_Publish = [_ownerID, _newVeh, [round getDir _newVeh, getPosATL _newVeh], _inventory, _hitpoints, _objectUID, damage _newVeh, fuel _newVeh];
 publicVariableServer "PVDZ_obj_Publish";
-diag_log [diag_ticktime, PLAYZ_logname, " New Networked object, request to save to hive. PVDZ_obj_Publish:", PVDZ_obj_Publish];
+diag_log format ["%1 %2 New Networked object, request to save to hive. PVDZ_obj_Publish=%3", PLAYZ_logname, diag_ticktime, PVDZ_obj_Publish];
 
 _newVeh
 
