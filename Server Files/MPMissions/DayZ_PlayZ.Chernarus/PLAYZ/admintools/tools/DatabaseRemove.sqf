@@ -11,7 +11,9 @@ if(isNull _obj) exitWith{cutText ["No object selected","PLAIN UP"];};
 _objectID = _obj getVariable["ObjectID","0"];
 _objectUID = _obj getVariable["ObjectUID","0"];
 
+
 	_fnc_databaseremtimer = {
+		/*
 		_cnt = 5;
 		for "_i" from 1 to 5 do
 		{
@@ -21,6 +23,7 @@ _objectUID = _obj getVariable["ObjectUID","0"];
 			sleep 1;
 			_cnt = _cnt - 1;
 		};
+		*/
 		call _func_databaseremove;
 	};
 
