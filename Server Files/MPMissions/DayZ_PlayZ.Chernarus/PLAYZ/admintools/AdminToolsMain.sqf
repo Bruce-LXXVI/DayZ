@@ -49,6 +49,7 @@ AdminMenu =
 	["Humanity Menu >>",[],"#USER:HumanityMenu", -5, [["expression", ""]], "1", "1"],
 	["Kick player",[],"", -5, [["expression", format[_EXECgenTools, "KickPlayer.sqf"]]], "1", "1"],
 	["Point to Delete(Perm)",[],"", -5,[["expression",format[_EXECgenTools,"DatabaseRemove.sqf"]]],"1","1"],
+	["Point to Destroy(Perm)",[],"", -5,[["expression", format[_EXECgenTools,"PointToDestroyPERM.sqf"]]], "1", "1"],
 	["Point to Repair(Perm)",[],"", -5,[["expression", format[_EXECgenTools,"PointToRepairPERM.sqf"]]], "1", "1"],
 //	["Safe Zone Create/Delete",[],"", -5, [["expression", format[_EXECgenTools,"SafeZoneArea.sqf"]]], "1", "1"],
 	["Zombie Shield",[],"", -5,[["expression",format[_EXECgenTools,"zombieshield.sqf"]]],"1","1"],
@@ -76,9 +77,15 @@ VehicleMenu =
 [
 ["",true],	
 	["Graphical Vehicle Menu", [],"", -5, [["expression", format[_EXECgenTools,"addvehicleDialog.sqf"]]], "1", "1"],
+	["Point to lock", [],"", -5, [["expression", format[_EXECgenTools,"vehicleLock.sqf"]]], "1", "1"],
+	["Point to unlock", [],"", -5, [["expression", format[_EXECgenTools,"vehicleUnlock.sqf"]]], "1", "1"],
+	["Point to Repair (Perm)", [],"", -5, [["expression", format[_EXECgenTools,"PointToRepairPERM.sqf"]]], "1", "1"],
+	["Point to Delete (Perm)",[],"",-5,[["expression",format[_EXECgenTools,"DatabaseRemove.sqf"]]],"1","1"],
+	["Point to only Refuel (Temp)", [],"", -5, [["expression", format[_EXECgenTools,"PointToRefuel.sqf"]]], "1", "1"],
+	["Flip Vehicle", [],"", -5, [["expression", format[_EXECgenTools,"flipvehicle.sqf"]]], "1", "1"],
 //	["Temporary Vehicle Menu >>", [], "#USER:VehicleTempMenu", -5, [["expression", ""]], "1", "1"],
 //	["Locked Vehicle Menu >>", [], "#USER:VehiclekeyMenu", -5, [["expression", ""]], "1", "1"],
-	["Vehicle Tools >>", [], "#USER:VehicleTools", -5, [["expression", ""]], "1", "1"],
+//	["Vehicle Tools >>", [], "#USER:VehicleTools", -5, [["expression", ""]], "1", "1"],
 	["", [], "", -5, [["expression", ""]], "1", "0"],
 		["Main Menu", [20], "#USER:epochmenustart", -5, [["expression", ""]], "1", "1"]
 ];
