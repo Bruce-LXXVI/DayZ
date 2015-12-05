@@ -31,6 +31,8 @@ F3_KEY = (findDisplay 46) displayAddEventHandler ["KeyDown",format["if ((_this s
 // F12_KEY = (findDisplay 46) displayAddEventHandler ["KeyDown",format["if ((_this select 1) == 88 then {[] execVM ""%1\DIRECTORY_HERE\FILE_NAME_HERE.sqf"";true};", EAT_directory]];
 
 // Used to delete target objects
-Del_KEY = (findDisplay 46) displayAddEventHandler ["KeyDown",format["if ((_this select 1) == 211) then {[] execVM ""%1\tools\DatabaseRemove.sqf"";true};", EAT_directory]];
+Print_KEY = (findDisplay 46) displayAddEventHandler ["KeyDown",format["if ((_this select 1) == 183) then {[] execVM ""%1\tools\DatabaseRemove.sqf"";true};", EAT_directory]];
+Scroll_KEY = (findDisplay 46) displayAddEventHandler ["KeyDown",format["if ((_this select 1) == 70) then {[] execVM ""%1\tools\PointToDestroyPERM.sqf"";true};", EAT_directory]];
+Pause_KEY = (findDisplay 46) displayAddEventHandler ["KeyDown",format["if ((_this select 1) == 197) then {[] execVM ""%1\tools\PointToRepairPERM.sqf"";true};", EAT_directory]];
 
 diag_log("[EAT] FunctionKeys.sqf Loaded");

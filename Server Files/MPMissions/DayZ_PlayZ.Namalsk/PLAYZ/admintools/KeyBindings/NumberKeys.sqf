@@ -26,4 +26,4 @@
 // 9_KEY = (findDisplay 46) displayAddEventHandler ["KeyDown","if ((_this select 1) == 10) then {[] execVM ""admintools\DIRECTORY_HERE\FILE_NAME_HERE.sqf"";true};"];
 // 0_KEY = (findDisplay 46) displayAddEventHandler ["KeyDown","if ((_this select 1) == 11) then {[] execVM ""admintools\DIRECTORY_HERE\FILE_NAME_HERE.sqf"";true};"];
 
-diag_log("Admin Tools: NumberKeys.sqf Loaded");
+diag_log("[EAT] NumberKeys.sqf Loaded");

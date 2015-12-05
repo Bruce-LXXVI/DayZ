@@ -56,8 +56,7 @@ _spawnCrate addMagazineCargoGlobal ["ItemWaterbottleBoiled", 50];
 _spawnCrate addMagazineCargoGlobal ["FoodSteakCooked", 50];
 _spawnCrate addMagazineCargoGlobal ["ItemSodaRocketFuel", 50];
 _spawnCrate addMagazineCargoGlobal ["FoodCanBoneboy", 50];
-
-
+_spawnCrate addMagazineCargoGlobal ["FoodCanCurgon", 50];
 
 
 // Add only 1 backpack. The rest will fall out onto the ground. Do not use LargeGunBag here, the box will not hold it.
