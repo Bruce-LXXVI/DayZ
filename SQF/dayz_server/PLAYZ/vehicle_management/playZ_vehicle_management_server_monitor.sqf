@@ -32,7 +32,6 @@ private [ "_directoryAsArray"
 		, "_aliveUIDs"
 		, "_aliveIDs"
 		, "_classnameCounters"
-		, "_hasMoved"
 		, "_isResetter"			// Fahrzeug, das immer wieder resettet wird
 ];
 
@@ -89,25 +88,28 @@ while {true} do {
 			_vehiceNear = (count (_pos nearEntities ["AllVehicles", PLAYZ_staticSpawnOtherVehicleDistance]) > 0);
 			//_isResetter = ((parseNumber _objectUID) >= 280000000) && ((parseNumber _objectUID) < 290000000);
 			_isResetter = false;
-			_isPrio =     ((parseNumber _objectUID) >= 290000000) && ((parseNumber _objectUID) < 300000000);
-			if( (count (_x getVariable ["PLAYZ_spawnpos", []])) < 3 ) then {
-				_hasMoved = false;
-			} else {
-				_hasMoved = (_x getVariable ["PLAYZ_spawnpos", []]) distance _x > 20;
+			_isPrio = ((parseNumber _objectUID) >= 290000000) && ((parseNumber _objectUID) < 300000000);
+			_isLocked = locked _x;
+
+			if( (_objectID == "0") && (_objectUID == "0") && !_isLocked ) then
+			{
+				diag_log format ["%1 FOUND VEHICLE (%2) WITH NO ID at %3!!", PLAYZ_logname, _type, mapGridPosition _pos];
+				diag_log format ["%1 CREW: %2", PLAYZ_logname, crew _x];
+				diag_log format ["%1 LOCKING VEHICLE!", PLAYZ_logname];
+				_x setVehicleLock "LOCKED";
 			};
 
 			// die objectUID/objectID zur Liste hinzufügen
-			if( (_objectUID != "") && (_objectUID != "0") ) then {_aliveUIDs set [count _aliveUIDs, _objectUID];};
-			if( (_objectID != "") && (_objectID != "0") ) then {_aliveIDs set [count _aliveIDs, _objectID];};
+			if( (_objectUID != "") && (_objectUID != "0") && !_isLocked ) then {_aliveUIDs set [count _aliveUIDs, _objectUID];};
+			if( (_objectID != "") && (_objectID != "0") && !_isLocked ) then {_aliveIDs set [count _aliveIDs, _objectID];};
 
 			// Klasse limitiert?
 			_index = PLAYZ_limitedClasses find _type;
-			if(_index >= 0) then {_classnameCounters set [_index, ((_classnameCounters select _index) + 1)];};
+			if( (_index >= 0) && !_isLocked ) then {_classnameCounters set [_index, ((_classnameCounters select _index) + 1)];};
 
 			// Stark beschädigte / Reset- Fahrzeuge zerstören
 			if(	alive _x && (
 					((PLAYZ_destroyVehiclesMoreDamaged < 1) && (_damage >= PLAYZ_destroyVehiclesMoreDamaged))
-					|| (_hasMoved && _isResetter)
 				)) then {
 				if( _playerNear ) then {
 					diag_log format ["%1 don't destroy %2 (player nearby)", PLAYZ_logname, _x];
