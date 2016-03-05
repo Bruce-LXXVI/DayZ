@@ -93,6 +93,12 @@ helpQueue = []; // Initialize help queue
 				};
 			} forEach entities "CAManBase";
 		};
+		
+		/*
+		"EAT_serverMessageAdmin" addPublicVariableEventHandler {
+			diag_log format ["%1 Message to admin: %2", EAT_logname, _this];
+		};
+		*/
 	};
 
 /****************** Client Public Variables ******************/

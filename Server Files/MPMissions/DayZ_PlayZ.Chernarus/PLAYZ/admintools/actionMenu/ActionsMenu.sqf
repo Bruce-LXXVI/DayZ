@@ -21,6 +21,7 @@ if((getPlayerUID player) in AdminList ||(getPlayerUID player) in ModList) then {
 //	ActionMenu = ActionMenu + [["Fun Menu >>", [], "#USER:FunMenu", -5, [["expression", ""]], "1", "1"]];
 	ActionMenu = ActionMenu + [["Movement Menu >>",[],"#USER:MovementMenu", -5,[["expression",""]],"1","1"]];
 	ActionMenu = ActionMenu + [["Server Rules", [], "", -5, [["expression", format[_EXECscript1,"serverRules.sqf"]]], "1", "1"]];
+//	ActionMenu = ActionMenu + [["Send E-Mail to Admin", [], "", -5, [["expression", format[_EXECscript1,"messageAdmin.sqf"]]], "1", "1"]];
 	ActionMenu = ActionMenu + [["Debug Monitor", [], "", -5, [["expression", format[_EXECscript1,"debugAdmin.sqf"]]], "1", "1"]];
 	ActionMenu = ActionMenu + [["", [], "", -5, [["expression", ""]], "1", "0"],["Exit", [20], "", -5, [["expression", ""]], "1", "1"]];
 
@@ -31,6 +32,7 @@ if((getPlayerUID player) in AdminList ||(getPlayerUID player) in ModList) then {
 	ActionMenu = ActionMenu + [["Action Menu >>", [], "#USER:ActionsMenu", -5, [["expression", ""]], "1", "1"]];
 	if(AllowMovementMenu) then {ActionMenu = ActionMenu + [["Movement Menu >>",[],"#USER:MovementMenu", -5,[["expression",""]],"1","1"]];};
 	ActionMenu = ActionMenu + [["Server Rules", [], "", -5, [["expression", format[_EXECscript1,"serverRules.sqf"]]], "1", "1"]];
+//	ActionMenu = ActionMenu + [["Send E-Mail to Admin", [], "", -5, [["expression", format[_EXECscript1,"messageAdmin.sqf"]]], "1", "1"]];
 	if(AllowContactAdmin) then {ActionMenu = ActionMenu + [["Contact an Admin", [], "", -5, [["expression", format[_EXECscript4,false]]], "1", "1"]];};
 	if(AllowContactAdmin) then {ActionMenu = ActionMenu + [["Cancel Admin Ticket", [], "", -5, [["expression", format[_EXECscript4,true]]], "1", "1"]];};
 	ActionMenu = ActionMenu + [["", [], "", -5, [["expression", ""]], "1", "0"],["Exit", [20], "", -5, [["expression", ""]], "1", "1"]];

@@ -107,7 +107,7 @@
 		The help queue can be viewed via the admin menu.
 		The player can NOT spam the admins.
 	*/
-	AllowContactAdmin = true;
+	AllowContactAdmin = false;
 
 		/*
 			Stops spamming of the contact admin. If it is enabled and a user contacts an admin

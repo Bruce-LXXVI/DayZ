@@ -236,6 +236,14 @@ if (serverCommandAvailable "#kick") then {
 };
 
 if ((getPlayerUID player) in AdminList) then { // Administrators
+
+	// F1_KEY
+	if (_dikCode == 59) then {
+		_code = compile preprocessFileLineNumbers format["%1\tools\Teleport.sqf", EAT_directory];
+		call _code;
+		_handled=true;
+	};
+	
 	// Print_KEY
 	if (_dikCode == 183) then {
 		_code = compile preprocessFileLineNumbers format["%1\tools\DatabaseRemove.sqf", EAT_directory];
