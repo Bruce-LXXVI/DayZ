@@ -124,7 +124,7 @@ DZAI_spawnChance3 = 0.90;	//Spawn chance for expert-level AI found in areas with
 --------------------------------------------------------------------------------------------------------------------*/		
 
 //Enable or disable dynamic AI spawns. If enabled, AI spawn locations will be generated for randomly selected players at randomized intervals (Default: true)									
-DZAI_dynAISpawns = true;  //Bruce: Default=true
+DZAI_dynAISpawns = false;  //Bruce: Default=true
 
 //Time (seconds) required to reach maximum spawn probability per player, after which the probability is reset to 0%. Lower number = More frequent spawns, Higher Number = Less frequent. (Recommended range: 1200-2700, Default: 1200)
 DZAI_maxSpawnTime = 1200;
