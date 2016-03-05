@@ -73,7 +73,8 @@ fa_spawninventory = {
 
 	_partType = _this select 0;
 	_partChance = _this select 1;
-	_config = configFile >> dayz_CBLConfigName >> "HeliCrash";
+	// _config = configFile >> dayz_CBLConfigName >> "HeliCrash"; // Das funktioniert so nicht mehr
+	_config = configFile >> "CfgLoot" >> "Buildings" >> "HeliCrash";
 	// append parts to loot item
 	_itemType =	(getArray (_config >> "itemType"));
 	{ _itemType set [count _itemType, [_x,"object"]] } forEach _partType;

@@ -28,6 +28,16 @@ class WoodenGate_Base: DZ_buildables
 			initPhase=0;
 		};
 	};
+	class Upgrade { //to next stage
+		requiredParts[] = {"ItemLog"};
+	};
+	class Disassembly {
+		requiredTools[] = {"ItemEtool"};
+	};	
+	class Maintenance {
+		requiredTools[] = {"ItemToolbox"};
+		requiredParts[] = {"ItemPlank","equip_nails"};
+	};
 };
 
 class WoodenGate_ghost: WoodenGate_Base

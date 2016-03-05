@@ -1,3 +1,5 @@
+#include "\z\addons\dayz_code\loot\Loot.hpp"
+
 private ["_bypass","_position","_unitTypes","_radius","_method","_agent","_maxlocalspawned","_doLoiter","_wildspawns","_maxControlledZombies","_cantSee","_isok","_zPos","__FILE__","_fov","_safeDistance","_farDistance","_xasl","_eye","_ed","_deg","_skipFOV","_wildSpawns","_tooClose","_type","_loot","_array","_rnd","_lootType","_index","_weights","_loot_count","_favStance"];
 
 _position = _this select 0;
@@ -75,8 +77,9 @@ if ((_maxlocalspawned < _maxControlledZombies) and (dayz_CurrentNearByZombies < 
 		_tooClose = {isPlayer _x} count (_position nearEntities ["CAManBase",30]) > 0;
 		if (_tooClose) exitwith { diag_log ("Zombie_Generate: was too close to player."); };
 		
-		if (count _unitTypes == 0) then {
-			_unitTypes = []+ getArray (configFile >> "CfgBuildingLoot" >> "Default" >> "zombieClass");
+		if (count _unitTypes == 0) then
+		{
+			_unitTypes = getArray (configFile >> "CfgLoot" >> "Buildings" >> "Default" >> "zombieClass");
 		};
 		
 		// lets create an agent
@@ -93,32 +96,21 @@ if ((_maxlocalspawned < _maxControlledZombies) and (dayz_CurrentNearByZombies < 
 		//add to global counter 
 		dayz_spawnZombies = dayz_spawnZombies + 1;
 		dayz_CurrentNearByZombies = dayz_CurrentNearByZombies + 1;
+		dayz_currentGlobalZombies = dayz_currentGlobalZombies + 1;
 		
 		//Add some loot
-		_loot = "";
-		_array = [];
-		_rnd = random 1;
-		if (_rnd > 0.3) then {
-			_lootType = configFile >> "CfgVehicles" >> _type >> "zombieLoot";
-			if (isText _lootType) then {
-				_array = [];
-				{
-					_array set [count _array, _x select 0];
-					sleep 0.001;
-				} foreach getArray (configFile >> "cfgLoot" >> getText(_lootType));
-				if (count _array > 0) then {
-					_index = dayz_CLBase find getText(_lootType);
-					_weights = dayz_CLChances select _index;
-					_loot = _array select (_weights select (floor(random (count _weights))));
-					if(!isNil "_array") then {
-						_loot_count =	getNumber(configFile >> "CfgMagazines" >> _loot >> "count");
-						if(_loot_count>1) then {
-							_agent addMagazine [_loot, ceil(random _loot_count)];
-						} else {
-							_agent addMagazine _loot;
-						};
-					};
-				};
+		//_loot = "";
+		//_array = [];
+		//_rnd = random 1;
+		if (0.7 > random 1) then
+		{
+			_lootGroup = configFile >> "CfgVehicles" >> _type >> "zombieLoot";
+			if (isText _lootGroup) then
+			{
+				//_lootGroup = dayz_lootGroups find getText (_lootGroup);
+				_lootGroup = Loot_GetGroup(getText _lootGroup);
+				//[_agent, _lootGroup, 1] call loot_insert;
+				Loot_Insert(_agent, _lootGroup, 1);
 			};
 		};
 		
@@ -143,9 +135,9 @@ if ((_maxlocalspawned < _maxControlledZombies) and (dayz_CurrentNearByZombies < 
 			_agent setVariable ["stance", _favStance];
 			_agent setVariable ["BaseLocation", _position];
 			_agent setVariable ["doLoiter", _doLoiter]; // true: Z will be wandering, false: stay still
-			_agent setVariable ["myDest", _position];
-			_agent setVariable ["newDest", _position];
-			[_agent, _position] call zombie_loiter;
+			//_agent setVariable ["myDest", _position];
+			//_agent setVariable ["newDest", _position];
+			//[_agent, _position] call zombie_loiter;
 		};
 		
 		//Disable simulation 

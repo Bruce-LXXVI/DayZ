@@ -1,3 +1,41 @@
+#define G36C_ACOG modelOptics = "\Ca\weapons_E\SCAR\ACOG_TA31_optic_4x.p3d";\
+class OpticsModes\
+{\
+	class ACOG\
+	{\
+		opticsID = 1;\
+		useModelOptics = true;\
+		opticsFlare = true;\
+		opticsDisablePeripherialVision = true;\
+		opticsZoomMin = 0.0623;\
+		opticsZoomMax = 0.0623;\
+		opticsZoomInit = 0.0623;\
+		distanceZoomMin = 300;\
+		distanceZoomMax = 300;\
+		memoryPointCamera = "opticView";\
+		visionMode[] = {"Normal"};\
+		opticsPPEffects[] = {"OpticsCHAbera3","OpticsBlur3"};\
+		cameraDir = "";\
+	};\
+	\
+	class Iron\
+	{\
+		opticsID = 2;\
+		useModelOptics = false;\
+		opticsFlare = false;\
+		opticsDisablePeripherialVision = false;\
+		opticsZoomMin = 0.25;\
+		opticsZoomMax = 1.1;\
+		opticsZoomInit = 0.5;\
+		distanceZoomMin = 100;\
+		distanceZoomMax = 100;\
+		memoryPointCamera = "eye";\
+		visionMode[] = {};\
+		opticsPPEffects[] = {};\
+		cameraDir = "";\
+	};\
+}
+
 class G36C_DZ : G36C
 {
 	model = "z\addons\dayz_communityweapons\g36c\g36c.p3d";
@@ -12,13 +50,6 @@ class G36C_DZ : G36C
 	
 	class Attachments
 	{
-		attachments[] =
-		{
-			"Attachment_CCO",
-			"Attachment_Holo",
-			"Attachment_Sup556"
-		};
-		
 		Attachment_CCO = "G36C_CCO_DZ";
 		Attachment_Holo = "G36C_Holo_DZ";
 		Attachment_Sup556 = "G36C_SD_DZ";
@@ -39,12 +70,6 @@ class G36C_SD_DZ : G36_C_SD_eotech
 	
 	class Attachments
 	{
-		attachments[] =
-		{
-			"Attachment_CCO",
-			"Attachment_Holo"
-		};
-		
 		Attachment_CCO = "G36C_CCO_SD_DZ";
 		Attachment_Holo = "G36C_Holo_SD_DZ";
 	};
@@ -67,11 +92,6 @@ class G36C_CCO_DZ : G36C_DZ
 	
 	class Attachments
 	{
-		attachments[] =
-		{
-			"Attachment_Sup556"
-		};
-		
 		Attachment_Sup556 = "G36C_CCO_SD_DZ";
 	};
 	
@@ -116,11 +136,6 @@ class G36C_Holo_DZ : G36C_DZ
 	
 	class Attachments
 	{
-		attachments[] =
-		{
-			"Attachment_Sup556"
-		};
-		
 		Attachment_Sup556 = "G36C_Holo_SD_DZ";
 	};
 	
@@ -156,3 +171,53 @@ class G36C_Holo_SD_DZ : G36C_SD_DZ
 		};
 	};
 };
+
+class G36C_ACOG_DZ : G36C_DZ
+{
+	model = "z\addons\dayz_communityweapons\g36c\g36c_acog.p3d";
+	picture = "\z\addons\dayz_communityweapons\g36c\data\w_g36c_acog_ca.paa";
+	displayName = $STR_DZ_WPN_G36C_ACOG_NAME;
+	
+	G36C_ACOG;
+	
+	class Attachments
+	{
+		Attachment_Sup556 = "G36C_ACOG_SD_DZ";
+	};
+	
+	class ItemActions
+	{
+		class RemoveACOG
+		{
+			text = $STR_DZ_ATT_ACOG_RMVE;
+			script = "; ['Attachment_ACOG',_id,'G36C_DZ'] call player_removeAttachment";
+		};
+	};
+};
+
+class G36C_ACOG_SD_DZ : G36C_SD_DZ
+{
+	model = "z\addons\dayz_communityweapons\g36c\g36c_acog_sd.p3d";
+	picture = "\z\addons\dayz_communityweapons\g36c\data\w_g36c_acog_sd_ca.paa";
+	displayName = $STR_DZ_WPN_G36C_ACOG_SD_NAME;
+	
+	G36C_ACOG;
+	
+	class Attachments {};
+	
+	class ItemActions
+	{
+		class RemoveACOG
+		{
+			text = $STR_DZ_ATT_ACOG_RMVE;
+			script = "; ['Attachment_ACOG',_id,'G36C_SD_DZ'] call player_removeAttachment";
+		};
+		class RemoveSuppressor
+		{
+			text = $STR_DZ_ATT_SUP556_RMVE;
+			script = "; ['Attachment_Sup556',_id,'G36C_ACOG_DZ'] call player_removeAttachment";
+		};
+	};
+};
+
+#undef G36C_ACOG

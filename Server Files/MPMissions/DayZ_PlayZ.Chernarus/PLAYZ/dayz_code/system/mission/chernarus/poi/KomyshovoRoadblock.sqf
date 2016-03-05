@@ -134,7 +134,7 @@ _this setVariable ["", true]; // prevent network SV by loot/zeds spawner
   _this setDir -132.45085;
   _this setPos [11705.452, 3416.7844, 3.8146973e-006];
 };
-
+/*
 _vehicle_17 = objNull;
 if (true) then
 {
@@ -145,7 +145,7 @@ _this setVariable ["", true]; // prevent network SV by loot/zeds spawner
   _this setDir -73.341125;
   _this setPos [11685.367, 3420.6243, 3.3855438e-005];
 };
-
+*/
 _vehicle_18 = objNull;
 if (true) then
 {
@@ -202,7 +202,7 @@ _this setVariable ["", true]; // prevent network SV by loot/zeds spawner
   _vehicle_22 = _this;
   _this setPos [11681.577, 3410.0994, -4.7683716e-007];
 };
-
+/*
 _vehicle_23 = objNull;
 if (true) then
 {
@@ -213,7 +213,7 @@ _this setVariable ["", true]; // prevent network SV by loot/zeds spawner
   _this setDir -79.741982;
   _this setPos [11663.863, 3415.5874, 1.9550323e-005];
 };
-
+*/
 _vehicle_27 = objNull;
 if (true) then
 {
@@ -224,7 +224,7 @@ _this setVariable ["", true]; // prevent network SV by loot/zeds spawner
   _this setDir -142.55556;
   _this setPos [11668.785, 3407.6177, 4.7683716e-006];
 };
-
+/*
 _vehicle_28 = objNull;
 if (true) then
 {
@@ -235,7 +235,7 @@ _this setVariable ["", true]; // prevent network SV by loot/zeds spawner
   _this setDir -93.814919;
   _this setPos [11641.327, 3409.6914, 1.9073486e-006];
 };
-
+*/
 _vehicle_30 = objNull;
 if (true) then
 {
@@ -342,7 +342,7 @@ _this setVariable ["", true]; // prevent network SV by loot/zeds spawner
   _vehicle_41 = _this;
   _this setPos [11604.376, 3389.4011, -2.3365021e-005];
 };
-
+/*
 _vehicle_42 = objNull;
 if (true) then
 {
@@ -352,7 +352,7 @@ _this setVariable ["", true]; // prevent network SV by loot/zeds spawner
   _vehicle_42 = _this;
   _this setPos [11664.599, 3415.8137, -0.55714953];
 };
-
+*/
 _vehicle_43 = objNull;
 if (true) then
 {

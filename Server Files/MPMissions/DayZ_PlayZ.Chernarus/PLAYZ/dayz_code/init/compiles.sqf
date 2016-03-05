@@ -10,6 +10,6 @@ if (!isDedicated) then {
 	zombie_generate = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\zombie_generate.sqf";			//Server compile, used for loiter behaviours
 	player_gearSet = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\player_gearSet.sqf";
 };
-
-spawn_loot = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\spawn_loot.sqf";
+// TODO: Gibts nicht mehr
+//spawn_loot = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\spawn_loot.sqf";
 

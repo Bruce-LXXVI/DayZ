@@ -27,9 +27,9 @@ class Mission
 		briefingDescription="DayZMod (playZ)";
 		startWeather=0;
 		forecastWeather=0;
-		year=2015;
-		month=04;
-		day=16;
+		year=2016;
+		month=03;
+		day=5;
 		hour=12;
 	};
 	class Groups
@@ -174,10 +174,6 @@ class Mission
 			};
 		};
 	};
-
-
-
-
 	class Markers
 	{
 		items=8;

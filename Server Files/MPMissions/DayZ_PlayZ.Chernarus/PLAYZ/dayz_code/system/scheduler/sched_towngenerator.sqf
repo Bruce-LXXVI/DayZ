@@ -1,7 +1,6 @@
 // (c) facoptere@gmail.com, licensed to DayZMod for the community
 
-//#include "scheduler.hpp"
-#define HIDE_FSM_VARS private ["__sc_task","__sc_code","__sc_period","__sc_next","__sc_taskArray", "__sc_lootT0"];
+#include "scheduler.hpp"
 
 // look for cells around this radius
 #define NEARBYSIZE 380
@@ -37,25 +36,6 @@ sched_townGenerator_init = {
 
 	//Bruce: Leeres Array setzen
 	_townarray = [];
-
-/*	//Bruce: Unerwünschte Objekte löschen
-	for "_i" from (count _townarray)-1 to 0 step -1 do {
-		_objectarray = (_townarray select _i);
-		for "_j" from ((count _objectarray) - 1) to 0 step -1 do {
-			_object = _objectarray select _j;
-			if (isClass(_object)) then {
-				_position = [] + getArray (_object >> "position");
-				_type = getText (_object >> "type");
-				_x = _position select 0;
-				_y = _position select 1;
-				if (_type != "waterHoleProxy") then {
-					_object = (_townarray select _i) deleteAt _j;
-					//((_townarray select _i) select _j) setVariable ["type", "UralWreck"];
-				};
-			};
-		};
-	};
-*/
 
 	// Compute the area size
 	for "_i" from (count _townarray)-1 to 0 step -1 do {

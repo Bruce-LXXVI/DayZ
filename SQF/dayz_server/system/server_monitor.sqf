@@ -80,6 +80,10 @@ _countr = 0;
 	_fuel =			if ((typeName (_x select 7)) == "SCALAR") then { _x select 7 } else { 0 };
 	_damage = 		if ((typeName (_x select 8)) == "SCALAR") then { _x select 8 } else { 0.9 };
 	
+	//set object to be in maintenance mode
+	_maintenanceMode = false;
+	_maintenanceModeVars = [];
+	
 	_dir = floor(random(360));
 	_pos = getMarkerpos "respawn_west";	
 	_wsDone = false;
@@ -107,6 +111,8 @@ _countr = 0;
 		//diag_log format["OBJ: %1 - %2,%3,%4,%5,%6,%7,%8", _idKey,_type,_ownerID,_worldspace,_inventory,_hitPoints,_fuel,_damage];
 		
 		DayZ_nonCollide = ["TentStorage","TentStorage","TentStorage0","TentStorage1","TentStorage2","TentStorage3","TentStorage4","StashSmall","StashSmall1","StashSmall2","StashSmall3","StashSmall4","StashMedium","StashMedium1","StashMedium2","StashMedium3", "StashMedium4", "DomeTentStorage", "DomeTentStorage0", "DomeTentStorage1", "DomeTentStorage2", "DomeTentStorag3", "DomeTentStorage4", "CamoNet_DZ"];
+		DayZ_WoodenFence = ["WoodenFence_1","WoodenFence_2","WoodenFence_3","WoodenFence_4","WoodenFence_5","WoodenFence_6","WoodenFence_7"];
+		DayZ_WoodenGates = ["WoodenGate_1","WoodenGate_2","WoodenGate_3","WoodenGate_4"];
 		
 		_typePlayZ = _type;
 		if( !isClass(configFile >> "CfgVehicles" >> _type) ) then {
@@ -117,10 +123,30 @@ _countr = 0;
 				diag_log format ["%1 %2 is a PlayZ classname. Spawning a %3.", PLAYZ_logname, _typePlayZ, _type];
 			};
 		};
-
+		
+		if (_type in DayZ_WoodenFence OR _type in DayZ_WoodenGates) then {
+			//Use hitpoints for Maintenance system and other systems later.
+			{
+				if (_x == "Maintenance") then { 
+					_maintenanceMode = true;
+				};
+			} foreach _hitPoints;
+			
+			//Enable model swap for a damaged model.
+			if (_maintenanceMode) then {
+				_maintenanceModeVars = [_type,_pos];
+				_type = _type + ("_Damaged");
+			};
+			
+			//TODO add remove object and readd old fence (hideobject would be nice to use here :-( )
+			//Pending change to new fence models\Layout
+		};
+		
 		//Create it
 		_object = createVehicle [_type, _pos, [], 0, if (_type in DayZ_nonCollide) then {"NONE"} else {"CAN_COLLIDE"}];
-		_object setVariable ["lastUpdate",time];
+		
+		// prevent immediate hive write when vehicle parts are set up
+		_object setVariable ["lastUpdate",diag_ticktime];
 		_object setVariable ["ObjectID", _idKey, true];
 		dayz_serverIDMonitor set [count dayz_serverIDMonitor,_idKey];
 		_object setVariable ["CharacterID", _ownerID, true];
@@ -156,16 +182,6 @@ _countr = 0;
 				_magItemQtys = _x select 1;
 				_i = _forEachIndex;
 				{
-				/*
-					if (_x == "Crossbow") then { _x = "Crossbow_DZ" }; // Convert Crossbow to Crossbow_DZ
-					if (_x == "BoltSteel") then { _x = "WoodenArrow" }; // Convert BoltSteel to WoodenArrow
-					if (_x == "ItemBloodbag") then { _x = "bloodBagONEG" }; // Convert ItemBloodbag into universal blood type/rh bag
-					// Convert to DayZ Weapons
-					if (_x == "DMR") then { _x = "DMR_DZ" };
-					//if (_x == "M14_EP1") then { _x = "M14_DZ" };
-					if (_x == "SVD") then { _x = "SVD_DZ" }; 
-					if (_x == "SVD_CAMO") then { _x = "SVD_CAMO_DZ" };
-				*/
 					if ((isClass(configFile >> (_config select _i) >> _x)) &&
 						{(getNumber(configFile >> (_config select _i) >> _x >> "stopThis") != 1)}) then {
 						if (_forEachIndex < count _magItemQtys) then {
@@ -220,13 +236,12 @@ _countr = 0;
 							case "clanArray" : { _object setVariable ["clanArray", _x select 1, true]; };
 							case "armed" : { _object setVariable ["armed", _x select 1, true]; };
 							case "padlockCombination" : { _object setVariable ["dayz_padlockCombination",_x select 1,false]; };
+							case "BuildLock" : { _object setVariable ["BuildLock",_x select 1,true]; };
 						};
 					};
 				} forEach _inventory;
-				//Use hitpoints for Maintenance system.
-				{
-					if (_x == "Maintenance") then { _object setVariable ["Maintenance", true, true]; };
-				} foreach _hitPoints;
+				
+				if (_maintenanceMode) then { _object setVariable ["Maintenance", true, true]; _object setVariable ["MaintenanceVars", _maintenanceModeVars]; };
 			};
 		};
 		
@@ -304,59 +319,14 @@ publicVariable "sm_done";
 	};
 };
 
+//Points of interest
+[] execVM "\z\addons\dayz_server\compile\server_spawnInfectedCamps.sqf";
+[] execVM "\z\addons\dayz_server\compile\server_spawnCarePackages.sqf";
+[] execVM "\z\addons\dayz_server\compile\server_spawnCrashSites.sqf";
 
-//Spawn camps and carepak once
-[] spawn {
-	if(isNil "dayz_spawnInfectedSite_clutterCutter") then {
-		dayz_spawnInfectedSite_clutterCutter = 0;
-	};
-
-	// quantity, marker, radius, min distance between 2 camps
-	Server_InfectedCamps = [3, "center", 4500, 300] call fn_bases;
-	//dayzInfectedCamps = Server_InfectedCamps;
-	//publicVariable "dayzInfectedCamps";
-
-	if(isNil "dayz_spawncarepkgs_clutterCutter") then {
-		dayz_spawncarepkgs_clutterCutter = 0;
-	};
-	
-	//Packages
-	[6,["Misc_cargo_cont_net1","Misc_cargo_cont_net2","Misc_cargo_cont_net3"],["Industrial","Supermarket","Hospital","CarePackages"]] call spawn_carePackages;
-};
-
-//Spawn helicopter crashes periodically
-[] spawn {
-	if(isNil "dayz_spawnCrashSite_clutterCutter") then {
-		dayz_spawnCrashSite_clutterCutter = 0;
-	};
-
-	// [_guaranteedLoot, _randomizedLoot, spawnOnStart, _frequency, _variance, _spawnChance, _spawnMarker, _spawnRadius, _spawnFire, _fadeFire]
-	[3, 4, 3, (40 * 60), (15 * 60), 0.75, 'center', 4000, true, false] call server_spawnCrashSite;
-};
 
 [] execVM "\z\addons\dayz_server\system\lit_fireplaces.sqf";
 
-/*
-if (isDedicated) then {
-	//Wild Zeds Ownership isnt working as expected yet
-	execFSM "\z\addons\dayz_server\system\zombie_wildagent.fsm";
-};
-*/
-
-/*
-if (dayz_serversideloot) then {
-	//looot
-	_i = 0;
-	{
-		_radius = 1500;
-		//_nearByPlayer = (count (_x nearEntities ["CAManBase",_radius])) > 0;
-		//if (_nearByPlayer) then {
-			dayz_i = [_x,_radius,_i,1800] call server_lootSpawner;
-			_i = _i + 1;
-		//};	
-	} foreach dayz_grid;
-};
-*/
 
 "PVDZ_sec_atp" addPublicVariableEventHandler { 
 	_x = _this select 1;

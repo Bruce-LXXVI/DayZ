@@ -6,10 +6,10 @@ class M1014_DZ : M1014
 	
 	magazines[] =
 	{
-		8Rnd_B_Beneli_74Slug,
-		8Rnd_B_Beneli_Pellets,
-		2Rnd_shotgun_74Slug,
-		2Rnd_shotgun_74Pellets
+		8Rnd_12Gauge_Slug,
+		8Rnd_12Gauge_Buck,
+		2Rnd_12Gauge_Slug,
+		2Rnd_12Gauge_Buck
 	};
 	
 	class Single : Single
@@ -22,12 +22,6 @@ class M1014_DZ : M1014
 	
 	class Attachments
 	{
-		attachments[] =
-		{
-			"Attachment_CCO",
-			"Attachment_Holo"
-		};
-		
 		Attachment_CCO = "M1014_CCO_DZ";
 		Attachment_Holo = "M1014_Holo_DZ";
 	};

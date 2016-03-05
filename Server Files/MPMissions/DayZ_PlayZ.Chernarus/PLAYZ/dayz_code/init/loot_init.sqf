@@ -1,4 +1,12 @@
 private ["_weighted","_j"];
+
+/*
+ *
+ * TODO: DIESE DATEI SCHEINT ES NICHT MEHR ZU GEBEN.
+ *
+ */
+
+
 dayz_CBLChances = [];
 dayz_CBLBase = [];
 

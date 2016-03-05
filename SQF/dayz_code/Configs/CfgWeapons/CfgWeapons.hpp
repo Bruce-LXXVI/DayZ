@@ -3,13 +3,11 @@ class Mode_Burst;
 class Mode_FullAuto;
 class HandGrenade;
 
-class DZ_SingleMelee;
-
 class CfgWeapons
 {
 	class Default
 	{
-		canlock = 0;
+		canlock = LockNo;
 	};
 	
 	class ItemCore;
@@ -17,7 +15,14 @@ class CfgWeapons
 	class Pistol;
 	class GrenadeLauncher;
 	
-	/* NEW WEAPONS */
+	
+	
+	/* Dummy weapons */
+	#include "Throw.hpp"
+	#include "Loot.hpp"
+	
+	
+	
 	//each include is preceded by its required external references.
 	
 	/* RIFLES */
@@ -31,6 +36,8 @@ class CfgWeapons
 	
 	class AK_47_M;
 	#include "Rifles\AKM.hpp"
+	
+	#include "Rifles\RPK.hpp"
 	
 	class DMR : Rifle
 	{
@@ -73,6 +80,9 @@ class CfgWeapons
 	class M249;
 	#include "Rifles\M249.hpp"
 	
+	class BAF_L110A1_Aim;
+	#include "Rifles\L110A1.hpp"
+	
 	class M240;
 	#include "Rifles\M240.hpp"
 	
@@ -84,6 +94,14 @@ class CfgWeapons
 	
 	class Mk_48;
 	#include "Rifles\Mk48.hpp"
+	
+	class PK : Rifle
+	{
+		class manual;
+	};
+	#include "Rifles\PKM.hpp"
+	
+	#include "Rifles\UK59.hpp"
 	
 	class RPK_74;
 	#include "Rifles\RPK74.hpp"
@@ -103,8 +121,6 @@ class CfgWeapons
 	#include "Rifles\M16A4.hpp"
 	
 	class Sa58V_EP1;
-	class Sa58V_CCO_EP1;
-	class Sa58V_RCO_EP1;
 	#include "Rifles\SA58.hpp"
 	
 	class BAF_L85A2_RIS_Holo;
@@ -120,7 +136,10 @@ class CfgWeapons
 	class LeeEnfield;
 	#include "Rifles\LeeEnfield.hpp"
 	
-	
+	#include "Rifles\MR43.hpp"
+	#include "Rifles\Winchester1866.hpp"
+	#include "Rifles\Remington870.hpp"
+	#include "Rifles\Crossbow.hpp"
 	
 	
 	
@@ -154,21 +173,48 @@ class CfgWeapons
 	
 	class MeleeWeapon : Rifle
 	{
-		canDrop = true;
-		class Single : DZ_SingleMelee
+		melee = true;
+		
+		distanceZoomMin = 50;
+		distanceZoomMax = 50;
+		fireLightDuration = 0;
+		fireLightIntensity = 0;
+		
+		autoReload = true;
+		magazineReloadTime = 0;
+		
+		soundBullet[] = {"emptySound", 1};
+		drySound[] = {"", 1, 1};
+		reloadMagazineSound[] = {"", 1, 1};
+		
+		cursor = "Vehicle_Grenade_W";
+		cursorAim = "\ca\Weapons\Data\clear_empty";
+		cursorSize = 1;
+		
+		handAnim[] = {"OFP2_ManSkeleton","\dayz_weapons\anim\melee_hatchet_holding.rtm"};
+		
+		modes[] = {Single};
+		
+		class Single : Mode_FullAuto
 		{
 			displayName = $STR_ACTION_HACK;
-		}; 
+			dispersion = 0.1;
+			reloadTime = 1;
+			recoil = "DZ_Swing";
+			recoilProne = "DZ_Swing";
+			
+			sound[] = {"", 0, 1};
+			swing0[] = {"dayz_weapons\sounds\swing_0", 1.77828, 1, 30};
+			swing1[] = {"dayz_weapons\sounds\swing_1", 1.77828, 1, 30};
+			soundBegin[] = {"swing0", 0.5, "swing1", 0.5};
+		};
 	};
 	
-	#include "Melee\MeleeMachete.hpp"
-	#include "Melee\MeleeHatchet.hpp"
-	#include "Melee\MeleeCrowbar.hpp"
-	//#include "Melee\Crossbow.hpp"
-	#include "Melee\MeleeBaseBallBat.hpp"
-	#include "Melee\MeleeBaseBallBatBarbed.hpp"
-	#include "Melee\MeleeBaseBallBatNails.hpp"
-	#include "Melee\MeleeFishingPole.hpp"
+	#include "Melee\Hatchet.hpp"
+	#include "Melee\Crowbar.hpp"
+	#include "Melee\Machete.hpp"
+	#include "Melee\BaseballBat.hpp"
+	#include "Melee\FishingPole.hpp"
 	
 	
 	
@@ -176,8 +222,30 @@ class CfgWeapons
 	
 	/* TOOLS */
 	
-	#include "Tools\GPS.hpp"
 	#include "Tools\Binocular.hpp"
+	
+	#include "Tools\Map.hpp"
+	#include "Tools\Compass.hpp"
+	#include "Tools\GPS.hpp"
+	#include "Tools\Watch.hpp"
+	
+	#include "Tools\Knife.hpp"
+	#include "Tools\Matchbox.hpp"
+	
+	#include "Tools\Toolbox.hpp"
+	#include "Tools\Etool.hpp"
+	
+	#include "Tools\FishingPole.hpp"
+	#include "Tools\Shovel.hpp"
+	#include "Tools\Pickaxe.hpp"
+	#include "Tools\Sledgehammer.hpp"
+	
+	#include "Tools\Crowbar.hpp"
+	#include "Tools\Hatchet.hpp"
+	#include "Tools\Machete.hpp"
+	
+	#include "Tools\Flashlight.hpp"
+	#include "Tools\FlashlightRed.hpp"
 	
 	
 	
@@ -185,12 +253,7 @@ class CfgWeapons
 	
 	/* OTHER */
 	
-	#include "Melee\Flare.hpp"
-	#include "Melee\Flashlight.hpp"
-	
-	
-	
-	class ItemFlashlightEmpty : ItemCore
+	/*class ItemFlashlightEmpty : ItemCore
 	{
 		scope = public;
 		displayName = $STR_EQUIP_NAME_5;
@@ -233,5 +296,5 @@ class CfgWeapons
 				script = "spawn player_drinkWater;";
 			};
 		};
-	};
+	};*/
 };

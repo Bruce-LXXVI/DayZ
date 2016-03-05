@@ -1,5 +1,12 @@
 private ["_item","_itemTypes","_qty","_tQty","_uniq"];
 
+/*
+ *
+ * TODO: DIESE DATEI SCHEINT ES NICHT MEHR ZU GEBEN.
+ *
+ */
+
+
 _iItem = _this select 0;
 _iClass = toLower (_this select 1);
 _iPos = _this select 2;

@@ -3,7 +3,6 @@ private ["_characterID","_temp","_currentWpn","_magazines","_force","_isNewPos",
 
 _character = 	_this select 0;
 _magazines =	_this select 1;
-_force =	_this select 2;
 
 _Achievements = _character getVariable "Achievements"; 
 
@@ -32,13 +31,15 @@ if (isNil {_Achievements}) exitWith {
 	_Achievements = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 };
 
-
-private["_debug","_distance"];
-_debug = getMarkerpos "respawn_west";
-_distance = _debug distance _charPos;
-if (_distance < 2000) exitWith { 
-//	diag_log format["ERROR: server_playerSync: Cannot Sync Player %1 [%2]. Position in debug! %3",name _character,_characterID,_charPos];
-};
+/*
+	//No longer used
+	private["_debug","_distance"];
+	_debug = getMarkerpos "respawn_west";
+	_distance = _debug distance _charPos;
+	if (_distance < 2000) exitWith { 
+	//	diag_log format["ERROR: server_playerSync: Cannot Sync Player %1 [%2]. Position in debug! %3",name _character,_characterID,_charPos];
+	};
+*/
 
 //Check for server initiated updates
 _isNewMed =		_character getVariable["medForceUpdate",false];		//Med Update is forced when a player receives some kind of med incident
@@ -79,16 +80,17 @@ if (_characterID != "0") then {
 		};
 		_character setVariable ["posForceUpdate",false,true];
 	};
+	
 	if (_isNewGear) then {
-		//diag_log ("gear..."); sleep 0.05;
-		 if (typeName _magazines != "ARRAY") then {
-			diag_log ("PlayerSync - Mag is not array");
-		 } else {
-			_playerGear = [weapons _character, _magazines select 0, _magazines select 1];
-			_backpack = unitBackpack _character;
-			_playerBackp = [typeOf _backpack,getWeaponCargo _backpack,getMagazineCargo _backpack];
+		 if (typeName _magazines == "ARRAY") then {
+			_playerGear = [weapons _character,_magazines select 0,_magazines select 1];
 		};
 	};
+		
+	//Check player backpack each time sync runs
+	_backpack = unitBackpack _character;
+	_playerBackp = [typeOf _backpack,getWeaponCargo _backpack,getMagazineCargo _backpack];
+	
 	if (_isNewMed or _force) then {
 		//diag_log ("medical..."); sleep 0.05;
 		if (!(_character getVariable["USEC_isDead",false])) then {
@@ -177,12 +179,16 @@ if (_characterID != "0") then {
 			} forEach (_playerPos select 1);
 			_playerPos set [1,_array];
 		};
+		
 		if (!isNull _character) then {
 			if (alive _character) then {
 				//Wait for HIVE to be free
 				//Send request
 				_key = format["CHILD:201:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16:",_characterID,_playerPos,_playerGear,_playerBackp,_medical,false,false,_kills,_headShots,_distanceFoot,_timeSince,_currentState,_killsH,_killsB,_currentModel,_humanity];
 				//diag_log ("HIVE: WRITE: "+ str(_key) + " / " + _characterID);
+				
+				//diag_log format["HIVE: SYNC: [%1,%2,%3,%4]",_characterID,_playerPos,_playerGear,_playerBackp];
+				
 				_key call server_hiveWrite;
 			};
 		};
