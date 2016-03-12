@@ -40,3 +40,9 @@ diagHit = 1;
 #include "spawn\class.hpp"
 #include "spawn\halo.hpp"
 #include "spawn\spawn.hpp"
+
+// Base building
+#include "PLAYZ\dayz_buildings\config.cpp"
+
+
+

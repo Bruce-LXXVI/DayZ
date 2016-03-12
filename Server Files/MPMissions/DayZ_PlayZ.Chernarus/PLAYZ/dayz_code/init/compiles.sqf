@@ -5,6 +5,7 @@ if (!isDedicated) then {
 	player_switchModel = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\player_switchModel.sqf";
 	player_selectSlot = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\ui_selectSlot.sqf";
 	player_spawnCheck = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\player_spawnCheck.sqf";
+	player_build = compile preprocessFileLineNumbers "PLAYZ\dayz_code\actions\player_build.sqf";
 	building_spawnLoot = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\building_spawnLoot.sqf";
 	building_spawnZombies = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\building_spawnZombies.sqf";
 	zombie_generate = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\zombie_generate.sqf";			//Server compile, used for loiter behaviours
