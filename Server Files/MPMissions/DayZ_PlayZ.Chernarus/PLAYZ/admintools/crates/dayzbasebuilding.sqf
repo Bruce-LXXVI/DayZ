@@ -44,6 +44,7 @@ _spawnCrate addWeaponCargoGlobal ["ItemHatchet", 5];
 _spawnCrate addWeaponCargoGlobal ["ItemPickaxe", 5];
 _spawnCrate addWeaponCargoGlobal ["ItemToolbox", 5];
 _spawnCrate addWeaponCargoGlobal ["ItemSledgeHammer", 5];
+_spawnCrate addWeaponCargoGlobal ["ItemShovel", 5];
 
 // Add magazine-slot items to crate
 // Syntax: _spawnCrate addMagazineCargoGlobal ["ITEM", number-of-items];

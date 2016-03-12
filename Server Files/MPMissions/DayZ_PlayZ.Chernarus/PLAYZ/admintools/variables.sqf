@@ -228,7 +228,6 @@ helpQueue = []; // Initialize help queue
 ["Mk48_CCO_DZ", 5],
 ["Mk48_DZ", 5],
 ["Mk48_Holo_DZ", 5],
-["Mk_48_DZ", 5],
 
 ["M4A1_DZ", 5],
 ["M4A1_FL_DZ", 5],
@@ -279,12 +278,15 @@ helpQueue = []; // Initialize help queue
 ["M1014_Holo_DZ", 5],
 ["LeeEnfield_DZ", 5],
 ["L85_Holo_DZ", 5],
+
 ["G36C_DZ", 5],
 ["G36C_SD_DZ", 5],
 ["G36C_CCO_DZ", 5],
 ["G36C_CCO_SD_DZ", 5],
 ["G36C_Holo_DZ", 5],
 ["G36C_Holo_SD_DZ", 5],
+["G36C_ACOG_DZ", 5],
+["G36C_ACOG_SD_DZ", 5],
 ["G36K_Camo_DZ", 5],
 ["G36K_Camo_SD_DZ", 5],
 ["G36A_Camo_DZ", 5],
@@ -321,6 +323,16 @@ helpQueue = []; // Initialize help queue
 ["L110A1_CCO_DZ", 5],
 ["L110A1_Holo_DZ", 5],
 ["L110A1_DZ", 5],
+["UK59_DZ", 5],
+["Remington870_DZ", 5],
+["Remington870_FL_DZ", 5],
+["Winchester1866_DZ", 5],
+["MR43_DZ", 5],
+["FNFAL_DZ", 5],
+["FNFAL_CCO_DZ", 5],
+["FNFAL_Holo_DZ", 5],
+["FNFAL_ANPVS4_DZ", 5],
+
 
 ["G17_DZ", 5],
 ["G17_FL_DZ", 5],
@@ -348,9 +360,11 @@ helpQueue = []; // Initialize help queue
 ["MeleeBaseBallBatBarbed", 5],
 ["MeleeBaseBallBat", 5],
 ["ItemHatchet", 5],
+["ItemHatchet", 5],
 
 ["NVGoggles", 5]
 ];
+
 	weaponCrateMagazines = [
 ["5Rnd_762x51_M24", 20],
 ["20Rnd_762x51_DMR", 20],
@@ -388,6 +402,15 @@ helpQueue = []; // Initialize help queue
 ["100Rnd_556x45_M249", 20],
 ["30Rnd_556x45_Stanag", 20],
 ["30Rnd_556x45_StanagSD", 20],
+
+["50Rnd_762x54_UK59", 20],
+["8Rnd_12Gauge_Slug", 20],
+["8Rnd_12Gauge_Buck", 20],
+["2Rnd_12Gauge_Slug", 20],
+["2Rnd_12Gauge_Buck", 20],
+["15Rnd_W1866_Slug", 20],
+["20Rnd_762x51_FNFAL", 20],
+
 
 ["17Rnd_9x19_glock17", 20],
 ["17Rnd_9x19_glock17SD", 20],

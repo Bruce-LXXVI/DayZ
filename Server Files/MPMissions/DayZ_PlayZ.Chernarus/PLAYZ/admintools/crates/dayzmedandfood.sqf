@@ -53,7 +53,7 @@ _spawnCrate addMagazineCargoGlobal ["ItemPainkiller", 50];
 _spawnCrate addMagazineCargoGlobal ["ItemBandage", 50];
 _spawnCrate addMagazineCargoGlobal ["ItemAntibacterialWipe", 50];
 _spawnCrate addMagazineCargoGlobal ["ItemWaterbottleBoiled", 50];
-_spawnCrate addMagazineCargoGlobal ["FoodSteakCooked", 50];
+_spawnCrate addMagazineCargoGlobal ["FoodBeefCooked", 50];
 _spawnCrate addMagazineCargoGlobal ["ItemSodaRocketFuel", 50];
 _spawnCrate addMagazineCargoGlobal ["FoodCanBoneboy", 50];
 _spawnCrate addMagazineCargoGlobal ["FoodCanCurgon", 50];

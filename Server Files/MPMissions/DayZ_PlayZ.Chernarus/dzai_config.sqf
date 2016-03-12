@@ -258,15 +258,15 @@ DZAI_customLootTables = false;
 //Example: DZAI_banAIWeapons = ["M107_DZ","BAF_AS50_scoped"] will remove the M107 and AS50 from AI weapon tables if dynamic weapon list is enabled.								
 //Note: It is recommended to add all melee weapon classnames into this list as AI have issues using melee weapons. 
 //Pre-banned weapons by DZAI: "Crossbow_DZ","Crossbow","MeleeHatchet","MeleeCrowbar","MeleeMachete","MeleeBaseball","MeleeBaseBallBat","MeleeBaseBallBatBarbed","MeleeBaseBallBatNails"
-DZAI_banAIWeapons = [];										
+DZAI_banAIWeapons = [];
 
 //List of launcher-type weapons for mid/high-level AI to use (by default, weapongrade 1/2/3), example: ["M136"]. If left empty, AI will not use launcher weapons. (Default: [])
 //If AI encounter an armored player vehicle, they will switch to a randomly-selected launcher-type weapon to engage.
 //Weapon classnames added here are verified if DZAI_verifyTables is set to true. Note: Launcher weapons are removed from the AI unit upon death.
-DZAI_launcherTypes = [];	
+DZAI_launcherTypes = [];
 
 //List of AI weapongrades that are permitted to use launcher-type weapons. Individual custom weapongrade levels may be added to allow launcher use (Default: [1,2,3])
-DZAI_launcherLevels = [1,2,3];								
+DZAI_launcherLevels = [1,2,3];
 
 //Limit of number of launcher-type weapons to add to each AI group. Groups cannot have more launcher weapons than their weapongrade value (Default: 1).
 DZAI_launchersPerGroup = 1;
@@ -437,10 +437,10 @@ DZAI_Pistols1 = ["M9","M9SD","MakarovSD","UZI_EP1","glock17_EP1"]; 	//Weapongrad
 DZAI_Pistols2 = ["M9SD","MakarovSD","UZI_EP1","glock17_EP1"]; 		//Weapongrade 2 pistols
 DZAI_Pistols3 = ["M9SD","MakarovSD","UZI_EP1","glock17_EP1"]; 		//Weapongrade 3 pistols
 
-DZAI_Rifles0 = ["LeeEnfield","Winchester1866","MR43","huntingrifle","LeeEnfield","Winchester1866","MR43"]; //Weapongrade 0 rifles
-DZAI_Rifles1 = ["M16A2","M16A2GL","AK_74","M4A1_Aim","AKS_74_kobra","AKS_74_U","AK_47_M","M24","M1014","DMR_DZ","M4A1","M14_EP1","Remington870_lamp","MP5A5","MP5SD","M4A3_CCO_EP1"]; //Weapongrade 1 rifles
-DZAI_Rifles2 = ["M16A2","M16A2GL","M249_DZ","AK_74","M4A1_Aim","AKS_74_kobra","AKS_74_U","AK_47_M","M24","SVD_CAMO","M1014","DMR_DZ","M4A1","M14_EP1","Remington870_lamp","M240_DZ","M4A1_AIM_SD_camo","M16A4_ACG","M4A1_HWS_GL_camo","Mk48_CCO_DZ","M4A3_CCO_EP1","Sa58V_RCO_EP1","Sa58V_CCO_EP1","M40A3","Sa58P_EP1","Sa58V_EP1"]; //Weapongrade 2 rifles
-DZAI_Rifles3 = ["FN_FAL","FN_FAL_ANPVS4","Mk48_CCO_DZ","M249_DZ","BAF_L85A2_RIS_Holo","G36C","G36C_camo","G36A_camo","G36K_camo","AK_47_M","AKS_74_U","M14_EP1","bizon_silenced","DMR_DZ","RPK_74"]; //Weapongrade 3 rifles
+DZAI_Rifles0 = ["LeeEnfield_DZ","Winchester1866_DZ","MR43_DZ","CZ550_DZ","LeeEnfield_DZ","Winchester1866_DZ","MR43_DZ"]; //Weapongrade 0 rifles
+DZAI_Rifles1 = ["M16A2_DZ","M16A2_GL_DZ","AK74_DZ","M4A1_CCO_DZ","AK74_Kobra_DZ","AKS74U_DZ","AKM_DZ","M24_DZ","M1014_DZ","DMR_DZ","M4A1_DZ","M14_DZ","Remington870_FL_DZ","MP5_DZ","MP5_SD_DZ","M4A1_CCO_FL_DZ"]; //Weapongrade 1 rifles
+DZAI_Rifles2 = ["M16A2_DZ","M16A2_GL_DZ","AK74_DZ","M4A1_CCO_DZ","AK74_Kobra_DZ","AKS74U_DZ","AKM_DZ","M24_DZ","M1014_DZ","DMR_DZ","M4A1_DZ","M14_DZ","Remington870_FL_DZ","M240_DZ","M4A1_CCO_SD_DZ","M16A4_GL_Holo_FL_DZ","M4A1_GL_CCO_FL_DZ","Mk48_CCO_DZ","M4A1_CCO_FL_DZ","SA58_CCO_DZ","SA58_ACOG_DZ","M40A3_Gh_DZ","SA58_CCO_DZ","SA58_ACOG_DZ","M249_DZ","SVD_Gh_DZ"]; //Weapongrade 2 rifles
+DZAI_Rifles3 = ["FNFAL_DZ","FNFAL_ANPVS4_DZ","Mk48_CCO_DZ","M249_DZ","L85_Holo_DZ","G36C_CCO_DZ","G36C_camo","G36A_Camo_DZ","G36K_Camo_DZ","AKM_DZ","AKS74U_DZ","M14_DZ","Bizon_SD_DZ","DMR_Gh_DZ","RPK74_DZ"]; //Weapongrade 3 rifles
 
 	
 /*

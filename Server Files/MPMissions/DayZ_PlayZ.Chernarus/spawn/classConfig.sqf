@@ -89,7 +89,7 @@ _customLoadout = [
 	"0"
 ];
 _customLoadouts = [
-	["Admin Loadout","GUE_Soldier_2_DZ","BanditW2_DZ",["100Rnd_762x51_M240",2,"30Rnd_9x19_UZI_SD",3,"Skin_GUE_Soldier_Sniper_DZ",VIP_ITEMS],["Mk_48_DZ","UZI_SD_EP1",VIP_TOOLS],"DZ_Backpack_EP1",["5Rnd_86x70_L115A1",3],["BAF_LRR_scoped_W"],0],
+	["Admin Loadout 1","Survivor2_DZ","SurvivorW2_DZ",["100Rnd_762x51_M240",2],["Mk_48_DZ","UZI_SD_EP1",VIP_TOOLS],"DZ_Backpack_EP1",["5Rnd_86x70_L115A1",3],["BAF_LRR_scoped_W"],0],
 	[],
 	[]
 ];
@@ -105,7 +105,7 @@ _publicClasses = [
 	[
 		"Random",
 		[["Survivor2_DZ"],["SurvivorW2_DZ"]],
-		["ItemBandage","ItemWaterbottle","FoodPistachio","FoodSteakCooked"],2,
+		["ItemBandage","ItemWaterbottle","FoodPistachio","FoodBeefCooked"],2,
 		["ItemMachete","ItemFishingPole","ItemCrowbar","MeleeBaseBallBatNails","MeleeBaseBallBatBarbed","MeleeBaseBallBat"],1,
 		/*["M4A1_DZ",2,"LeeEnfield_DZ",4,"Mosin_DZ",4,"SVD_DZ",1]*/[],1,
 		["Revolver_DZ","M1911_DZ","G17_DZ","M9_DZ","M9_SD_DZ","Makarov_DZ","Makarov_SD_DZ"],1,
@@ -118,7 +118,7 @@ _publicClasses = [
 	] /*,
 	["Bandit","Bandit2_DZ","BanditW1_DZ",["10x_303",2],["LeeEnfield"],"",[],[],0,-2000,0],
 	["Hero","Soldier_Sniper_PMC_DZ","SurvivorWpink_DZ",["10x_303",2],["LeeEnfield"],"",[],[],0,5000,0],
-	["Survivor","Survivor2_DZ","SurvivorW2_DZ",[],["MeleeBaseBallBatBarbed"],"",[],[],0,0,0],
+	["Survivor","Survivor2_DZ","SurvivorW2_DZ",[],[],"",[],[],0,0,0],
 	["British Soldier","Soldier1_DZ","SurvivorWcombat_DZ",["30Rnd_556x45_Stanag",2],["BAF_L85A2_RIS_Holo"],"",[],[],0,0,0],
 	["Business Person","Functionary1_EP1_DZ","SurvivorWurban_DZ",["8Rnd_B_Beneli_74Slug",3,"ItemBriefcaseS20oz"],["Remington870_lamp"],"",[],[],0,0,0],
 	["Civilian","Haris_Press_EP1_DZ","SurvivorW3_DZ",["15Rnd_W1866_Slug",2],["Winchester1866"],"",[],[],0,0,0],

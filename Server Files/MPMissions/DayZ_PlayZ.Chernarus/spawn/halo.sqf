@@ -1,6 +1,6 @@
 _haloDrop = {
 	#include "haloConfig.sqf"
-	private ["_dir","_oid","_plane","_pPos"];
+	private ["_dir","_oid","_plane","_pPos","_unit"];
 	DZE_HaloJump = false;
 	_pPos = [(_this select 0)+1000,(_this select 1)+1000,_haloHeight];
 	_oid = str(ceil(random 999999));
@@ -14,22 +14,26 @@ _haloDrop = {
 	_dir = [_pPos,_this] call BIS_fnc_dirTo;
     _plane setDir (90 -_dir); 
     _plane setVelocity [50*(sin _dir),50*(cos _dir),0];
+	_unit = createAgent ["Survivor2_DZ",_this,[],0,"CAN_COLLIDE"];
+	_unit assignAsDriver _plane;
+	_unit moveInDriver _plane;
 	player reveal _plane;
 	player moveInCargo [_plane,2];
 	player action ["getInCargo",_plane,2];
 	_plane setVehicleLock "LOCKED";
 	_pPos = (group player) addWaypoint [_this,0];
-	[_this,_plane,_pPos,_haloHeight] spawn {
+	[_this,_plane,_unit,_pPos,_haloHeight] spawn {
 		private "_plane";
 		_plane = _this select 1;
 		_plane setDamage .8;
-		waitUntil {_plane distance (_this select 0) < ((_this select 3)+200)};
+		waitUntil {_plane distance (_this select 0) < ((_this select 4)+200)};
 		player spawn BIS_fnc_halo;
 		player action ["eject",_plane];
 		player setVelocity [((velocity player) select 0),((velocity player) select 1),-15];
 		uiSleep 25;
 		deleteVehicle _plane;
-		deleteWayPoint (_this select 2);
+		deleteVehicle (_this select 2);
+		deleteWayPoint (_this select 3);
 	};
 };
 

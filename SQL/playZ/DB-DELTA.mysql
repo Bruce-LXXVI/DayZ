@@ -217,6 +217,21 @@ UPDATE `tOption` SET `optvalue` = '2015-08-25 23:00' WHERE `optname`='dbversion'
 
 
 
+-- ------------------------------------------------------------------------
+-- 2016-03-12 11:45
+INSERT INTO `event_scheduler` (`id`, `System`, `LastRun`) VALUES (NULL, 'playZ_restart_scheduler', NULL);
+DELIMITER ;;
+CREATE EVENT `playZ_restart_scheduler` ON SCHEDULE EVERY 1 DAY STARTS '2016-01-01 05:55:00' ON COMPLETION NOT PRESERVE DISABLE DO BEGIN
+	UPDATE event_scheduler SET LastRun = NOW() WHERE System = "playZ_restart_scheduler";
+	
+	DELETE FROM object_data WHERE ObjectUID >= 280000000 AND ObjectUID < 290000000;
+	
+END;;
+DELIMITER ;
+UPDATE `tOption` SET `optvalue` = '2016-03-12 11:45' WHERE `optname`='dbversion';
+
+
+
 
 
 
@@ -255,4 +270,16 @@ SELECT GROUP_CONCAT(DISTINCT
     )
 AS SQF FROM object_spawns;
 
+
+
+
+-- ------------------------------------------------------------------------
+-- CLEANUP
+-- ------------------------------------------------------------------------
+TRUNCATE TABLE character_data;
+TRUNCATE TABLE character_dead;
+TRUNCATE TABLE object_data;
+TRUNCATE TABLE object_data_deleted;
+TRUNCATE TABLE player_data;
+TRUNCATE TABLE player_login;
 

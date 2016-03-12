@@ -41,8 +41,8 @@ _customBase = [
 	"0"
 ];
 _customBases = [ // Do not use a z (height) higher than _autoOpenHeight in haloConfig.sqf if using halo
-	["Admin Base",[2324,15365,0]],
-	["Admin Base",[2324,15365,0]]],
+	["Admin Base",[15359, 15359, 0]],
+	["Admin Base",[15359, 15359, 0]],
 	[]
 ];
 
