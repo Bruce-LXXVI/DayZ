@@ -57,7 +57,7 @@ if (_go) then {
 		_ret
 	};
 
-	//#include "class.sqf"
+	#include "class.sqf"
 	#include "spawn.sqf"
 	//#include "halo.sqf"
 	#include "startSpawn.sqf"

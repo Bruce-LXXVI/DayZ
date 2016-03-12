@@ -217,14 +217,14 @@ helpQueue = []; // Initialize help queue
 ["RPK74_PSO1_DZ", 5],
 ["MP5_DZ", 5],
 ["MP5_SD_DZ", 5],
-["Mosin_Nagant_Belt_Scoped_FL", 5],
-["Mosin_Nagant_Belt_Scoped", 5],
-["Mosin_Nagant_Belt_FL", 5],
-["Mosin_Nagant_Belt", 5],
-["Mosin_Nagant_Scoped_FL", 5],
-["Mosin_Nagant_Scoped", 5],
-["Mosin_Nagant_FL", 5],
-["Mosin_Nagant", 5],
+["Mosin_DZ", 5],
+["Mosin_FL_DZ", 5],
+["Mosin_Belt_DZ", 5],
+["Mosin_Belt_FL_DZ", 5],
+["Mosin_PU_DZ", 5],
+["Mosin_PU_FL_DZ", 5],
+["Mosin_PU_Belt_DZ", 5],
+["Mosin_PU_Belt_FL_DZ", 5],
 ["Mk48_CCO_DZ", 5],
 ["Mk48_DZ", 5],
 ["Mk48_Holo_DZ", 5],
@@ -316,12 +316,39 @@ helpQueue = []; // Initialize help queue
 ["AK74_PSO1_SD_DZ", 5],
 ["AK74_GL_PSO1_DZ", 5],
 ["AK74_GL_PSO1_SD_DZ", 5],
+
+["PKM_DZ", 5],
+["L110A1_CCO_DZ", 5],
+["L110A1_Holo_DZ", 5],
+["L110A1_DZ", 5],
+
+["G17_DZ", 5],
+["G17_FL_DZ", 5],
+["G17_SD_DZ", 5],
+["G17_SD_FL_DZ", 5],
+["M1911_DZ", 5],
+["M9_DZ", 5],
+["M9_SD_DZ", 5],
+["Makarov_DZ", 5],
+["Makarov_SD_DZ", 5],
+["PDW_DZ", 5],
+["Revolver_DZ", 5],
+
+
+
 /*
-["", 5],
+
 ["", 5],
 ["", 5],
 */
 ["ItemMachete", 5],
+["ItemFishingPole", 5],
+["ItemCrowbar", 5],
+["MeleeBaseBallBatNails", 5],
+["MeleeBaseBallBatBarbed", 5],
+["MeleeBaseBallBat", 5],
+["ItemHatchet", 5],
+
 ["NVGoggles", 5]
 ];
 	weaponCrateMagazines = [
@@ -334,7 +361,7 @@ helpQueue = []; // Initialize help queue
 ["30Rnd_545x39_AKSD", 20],
 ["30Rnd_9x19_MP5", 20],
 ["30Rnd_9x19_MP5SD", 20],
-["Mosin_Nagant_Ammo", 20],
+["5Rnd_762x54_Mosin", 20],
 ["100Rnd_762x51_M240", 20],
 
 ["30Rnd_556x45_Stanag", 20],
@@ -355,8 +382,26 @@ helpQueue = []; // Initialize help queue
 ["30Rnd_545x39_AK", 20],
 ["30Rnd_545x39_AKSD", 20],
 ["30Rnd_762x39_AK47", 20],
+
+["100Rnd_762x54_PK", 20],
+["200Rnd_556x45_M249", 20],
+["100Rnd_556x45_M249", 20],
+["30Rnd_556x45_Stanag", 20],
+["30Rnd_556x45_StanagSD", 20],
+
+["17Rnd_9x19_glock17", 20],
+["17Rnd_9x19_glock17SD", 20],
+["7Rnd_45ACP_1911", 20],
+["15Rnd_9x19_M9", 20],
+["15Rnd_9x19_M9SD", 20],
+["8Rnd_9x18_Makarov", 20],
+["8Rnd_9x18_MakarovSD", 20],
+["30Rnd_9x19_UZI", 20],
+["30Rnd_9x19_UZI_SD", 20],
+["6Rnd_45ACP", 20],
+
+
 /*
-["", 20],
 ["", 20],
 ["", 20],
 ["", 20],
