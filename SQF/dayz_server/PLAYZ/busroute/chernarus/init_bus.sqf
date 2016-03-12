@@ -130,9 +130,9 @@
 		_ailoadout=
 		switch (_rndLOut) do 
 		{
-			case 0: {["AK_47_M","30Rnd_762x39_AK47"]}; 
-			case 1: {["M4A1_AIM_SD_camo","30Rnd_556x45_StanagSD"]}; 
-			case 2: {["Remington870_lamp","8Rnd_B_Beneli_74Slug"]}; 
+			case 0: {["AKM_Kobra_DZ","30Rnd_762x39_AK47"]}; 
+			case 1: {["M4A1_CCO_FL_DZ","30Rnd_556x45_Stanag"]}; 
+			case 2: {["Remington870_FL_DZ","8Rnd_12Gauge_Slug"]}; 
 		};
 		
 		if( x == 1 ) then {
