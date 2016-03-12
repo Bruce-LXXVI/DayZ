@@ -13,7 +13,7 @@ DayZ_SafeObjects = ["WoodenGate_1","WoodenGate_2","WoodenGate_3","WoodenGate_4",
 dayz_CBLConfigName = "CfgBuildingLoot";
 
 // init global arrays for Loot Chances
-call compile preprocessFileLineNumbers "PLAYZ\dayz_code\init\loot_init.sqf";
+//call compile preprocessFileLineNumbers "PLAYZ\dayz_code\init\loot_init.sqf";
 
 //if(!isDedicated) then {
 	//Establish Location Streaming

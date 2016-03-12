@@ -79,7 +79,7 @@ call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\publicEH.sqf";
 progressLoadingScreen 0.1;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\medical\setup_functions_med.sqf";
 progressLoadingScreen 0.15;
-call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";
+//call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";
 call compile preprocessFileLineNumbers "PLAYZ\dayz_code\init\compiles.sqf";
 //call compile preprocessFileLineNumbers "PLAYZ\ns_dayz\code\init\compiles.sqf";
 

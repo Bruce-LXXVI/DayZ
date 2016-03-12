@@ -12,7 +12,7 @@ briefing = 0;
 debriefing = 0;
 
 //loadScreen = "\z\addons\dayz_code\gui\loadingscreen.paa";
-loadScreen = "PLAYZ\dayz_code\gui\loadingscreen6.jpg";
+loadScreen = "PLAYZ\dayz_code\gui\loadingscreen7.jpg";
 
 class Header
 {
@@ -44,5 +44,6 @@ diagHit = 1;
 // Base building
 #include "PLAYZ\dayz_buildings\config.cpp"
 
-
+// Loot Tables
+#include "PLAYZ\dayz_code\Configs\CfgLoot\CfgLoot.hpp"
 

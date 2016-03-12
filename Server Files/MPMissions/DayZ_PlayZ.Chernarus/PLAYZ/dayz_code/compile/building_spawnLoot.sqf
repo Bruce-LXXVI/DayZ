@@ -28,7 +28,13 @@ _vectorUp = vectorUp _this;
 if (Vector_Angle(Vector_UP,_vectorUp) > 20) exitWith { 0 };
 
 _type = typeOf _this;
-_config = (configFile >> "CfgLoot" >> "Buildings" >> _type);
+
+/* PLAYZ LOOT */
+_config = (missionConfigFile >> "CfgLoot" >> "Buildings" >> _type);
+if(!isClass _config) then {
+	_config = (configFile >> "CfgLoot" >> "Buildings" >> _type);
+};
+/* PLAYZ LOOT */
 
 if (!isClass _config) exitWith {};
 

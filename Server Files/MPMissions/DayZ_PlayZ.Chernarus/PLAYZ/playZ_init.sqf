@@ -10,6 +10,7 @@ PLAYZ_worldname=toLower worldName;
 
 diag_log format["%1 Initializing PLAYZ EXTENSION for world %2", PLAYZ_logname, PLAYZ_worldname];
 
+/*
 diag_log format["%1 dayz_CBLConfigName: %2", PLAYZ_logname, dayz_CBLConfigName];
 diag_log format["%1 dayz_CLChances (%3): %2", PLAYZ_logname, dayz_CLChances, count dayz_CLChances];
 diag_log format["%1 dayz_CLBase (%3): %2", PLAYZ_logname, dayz_CLBase, count dayz_CLBase];
@@ -18,6 +19,7 @@ diag_log format["%1 dayz_CBLBase (%3): %2", PLAYZ_logname, dayz_CBLBase, count d
 diag_log format["%1 dayz_ZombieBuildings: %2", PLAYZ_logname, dayz_ZombieBuildings];
 diag_log format["%1 dayz_LootBuildings: %2", PLAYZ_logname, dayz_LootBuildings];
 diag_log format["%1 dayz_Locations=%2", PLAYZ_logname, dayz_Locations];
+*/
 
 // Overwrite some variables
 //call compile preprocessFileLineNumbers "PLAYZ\dayz_code\init\variables.sqf";

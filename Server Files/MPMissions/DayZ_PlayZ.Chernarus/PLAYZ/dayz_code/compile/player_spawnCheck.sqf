@@ -67,7 +67,14 @@ if (_maxlocalspawned > 0) then { _spawnZedRadius = _spawnZedRadius * 3; };
 //Spawn Zeds & loot in buildings
 {
     _type = typeOf _x;
-    _config = configFile >> "CfgLoot" >> "Buildings" >> _type;
+
+/* PLAYZ LOOT */
+_config = (missionConfigFile >> "CfgLoot" >> "Buildings" >> _type);
+if(!isClass _config) then {
+	_config = (configFile >> "CfgLoot" >> "Buildings" >> _type);
+};
+/* PLAYZ LOOT */
+
     _canSpawn = isClass (_config);
 
     if (_canSpawn) then {

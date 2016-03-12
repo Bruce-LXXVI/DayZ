@@ -79,7 +79,16 @@ if ((_maxlocalspawned < _maxControlledZombies) and (dayz_CurrentNearByZombies < 
 		
 		if (count _unitTypes == 0) then
 		{
-			_unitTypes = getArray (configFile >> "CfgLoot" >> "Buildings" >> "Default" >> "zombieClass");
+
+/* PLAYZ LOOT */
+_PZcfg = (missionConfigFile >> "CfgLoot" >> "Buildings" >> "Default" >> "zombieClass");
+if(!isClass _PZcfg) then {
+	_PZcfg = (configFile >> "CfgLoot" >> "Buildings" >> "Default" >> "zombieClass");
+};
+_unitTypes = getArray _PZcfg;
+/* PLAYZ LOOT */
+
+			
 		};
 		
 		// lets create an agent

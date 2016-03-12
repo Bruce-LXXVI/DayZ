@@ -61,6 +61,7 @@ _spawnCrate addMagazineCargoGlobal ["ItemDomeTent", 5];
 _spawnCrate addMagazineCargoGlobal ["ItemRSJ", 50];
 _spawnCrate addMagazineCargoGlobal ["ItemScrews", 50];
 _spawnCrate addMagazineCargoGlobal ["ItemMetalSheet", 50];
+_spawnCrate addMagazineCargoGlobal ["ItemConcreteBlock", 50];
 _spawnCrate addMagazineCargoGlobal ["equip_2inch_metal_pipe", 50];
 _spawnCrate addMagazineCargoGlobal ["equip_1inch_metal_pipe", 50];
 _spawnCrate addMagazineCargoGlobal ["equip_duct_tape", 5];

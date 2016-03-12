@@ -10,7 +10,14 @@ if (count _this > 1) then {
 };
 
 _type = 		typeOf _obj;
-_config = 		configFile >> "CfgLoot" >> "Buildings" >> _type;
+
+/* PLAYZ LOOT */
+_config = 		missionConfigFile >> "CfgLoot" >> "Buildings" >> _type;
+if(!isClass _config) then {
+	_config = 		configFile >> "CfgLoot" >> "Buildings" >> _type;
+};
+/* PLAYZ LOOT */
+
 _canLoot = 		isClass (_config);
 _originalPos = 	getPosATL _obj;
 
