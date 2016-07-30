@@ -1,7 +1,10 @@
 if (isServer) then {
 	call compile preprocessFileLineNumbers "\z\addons\dayz_server\init\server_functions.sqf";
 	
-	pvs_processSetAccessCode = compile preprocessFile "\z\addons\dayz_code\eventHandlers\processSetAccessCode.sqf";
+	pvs_processSetAccessCode = compile preprocessFile "PLAYZ\dayz_code\eventHandlers\processSetAccessCode.sqf";
+	pvs_processAccessCode = compile preprocessFile "PLAYZ\dayz_code\eventHandlers\processAccessCode.sqf";
+
+
 };
 
 if (!isDedicated) then {
