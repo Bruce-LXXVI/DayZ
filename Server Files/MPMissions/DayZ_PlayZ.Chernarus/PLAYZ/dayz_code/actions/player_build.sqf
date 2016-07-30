@@ -20,17 +20,17 @@ _emergingLevel = 1.1;
 r_action_count = 1;
 
 _isClass = switch (1==1) do {
-    case (isClass (missionConfigFile >> "CfgMagazines" >> _item)): {"CfgMagazines"};
-    case (isClass (missionConfigFile >> "CfgWeapons" >> _item)): {"CfgWeapons"};
+    case (isClass (configFile >> "CfgMagazines" >> _item)): {"CfgMagazines"};
+    case (isClass (configFile >> "CfgWeapons" >> _item)): {"CfgWeapons"};
 };
 
 //need to swap all build systems to this "ItemActions"
-_classname = getText (missionConfigFile >> _isClass >> _item >> _classType >> _action >> "create");
-_requiredTools = getArray (missionConfigFile >> _isClass >> _item >> _classType >> _action >> "require");
-_requiredParts   = getArray (missionConfigFile >> _isClass >> _item >> _classType >> _action >> "consume");
-_ghost = getText (missionConfigFile >> _isClass >> _item >> _classType >> _action >> "ghost");
+_classname = getText (configFile >> _isClass >> _item >> _classType >> _action >> "create");
+_requiredTools = getArray (configFile >> _isClass >> _item >> _classType >> _action >> "require");
+_requiredParts   = getArray (configFile >> _isClass >> _item >> _classType >> _action >> "consume");
+_ghost = getText (configFile >> _isClass >> _item >> _classType >> _action >> "ghost");
 //need to move to array and separate what checks need to be done.
-_byPassChecks = getText (missionConfigFile >> _isClass >> _item >> _classType >> _action >> "byPass");
+_byPassChecks = getText (configFile >> _isClass >> _item >> _classType >> _action >> "byPass");
 
 if (_byPassChecks == "") then { _byPassChecks = "BaseItems" };
 if (_ghost == "") then { _ghost = _classname; };
@@ -50,7 +50,7 @@ if (0 != count Dayz_constructionContext) then {
 };
 
 // item is missin - this really is pointless but it aint broke so dont fix it
-if (isClass (missionConfigFile >> _isClass >> _item)) then {
+if (isClass (configFile >> _isClass >> _item)) then {
     if ((!(_item IN magazines player))) exitWith {
         _string = switch true do {
             case (_item isKindOf "Land_A_tent"): {"str_player_31_pitch"};
