@@ -1,6 +1,13 @@
 // (c) facoptere@gmail.com, licensed to DayZMod for the community
 private ["_classType","_item","_action","_missingTools","_missingItem","_emergingLevel","_isClass","_classname","_requiredTools","_requiredParts ","_ghost","_placement","_text","_onLadder","_isWater","_object","_string","_actionBuildHidden","_getBeams","_o","_offset","_rot","_r","_p","_bn","_bb","_h","_bx","_by","_minElevation","_maxElevation","_insideCheck","_building","_unit","_bbb","_ubb","_check","_min","_max","_myX","_myY","_checkBuildingCollision","_objColliding","_inside","_checkOnRoad","_roadCollide","_checkBeam2Magnet","_a","_beams","_best","_b","_d","_checkNotBuried","_elevation","_position","_delta","_overElevation","_maxplanting","_safeDistance","_dir","_angleRef","_tmp","_actionCancel","_sfx","_actionBuild"];
 
+private "_byPassChecks"; _byPassChecks="";
+_classname="";
+_requiredTools=[];
+_requiredParts=[];
+_ghost="";
+
+
 /*
 Needs a full rewrite to keep up with the demand of everything we plan to add.
 */
@@ -16,6 +23,8 @@ if (count _this > 2) then {
 	_classType = _this select 2;
 };
 
+//diag_log format["%1 player_build: _item=%2 | _action=%3 | _classType=%4", PLAYZ_logname, _item, _action, _classType];
+
 _emergingLevel = 1.1;
 r_action_count = 1;
 
@@ -24,15 +33,34 @@ _isClass = switch (1==1) do {
     case (isClass (configFile >> "CfgWeapons" >> _item)): {"CfgWeapons"};
 };
 
-//need to swap all build systems to this "ItemActions"
-_classname = getText (configFile >> _isClass >> _item >> _classType >> _action >> "create");
-_requiredTools = getArray (configFile >> _isClass >> _item >> _classType >> _action >> "require");
-_requiredParts   = getArray (configFile >> _isClass >> _item >> _classType >> _action >> "consume");
-_ghost = getText (configFile >> _isClass >> _item >> _classType >> _action >> "ghost");
-//need to move to array and separate what checks need to be done.
-_byPassChecks = getText (configFile >> _isClass >> _item >> _classType >> _action >> "byPass");
+if(_item IN ["ItemDIY_wood", "ItemDIY_Gate", "ItemDIY_metal"]) then
+{
+	//need to swap all build systems to this "ItemActions"
+	_classname = getText (missionConfigFile >> _isClass >> _item >> _classType >> _action >> "create");
+	_requiredTools = getArray (missionConfigFile >> _isClass >> _item >> _classType >> _action >> "require");
+	_requiredParts   = getArray (missionConfigFile >> _isClass >> _item >> _classType >> _action >> "consume");
+	_ghost = getText (missionConfigFile >> _isClass >> _item >> _classType >> _action >> "ghost");
+	//need to move to array and separate what checks need to be done.
+	_byPassChecks = getText (missionConfigFile >> _isClass >> _item >> _classType >> _action >> "byPass");
 
-if (_byPassChecks == "") then { _byPassChecks = "BaseItems" };
+	//diag_log format["%1 player_build: read from missionConfigFile _requiredTools=%2 | _requiredParts=%3", PLAYZ_logname, _requiredTools, _requiredParts];
+} else
+{
+	//need to swap all build systems to this "ItemActions"
+	_classname = getText (configFile >> _isClass >> _item >> _classType >> _action >> "create");
+	_requiredTools = getArray (configFile >> _isClass >> _item >> _classType >> _action >> "require");
+	_requiredParts   = getArray (configFile >> _isClass >> _item >> _classType >> _action >> "consume");
+	_ghost = getText (configFile >> _isClass >> _item >> _classType >> _action >> "ghost");
+	//need to move to array and separate what checks need to be done.
+	_byPassChecks = getText (configFile >> _isClass >> _item >> _classType >> _action >> "byPass");
+
+	//diag_log format["%1 player_build: read from configFile _requiredTools=%2 | _requiredParts=%3", PLAYZ_logname, _requiredTools, _requiredParts];
+};
+
+//diag_log format["%1 player_build: _requiredParts=%2", PLAYZ_logname, _requiredParts];
+
+if (isNil "_byPassChecks") then {_byPassChecks="";};
+if (_byPassChecks=="") then { _byPassChecks = "BaseItems";};
 if (_ghost == "") then { _ghost = _classname; };
 
 _text = getText (configFile >> "CfgVehicles" >> _classname >> "displayName");
@@ -41,15 +69,18 @@ _keepOnSlope = 0 == (getNumber (configFile >> "CfgVehicles" >> _classname >> "ca
 _onLadder = {getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState player) >> "onLadder") == 1};
 _isWater = {(surfaceIsWater (getPosATL _object)) or dayz_isSwimming};
 
+//diag_log format["%1 player_build: _requiredParts=%2", PLAYZ_logname, _requiredParts];
+
 if (0 != count Dayz_constructionContext) then {
     r_action_count = 0;
     //cutText [localize "str_already_building", "PLAIN DOWN"];
 	_msg = localize "str_already_building";
 	_msg call dayz_rollingMessages;
-    diag_log [ diag_ticktime, __FILE__, 'already building, exiting', Dayz_constructionContext, typeName Dayz_constructionContext];
+	//diag_log [ diag_ticktime, __FILE__, 'already building, exiting', Dayz_constructionContext, typeName Dayz_constructionContext];
 };
 
 // item is missin - this really is pointless but it aint broke so dont fix it
+/*
 if (isClass (configFile >> _isClass >> _item)) then {
     if ((!(_item IN magazines player))) exitWith {
         _string = switch true do {
@@ -62,6 +93,9 @@ if (isClass (configFile >> _isClass >> _item)) then {
         //diag_log(format["player_build: item:%1 require:%2  Player items:%3  magazines:%4", _item, _requiredTools, (items player), (magazines player)]);
     };
 };
+*/
+
+//diag_log format["%1 player_build: _requiredParts=%2", PLAYZ_logname, _requiredParts];
 
 // lets check player has requiredTools for upgrade
 _ok = true;
@@ -74,6 +108,8 @@ _missing = "";
     };
 } count _requiredTools;
 
+//diag_log format["%1 player_build: _requiredParts=%2", PLAYZ_logname, _requiredParts];
+
 if (!_ok) exitWith {
     r_action_count = 0;
     //cutText [format [localize "str_player_31_missingtools",_text,_missing] , "PLAIN DOWN"]; 
@@ -82,6 +118,7 @@ if (!_ok) exitWith {
 };
 
 // lets check player has requiredParts for upgrade
+//diag_log format["%1 player_build: _requiredParts=%2", PLAYZ_logname, _requiredParts];
 _ok = true;
 _upgradeParts = [];
 {
@@ -92,6 +129,7 @@ _upgradeParts = [];
     if (_x IN magazines player) then {
         _upgradeParts set [count _upgradeParts, _x];
         player removeMagazine _x;
+		//diag_log format["%1 player_build: removeMagazine %2", PLAYZ_logname, _x];
     };
 } count _requiredParts;
 if (!_ok) exitWith {
