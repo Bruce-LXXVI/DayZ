@@ -1,6 +1,6 @@
 //Server settings
-dayZ_instance = 1337; //Instance ID of this server
-dayZ_serverName = "1337"; //Shown to all players in the bottom left of the screen (country code + server number)
+dayZ_instance = 1; //Instance ID of this server
+dayZ_serverName = "playZ"; //Shown to all players in the bottom left of the screen (country code + server number)
 
 //Game settings
 dayz_antihack = 0; // DayZ Antihack / 1 = enabled // 0 = disabled
@@ -14,19 +14,20 @@ dayz_ForcefullmoonNights = false; // Forces night time to be full moon.
 dayz_randomMaxFuelAmount = 250; //Puts a random amount of fuel in all fuel stations.
 
 //DayZMod presets
-dayz_presets = "Vanilla"; //"Custom","Classic","Vanilla","Elite"
+dayz_presets = "Custom"; //"Custom","Classic","Vanilla","Elite"
 
 //Only need to edit if you are running a custom server.
 if (dayz_presets == "Custom") then {
 	dayz_enableGhosting = true; //Enable disable the ghosting system.
 	dayz_ghostTimer = 30; //Sets how long in seconds a player must be disconnected before being able to login again.
 	dayz_spawnselection = 1; //Turn on spawn selection 0 = random only spawns, 1 = spawn choice based on limits
-	dayz_spawncarepkgs_clutterCutter = 2; //0 = loot hidden in grass, 1 = loot lifted, 2 = no grass
-	dayz_spawnCrashSite_clutterCutter = 2;	// heli crash options 0 = loot hidden in grass, 1 = loot lifted, 2 = no grass
-	dayz_spawnInfectedSite_clutterCutter = 2; // infected base spawn 0 = loot hidden in grass, 1 = loot lifted, 2 = no grass 
+	dayz_spawncarepkgs_clutterCutter = 0; //0 = loot hidden in grass, 1 = loot lifted, 2 = no grass
+	dayz_spawnCrashSite_clutterCutter = 0;	// heli crash options 0 = loot hidden in grass, 1 = loot lifted, 2 = no grass
+	dayz_spawnInfectedSite_clutterCutter = 0; // infected base spawn 0 = loot hidden in grass, 1 = loot lifted, 2 = no grass 
 	dayz_bleedingeffect = 3; //1 = blood on the ground, 2 = partical effect, 3 = both
+	dayz_ForcefullmoonNights = true; // Forces night time to be full moon.
 	dayz_OpenTarget_TimerTicks = 60 * 10; //how long can a player be freely attacked for after attacking someone unprovoked
-	dayz_nutritionValuesSystem = false; //Enables nutrition system
+	dayz_nutritionValuesSystem = true; //Enables nutrition system
 	dayz_classicBloodBagSystem = false; // removes all blood type bloodbags (not implmented yet)
 };
 
@@ -65,6 +66,13 @@ call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";
 progressLoadingScreen 0.2;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\BIS_Effects\init.sqf";
 progressLoadingScreen 0.25;
+
+
+/*
+ * INITIALIZE playZ scripts and modules
+ */
+call compile preprocessFileLineNumbers "PLAYZ\playZ_init.sqf";
+
 initialized = true;
 
 setTerrainGrid 25;

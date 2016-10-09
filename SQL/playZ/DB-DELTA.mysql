@@ -1,0 +1,285 @@
+-- ------------------------------------------------------------------------
+-- $Id: DB-DELTA.mysql 394 2015-06-12 08:36:52Z roland.rusch@fima.ch $
+
+
+
+
+
+
+-- ------------------------------------------------------------------------
+-- 2015-07-25 00:00
+CREATE TABLE `tOption` (
+  `optname` VARCHAR(20) NOT NULL,
+  `optvalue` VARCHAR(100) NOT NULL,
+  PRIMARY KEY  (`optname`)
+);
+INSERT INTO `tOption` (`optname` ,`optvalue`) VALUES ('dbversion', '2015-07-25 00:00');
+
+
+
+
+
+
+
+
+-- ------------------------------------------------------------------------
+-- 2015-07-25 14:00
+ALTER TABLE `object_data` CHANGE `ObjectID` `ObjectID` BIGINT(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3000000000;
+ALTER TABLE `event_scheduler` ADD `id` INT NOT NULL AUTO_INCREMENT FIRST, ADD PRIMARY KEY (`id`) ;
+
+INSERT INTO `event_scheduler` (`id`, `System`, `LastRun`) VALUES (NULL, 'playZ_1min_scheduler', NULL);
+INSERT INTO `event_scheduler` (`id`, `System`, `LastRun`) VALUES (NULL, 'pPlayZ_UID2ID', NULL);
+INSERT INTO `event_scheduler` (`id`, `System`, `LastRun`) VALUES (NULL, 'pPlayZ_Cleanup', NULL);
+
+
+DELIMITER ;;
+CREATE PROCEDURE `pPlayZ_UID2ID`(IN `i` INT)
+    MODIFIES SQL DATA
+BEGIN
+# Server instance ID.
+#-----------------------------------------------
+	DECLARE sInstance VARCHAR(8) DEFAULT i;
+#-----------------------------------------------
+#Last Ran
+	update event_scheduler set LastRun = NOW() where System = "pPlayZ_UID2ID";
+#Starts Cleanup
+
+  UPDATE `object_data` SET `ObjectID`=`ObjectUID` WHERE `Instance`=sInstance AND `ObjectID`<>`ObjectUID`;
+
+END ;;
+DELIMITER ;
+
+
+DELIMITER ;;
+CREATE PROCEDURE `pPlayZ_Cleanup`(IN `i` INT)
+    MODIFIES SQL DATA
+BEGIN
+# Server instance ID.
+#-----------------------------------------------
+	DECLARE sInstance VARCHAR(8) DEFAULT i;
+#-----------------------------------------------
+#Last Ran
+	update event_scheduler set LastRun = NOW() where System = "pPlayZ_Cleanup";
+#Starts Cleanup
+
+  DELETE FROM `object_data` WHERE `Instance`=sInstance AND `CharacterID`=0 AND `Damage`>=1;
+
+END ;;
+DELIMITER ;
+
+DELIMITER ;;
+CREATE EVENT `playZ_1min_scheduler` ON SCHEDULE EVERY 1 MINUTE STARTS '2015-07-25 00:00:00' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
+	update event_scheduler set LastRun = NOW() where System = "playZ_1min_scheduler";
+	
+	CALL `pPlayZ_UID2ID`('1');
+	CALL `pPlayZ_Cleanup`('1');
+	
+END ;;
+DELIMITER ;
+
+UPDATE `tOption` SET `optvalue` = '2015-07-25 14:00' WHERE `optname`='dbversion';
+
+
+
+
+
+-- ------------------------------------------------------------------------
+-- 2015-07-29 22:00
+ALTER TABLE `player_login` ADD INDEX(`datestamp`);
+ALTER TABLE `player_login` ADD INDEX(`CharacterID`);
+ALTER TABLE `player_login` ADD INDEX(`PlayerUID`);
+
+CREATE VIEW `playz_player_logins` AS 
+select `player_login`.`datestamp` AS `datestamp`,`player_data`.`playerName` AS `playerName`,`player_data`.`playerUID` AS `playerUID` from ((`player_data` left join `player_login` on((`player_data`.`playerUID` = `player_login`.`PlayerUID`))) left join `character_data` on((`character_data`.`CharacterID` = `player_login`.`CharacterID`))) order by `player_login`.`datestamp` desc;
+
+CREATE VIEW `playz_player_login_count` AS 
+select `player_data`.`playerName` AS `playerName`,`player_data`.`playerUID` AS `playerUID`,max(`player_login`.`datestamp`) AS `last_login`,min(`player_login`.`datestamp`) AS `first_login`,count(`player_login`.`LoginID`) AS `login_count` from ((`player_data` left join `player_login` on((`player_data`.`playerUID` = `player_login`.`PlayerUID`))) left join `character_data` on((`character_data`.`CharacterID` = `player_login`.`CharacterID`))) group by `player_data`.`playerUID` order by `last_login` desc;
+
+UPDATE `tOption` SET `optvalue` = '2015-07-29 22:00' WHERE `optname`='dbversion';
+
+
+
+
+
+
+-- ------------------------------------------------------------------------
+-- 2015-07-30 22:00
+ALTER TABLE `object_data`
+MODIFY COLUMN `Hitpoints`  longtext NOT NULL;
+UPDATE `tOption` SET `optvalue` = '2015-07-30 22:00' WHERE `optname`='dbversion';
+
+
+
+
+
+
+
+
+
+
+
+-- ------------------------------------------------------------------------
+-- 2015-08-25 23:00
+DROP FUNCTION IF EXISTS `fPlayZ_generateID`;
+DELIMITER ;;
+CREATE FUNCTION `fPlayZ_generateID`(`inst` int, `ObjectUID` bigint(20)) RETURNS bigint(20)
+BEGIN
+	DECLARE Min BIGINT DEFAULT 10000000;
+	DECLARE Max BIGINT DEFAULT 99999999;
+	DECLARE ID BIGINT DEFAULT 0;
+
+	IF (ObjectUID < 2147483647) THEN
+		SET ID = ObjectUID;
+	END IF;
+
+	IF (ObjectUID < 300000) THEN
+		SET ID = ObjectUID + 100000000;
+	END IF;
+
+	IF (ID IN (SELECT ObjectID FROM object_data WHERE Instance = inst)) THEN
+		SET ID = 0;
+	END IF;
+	
+	
+	WHILE (ID = 0) DO
+		SET ID = ROUND(Min + RAND() * (Max - Min)) + 100000000;
+		
+		IF (ID IN (SELECT ObjectID FROM object_data WHERE Instance = inst)) THEN
+			SET ID = 0;
+		END IF;
+	END WHILE;
+	
+	RETURN ID;
+END ;;
+DELIMITER ;
+
+DROP PROCEDURE IF EXISTS `pPlayZ_UID2ID`;
+DELIMITER ;;
+CREATE PROCEDURE `pPlayZ_UID2ID`(IN `i` INT)
+    MODIFIES SQL DATA
+BEGIN
+# Server instance ID.
+#-----------------------------------------------
+	DECLARE sInstance VARCHAR(8) DEFAULT i;
+#-----------------------------------------------
+#Last Ran
+	update event_scheduler set LastRun = NOW() where System = "pPlayZ_UID2ID";
+#Starts setting ID
+	UPDATE `object_data` SET `ObjectID`=fPlayZ_generateID(i, `ObjectUID`) WHERE `Instance`=sInstance AND (`ObjectID`<300000 OR `ObjectID`>=2147483647);
+END ;;
+DELIMITER ;
+
+CREATE TABLE object_data_deleted LIKE object_data;
+ALTER TABLE object_data_deleted DROP INDEX Instance;
+ALTER TABLE object_data_deleted DROP INDEX ObjectUID;
+ALTER TABLE object_data_deleted DROP INDEX CheckUID;
+ALTER TABLE object_data_deleted CHANGE `ObjectID` `ObjectID` BIGINT(20) NOT NULL;
+ALTER TABLE object_data_deleted DROP PRIMARY KEY;
+
+ALTER TABLE object_data_deleted ADD INDEX(`ObjectID`);
+ALTER TABLE object_data_deleted ADD INDEX(`ObjectUID`);
+ALTER TABLE object_data_deleted ADD INDEX(`Classname`);
+ALTER TABLE object_data_deleted ADD INDEX(`Datestamp`);
+ALTER TABLE object_data_deleted ADD INDEX(`CharacterID`);
+ALTER TABLE object_data_deleted ADD INDEX(`last_updated`);
+ALTER TABLE object_data_deleted ADD `id` INT NOT NULL AUTO_INCREMENT, ADD PRIMARY KEY (`id`);
+ALTER TABLE object_data_deleted CHANGE `id` `id` INT(11) NULL DEFAULT NULL AUTO_INCREMENT;
+ALTER TABLE object_data_deleted ADD `deleted` DATETIME NULL DEFAULT NULL, ADD INDEX (`deleted`) ;
+
+DROP PROCEDURE IF EXISTS `pPlayZ_Cleanup`;
+DELIMITER ;;
+CREATE PROCEDURE `pPlayZ_Cleanup`(IN `i` INT)
+    MODIFIES SQL DATA
+BEGIN
+# Server instance ID.
+#-----------------------------------------------
+	DECLARE sInstance VARCHAR(8) DEFAULT i;
+#-----------------------------------------------
+#Last Ran
+	update event_scheduler set LastRun = NOW() where System = "pPlayZ_Cleanup";
+#Starts Cleanup
+
+	INSERT INTO object_data_deleted (SELECT *, NULL, NOW() FROM object_data WHERE `Instance`=sInstance AND `Damage`>=1);
+	DELETE FROM `object_data` WHERE `Instance`=sInstance AND `Damage`>=1;
+END ;;
+DELIMITER ;
+
+
+
+
+UPDATE `tOption` SET `optvalue` = '2015-08-25 23:00' WHERE `optname`='dbversion';
+
+
+
+
+
+
+
+
+
+-- ------------------------------------------------------------------------
+-- 2016-03-12 11:45
+INSERT INTO `event_scheduler` (`id`, `System`, `LastRun`) VALUES (NULL, 'playZ_restart_scheduler', NULL);
+DELIMITER ;;
+CREATE EVENT `playZ_restart_scheduler` ON SCHEDULE EVERY 1 DAY STARTS '2016-01-01 05:55:00' ON COMPLETION NOT PRESERVE DISABLE DO BEGIN
+	UPDATE event_scheduler SET LastRun = NOW() WHERE System = "playZ_restart_scheduler";
+	
+	DELETE FROM object_data WHERE ObjectUID >= 280000000 AND ObjectUID < 290000000;
+	
+END;;
+DELIMITER ;
+UPDATE `tOption` SET `optvalue` = '2016-03-12 11:45' WHERE `optname`='dbversion';
+
+
+
+
+
+
+
+
+
+-- ------------------------------------------------------------------------
+-- EXPORT static spawn points
+-- ------------------------------------------------------------------------
+SET group_concat_max_len=18446744073709547520;
+SELECT
+    GROUP_CONCAT(
+      '[',
+    	CONCAT('"', ObjectUID, '", '), 
+      CONCAT('"', Classname, '", '), 
+      Worldspace, ', ',
+      Inventory, ', ',
+      Hitpoints,
+      ']'
+      SEPARATOR ',\n'
+    )
+AS SQF FROM object_spawns;
+
+
+
+
+-- ------------------------------------------------------------------------
+-- EXPORT Classnames for DayZ_SafeObjects
+-- ------------------------------------------------------------------------
+SET group_concat_max_len=18446744073709547520;
+SELECT GROUP_CONCAT(DISTINCT
+      '"',
+    	Classname,
+      '"'
+      SEPARATOR ', '
+    )
+AS SQF FROM object_spawns;
+
+
+
+
+-- ------------------------------------------------------------------------
+-- CLEANUP
+-- ------------------------------------------------------------------------
+TRUNCATE TABLE character_data;
+TRUNCATE TABLE character_dead;
+TRUNCATE TABLE object_data;
+TRUNCATE TABLE object_data_deleted;
+TRUNCATE TABLE player_data;
+TRUNCATE TABLE player_login;
+
