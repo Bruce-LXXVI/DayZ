@@ -5,13 +5,14 @@ OnLoadIntro = "Welcome to Chernarus";
 OnLoadIntroTime = False;
 OnLoadMissionTime = False;
 disabledAI = true;
-disableChannels[] = {0,1,2,6};
+disableChannels[] = {0,2,6};
 enableItemsDropping = 0;
 onPauseScript = "";
 briefing = 0;
 debriefing = 0;
 
-loadScreen = "\z\addons\dayz_code\gui\loadingscreen.paa";
+//loadScreen = "\z\addons\dayz_code\gui\loadingscreen.paa";
+loadScreen = "PLAYZ\dayz_code\gui\loadingscreen8.jpg";
 
 class Header
 {
@@ -24,4 +25,27 @@ aiKills = 1;
 diagRadio = 1;
 diagHit = 1;
 
+
 #include "\z\addons\dayz_code\gui\description.hpp"
+// DZGM 
+//#include "PLAYZ\dayz_code\gui\description.hpp"
+//#include "PLAYZ\dayz_code\gui\dzgm\extra_rc.hpp"
+//#include "dzgm\groupManagement.hpp"
+
+// PlayZ Classnames
+//#include "PLAYZ\Configs\CfgVehiclesPlayZ.hpp"
+
+// Epoch Admin Tools
+#include "PLAYZ\admintools\dialog.hpp"
+
+// ESS
+//#include "spawn\class.hpp"
+//#include "spawn\halo.hpp"
+//#include "spawn\spawn.hpp"
+
+// Base building
+//#include "PLAYZ\dayz_buildings\config.cpp"
+
+// Loot Tables
+//#include "PLAYZ\dayz_code\Configs\CfgLoot\CfgLoot.hpp"
+
