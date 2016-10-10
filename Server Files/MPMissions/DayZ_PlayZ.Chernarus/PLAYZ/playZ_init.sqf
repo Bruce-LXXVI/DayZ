@@ -6,7 +6,6 @@
  ************************************************************************************/
 PLAYZ_logname="[PLAYZ]";
 PLAYZ_worldname=toLower worldName;
-//TODO: dayz_CBLConfigName="";
 
 diag_log format["%1 Initializing PLAYZ EXTENSION for world %2", PLAYZ_logname, PLAYZ_worldname];
 
@@ -49,7 +48,7 @@ if (!isDedicated) then
 	//execVM "dzgm\init.sqf";
 
 	// Initialize playZ virtual classnames player event handler
-	//execVM "PLAYZ\virtual_classnames\playZ_virtual_classnames_player_EH.sqf";
+	execVM "PLAYZ\virtual_classnames\playZ_virtual_classnames_player_EH.sqf";
 
 	// Initialize debug monitor
 	execVM "PLAYZ\debug_monitor\playZ_debug_monitor.sqf";
@@ -74,11 +73,11 @@ if (!isDedicated) then
 if (isServer) then
 {
 	// Initialize the server functions used by PLAYZ extension
-	//call compile preprocessFileLineNumbers "\z\addons\dayz_server\PLAYZ\init\PLAYZ_server_functions.sqf";
+	call compile preprocessFileLineNumbers "\z\addons\dayz_server\PLAYZ\init\PLAYZ_server_functions.sqf";
 	// Initialize the server public variable event handlers used by PLAYZ extension
-	//call compile preprocessFileLineNumbers "\z\addons\dayz_server\PLAYZ\init\PLAYZ_server_EH.sqf";
+	call compile preprocessFileLineNumbers "\z\addons\dayz_server\PLAYZ\init\PLAYZ_server_EH.sqf";
 
-	//execVM "\z\addons\dayz_server\PLAYZ\vehicle_management\playZ_vehicle_management_server_monitor.sqf";
+	execVM "\z\addons\dayz_server\PLAYZ\vehicle_management\playZ_vehicle_management_server_monitor.sqf";
 	
 	if( PLAYZ_worldname == "chernarus" ) then
 	{

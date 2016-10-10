@@ -6,12 +6,11 @@ waitUntil {uiSleep 1; !isNil ("Dayz_loginCompleted")};
 _messages = [
 	["DayZMod", "Welcome "+(name player)],
 	["World", worldName],
-	["Teamspeak", "some TS info"],
-	["Website/Forums", "some website info"],
+	["Teamspeak", "ts.playZ.rocks"],
+	["Website/Forums", "http://playZ.rocks"],
 	["Server Rules", "Duping, glitching or using any<br />exploit will result in a<br />permanent ban."],
 	["Server Rules", "No talking in side."],
-	["Server Rules", "Hackers will be banned permanently<br />Respect others"],
-	["News", "Some random new info!<br />Random news<br />"]
+	["Server Rules", "Hackers will be banned permanently<br />Respect others"]
 ];
  
 _timeout = 5;
