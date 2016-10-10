@@ -33,7 +33,7 @@ diagHit = 1;
 //#include "dzgm\groupManagement.hpp"
 
 // PlayZ Classnames
-//#include "PLAYZ\Configs\CfgVehiclesPlayZ.hpp"
+#include "PLAYZ\Configs\CfgVehiclesPlayZ.hpp"
 
 // Epoch Admin Tools
 #include "PLAYZ\admintools\dialog.hpp"
