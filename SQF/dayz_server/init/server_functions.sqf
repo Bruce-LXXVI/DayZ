@@ -115,8 +115,8 @@ server_hiveReadWrite = {
 	_key = _this;
 	//diag_log ("ATTEMPT READ/WRITE: " + _key);
 	_data = "HiveExt" callExtension _key;
-	//diag_log ("READ/WRITE: " +str(_data));
-	_resultArray = call compile format ["%1",_data];
+	//diag_log str formatText["READ/WRITE: %1",_data];
+	_resultArray = call compile str formatText["%1", _data];
 	_resultArray
 };
 
