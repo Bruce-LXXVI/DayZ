@@ -238,6 +238,9 @@ UPDATE `tOption` SET `optvalue` = '2016-03-12 11:45' WHERE `optname`='dbversion'
 
 
 
+
+
+
 -- ------------------------------------------------------------------------
 -- EXPORT static spawn points
 -- ------------------------------------------------------------------------
@@ -282,4 +285,15 @@ TRUNCATE TABLE object_data;
 TRUNCATE TABLE object_data_deleted;
 TRUNCATE TABLE player_data;
 TRUNCATE TABLE player_login;
+
+
+
+
+ALTER TABLE `object_data` CHANGE `Hitpoints` `Hitpoints` LONGTEXT NOT NULL;
+ALTER TABLE `object_data_deleted` CHANGE `Hitpoints` `Hitpoints` LONGTEXT NOT NULL;
+
+# FIX ObjectIDs
+ALTER TABLE object_data AUTO_INCREMENT=3000000001;
+UPDATE object_data SET ObjectID=ObjectID+3000000001;
+
 
