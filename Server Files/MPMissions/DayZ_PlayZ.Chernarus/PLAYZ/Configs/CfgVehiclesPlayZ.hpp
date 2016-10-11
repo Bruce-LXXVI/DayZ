@@ -2,7 +2,7 @@
 
 class CfgVehicles {
 	class SUV_DZ;	// External class reference
-	class UH1H_DZ2;
+	class UH1H_2_DZ;
 
 
 	class SUV_Pink_PLAYZ : SUV_DZ {
@@ -15,7 +15,7 @@ class CfgVehicles {
 		//hiddenSelectionsTextures[] = {"\custom\textures\suv_body_camo_co.paa"};
 	};
 	
-	class UH1H_Red_PLAYZ : UH1H_DZ2 {
+	class UH1H_Red_PLAYZ : UH1H_2_DZ {
 		displayName = "UH1H Red";
 	}
 	
