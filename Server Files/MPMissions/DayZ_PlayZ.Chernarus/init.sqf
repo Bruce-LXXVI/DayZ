@@ -81,7 +81,8 @@ if (dayz_REsec == 1) then {call compile preprocessFileLineNumbers "\z\addons\day
 execVM "\z\addons\dayz_code\system\DynamicWeatherEffects.sqf";
 
 if (isServer) then {
-	execVM "\z\addons\dayz_server\system\server_monitor.sqf";
+	//execVM "\z\addons\dayz_server\system\server_monitor.sqf";
+	execVM "\z\addons\dayz_server\PLAYZ\system\server_monitor.sqf";
 	if (dayz_infectiousWaterholes && (toLower worldName == "chernarus")) then {execVM "\z\addons\dayz_code\system\mission\chernarus\infectiousWaterholes\init.sqf";};
 };
 
