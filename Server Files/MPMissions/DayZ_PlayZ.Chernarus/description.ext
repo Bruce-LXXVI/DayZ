@@ -26,11 +26,11 @@ diagRadio = 1;
 diagHit = 1;
 
 
-#include "\z\addons\dayz_code\gui\description.hpp"
+//#include "\z\addons\dayz_code\gui\description.hpp"
 // DZGM 
-//#include "PLAYZ\dayz_code\gui\description.hpp"
-//#include "PLAYZ\dayz_code\gui\dzgm\extra_rc.hpp"
-//#include "dzgm\groupManagement.hpp"
+#include "PLAYZ\dayz_code\gui\description.hpp"
+#include "PLAYZ\dayz_code\gui\dzgm\extra_rc.hpp"
+#include "dzgm\groupManagement.hpp"
 
 // PlayZ Classnames
 #include "PLAYZ\Configs\CfgVehiclesPlayZ.hpp"

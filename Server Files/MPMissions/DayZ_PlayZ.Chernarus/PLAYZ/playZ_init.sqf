@@ -44,8 +44,9 @@ if (!isDedicated) then
 	//_nul = [] execVM "PLAYZ\DZAI_Client\dzai_initclient.sqf";
 
 	// Initialize Group Management
-	// TODO: move to PLAYZ Directory 
-	//execVM "dzgm\init.sqf";
+	execVM "dzgm\init.sqf";
+	player_switchModel = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\player_switchModel.sqf";
+	player_selectSlot = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\ui_selectSlot.sqf";
 
 	// Initialize playZ virtual classnames player event handler
 	execVM "PLAYZ\virtual_classnames\playZ_virtual_classnames_player_EH.sqf";

@@ -19,3 +19,8 @@ PLAYZ_fnc_getHitpoints =	compile preprocessFileLineNumbers "\z\addons\dayz_serve
 PLAYZ_fnc_createVehicle =	compile preprocessFileLineNumbers "\z\addons\dayz_server\PLAYZ\compile\PLAYZ_fnc_createVehicle.sqf";
 
 
+/* DZGM */
+currentInvites = [];
+publicVariable "currentInvites";
+"currentInvites" addPublicVariableEventHandler {publicVariable "currentInvites";};
+/* DZGM */
