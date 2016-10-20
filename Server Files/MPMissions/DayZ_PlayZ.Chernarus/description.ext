@@ -47,5 +47,5 @@ diagHit = 1;
 //#include "PLAYZ\dayz_buildings\config.cpp"
 
 // Loot Tables
-//#include "PLAYZ\dayz_code\Configs\CfgLoot\CfgLoot.hpp"
+#include "PLAYZ\dayz_code\Configs\CfgLoot\CfgLoot.hpp"
 
