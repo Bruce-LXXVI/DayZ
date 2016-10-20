@@ -70,6 +70,8 @@ if (_finished) then {
 	_dir = getDir vehicle _player;
 	_pos = getPosATL vehicle _player;
 	_pos = [(_pos select 0)+_dist*sin(_dir),(_pos select 1)+_dist*cos(_dir),0];
+
+
 	_veh = createVehicle [_vehtospawn, _pos, [], 0, "CAN_COLLIDE"];
 	_veh setVariable ["MalSar",1,true];
 	_veh setVariable ["ObjectID", "1", true];
@@ -78,6 +80,11 @@ if (_finished) then {
 	_veh setVariable ["PlayZ_salvage_disabled", 1, true];
 	clearMagazineCargoGlobal _veh;
 	clearWeaponCargoGlobal _veh;
+
+
+	PVDZ_obj_Publish = [0, _veh, [round getDir _veh, _pos], []];
+	publicVariable "PVDZ_obj_Publish";
+
 
 	cutText ["\nYou have built a bike!", "PLAIN DOWN",3];
 	DZE_ActionInProgress = false;
