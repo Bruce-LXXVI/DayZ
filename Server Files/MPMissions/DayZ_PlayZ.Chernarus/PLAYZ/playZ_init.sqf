@@ -55,7 +55,7 @@ if (!isDedicated) then
 	execVM "PLAYZ\debug_monitor\playZ_debug_monitor.sqf";
 
 	// Initialize side voice kicker
-	//execVM "PLAYZ\antisidevoice\playZ_antisidevoice_player_monitor.sqf";
+	execVM "PLAYZ\antisidevoice\playZ_antisidevoice_player_monitor.sqf";
 
 	// Initialize kicker
 	//execVM "PLAYZ\kicker\playZ_kicker_player_monitor.sqf";
