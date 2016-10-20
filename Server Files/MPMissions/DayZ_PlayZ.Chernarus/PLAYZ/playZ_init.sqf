@@ -65,6 +65,14 @@ if (!isDedicated) then
 		// Initialize Public Bus Route player monitor
 		//[true] execVM "PLAYZ\busroute\chernarus\player_axeBus.sqf";
 	};
+	
+	// Initialize Spawn Tables
+	call compile preprocessFileLineNumbers "PLAYZ\dayz_code\loot\compile.sqf";
+	building_spawnLoot = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\building_spawnLoot.sqf";
+	building_spawnZombies = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\building_spawnZombies.sqf";
+	player_spawnCheck = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\player_spawnCheck.sqf";
+	zombie_generate = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\zombie_generate.sqf";
+	
 };
 
 
@@ -88,6 +96,14 @@ if (isServer) then
 		// Custom mapaddons
 		//[] execVM "\z\addons\dayz_server\PLAYZ\mapaddons\chernarus\init.sqf";
 	};
+	
+	// Initialize Spawn Tables
+	call compile preprocessFileLineNumbers "PLAYZ\dayz_code\loot\compile.sqf";
+	building_spawnLoot = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\building_spawnLoot.sqf";
+	building_spawnZombies = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\building_spawnZombies.sqf";
+	player_spawnCheck = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\player_spawnCheck.sqf";
+	zombie_generate = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\zombie_generate.sqf";
+	
 };
 
 
