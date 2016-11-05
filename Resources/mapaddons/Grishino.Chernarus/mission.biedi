@@ -26,62 +26,51 @@ class _unit_0
 	objectType="unit";
 	class Arguments
 	{
-		POSITION="[4583.9053, 10426.597, 0]";
+		POSITION="[6007.1816, 10382.853, 0]";
 		GROUP="_group_0";
-		TYPE="CZ_Soldier_Pilot_Wdl_ACR";
+		TYPE="Camo1_DZ";
 		SKILL="0.60000002";
 		PLAYER="true";
 		LEADER="true";
 	};
 };
-class _vehicle_0
+class _vehicle_3
 {
 	objectType="vehicle";
 	class Arguments
 	{
-		POSITION="[4636.3687, 10495.295]";
-		TYPE="Land_Mil_Barracks_i";
-		AZIMUT="58.252419";
+		POSITION="[6114.269, 10418.058]";
+		TYPE="FlagCarrierCDF";
 		PARENT="";
 	};
 };
-class _vehicle_1
+class _vehicle_14
 {
 	objectType="vehicle";
 	class Arguments
 	{
-		POSITION="[4650.0283, 10540.247, -0.018598476]";
-		TYPE="Land_Ind_Timbers";
-		AZIMUT="-43.836658";
+		POSITION="[6006.1558, 10413.397, 0.13574743]";
+		TYPE="MAP_A_GeneralStore_01a";
+		AZIMUT="-236.87326";
 		PARENT="";
 	};
 };
-class _vehicle_12
+class _vehicle_18
 {
 	objectType="vehicle";
 	class Arguments
 	{
-		POSITION="[4643.8408, 10525.031, -9.1552734e-005]";
-		TYPE="ClutterCutter_small_EP1";
+		POSITION="[6013.1685, 10422.887, -3.0517578e-005]";
+		TYPE="ClutterCutter_EP1";
 		PARENT="";
 	};
 };
-class _vehicle_16
+class _vehicle_20
 {
 	objectType="vehicle";
 	class Arguments
 	{
-		POSITION="[4643.3428, 10525.1, 0.00012207031]";
-		TYPE="Land_Campfire_burning";
-		PARENT="";
-	};
-};
-class _vehicle_32
-{
-	objectType="vehicle";
-	class Arguments
-	{
-		POSITION="[4635.0278, 10493.642, -3.0517578e-005]";
+		POSITION="[6005.8872, 10409.899, 5.0581665]";
 		TYPE="ClutterCutter_EP1";
 		PARENT="";
 	};
