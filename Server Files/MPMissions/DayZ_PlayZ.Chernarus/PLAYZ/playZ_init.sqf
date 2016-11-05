@@ -98,7 +98,7 @@ if (isServer) then
 		//[true] execVM "\z\addons\dayz_server\PLAYZ\busroute\chernarus\init_bus.sqf";
 
 		// Custom mapaddons
-		//[] execVM "\z\addons\dayz_server\PLAYZ\mapaddons\chernarus\init.sqf";
+		[] execVM "\z\addons\dayz_server\PLAYZ\mapaddons\chernarus\init.sqf";
 	};
 	
 	// Initialize Spawn Tables

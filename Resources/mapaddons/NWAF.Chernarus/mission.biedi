@@ -1,0 +1,95 @@
+class _prefix_0
+{
+	objectType="prefix";
+	class Arguments
+	{
+	};
+};
+class _center_0
+{
+	objectType="center";
+	class Arguments
+	{
+		SIDE="west";
+	};
+};
+class _group_0
+{
+	objectType="group";
+	class Arguments
+	{
+		CENTER="_center_0";
+	};
+};
+class _unit_0
+{
+	objectType="unit";
+	class Arguments
+	{
+		POSITION="[4583.9053, 10426.597, 0]";
+		GROUP="_group_0";
+		TYPE="CZ_Soldier_Pilot_Wdl_ACR";
+		SKILL="0.60000002";
+		PLAYER="true";
+		LEADER="true";
+	};
+};
+class _vehicle_0
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[4636.3687, 10495.295]";
+		TYPE="MAP_Mil_Barracks_i";
+		AZIMUT="58.252419";
+		PARENT="";
+	};
+};
+class _vehicle_1
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[4650.0283, 10540.247, -0.018598476]";
+		TYPE="Land_Ind_Timbers";
+		AZIMUT="-43.836658";
+		PARENT="";
+	};
+};
+class _vehicle_12
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[4643.8408, 10525.031, -9.1552734e-005]";
+		TYPE="ClutterCutter_small_EP1";
+		PARENT="";
+	};
+};
+class _vehicle_16
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[4643.3428, 10525.1, 0.00012207031]";
+		TYPE="Land_Campfire_burning";
+		PARENT="";
+	};
+};
+class _vehicle_32
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[4635.0278, 10493.642, -3.0517578e-005]";
+		TYPE="ClutterCutter_EP1";
+		PARENT="";
+	};
+};
+class _postfix_0
+{
+	objectType="postfix";
+	class Arguments
+	{
+	};
+};
