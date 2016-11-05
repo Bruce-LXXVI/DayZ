@@ -9,4 +9,6 @@
 // Vysota by Bruce <bruce@playz.rocks>
 #include "vysota.sqf"
 
+// Destroy Balota by Bruce <bruce@playz.rocks>
+//#include "destroy_balota.sqf"
 

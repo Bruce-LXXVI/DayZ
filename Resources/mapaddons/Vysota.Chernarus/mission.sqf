@@ -30,7 +30,7 @@ if (true) then
 _vehicle_7 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_tent_east", [6561.1191, 3416.6924, 7.6293945e-005], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["CampEast_EP1", [6561.1191, 3416.6924, 7.6293945e-005], [], 0, "CAN_COLLIDE"];
   _vehicle_7 = _this;
   _this setDir -1.0312016;
   _this setPos [6561.1191, 3416.6924, 7.6293945e-005];
