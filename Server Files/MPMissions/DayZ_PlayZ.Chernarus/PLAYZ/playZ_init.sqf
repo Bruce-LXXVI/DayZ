@@ -19,9 +19,10 @@ DZ_KeyDown_EH = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\keybo
 if( PLAYZ_worldname == "chernarus" ) then
 {
 	([4654,9595,0] nearestObject 143992) setDamage 1;
-	/*
+	
 	if (dayz_POIs) then
 	{
+		// Original POI (some modified)
 		[] execVM "\z\addons\dayz_code\system\mission\chernarus\poi\DevilsFarm.sqf";
 		[] execVM "\z\addons\dayz_code\system\mission\chernarus\poi\NEA.sqf";
 		[] execVM "\z\addons\dayz_code\system\mission\chernarus\poi\C130Crash.sqf";
@@ -32,7 +33,6 @@ if( PLAYZ_worldname == "chernarus" ) then
 		[] execVM "PLAYZ\dayz_code\system\mission\chernarus\poi\ZelenogorskBuildings.sqf";
 		[] execVM "\z\addons\dayz_code\system\mission\chernarus\poi\Twains.sqf";
 	};
-	*/
 };
 
 
