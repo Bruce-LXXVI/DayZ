@@ -50,7 +50,7 @@ class _vehicle_7
 	class Arguments
 	{
 		POSITION="[6561.1191, 3416.6924, 7.6293945e-005]";
-		TYPE="Land_tent_east";
+		TYPE="CampEast_EP1";
 		AZIMUT="-1.0312016";
 		PARENT="";
 	};
