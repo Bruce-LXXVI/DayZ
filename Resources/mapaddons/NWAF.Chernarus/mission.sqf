@@ -22,7 +22,7 @@ if (true) then
 _vehicle_0 = objNull;
 if (true) then
 {
-  _this = createVehicle ["MAP_Mil_Barracks_i", [4636.3687, 10495.295], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_Mil_Barracks_i", [4636.3687, 10495.295], [], 0, "CAN_COLLIDE"];
   _vehicle_0 = _this;
   _this setDir 58.252419;
   _this setPos [4636.3687, 10495.295];
