@@ -13,10 +13,13 @@ diag_log format["%1 Initializing PLAYZ EXTENSION for world %2", PLAYZ_logname, P
 call compile preprocessFileLineNumbers "PLAYZ\admintools\config_playZ.sqf";
 call compile preprocessFileLineNumbers "PLAYZ\admintools\variables.sqf";
 
+DZ_KeyDown_EH = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\keyboard.sqf";
 
-/*
+
 if( PLAYZ_worldname == "chernarus" ) then
 {
+	([4654,9595,0] nearestObject 143992) setDamage 1;
+	/*
 	if (dayz_POIs) then
 	{
 		[] execVM "\z\addons\dayz_code\system\mission\chernarus\poi\DevilsFarm.sqf";
@@ -29,8 +32,9 @@ if( PLAYZ_worldname == "chernarus" ) then
 		[] execVM "PLAYZ\dayz_code\system\mission\chernarus\poi\ZelenogorskBuildings.sqf";
 		[] execVM "\z\addons\dayz_code\system\mission\chernarus\poi\Twains.sqf";
 	};
+	*/
 };
-*/
+
 
 /************************************************************************************
  * run on all player clients incl. player host and headless clients                 *
