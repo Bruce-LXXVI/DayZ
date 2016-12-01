@@ -7,6 +7,8 @@ SET BACKUPDIR="%DSTPATH%\%TIMESTAMP%\"
 mkdir %BACKUPDIR%
 move "%MYDIR%\..\*.rpt" %BACKUPDIR%
 move "%MYDIR%\..\*.log" %BACKUPDIR%
+move "%MYDIR%\..\*.bidmp" %BACKUPDIR%
+move "%MYDIR%\..\*.mdmp" %BACKUPDIR%
 move "%MYDIR%\..\BattlEye\*.log" %BACKUPDIR%
 copy "%MYDIR%\..\..\MPMissions\%MISSION_NAME%.pbo" %BACKUPDIR%
 copy "%MYDIR%\..\..\%SERVER_MOD_NAME%\Addons\dayz_server.pbo" %BACKUPDIR%
