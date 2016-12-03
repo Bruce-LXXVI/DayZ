@@ -203,10 +203,6 @@ BEGIN
 	DELETE FROM `object_data` WHERE `Instance`=sInstance AND `Damage`>=1;
 END ;;
 DELIMITER ;
-
-
-
-
 UPDATE `tOption` SET `optvalue` = '2015-08-25 23:00' WHERE `optname`='dbversion';
 
 
@@ -229,6 +225,51 @@ CREATE EVENT `playZ_restart_scheduler` ON SCHEDULE EVERY 1 DAY STARTS '2016-01-0
 END;;
 DELIMITER ;
 UPDATE `tOption` SET `optvalue` = '2016-03-12 11:45' WHERE `optname`='dbversion';
+
+
+
+
+
+
+
+
+
+
+-- ------------------------------------------------------------------------
+-- 2016-12-02 01:00
+INSERT INTO `event_scheduler` (`id`, `System`, `LastRun`) VALUES (NULL, 'playZ_restart_scheduler', NULL);
+DROP EVENT `playZ_restart_scheduler`;
+DELIMITER ;;
+CREATE EVENT `playZ_restart_scheduler` ON SCHEDULE EVERY 1 DAY STARTS '2016-01-01 05:55:00' ON COMPLETION NOT PRESERVE ENABLE DO
+BEGIN
+
+  UPDATE event_scheduler SET LastRun = NOW() WHERE System = "playZ_restart_scheduler";
+
+  DELETE FROM object_data WHERE ObjectUID >= 280000000 AND ObjectUID < 290000000;
+
+  # temp. fix for the bike problem
+  DELETE FROM object_data WHERE `Classname` LIKE 'Old_bike_%' AND ObjectID < 200000000;
+
+  # FIX ObjectIDs
+  ALTER TABLE object_data AUTO_INCREMENT=3000000001;
+  UPDATE object_data SET ObjectID=ObjectID+3000000001;
+
+END;;
+DELIMITER ;
+UPDATE `tOption` SET `optvalue` = '2016-12-02 01:00' WHERE `optname`='dbversion';
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
