@@ -3,7 +3,7 @@
 _base="z\addons\dayz_code\system\scheduler\";
 _base_PLAYZ="PLAYZ\dayz_code\system\scheduler\";
 call compile preprocessFileLineNumbers (_base+"sched_oneachframe.sqf");
-call compile preprocessFileLineNumbers (_base+"sched_towngenerator.sqf");
+call compile preprocessFileLineNumbers (_base_PLAYZ+"sched_towngenerator.sqf");
 call compile preprocessFileLineNumbers (_base+"sched_throwable.sqf");
 call compile preprocessFileLineNumbers (_base+"sched_planthint.sqf");
 call compile preprocessFileLineNumbers (_base+"sched_bloodstains.sqf");
