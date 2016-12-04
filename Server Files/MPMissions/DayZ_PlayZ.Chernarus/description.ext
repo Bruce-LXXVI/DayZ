@@ -49,3 +49,6 @@ diagHit = 1;
 // Loot Tables
 #include "PLAYZ\dayz_code\Configs\CfgLoot\CfgLoot.hpp"
 
+// Customized Town Generator
+#include "PLAYZ\dayz_code\Configs\CfgTownGenerator\CfgTownGeneratorChernarus.hpp"
+
