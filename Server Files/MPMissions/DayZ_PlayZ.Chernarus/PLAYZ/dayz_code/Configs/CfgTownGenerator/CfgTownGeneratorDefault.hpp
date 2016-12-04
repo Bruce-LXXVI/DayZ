@@ -1,3 +1,14 @@
+//
+// Removed:
+// Land_Misc_Rubble_EP1
+//
+// Rubbish1
+// datsun01Wreck
+// RoadBarrier_long
+// Fort_Barricade
+// 
+
+
 class SouthernAirport { 
 	position[] = {4909,2399}; 
 	size = 360;		
@@ -371,14 +382,14 @@ class SouthernAirport {
 	class Object366 { type = "Body"; position[] = {4960.99, 2208.74, 0}; direction = 254; onFire = 0; };
 	class Object367 { type = "Body2"; position[] = {4781.59, 2543.28, 0}; direction = 26; onFire = 0; };
 	class Object368 { type = "UralWreck"; position[] = {4756.41, 2520.97, 0}; direction = 240; onFire = 0.267989; };
-	class Object369 { type = "Land_Misc_Rubble_EP1"; position[] = {4799.34, 2556.63, 0}; direction = 179; onFire = 0; };
+//	class Object369 { type = "Land_Misc_Rubble_EP1"; position[] = {4799.34, 2556.63, 0}; direction = 179; onFire = 0; };
 	class Object370 { type = "HeliHRescue"; position[] = {4960.48, 2206.7, 0}; direction = 344; onFire = 0; };
 	class Object371 { type = "UralWreck"; position[] = {4795.92, 2556.97, 0}; direction = 5; onFire = 0; };
 	class Object372 { type = "HeliHRescue"; position[] = {4940.55, 2198.7, 0}; direction = 351; onFire = 0; };
 	class Object373 { type = "Body2"; position[] = {4789.71, 2556.11, 0}; direction = 194; onFire = 0; };
 	class Object374 { type = "Rubbish4"; position[] = {4753.87, 2529.06, 0}; direction = 151; onFire = 0; };
 	class Object375 { type = "HMMWVWreck"; position[] = {4751.81, 2531.35, 0}; direction = 248; onFire = 0.29923; };
-	class Object376 { type = "Land_Misc_Rubble_EP1"; position[] = {5101.4, 2356.14, 0}; direction = 297; onFire = 0; };
+//	class Object376 { type = "Land_Misc_Rubble_EP1"; position[] = {5101.4, 2356.14, 0}; direction = 297; onFire = 0; };
 	class Object377 { type = "Rubbish1"; position[] = {4787.75, 2563.09, 0}; direction = 74; onFire = 0; };
 	class Object378 { type = "Rubbish1"; position[] = {4746.95, 2528.38, 0}; direction = 135; onFire = 0; };
 	class Object379 { type = "Rubbish4"; position[] = {4752.77, 2536.22, 0}; direction = 81; onFire = 0; };
@@ -393,7 +404,7 @@ class SouthernAirport {
 	class Object388 { type = "Land_Misc_Cargo1Eo_EP1"; position[] = {4781.01, 2568.49, 0}; direction = 350; onFire = 0; };
 	class Object389 { type = "Land_Misc_Cargo1Eo_EP1"; position[] = {4798.27, 2578.94, 0}; direction = 56; onFire = 0; };
 	class Object390 { type = "Body1"; position[] = {4727.48, 2519.37, 0}; direction = 316; onFire = 0; };
-	class Object391 { type = "Land_Misc_Rubble_EP1"; position[] = {4766.73, 2560.1, 0}; direction = 179; onFire = 0; };
+//	class Object391 { type = "Land_Misc_Rubble_EP1"; position[] = {4766.73, 2560.1, 0}; direction = 179; onFire = 0; };
 	class Object392 { type = "Body2"; position[] = {4719.53, 2509.99, 0}; direction = 61; onFire = 0; };
 	class Object393 { type = "T72Wreck"; position[] = {4728.39, 2524.79, 0}; direction = 170; onFire = 0.269684; };
 	class Object394 { type = "Body1"; position[] = {5116.55, 2367.38, 0}; direction = 180; onFire = 0; };
@@ -406,12 +417,12 @@ class SouthernAirport {
 	class Object401 { type = "Body2"; position[] = {5120.86, 2368.16, 0}; direction = 286; onFire = 0.213776; };
 	class Object402 { type = "Body1"; position[] = {4722.76, 2526.16, 0}; direction = 278; onFire = 0; };
 	class Object403 { type = "Body1"; position[] = {5121.24, 2363.41, 0}; direction = 250; onFire = 0; };
-	class Object404 { type = "Land_Misc_Rubble_EP1"; position[] = {5119.03, 2348.13, 0}; direction = 312; onFire = 0; };
+//	class Object404 { type = "Land_Misc_Rubble_EP1"; position[] = {5119.03, 2348.13, 0}; direction = 312; onFire = 0; };
 	class Object405 { type = "Rubbish1"; position[] = {4794.73, 2588.78, 0}; direction = 177; onFire = 0; };
 	class Object406 { type = "HMMWVWreck"; position[] = {5121.28, 2342.43, 0}; direction = 48; onFire = 0; };
 	class Object407 { type = "Body1"; position[] = {4716.64, 2526.67, 0}; direction = 316; onFire = 0.269703; };
 	class Object408 { type = "T72Wreck"; position[] = {4719.68, 2532.28, 0}; direction = 86; onFire = 0; };
-	class Object409 { type = "Land_Misc_Rubble_EP1"; position[] = {4765.62, 2579.44, 0}; direction = 195; onFire = 0; };
+//	class Object409 { type = "Land_Misc_Rubble_EP1"; position[] = {4765.62, 2579.44, 0}; direction = 195; onFire = 0; };
 	class Object410 { type = "HMMWVWreck"; position[] = {4749.46, 2569.14, 0}; direction = 229; onFire = 0.266404; };
 	class Object411 { type = "Rubbish4"; position[] = {4725.11, 2548.89, 0}; direction = 117; onFire = 0; };
 	class Object412 { type = "HMMWVWreck"; position[] = {4727.1, 2551.16, 0}; direction = 174; onFire = 0; };
@@ -424,7 +435,7 @@ class SouthernAirport {
 	class Object419 { type = "Rubbish1"; position[] = {4762.79, 2592.25, 0}; direction = 206; onFire = 0; };
 	class Object420 { type = "Body1"; position[] = {4731.19, 2566.6, 0}; direction = 249; onFire = 0; };
 	class Object421 { type = "Rubbish5"; position[] = {5140.01, 2348.94, 0}; direction = 301; onFire = 0; };
-	class Object422 { type = "Land_Misc_Rubble_EP1"; position[] = {5142.99, 2369.74, 0}; direction = 297; onFire = 0; };
+//	class Object422 { type = "Land_Misc_Rubble_EP1"; position[] = {5142.99, 2369.74, 0}; direction = 297; onFire = 0; };
 	class Object423 { type = "Rubbish4"; position[] = {4680.55, 2498.77, 0}; direction = 66; onFire = 0; };
 	class Object424 { type = "Rubbish1"; position[] = {4677.05, 2492.39, 0}; direction = 120; onFire = 0; };
 	class Object425 { type = "Body1"; position[] = {4726.82, 2564.3, 0}; direction = 250; onFire = 0; };
@@ -450,7 +461,7 @@ class SouthernAirport {
 	class Object445 { type = "Rubbish4"; position[] = {4673.33, 2498.26, 0}; direction = 356; onFire = 0; };
 	class Object446 { type = "Body"; position[] = {4770.82, 2606.05, 0}; direction = 211; onFire = 0; };
 	class Object447 { type = "Body"; position[] = {4768.76, 2605.13, 0}; direction = 211; onFire = 0; };
-	class Object448 { type = "Land_Misc_Rubble_EP1"; position[] = {5142.05, 2324.14, 0}; direction = 312; onFire = 0; };
+//	class Object448 { type = "Land_Misc_Rubble_EP1"; position[] = {5142.05, 2324.14, 0}; direction = 312; onFire = 0; };
 	class Object449 { type = "Body"; position[] = {4769.82, 2606.65, 0}; direction = 211; onFire = 0; };
 	class Object450 { type = "Body"; position[] = {4767.86, 2605.77, 0}; direction = 211; onFire = 0; };
 	class Object451 { type = "Rubbish1"; position[] = {5151.73, 2378.73, 0}; direction = 324; onFire = 0; };
@@ -471,7 +482,7 @@ class SouthernAirport {
 	class Object466 { type = "Body"; position[] = {4765.51, 2609.47, 0}; direction = 211; onFire = 0; };
 	class Object467 { type = "Body"; position[] = {4764.52, 2610.05, 0}; direction = 211; onFire = 0; };
 	class Object468 { type = "Rubbish1"; position[] = {5154.27, 2351.51, 0}; direction = 251; onFire = 0; };
-	class Object469 { type = "Land_Misc_Rubble_EP1"; position[] = {4735.31, 2590.55, 0}; direction = 179; onFire = 0; };
+//	class Object469 { type = "Land_Misc_Rubble_EP1"; position[] = {4735.31, 2590.55, 0}; direction = 179; onFire = 0; };
 	class Object470 { type = "Rubbish1"; position[] = {5158.83, 2367.06, 0}; direction = 290; onFire = 0; };
 	class Object471 { type = "Body1"; position[] = {4709.94, 2569.05, 0}; direction = 35; onFire = 0; };
 	class Object472 { type = "HMMWVWreck"; position[] = {5157.01, 2347.8, 0}; direction = 294; onFire = 0; };
@@ -481,16 +492,16 @@ class SouthernAirport {
 	class Object476 { type = "Rubbish5"; position[] = {5161.59, 2377.07, 0}; direction = 301; onFire = 0; };
 	class Object477 { type = "Rubbish4"; position[] = {5161.15, 2350.49, 0}; direction = 126; onFire = 0; };
 	class Object478 { type = "Body1"; position[] = {4701.75, 2567.91, 0}; direction = 73; onFire = 0.12201; };
-	class Object479 { type = "Land_Misc_Rubble_EP1"; position[] = {4714.51, 2586.34, 0}; direction = 259; onFire = 0; };
+//	class Object479 { type = "Land_Misc_Rubble_EP1"; position[] = {4714.51, 2586.34, 0}; direction = 259; onFire = 0; };
 	class Object480 { type = "Rubbish3"; position[] = {4710.59, 2584.27, 0}; direction = 28; onFire = 0; };
 	class Object481 { type = "HMMWVWreck"; position[] = {4705.95, 2583.05, 0}; direction = 28; onFire = 0; };
 	class Object482 { type = "Body2"; position[] = {4696.97, 2579.24, 0}; direction = 178; onFire = 0; };
 	class Object483 { type = "Body2"; position[] = {4700.25, 2586.41, 0}; direction = 275; onFire = 0; };
 	class Object484 { type = "Rubbish2"; position[] = {5177.3, 2354.61, 0}; direction = 188; onFire = 0; };
 	class Object485 { type = "Rubbish5"; position[] = {4702.81, 2590.22, 0}; direction = 28; onFire = 0; };
-	class Object486 { type = "Land_Misc_Rubble_EP1"; position[] = {4708.34, 2598.17, 0}; direction = 107; onFire = 0; };
+//	class Object486 { type = "Land_Misc_Rubble_EP1"; position[] = {4708.34, 2598.17, 0}; direction = 107; onFire = 0; };
 	class Object487 { type = "Rubbish1"; position[] = {4703.3, 2594.31, 0}; direction = 28; onFire = 0; };
-	class Object488 { type = "Land_Misc_Rubble_EP1"; position[] = {5175.71, 2322.1, 0}; direction = 313; onFire = 0; };
+//	class Object488 { type = "Land_Misc_Rubble_EP1"; position[] = {5175.71, 2322.1, 0}; direction = 313; onFire = 0; };
 	class Object489 { type = "Rubbish2"; position[] = {5187.92, 2302.83, 0}; direction = 188; onFire = 0; };
 	class Object490 { type = "Body1"; position[] = {4684.15, 2607.68, 0}; direction = 211; onFire = 0; };
 	class Object491 { type = "Body1"; position[] = {4686.17, 2612.19, 0}; direction = 211; onFire = 0; };
@@ -513,14 +524,14 @@ class NorthernAirport {
 	position[] = {4756,10188};
 	size = 670;
 		
-	class Object0 { type = "Land_Misc_Rubble_EP1"; position[] = {4725.02, 10213.7, 0}; direction = 343; onFire = 0; };
+//	class Object0 { type = "Land_Misc_Rubble_EP1"; position[] = {4725.02, 10213.7, 0}; direction = 343; onFire = 0; };
 	class Object1 { type = "Rubbish1"; position[] = {4731.03, 10211.7, 0}; direction = 264; onFire = 0; };
 	class Object2 { type = "Rubbish5"; position[] = {4734.7, 10213.6, 0}; direction = 264; onFire = 0; };
 	class Object3 { type = "Body2"; position[] = {4739.29, 10213.6, 0}; direction = 151; onFire = 0; };
 	class Object4 { type = "Body2"; position[] = {4747.07, 10214.9, 0}; direction = 54; onFire = 0; };
 	class Object5 { type = "HMMWVWreck"; position[] = {4738.87, 10220.2, 0}; direction = 264; onFire = 0; };
 	class Object6 { type = "Rubbish3"; position[] = {4735.28, 10223.3, 0}; direction = 264; onFire = 0; };
-	class Object7 { type = "Land_Misc_Rubble_EP1"; position[] = {4731.37, 10225.4, 0}; direction = 135; onFire = 0; };
+//	class Object7 { type = "Land_Misc_Rubble_EP1"; position[] = {4731.37, 10225.4, 0}; direction = 135; onFire = 0; };
 	class Object8 { type = "Body1"; position[] = {4742.12, 10231.1, 0}; direction = 309; onFire = 0; };
 	class Object9 { type = "Body1"; position[] = {4753.78, 10225.2, 0}; direction = 309; onFire = 0; };
 	class Object10 { type = "Body1"; position[] = {4748.25, 10231.3, 0}; direction = 271; onFire = 0; };
@@ -536,7 +547,7 @@ class NorthernAirport {
 	class Object20 { type = "Rubbish2"; position[] = {4766.22, 10248.1, 0}; direction = 343; onFire = 0; };
 	class Object21 { type = "Body1"; position[] = {4597.77, 10014.8, 0}; direction = 321; onFire = 0; };
 	class Object22 { type = "Body1"; position[] = {4587.56, 10022.9, 0}; direction = 321; onFire = 0; };
-	class Object23 { type = "Land_Misc_Rubble_EP1"; position[] = {4763.25, 10257, 0}; direction = 343; onFire = 0; };
+//	class Object23 { type = "Land_Misc_Rubble_EP1"; position[] = {4763.25, 10257, 0}; direction = 343; onFire = 0; };
 	class Object24 { type = "Rubbish1"; position[] = {4756.76, 10261.2, 0}; direction = 343; onFire = 0; };
 	class Object25 { type = "Body1"; position[] = {4795.61, 10235.7, 0}; direction = 359; onFire = 0; };
 	class Object26 { type = "Body1"; position[] = {4584.37, 10016.8, 0}; direction = 258; onFire = 0; };
@@ -544,7 +555,7 @@ class NorthernAirport {
 	class Object28 { type = "Body2"; position[] = {4589.1, 10006, 0}; direction = 65; onFire = 0; };
 	class Object29 { type = "Rubbish1"; position[] = {4728.41, 10291.5, 0}; direction = 297; onFire = 0; };
 	class Object30 { type = "Rubbish4"; position[] = {4723.24, 10301.2, 0}; direction = 281; onFire = 0; };
-	class Object31 { type = "Land_Misc_Rubble_EP1"; position[] = {4813.56, 10258.4, 0}; direction = 343; onFire = 0; };
+//	class Object31 { type = "Land_Misc_Rubble_EP1"; position[] = {4813.56, 10258.4, 0}; direction = 343; onFire = 0; };
 	class Object32 { type = "UAZWreck"; position[] = {4841.8, 10245.1, 0}; direction = 211; onFire = 0; };
 	class Object33 { type = "Mass_grave"; position[] = {4800.99, 10284.6, 0}; direction = 343; onFire = 0; };
 	class Object34 { type = "HMMWVWreck"; position[] = {4732.44, 10319.6, 0}; direction = 34; onFire = 0; };
@@ -623,17 +634,17 @@ class GreenMountain {
 	class Object0 { type = "Body1"; position[] = {3748.33, 5995.25, 0}; direction = 282; onFire = 0; };
 	class Object1 { type = "HMMWVWreck"; position[] = {3738.88, 5996.41, 0}; direction = 343; onFire = 0; };
 	class Object2 { type = "Rubbish1"; position[] = {3735.95, 5998.42, 0}; direction = 343; onFire = 0; };
-	class Object3 { type = "Land_Misc_Rubble_EP1"; position[] = {3733.44, 6003.62, 0}; direction = 135; onFire = 0; };
+//	class Object3 { type = "Land_Misc_Rubble_EP1"; position[] = {3733.44, 6003.62, 0}; direction = 135; onFire = 0; };
 	class Object4 { type = "Body2"; position[] = {3729.47, 6002.45, 0}; direction = 357; onFire = 0; };
 	class Object5 { type = "Body1"; position[] = {3727.15, 6001.17, 0}; direction = 270; onFire = 0; };
 	class Object6 { type = "Body1"; position[] = {3725.28, 6005.55, 0}; direction = 39; onFire = 0; };
 	class Object7 { type = "Body1"; position[] = {3721.01, 6011.19, 0}; direction = 335; onFire = 0; };
-	class Object8 { type = "Land_Misc_Rubble_EP1"; position[] = {3719.09, 5995.13, 0}; direction = 343; onFire = 0; };
+//	class Object8 { type = "Land_Misc_Rubble_EP1"; position[] = {3719.09, 5995.13, 0}; direction = 343; onFire = 0; };
 	class Object9 { type = "Rubbish2"; position[] = {3722.29, 6016.17, 0}; direction = 343; onFire = 0; };
 	class Object10 { type = "Body2"; position[] = {3723.85, 5979.43, 0}; direction = 357; onFire = 0; };
 	class Object11 { type = "Body2"; position[] = {3716.53, 5999.96, 0}; direction = 151; onFire = 0; };
 	class Object12 { type = "Body2"; position[] = {3715.25, 5996.87, 0}; direction = 357; onFire = 0; };
-	class Object13 { type = "Land_Misc_Rubble_EP1"; position[] = {3721.97, 6023.59, 0}; direction = 343; onFire = 0; };
+//	class Object13 { type = "Land_Misc_Rubble_EP1"; position[] = {3721.97, 6023.59, 0}; direction = 343; onFire = 0; };
 	class Object14 { type = "Body1"; position[] = {3713.27, 6000.78, 0}; direction = 251; onFire = 0; };
 	class Object15 { type = "Body1"; position[] = {3719.74, 6026.16, 0}; direction = 359; onFire = 0; };
 	class Object16 { type = "Body2"; position[] = {3711.23, 5998.11, 0}; direction = 65; onFire = 0; };
@@ -649,8 +660,8 @@ class GreenMountain {
 	class Object26 { type = "UralWreck"; position[] = {3708.06, 5966.81, 0}; direction = 229; onFire = 0; };
 	class Object27 { type = "UAZWreck"; position[] = {3697.58, 6000.81, 0}; direction = 276; onFire = 1; };
 	class Object28 { type = "UralWreck"; position[] = {3702.44, 5974.46, 0}; direction = 168; onFire = 0.1; };
-	class Object29 { type = "Land_Misc_Rubble_EP1"; position[] = {3699.06, 5973.82, 0}; direction = 343; onFire = 0; };
-	class Object30 { type = "Land_Misc_Rubble_EP1"; position[] = {3691.69, 5990.69, 0}; direction = 343; onFire = 0; };
+//	class Object29 { type = "Land_Misc_Rubble_EP1"; position[] = {3699.06, 5973.82, 0}; direction = 343; onFire = 0; };
+//	class Object30 { type = "Land_Misc_Rubble_EP1"; position[] = {3691.69, 5990.69, 0}; direction = 343; onFire = 0; };
 	class Object31 { type = "Mass_grave"; position[] = {3694.77, 5961.83, 0}; direction = 343; onFire = 0; };
 	class Object32 { type = "Body1"; position[] = {3962.5, 5811.43, 0}; direction = 1; onFire = 0; };
 	class Object33 { type = "Fort_RazorWire"; position[] = {3959.66, 5807.06, 0}; direction = 327; onFire = 0; };
@@ -733,7 +744,7 @@ class Chernogorsk {
 	class Object60 { type = "UAZWreck"; position[] = {6303.48, 3763.96, 0}; direction = 109; onFire = 3.08967; };
 	class Object61 { type = "Fort_Barricade"; position[] = {6376.48, 2405.84, 0}; direction = 115; onFire = 0; };
 	class Object62 { type = "hiluxWreck"; position[] = {7220.14, 3296.28, 0}; direction = 61; onFire = 0; };
-	class Object63 { type = "Land_Misc_Rubble_EP1"; position[] = {6664.42, 2323.77, 0}; direction = 218; onFire = 0; };
+//	class Object63 { type = "Land_Misc_Rubble_EP1"; position[] = {6664.42, 2323.77, 0}; direction = 218; onFire = 0; };
 	class Object64 { type = "Rubbish2"; position[] = {7278.35, 2250.66, 0}; direction = 168; onFire = 0; };
 	class Object65 { type = "SKODAWreck"; position[] = {7252.44, 2796.55, 0}; direction = 327; onFire = 0; };
 	class Object66 { type = "datsun01Wreck"; position[] = {6874.42, 2751.83, 0}; direction = 309; onFire = 0; };
@@ -765,7 +776,7 @@ class Chernogorsk {
 	class Object92 { type = "datsun01Wreck"; position[] = {6784.78, 2768.1, 0}; direction = 317; onFire = 0.125076; };
 	class Object93 { type = "Land_CncBlock_D"; position[] = {6740.34, 2977.21, 0}; direction = 142; onFire = 0; };
 	class Object94 { type = "Rubbish3"; position[] = {7093.29, 3235.53, 0}; direction = 69; onFire = 0; };
-	class Object95 { type = "Land_Misc_Rubble_EP1"; position[] = {7052.51, 2749.54, 0}; direction = 317; onFire = 0; };
+//	class Object95 { type = "Land_Misc_Rubble_EP1"; position[] = {7052.51, 2749.54, 0}; direction = 317; onFire = 0; };
 	class Object96 { type = "Rubbish5"; position[] = {7047.1, 2747.21, 0}; direction = 313; onFire = 0; };
 	class Object97 { type = "UAZWreck"; position[] = {6944.61, 2718.84, 0}; direction = 65; onFire = 0; };
 	class Object98 { type = "SKODAWreck"; position[] = {6655.1, 2321.99, 0}; direction = 27; onFire = 0; };
@@ -791,7 +802,7 @@ class Chernogorsk {
 	class Object118 { type = "Rubbish3"; position[] = {7106.84, 3244.4, 0}; direction = 66; onFire = 0; };
 	class Object119 { type = "Rubbish2"; position[] = {7005.24, 2808.2, 0}; direction = 148; onFire = 0; };
 	class Object120 { type = "UralWreck"; position[] = {6111.03, 3645.12, 0}; direction = 132; onFire = 0; };
-	class Object121 { type = "Land_Misc_Rubble_EP1"; position[] = {6870.25, 2688.08, 0}; direction = 139; onFire = 0; };
+//	class Object121 { type = "Land_Misc_Rubble_EP1"; position[] = {6870.25, 2688.08, 0}; direction = 139; onFire = 0; };
 	class Object122 { type = "Rubbish1"; position[] = {7275.03, 3315.09, 0}; direction = 72; onFire = 0; };
 	class Object123 { type = "Fort_Barricade"; position[] = {6346.73, 3311.88, 0}; direction = 143; onFire = 0; };
 	class Object124 { type = "Rubbish2"; position[] = {7262.85, 3317.39, 0}; direction = 71; onFire = 0; };
@@ -819,7 +830,7 @@ class Chernogorsk {
 	class Object146 { type = "HMMWVWreck"; position[] = {6798.54, 2759.97, 0}; direction = 303; onFire = 0; };
 	class Object147 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {6620.32, 2273.62, 0}; direction = 344; onFire = 0; };
 	class Object148 { type = "UAZWreck"; position[] = {6985.87, 2836.94, 0}; direction = 327; onFire = 0; };
-	class Object149 { type = "Land_Misc_Rubble_EP1"; position[] = {6605.01, 2258.79, 0}; direction = 251; onFire = 0; };
+//	class Object149 { type = "Land_Misc_Rubble_EP1"; position[] = {6605.01, 2258.79, 0}; direction = 251; onFire = 0; };
 	class Object150 { type = "hiluxWreck"; position[] = {6440.02, 3703.76, 0}; direction = 129; onFire = 0; };
 	class Object151 { type = "UralWreck"; position[] = {6633, 2265.81, 0}; direction = 256; onFire = 0; };
 	class Object152 { type = "SKODAWreck"; position[] = {6091.1, 3659.18, 0}; direction = 301; onFire = 0; };
@@ -827,7 +838,7 @@ class Chernogorsk {
 	class Object154 { type = "UralWreck"; position[] = {5823.48, 2168.43, 0}; direction = 69; onFire = 0; };
 	class Object155 { type = "Fort_Barricade"; position[] = {6809.76, 2748.64, 0}; direction = 317; onFire = 0; };
 	class Object156 { type = "datsun01Wreck"; position[] = {7289.92, 2759.47, 0}; direction = 121; onFire = 0; };
-	class Object157 { type = "Land_Misc_Rubble_EP1"; position[] = {6919.14, 2705.88, 0}; direction = 54; onFire = 0; };
+//	class Object157 { type = "Land_Misc_Rubble_EP1"; position[] = {6919.14, 2705.88, 0}; direction = 54; onFire = 0; };
 	class Object158 { type = "hiluxWreck"; position[] = {6990.73, 2763.52, 0}; direction = 229; onFire = 0; };
 	class Object159 { type = "datsun02Wreck"; position[] = {6294.29, 2464.64, 0}; direction = 151; onFire = 0; };
 	class Object160 { type = "UralWreck"; position[] = {5715.79, 3037.77, 0}; direction = 72; onFire = 0; };
@@ -858,8 +869,8 @@ class Chernogorsk {
 	class Object185 { type = "Rubbish4"; position[] = {7278.18, 2771.44, 0}; direction = 305; onFire = 0; };
 	class Object186 { type = "Rubbish1"; position[] = {6602.34, 2416.35, 0}; direction = 124; onFire = 0; };
 	class Object187 { type = "Rubbish2"; position[] = {6531.53, 2338.25, 0}; direction = 218; onFire = 0; };
-	class Object188 { type = "Land_Misc_Rubble_EP1"; position[] = {7291.91, 2764.18, 0}; direction = 127; onFire = 0; };
-	class Object189 { type = "Land_Misc_Rubble_EP1"; position[] = {6367.67, 3752.8, 0}; direction = 287; onFire = 0; };
+//	class Object188 { type = "Land_Misc_Rubble_EP1"; position[] = {7291.91, 2764.18, 0}; direction = 127; onFire = 0; };
+//	class Object189 { type = "Land_Misc_Rubble_EP1"; position[] = {6367.67, 3752.8, 0}; direction = 287; onFire = 0; };
 	class Object190 { type = "Rubbish2"; position[] = {6494.96, 2306.32, 0}; direction = 314; onFire = 0; };
 	class Object191 { type = "Fort_Barricade"; position[] = {7277.28, 2250, 0}; direction = 160; onFire = 0; };
 	class Object192 { type = "Fort_Barricade"; position[] = {7092.35, 3241.64, 0}; direction = 54; onFire = 0; };
@@ -867,7 +878,7 @@ class Chernogorsk {
 	class Object194 { type = "Land_CncBlock_Stripes"; position[] = {6448.65, 2366.36, 0}; direction = 214; onFire = 0; };
 	class Object195 { type = "hiluxWreck"; position[] = {6367.65, 3278.7, 0}; direction = 139; onFire = 0; };
 	class Object196 { type = "UralWreck"; position[] = {7729.8, 3251.99, 0}; direction = 161; onFire = 0; };
-	class Object197 { type = "Land_Misc_Rubble_EP1"; position[] = {6864.66, 2700.8, 0}; direction = 141; onFire = 0; };
+//	class Object197 { type = "Land_Misc_Rubble_EP1"; position[] = {6864.66, 2700.8, 0}; direction = 141; onFire = 0; };
 	class Object198 { type = "Land_CncBlock_D"; position[] = {6877.69, 2684.1, 0}; direction = 139; onFire = 0; };
 	class Object199 { type = "datsun01Wreck"; position[] = {6607.67, 2293.5, 0}; direction = 127; onFire = 0; };
 	class Object200 { type = "UralWreck"; position[] = {6995.98, 2729.35, 0}; direction = 137; onFire = 0; };
@@ -900,7 +911,7 @@ class Cherno_factory {
 	class Object17 { type = "Rubbish3"; position[] = {6673.91, 2855.2, 0}; direction = 52; onFire = 0; };
 	class Object18 { type = "HMMWVWreck"; position[] = {6558.13, 2857.74, 0}; direction = 38; onFire = 0; };
 	class Object19 { type = "Rubbish5"; position[] = {6520.42, 2697.01, 0}; direction = 307; onFire = 0; };
-	class Object20 { type = "Land_Misc_Rubble_EP1"; position[] = {6651.34, 2939.62, 0}; direction = 62; onFire = 0; };
+//	class Object20 { type = "Land_Misc_Rubble_EP1"; position[] = {6651.34, 2939.62, 0}; direction = 62; onFire = 0; };
 	class Object21 { type = "hiluxWreck"; position[] = {6564.6, 2506.47, 0}; direction = 49; onFire = 0; };
 	class Object22 { type = "UralWreck"; position[] = {6484.88, 2657.7, 0}; direction = 33; onFire = 0; };
 	class Object23 { type = "hiluxWreck"; position[] = {6687.33, 2780.34, 0}; direction = 330; onFire = 0; };
@@ -921,7 +932,7 @@ class Cherno_factory {
 	class Object38 { type = "RoadBarrier_long"; position[] = {6544.15, 2472.89, 0}; direction = 223; onFire = 0; };
 	class Object39 { type = "Rubbish5"; position[] = {6496.84, 2788.32, 0}; direction = 211; onFire = 0; };
 	class Object40 { type = "SKODAWreck"; position[] = {6295.38, 2594.3, 0}; direction = 186; onFire = 0; };
-	class Object41 { type = "Land_Misc_Rubble_EP1"; position[] = {6669.55, 2946.95, 0}; direction = 52; onFire = 0; };
+//	class Object41 { type = "Land_Misc_Rubble_EP1"; position[] = {6669.55, 2946.95, 0}; direction = 52; onFire = 0; };
 	class Object42 { type = "UAZWreck"; position[] = {6687.67, 2674.45, 0}; direction = 50; onFire = 0; };
 	class Object43 { type = "RoadBarrier_long"; position[] = {6603.67, 2890.06, 0}; direction = 146; onFire = 0; };
 	class Object44 { type = "Fort_Barricade"; position[] = {6555.95, 2491.35, 0}; direction = 47; onFire = 0; };
@@ -935,7 +946,7 @@ class Cherno_factory {
 	class Object52 { type = "Rubbish1"; position[] = {6657.7, 2746.53, 0}; direction = 47; onFire = 0; };
 	class Object53 { type = "Land_CncBlock_Stripes"; position[] = {6501.64, 2675.19, 0}; direction = 216; onFire = 0; };
 	class Object54 { type = "Rubbish4"; position[] = {6645.38, 2539.81, 0}; direction = 125; onFire = 0; };
-	class Object55 { type = "Land_Misc_Rubble_EP1"; position[] = {6554.2, 2857.72, 0}; direction = 42; onFire = 0; };
+//	class Object55 { type = "Land_Misc_Rubble_EP1"; position[] = {6554.2, 2857.72, 0}; direction = 42; onFire = 0; };
 	class Object56 { type = "Land_CncBlock_Stripes"; position[] = {6288.29, 2622.81, 0}; direction = 319; onFire = 0; };
 	class Object57 { type = "SKODAWreck"; position[] = {6568.97, 2762.2, 0}; direction = 39; onFire = 0; };
 	class Object58 { type = "Rubbish3"; position[] = {6493.48, 2624.04, 0}; direction = 301; onFire = 0; };
@@ -985,10 +996,10 @@ class Cherno_factory {
 	class Object102 { type = "UralWreck"; position[] = {6611.37, 2719.43, 0}; direction = 309; onFire = 0; };
 	class Object103 { type = "Fort_Barricade"; position[] = {6690.62, 2678.84, 0}; direction = 213; onFire = 0; };
 	class Object104 { type = "Rubbish2"; position[] = {6566.06, 2502.93, 0}; direction = 47; onFire = 0; };
-	class Object105 { type = "Land_Misc_Rubble_EP1"; position[] = {6518.89, 2635.91, 0}; direction = 45; onFire = 0; };
+//	class Object105 { type = "Land_Misc_Rubble_EP1"; position[] = {6518.89, 2635.91, 0}; direction = 45; onFire = 0; };
 	class Object106 { type = "RoadBarrier_long"; position[] = {6508.44, 2619.55, 0}; direction = 47; onFire = 0; };
 	class Object107 { type = "Rubbish2"; position[] = {6517.06, 2791.28, 0}; direction = 124; onFire = 0; };
-	class Object108 { type = "Land_Misc_Rubble_EP1"; position[] = {6480.3, 2661.36, 0}; direction = 31; onFire = 0; };
+//	class Object108 { type = "Land_Misc_Rubble_EP1"; position[] = {6480.3, 2661.36, 0}; direction = 31; onFire = 0; };
 	class Object109 { type = "datsun01Wreck"; position[] = {6650.6, 2542.12, 0}; direction = 39; onFire = 0; };
 	class Object110 { type = "Land_CncBlock_Stripes"; position[] = {6498.65, 2498.57, 0}; direction = 139; onFire = 0; };
 	class Object111 { type = "UralWreck"; position[] = {6419.36, 2541.95, 0}; direction = 228; onFire = 0; };
@@ -997,7 +1008,7 @@ class Cherno_factory {
 	class Object114 { type = "Rubbish1"; position[] = {6599.63, 2727.91, 0}; direction = 317; onFire = 0; };
 	class Object115 { type = "Rubbish2"; position[] = {6650.85, 2540.72, 0}; direction = 35; onFire = 0; };
 	class Object116 { type = "HMMWVWreck"; position[] = {6671.43, 2759.08, 0}; direction = 228; onFire = 0; };
-	class Object117 { type = "Land_Misc_Rubble_EP1"; position[] = {6522.22, 2821.68, 0}; direction = 36; onFire = 0; };
+//	class Object117 { type = "Land_Misc_Rubble_EP1"; position[] = {6522.22, 2821.68, 0}; direction = 36; onFire = 0; };
 	class Object118 { type = "datsun01Wreck"; position[] = {6405.35, 2529.23, 0}; direction = 234; onFire = 1.2346; };
 	class Object119 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {6700.06, 2605.87, 0}; direction = 207; onFire = 0; };
 	class Object120 { type = "SKODAWreck"; position[] = {6559.96, 2594.25, 0}; direction = 212; onFire = 2.8452; };
@@ -1009,11 +1020,11 @@ class Cherno_factory {
 	class Object126 { type = "datsun01Wreck"; position[] = {6682.29, 2960.85, 0}; direction = 57; onFire = 1.76958; };
 	class Object127 { type = "Land_CncBlock_D"; position[] = {6549.87, 2516.96, 0}; direction = 128; onFire = 0; };
 	class Object128 { type = "Rubbish2"; position[] = {6494.22, 2787.75, 0}; direction = 215; onFire = 0; };
-	class Object129 { type = "Land_Misc_Rubble_EP1"; position[] = {6476.02, 2511.1, 0}; direction = 134; onFire = 0; };
+//	class Object129 { type = "Land_Misc_Rubble_EP1"; position[] = {6476.02, 2511.1, 0}; direction = 134; onFire = 0; };
 	class Object130 { type = "hiluxWreck"; position[] = {6617, 2596.16, 0}; direction = 226; onFire = 0; };
 	class Object131 { type = "RoadBarrier_long"; position[] = {6681.94, 2957.63, 0}; direction = 63; onFire = 0; };
 	class Object132 { type = "datsun02Wreck"; position[] = {6486.38, 2504.92, 0}; direction = 301; onFire = 0; };
-	class Object133 { type = "Land_Misc_Rubble_EP1"; position[] = {6541.54, 2543.57, 0}; direction = 182; onFire = 0; };
+//	class Object133 { type = "Land_Misc_Rubble_EP1"; position[] = {6541.54, 2543.57, 0}; direction = 182; onFire = 0; };
 	class Object134 { type = "Land_CncBlock_D"; position[] = {6577.62, 2511.45, 0}; direction = 32; onFire = 0; };
 	class Object135 { type = "UAZWreck"; position[] = {6624.71, 2860.45, 0}; direction = 324; onFire = 0; };
 	class Object136 { type = "RoadBarrier_long"; position[] = {6613.24, 2557.17, 0}; direction = 132; onFire = 0; };
@@ -1197,7 +1208,7 @@ class Cherno_docks {
 	class Object156 { type = "Rubbish5"; position[] = {6972.97, 2402.53, 0}; direction = 49; onFire = 0; };
 	class Object157 { type = "SKODAWreck"; position[] = {6778.07, 2449.39, 0}; direction = 220; onFire = 0; };
 	class Object158 { type = "datsun01Wreck"; position[] = {7041.55, 2401.92, 0}; direction = 55; onFire = 0; };
-	class Object159 { type = "Land_Misc_Rubble_EP1"; position[] = {6993.97, 2163.09, 0}; direction = 258; onFire = 0; };
+//	class Object159 { type = "Land_Misc_Rubble_EP1"; position[] = {6993.97, 2163.09, 0}; direction = 258; onFire = 0; };
 	class Object160 { type = "SKODAWreck"; position[] = {6837.19, 2513.36, 0}; direction = 220; onFire = 2.97247; };
 	class Object161 { type = "UralWreck"; position[] = {7262.22, 2367.43, 0}; direction = 179; onFire = 0; };
 	class Object162 { type = "RoadBarrier_long"; position[] = {7193.58, 2472.92, 0}; direction = 318; onFire = 0; };
@@ -1219,7 +1230,7 @@ class Cherno_docks {
 	class Object178 { type = "datsun01Wreck"; position[] = {7063.38, 2596.89, 0}; direction = 321; onFire = 0; };
 	class Object179 { type = "SKODAWreck"; position[] = {7069.03, 2662.62, 0}; direction = 43; onFire = 0; };
 	class Object180 { type = "datsun01Wreck"; position[] = {6981.32, 2166.38, 0}; direction = 268; onFire = 0; };
-	class Object181 { type = "Land_Misc_Rubble_EP1"; position[] = {6930.41, 2519.76, 0}; direction = 236; onFire = 0; };
+//	class Object181 { type = "Land_Misc_Rubble_EP1"; position[] = {6930.41, 2519.76, 0}; direction = 236; onFire = 0; };
 	class Object182 { type = "Rubbish4"; position[] = {6847.5, 2473.17, 0}; direction = 330; onFire = 0; };
 	class Object183 { type = "Land_CncBlock_Stripes"; position[] = {7133.49, 2185.47, 0}; direction = 266; onFire = 0; };
 	class Object184 { type = "UAZWreck"; position[] = {6981.96, 2676.91, 0}; direction = 321; onFire = 0; };
@@ -1227,7 +1238,7 @@ class Cherno_docks {
 	class Object186 { type = "Land_CncBlock_Stripes"; position[] = {7120.03, 2559.46, 0}; direction = 57; onFire = 0; };
 	class Object187 { type = "Rubbish3"; position[] = {6927.57, 2548.36, 0}; direction = 325; onFire = 0; };
 	class Object188 { type = "hiluxWreck"; position[] = {6859.2, 2471.48, 0}; direction = 52; onFire = 2.26611; };
-	class Object189 { type = "Land_Misc_Rubble_EP1"; position[] = {6820.02, 2390.91, 0}; direction = 135; onFire = 0; };
+//	class Object189 { type = "Land_Misc_Rubble_EP1"; position[] = {6820.02, 2390.91, 0}; direction = 135; onFire = 0; };
 	class Object190 { type = "UralWreck"; position[] = {6926.86, 2555.86, 0}; direction = 317; onFire = 0; };
 	class Object191 { type = "UralWreck"; position[] = {6776.32, 2348.43, 0}; direction = 347; onFire = 0; };
 	class Object192 { type = "hiluxWreck"; position[] = {6846.88, 2348.01, 0}; direction = 46; onFire = 0; };
@@ -1265,7 +1276,7 @@ class Cherno_docks {
 	class Object224 { type = "datsun02Wreck"; position[] = {7054.37, 2410.88, 0}; direction = 60; onFire = 0; };
 	class Object225 { type = "HMMWVWreck"; position[] = {6822.38, 2328.59, 0}; direction = 239; onFire = 0.234307; };
 	class Object226 { type = "Fort_Barricade"; position[] = {6834.31, 2368.19, 0}; direction = 317; onFire = 0; };
-	class Object227 { type = "Land_Misc_Rubble_EP1"; position[] = {6931.99, 2550, 0}; direction = 313; onFire = 0; };
+//	class Object227 { type = "Land_Misc_Rubble_EP1"; position[] = {6931.99, 2550, 0}; direction = 313; onFire = 0; };
 	class Object228 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {6789.51, 2421.12, 0}; direction = 141; onFire = 0; };
 	class Object229 { type = "Rubbish2"; position[] = {6833.9, 2335.86, 0}; direction = 230; onFire = 0; };
 	class Object230 { type = "datsun01Wreck"; position[] = {6859.52, 2424.61, 0}; direction = 240; onFire = 0; };
@@ -1280,7 +1291,7 @@ class Cherno_docks {
 	class Object239 { type = "Fort_Barricade"; position[] = {6814.66, 2328.14, 0}; direction = 225; onFire = 0; };
 	class Object240 { type = "Rubbish4"; position[] = {7095, 2533.87, 0}; direction = 44; onFire = 0; };
 	class Object241 { type = "SKODAWreck"; position[] = {7033.45, 2409.24, 0}; direction = 146; onFire = 0; };
-	class Object242 { type = "Land_Misc_Rubble_EP1"; position[] = {7051.98, 2617.25, 0}; direction = 325; onFire = 0; };
+//	class Object242 { type = "Land_Misc_Rubble_EP1"; position[] = {7051.98, 2617.25, 0}; direction = 325; onFire = 0; };
 	class Object243 { type = "RoadBarrier_long"; position[] = {6767.18, 2399.64, 0}; direction = 310; onFire = 0; };
 	class Object244 { type = "SKODAWreck"; position[] = {6945.92, 2372.39, 0}; direction = 240; onFire = 0; };
 	class Object245 { type = "UralWreck"; position[] = {7219.88, 2266.16, 0}; direction = 266; onFire = 0; };
@@ -1315,10 +1326,10 @@ class Balota {
 		
 	class Object0 { type = "hiluxWreck"; position[] = {4427.69, 2487.55, 0}; direction = 294; onFire = 0; };
 	class Object1 { type = "Rubbish2"; position[] = {4618.18, 2610.13, 0}; direction = 95; onFire = 0; };
-	class Object2 { type = "Land_Misc_Rubble_EP1"; position[] = {4502.19, 2456.29, 0}; direction = 279; onFire = 0; };
+//	class Object2 { type = "Land_Misc_Rubble_EP1"; position[] = {4502.19, 2456.29, 0}; direction = 279; onFire = 0; };
 	class Object3 { type = "UralWreck"; position[] = {4821.26, 2520.95, 0}; direction = 127; onFire = 0; };
 	class Object4 { type = "Rubbish2"; position[] = {4458.05, 2471.88, 0}; direction = 284; onFire = 0; };
-	class Object5 { type = "Land_Misc_Rubble_EP1"; position[] = {4863.92, 2852.91, 0}; direction = 146; onFire = 0; };
+//	class Object5 { type = "Land_Misc_Rubble_EP1"; position[] = {4863.92, 2852.91, 0}; direction = 146; onFire = 0; };
 	class Object6 { type = "SKODAWreck"; position[] = {4523.71, 2412.91, 0}; direction = 337; onFire = 0; };
 	class Object7 { type = "Fort_Barricade"; position[] = {4524.84, 2441.63, 0}; direction = 291; onFire = 0; };
 	class Object8 { type = "HMMWVWreck"; position[] = {4379.19, 2252.64, 0}; direction = 22; onFire = 0; };
@@ -1330,7 +1341,7 @@ class Balota {
 	class Object14 { type = "Rubbish2"; position[] = {4539.87, 2501.21, 0}; direction = 58; onFire = 0; };
 	class Object15 { type = "Rubbish5"; position[] = {4503.05, 2453.07, 0}; direction = 292; onFire = 0; };
 	class Object16 { type = "UAZWreck"; position[] = {4566.98, 2528.11, 0}; direction = 51; onFire = 0; };
-	class Object17 { type = "Land_Misc_Rubble_EP1"; position[] = {4941.83, 2835.23, 0}; direction = 60; onFire = 0; };
+//	class Object17 { type = "Land_Misc_Rubble_EP1"; position[] = {4941.83, 2835.23, 0}; direction = 60; onFire = 0; };
 	class Object18 { type = "Rubbish3"; position[] = {4555.45, 2519.7, 0}; direction = 213; onFire = 0; };
 	class Object19 { type = "UralWreck"; position[] = {4484.99, 2425.51, 0}; direction = 233; onFire = 0; };
 	class Object20 { type = "Rubbish1"; position[] = {4471.79, 2466.56, 0}; direction = 292; onFire = 0; };
@@ -1340,7 +1351,7 @@ class Balota {
 	class Object24 { type = "RoadBarrier_long"; position[] = {4927.33, 2825.52, 0}; direction = 49; onFire = 0; };
 	class Object25 { type = "Land_CncBlock_Stripes"; position[] = {4558.37, 2516.57, 0}; direction = 216; onFire = 0; };
 	class Object26 { type = "Rubbish3"; position[] = {4579.39, 2533.56, 0}; direction = 35; onFire = 0; };
-	class Object27 { type = "Land_Misc_Rubble_EP1"; position[] = {4387.24, 2260.17, 0}; direction = 35; onFire = 0; };
+//	class Object27 { type = "Land_Misc_Rubble_EP1"; position[] = {4387.24, 2260.17, 0}; direction = 35; onFire = 0; };
 	class Object28 { type = "SKODAWreck"; position[] = {4454.48, 2468.55, 0}; direction = 299; onFire = 0; };
 	class Object29 { type = "Land_CncBlock_D"; position[] = {4592.74, 2731.34, 0}; direction = 350; onFire = 0; };
 	class Object30 { type = "Misc_Cargo1Bo_military"; position[] = {4778.78, 2590.21, 0}; direction = 129; onFire = 0; };
@@ -1351,7 +1362,7 @@ class Balota {
 	class Object35 { type = "Rubbish2"; position[] = {4888.64, 2803.4, 0}; direction = 62; onFire = 0; };
 	class Object36 { type = "Fort_Barricade"; position[] = {4589.1, 2564.13, 0}; direction = 333; onFire = 0; };
 	class Object37 { type = "SKODAWreck"; position[] = {4490.68, 2436.27, 0}; direction = 189; onFire = 0; };
-	class Object38 { type = "Land_Misc_Rubble_EP1"; position[] = {4880.56, 2819.01, 0}; direction = 319; onFire = 0; };
+//	class Object38 { type = "Land_Misc_Rubble_EP1"; position[] = {4880.56, 2819.01, 0}; direction = 319; onFire = 0; };
 	class Object39 { type = "datsun02Wreck"; position[] = {4558.23, 2513.95, 0}; direction = 216; onFire = 0; };
 	class Object40 { type = "SKODAWreck"; position[] = {4469.54, 2407.02, 0}; direction = 9; onFire = 0; };
 	class Object41 { type = "Rubbish3"; position[] = {4369.7, 2519.59, 0}; direction = 292; onFire = 0; };
@@ -1359,7 +1370,7 @@ class Balota {
 	class Object43 { type = "Misc_Cargo1Bo_military"; position[] = {4680.98, 2602.59, 0}; direction = 298; onFire = 0; };
 	class Object44 { type = "datsun01Wreck"; position[] = {4538.1, 2503.94, 0}; direction = 47; onFire = 0; };
 	class Object45 { type = "SKODAWreck"; position[] = {4526.27, 2395.89, 0}; direction = 158; onFire = 0; };
-	class Object46 { type = "Land_Misc_Rubble_EP1"; position[] = {4538.44, 2499.11, 0}; direction = 65; onFire = 0; };
+//	class Object46 { type = "Land_Misc_Rubble_EP1"; position[] = {4538.44, 2499.11, 0}; direction = 65; onFire = 0; };
 	class Object47 { type = "Rubbish4"; position[] = {4536.16, 2386.25, 0}; direction = 317; onFire = 0; };
 	class Object48 { type = "Rubbish3"; position[] = {4501.29, 2455.92, 0}; direction = 281; onFire = 0; };
 	class Object49 { type = "Rubbish1"; position[] = {4684.31, 2601.13, 0}; direction = 312; onFire = 0; };
@@ -1382,7 +1393,7 @@ class Prigorodki {
 	class Object8 { type = "Rubbish2"; position[] = {8003.15, 3294.32, 0}; direction = 283; onFire = 0; };
 	class Object9 { type = "Rubbish5"; position[] = {8034.42, 3350.83, 0}; direction = 92; onFire = 0; };
 	class Object10 { type = "Fort_Barricade"; position[] = {7557.05, 3157.56, 0}; direction = 192; onFire = 0; };
-	class Object11 { type = "Land_Misc_Rubble_EP1"; position[] = {8002.92, 2900.93, 0}; direction = 88; onFire = 0; };
+//	class Object11 { type = "Land_Misc_Rubble_EP1"; position[] = {8002.92, 2900.93, 0}; direction = 88; onFire = 0; };
 	class Object12 { type = "datsun02Wreck"; position[] = {7814.67, 3517.34, 0}; direction = 82; onFire = 0; };
 	class Object13 { type = "UAZWreck"; position[] = {7957.19, 3222.56, 0}; direction = 15; onFire = 0; };
 	class Object14 { type = "hiluxWreck"; position[] = {7849.4, 3524.47, 0}; direction = 75; onFire = 0; };
@@ -1418,8 +1429,8 @@ class Prigorodki {
 	class Object44 { type = "SKODAWreck"; position[] = {8069.88, 3276.85, 0}; direction = 115; onFire = 0; };
 	class Object45 { type = "Rubbish3"; position[] = {7796.57, 3518.99, 0}; direction = 84; onFire = 0; };
 	class Object46 { type = "Rubbish1"; position[] = {7829.87, 3519.29, 0}; direction = 83; onFire = 0; };
-	class Object47 { type = "Land_Misc_Rubble_EP1"; position[] = {8060.21, 3344.07, 0}; direction = 92; onFire = 0; };
-	class Object48 { type = "Land_Misc_Rubble_EP1"; position[] = {8079.23, 3347.98, 0}; direction = 284; onFire = 0; };
+//	class Object47 { type = "Land_Misc_Rubble_EP1"; position[] = {8060.21, 3344.07, 0}; direction = 92; onFire = 0; };
+//	class Object48 { type = "Land_Misc_Rubble_EP1"; position[] = {8079.23, 3347.98, 0}; direction = 284; onFire = 0; };
 	class Object49 { type = "HMMWVWreck"; position[] = {8071.98, 3347.25, 0}; direction = 95; onFire = 0; };
 	};
 	
@@ -1431,7 +1442,7 @@ class Nadezhdino {
 		
 	class Object0 { type = "HMMWVWreck"; position[] = {5886.42, 4703.04, 0}; direction = 263; onFire = 0; };
 	class Object1 { type = "hiluxWreck"; position[] = {5849.52, 4693.75, 0}; direction = 162; onFire = 0; };
-	class Object2 { type = "Land_Misc_Rubble_EP1"; position[] = {5769.47, 4597.76, 0}; direction = 10; onFire = 0; };
+//	class Object2 { type = "Land_Misc_Rubble_EP1"; position[] = {5769.47, 4597.76, 0}; direction = 10; onFire = 0; };
 	class Object3 { type = "UAZWreck"; position[] = {5764.43, 4597.82, 0}; direction = 5; onFire = 0.452709; };
 	class Object4 { type = "HMMWVWreck"; position[] = {5908.84, 4707.96, 0}; direction = 267; onFire = 0; };
 	class Object5 { type = "UralWreck"; position[] = {5770.38, 4614.75, 0}; direction = 9; onFire = 0; };
@@ -1440,7 +1451,7 @@ class Nadezhdino {
 	class Object8 { type = "Land_CncBlock_D"; position[] = {5870.98, 4623.8, 0}; direction = 166; onFire = 0; };
 	class Object9 { type = "Land_CncBlock_Stripes"; position[] = {5857.12, 4681.62, 0}; direction = 159; onFire = 0; };
 	class Object10 { type = "SKODAWreck"; position[] = {5768.41, 4597.44, 0}; direction = 15; onFire = 0; };
-	class Object11 { type = "Land_Misc_Rubble_EP1"; position[] = {5873, 4891.42, 0}; direction = 240; onFire = 0; };
+//	class Object11 { type = "Land_Misc_Rubble_EP1"; position[] = {5873, 4891.42, 0}; direction = 240; onFire = 0; };
 	class Object12 { type = "Rubbish4"; position[] = {5877.64, 4838.13, 0}; direction = 213; onFire = 0; };
 	class Object13 { type = "UAZWreck"; position[] = {5873.36, 4701.8, 0}; direction = 281; onFire = 0; };
 	class Object14 { type = "Land_CncBlock_Stripes"; position[] = {5860.34, 4708.48, 0}; direction = 90; onFire = 0; };
@@ -1449,7 +1460,7 @@ class Nadezhdino {
 	class Object17 { type = "datsun02Wreck"; position[] = {5892.62, 4850.97, 0}; direction = 219; onFire = 0.396456; };
 	class Object18 { type = "Rubbish4"; position[] = {5894.65, 4699.69, 0}; direction = 258; onFire = 0; };
 	class Object19 { type = "RoadBarrier_long"; position[] = {5804.18, 4465.71, 0}; direction = 215; onFire = 0; };
-	class Object20 { type = "Land_Misc_Rubble_EP1"; position[] = {5854.57, 4679.94, 0}; direction = 173; onFire = 0; };
+//	class Object20 { type = "Land_Misc_Rubble_EP1"; position[] = {5854.57, 4679.94, 0}; direction = 173; onFire = 0; };
 	class Object21 { type = "Rubbish1"; position[] = {5872.8, 4924.19, 0}; direction = 154; onFire = 0; };
 	class Object22 { type = "datsun02Wreck"; position[] = {5852.38, 4808.37, 0}; direction = 202; onFire = 0; };
 	class Object23 { type = "Rubbish2"; position[] = {6078.21, 4904.72, 0}; direction = 175; onFire = 0; };
@@ -1462,18 +1473,18 @@ class Nadezhdino {
 	class Object30 { type = "Land_CncBlock_Stripes"; position[] = {5839.74, 4750.58, 0}; direction = 344; onFire = 0; };
 	class Object31 { type = "Rubbish5"; position[] = {5886.11, 4897.68, 0}; direction = 317; onFire = 0; };
 	class Object32 { type = "Rubbish4"; position[] = {5884.06, 4703.16, 0}; direction = 281; onFire = 0; };
-	class Object33 { type = "Land_Misc_Rubble_EP1"; position[] = {5878.93, 4909.82, 0}; direction = 318; onFire = 0; };
+//	class Object33 { type = "Land_Misc_Rubble_EP1"; position[] = {5878.93, 4909.82, 0}; direction = 318; onFire = 0; };
 	class Object34 { type = "datsun01Wreck"; position[] = {5853.64, 4883.83, 0}; direction = 263; onFire = 0; };
 	class Object35 { type = "Rubbish2"; position[] = {5847.16, 4708.4, 0}; direction = 163; onFire = 0; };
 	class Object36 { type = "Fort_Barricade"; position[] = {5900.17, 4889.3, 0}; direction = 134; onFire = 0; };
-	class Object37 { type = "Land_Misc_Rubble_EP1"; position[] = {5765.03, 4612.72, 0}; direction = -3; onFire = 0; };
-	class Object38 { type = "Land_Misc_Rubble_EP1"; position[] = {6075.85, 4904.41, 0}; direction = 169; onFire = 0; };
+//	class Object37 { type = "Land_Misc_Rubble_EP1"; position[] = {5765.03, 4612.72, 0}; direction = -3; onFire = 0; };
+//	class Object38 { type = "Land_Misc_Rubble_EP1"; position[] = {6075.85, 4904.41, 0}; direction = 169; onFire = 0; };
 	class Object39 { type = "SKODAWreck"; position[] = {5870.21, 4623.58, 0}; direction = 171; onFire = 0; };
 	class Object40 { type = "hiluxWreck"; position[] = {5794.44, 4453.28, 0}; direction = 214; onFire = 0; };
 	class Object41 { type = "HMMWVWreck"; position[] = {6077.73, 4875.94, 0}; direction = 168; onFire = 0; };
 	class Object42 { type = "HMMWVWreck"; position[] = {5838.81, 4766.9, 0}; direction = 1; onFire = 0; };
 	class Object43 { type = "Land_CncBlock_Stripes"; position[] = {6080.34, 4876.23, 0}; direction = 180; onFire = 0; };
-	class Object44 { type = "Land_Misc_Rubble_EP1"; position[] = {5861.97, 4598.64, 0}; direction = 207; onFire = 0; };
+//	class Object44 { type = "Land_Misc_Rubble_EP1"; position[] = {5861.97, 4598.64, 0}; direction = 207; onFire = 0; };
 	class Object45 { type = "Rubbish4"; position[] = {5907.39, 4873.1, 0}; direction = 201; onFire = 0; };
 	class Object46 { type = "datsun01Wreck"; position[] = {5830.95, 5003.68, 0}; direction = 318; onFire = 0; };
 	class Object47 { type = "SKODAWreck"; position[] = {6077.63, 4861.67, 0}; direction = 189; onFire = 0; };
@@ -1498,11 +1509,11 @@ class Komarovo {
 	class Object8 { type = "RoadBarrier_long"; position[] = {3631.39, 2224.59, 0}; direction = 194; onFire = 0; };
 	class Object9 { type = "hiluxWreck"; position[] = {3526.58, 2437.02, 0}; direction = 255; onFire = 0; };
 	class Object10 { type = "datsun01Wreck"; position[] = {3719.01, 2492.03, 0}; direction = 88; onFire = 0; };
-	class Object11 { type = "Land_Misc_Rubble_EP1"; position[] = {3616.31, 2166.35, 0}; direction = 28; onFire = 0; };
+//	class Object11 { type = "Land_Misc_Rubble_EP1"; position[] = {3616.31, 2166.35, 0}; direction = 28; onFire = 0; };
 	class Object12 { type = "UAZWreck"; position[] = {3650.08, 2432.24, 0}; direction = 155; onFire = 0; };
 	class Object13 { type = "UAZWreck"; position[] = {3626.85, 2200.27, 0}; direction = 204; onFire = 0; };
 	class Object14 { type = "datsun02Wreck"; position[] = {3646.71, 2518.07, 0}; direction = 308; onFire = 0; };
-	class Object15 { type = "Land_Misc_Rubble_EP1"; position[] = {3589.2, 2534.52, 0}; direction = 259; onFire = 0; };
+//	class Object15 { type = "Land_Misc_Rubble_EP1"; position[] = {3589.2, 2534.52, 0}; direction = 259; onFire = 0; };
 	class Object16 { type = "datsun01Wreck"; position[] = {3611.82, 2461.9, 0}; direction = 68; onFire = 0; };
 	class Object17 { type = "UAZWreck"; position[] = {3633.57, 2221.08, 0}; direction = 207; onFire = 0; };
 	class Object18 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {3548.42, 2540.14, 0}; direction = 88; onFire = 0; };
@@ -1514,12 +1525,12 @@ class Komarovo {
 	class Object24 { type = "Rubbish5"; position[] = {3652.89, 2435.99, 0}; direction = 157; onFire = 0; };
 	class Object25 { type = "UralWreck"; position[] = {3791.46, 2560.01, 0}; direction = 33; onFire = 0; };
 	class Object26 { type = "Rubbish5"; position[] = {3803.01, 2572.56, 0}; direction = 49; onFire = 0; };
-	class Object27 { type = "Land_Misc_Rubble_EP1"; position[] = {3657.03, 2475.22, 0}; direction = 245; onFire = 0; };
+//	class Object27 { type = "Land_Misc_Rubble_EP1"; position[] = {3657.03, 2475.22, 0}; direction = 245; onFire = 0; };
 	class Object28 { type = "HMMWVWreck"; position[] = {3656.66, 2479.4, 0}; direction = 258; onFire = 0; };
 	class Object29 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {3552.35, 2441.46, 0}; direction = 254; onFire = 0; };
 	class Object30 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {3654.6, 2407.08, 0}; direction = 177; onFire = 0; };
 	class Object31 { type = "RoadBarrier_long"; position[] = {3650.9, 2408.07, 0}; direction = 184; onFire = 0; };
-	class Object32 { type = "Land_Misc_Rubble_EP1"; position[] = {3648.32, 2453.38, 0}; direction = 168; onFire = 0; };
+//	class Object32 { type = "Land_Misc_Rubble_EP1"; position[] = {3648.32, 2453.38, 0}; direction = 168; onFire = 0; };
 	class Object33 { type = "HMMWVWreck"; position[] = {3666.74, 2478.28, 0}; direction = 81; onFire = 0; };
 	class Object34 { type = "UralWreck"; position[] = {3616.28, 2167.56, 0}; direction = 16; onFire = 0; };
 	class Object35 { type = "HMMWVWreck"; position[] = {3651.92, 2446.68, 0}; direction = 163; onFire = 0; };
@@ -1574,11 +1585,11 @@ class Kozlovka {
 	class Object26 { type = "hiluxWreck"; position[] = {4339.82, 4734.13, 0}; direction = 322; onFire = 0; };
 	class Object27 { type = "Rubbish3"; position[] = {4431.32, 4673.29, 0}; direction = 120; onFire = 0; };
 	class Object28 { type = "Land_CncBlock_Stripes"; position[] = {4587.29, 4378.91, 0}; direction = 131; onFire = 0; };
-	class Object29 { type = "Land_Misc_Rubble_EP1"; position[] = {4361.52, 4693.76, 0}; direction = 161; onFire = 0; };
+//	class Object29 { type = "Land_Misc_Rubble_EP1"; position[] = {4361.52, 4693.76, 0}; direction = 161; onFire = 0; };
 	class Object30 { type = "Rubbish1"; position[] = {4355.88, 4662.11, 0}; direction = 6; onFire = 0; };
 	class Object31 { type = "RoadBarrier_long"; position[] = {4362.56, 4691.32, 0}; direction = 172; onFire = 0; };
 	class Object32 { type = "Rubbish2"; position[] = {4019.83, 4736.8, 0}; direction = 322; onFire = 0; };
-	class Object33 { type = "Land_Misc_Rubble_EP1"; position[] = {4352.82, 4704.62, 0}; direction = 147; onFire = 0; };
+//	class Object33 { type = "Land_Misc_Rubble_EP1"; position[] = {4352.82, 4704.62, 0}; direction = 147; onFire = 0; };
 	class Object34 { type = "datsun02Wreck"; position[] = {4397.05, 4577.15, 0}; direction = 315; onFire = 0; };
 	class Object35 { type = "datsun02Wreck"; position[] = {4365.62, 4681.1, 0}; direction = 98; onFire = 0; };
 	class Object36 { type = "datsun01Wreck"; position[] = {4603.15, 4366.27, 0}; direction = 133; onFire = 0; };
@@ -1607,7 +1618,7 @@ class Mogilevka {
 	class Object1 { type = "Rubbish5"; position[] = {7526.49, 5143.47, 0}; direction = 263; onFire = 0; };
 	class Object2 { type = "Fort_Barricade"; position[] = {7472.03, 5137.97, 0}; direction = 71; onFire = 0; };
 	class Object3 { type = "datsun02Wreck"; position[] = {7533.87, 5144.56, 0}; direction = 257; onFire = 0; };
-	class Object4 { type = "Land_Misc_Rubble_EP1"; position[] = {7511.04, 5141.31, 0}; direction = 257; onFire = 0; };
+//	class Object4 { type = "Land_Misc_Rubble_EP1"; position[] = {7511.04, 5141.31, 0}; direction = 257; onFire = 0; };
 	class Object5 { type = "Fort_Barricade"; position[] = {7545.52, 5079.9, 0}; direction = 206; onFire = 0; };
 	class Object6 { type = "datsun01Wreck"; position[] = {7496.74, 5136.52, 0}; direction = 270; onFire = 0; };
 	class Object7 { type = "Rubbish3"; position[] = {7545.81, 5131.27, 0}; direction = 355; onFire = 0; };
@@ -1616,8 +1627,8 @@ class Mogilevka {
 	class Object10 { type = "Rubbish2"; position[] = {7688.84, 4896.86, 0}; direction = 131; onFire = 0; };
 	class Object11 { type = "Land_CncBlock_D"; position[] = {7527.93, 5046.14, 0}; direction = 18; onFire = 0; };
 	class Object12 { type = "Land_CncBlock_D"; position[] = {7539.7, 5228.98, 0}; direction = 12; onFire = 0; };
-	class Object13 { type = "Land_Misc_Rubble_EP1"; position[] = {7563.8, 5245.56, 0}; direction = 67; onFire = 0; };
-	class Object14 { type = "Land_Misc_Rubble_EP1"; position[] = {7543.68, 5149.03, 0}; direction = 341; onFire = 0; };
+//	class Object13 { type = "Land_Misc_Rubble_EP1"; position[] = {7563.8, 5245.56, 0}; direction = 67; onFire = 0; };
+//	class Object14 { type = "Land_Misc_Rubble_EP1"; position[] = {7543.68, 5149.03, 0}; direction = 341; onFire = 0; };
 	class Object15 { type = "Rubbish4"; position[] = {7450.28, 5138.44, 0}; direction = 251; onFire = 0; };
 	class Object16 { type = "Land_CncBlock_D"; position[] = {7647.22, 4924.14, 0}; direction = 129; onFire = 0; };
 	class Object17 { type = "Rubbish4"; position[] = {7537.37, 5186.56, 0}; direction = 360; onFire = 0; };
@@ -1630,13 +1641,13 @@ class Mogilevka {
 	class Object24 { type = "RoadBarrier_long"; position[] = {7483.66, 4731.26, 0}; direction = 354; onFire = 0; };
 	class Object25 { type = "Land_CncBlock_Stripes"; position[] = {7541.97, 5141.98, 0}; direction = 250; onFire = 0; };
 	class Object26 { type = "Land_CncBlock_D"; position[] = {7554.8, 5119.78, 0}; direction = 166; onFire = 0; };
-	class Object27 { type = "Land_Misc_Rubble_EP1"; position[] = {7471.32, 5134.77, 0}; direction = 81; onFire = 0; };
+//	class Object27 { type = "Land_Misc_Rubble_EP1"; position[] = {7471.32, 5134.77, 0}; direction = 81; onFire = 0; };
 	class Object28 { type = "Land_CncBlock_D"; position[] = {7550.83, 5134.43, 0}; direction = 342; onFire = 0; };
 	class Object29 { type = "Fort_Barricade"; position[] = {7460.38, 5137.72, 0}; direction = 248; onFire = 0; };
 	class Object30 { type = "Rubbish1"; position[] = {7535.25, 5186.58, 0}; direction = 357; onFire = 0; };
 	class Object31 { type = "Land_CncBlock_Stripes"; position[] = {7537.58, 5209.28, 0}; direction = 361; onFire = 0; };
 	class Object32 { type = "SKODAWreck"; position[] = {7450.08, 5137.15, 0}; direction = 248; onFire = 0; };
-	class Object33 { type = "Land_Misc_Rubble_EP1"; position[] = {7484.84, 5138.79, 0}; direction = 271; onFire = 0; };
+//	class Object33 { type = "Land_Misc_Rubble_EP1"; position[] = {7484.84, 5138.79, 0}; direction = 271; onFire = 0; };
 	class Object34 { type = "Rubbish4"; position[] = {7535.19, 5209.33, 0}; direction = 350; onFire = 0; };
 	class Object35 { type = "Rubbish4"; position[] = {7548.51, 5099.46, 0}; direction = 191; onFire = 0; };
 	class Object36 { type = "Rubbish1"; position[] = {7541.46, 5187.26, 0}; direction = 360; onFire = 0; };
@@ -1695,7 +1706,7 @@ class Pusta {
 	class Object31 { type = "hiluxWreck"; position[] = {9168.82, 3792.87, 0}; direction = 9; onFire = 0; };
 	class Object32 { type = "UAZWreck"; position[] = {9137.09, 3685.43, 0}; direction = 343; onFire = 0; };
 	class Object33 { type = "UAZWreck"; position[] = {9142.17, 3733.64, 0}; direction = 35; onFire = 0; };
-	class Object34 { type = "Land_Misc_Rubble_EP1"; position[] = {9159.64, 3891.89, 0}; direction = 170; onFire = 0; };
+//	class Object34 { type = "Land_Misc_Rubble_EP1"; position[] = {9159.64, 3891.89, 0}; direction = 170; onFire = 0; };
 	class Object35 { type = "datsun02Wreck"; position[] = {9137.26, 3898.78, 0}; direction = 251; onFire = 0; };
 	class Object36 { type = "Rubbish2"; position[] = {9202.95, 3945.9, 0}; direction = 129; onFire = 0; };
 	class Object37 { type = "Rubbish2"; position[] = {9153.23, 3896.5, 0}; direction = 172; onFire = 0; };
@@ -1720,12 +1731,12 @@ class Bor {
 	buildings = 50;
 		
 	class Object0 { type = "HMMWVWreck"; position[] = {3355.92, 3972.87, 0}; direction = 58; onFire = 0; };
-	class Object1 { type = "Land_Misc_Rubble_EP1"; position[] = {3342.51, 3959.83, 0}; direction = 44; onFire = 0; };
+//	class Object1 { type = "Land_Misc_Rubble_EP1"; position[] = {3342.51, 3959.83, 0}; direction = 44; onFire = 0; };
 	class Object2 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {3314.81, 3935.85, 0}; direction = 294; onFire = 0; };
 	class Object3 { type = "Rubbish1"; position[] = {3396.62, 3972.52, 0}; direction = 271; onFire = 0; };
 	class Object4 { type = "Rubbish1"; position[] = {3641.43, 3702.77, 0}; direction = 53; onFire = 0; };
 	class Object5 { type = "Rubbish5"; position[] = {3313.77, 3916.02, 0}; direction = 352; onFire = 0; };
-	class Object6 { type = "Land_Misc_Rubble_EP1"; position[] = {3318.35, 3932.17, 0}; direction = 4; onFire = 0; };
+//	class Object6 { type = "Land_Misc_Rubble_EP1"; position[] = {3318.35, 3932.17, 0}; direction = 4; onFire = 0; };
 	class Object7 { type = "UralWreck"; position[] = {3304.87, 3941.6, 0}; direction = 307; onFire = 0; };
 	class Object8 { type = "SKODAWreck"; position[] = {3535.03, 3831.08, 0}; direction = 220; onFire = 0; };
 	class Object9 { type = "datsun01Wreck"; position[] = {3338.89, 3962.45, 0}; direction = 55; onFire = 0; };
@@ -1792,7 +1803,7 @@ class Pulkovo {
 	class Object12 { type = "RoadBarrier_long"; position[] = {4939.13, 5590.54, 0}; direction = 292; onFire = 0; };
 	class Object13 { type = "Rubbish1"; position[] = {4887.89, 5654.9, 0}; direction = 243; onFire = 0; };
 	class Object14 { type = "UAZWreck"; position[] = {4924.82, 5593.87, 0}; direction = 136; onFire = 0; };
-	class Object15 { type = "Land_Misc_Rubble_EP1"; position[] = {4936.21, 5590.62, 0}; direction = 289; onFire = 0; };
+//	class Object15 { type = "Land_Misc_Rubble_EP1"; position[] = {4936.21, 5590.62, 0}; direction = 289; onFire = 0; };
 	class Object16 { type = "Rubbish2"; position[] = {5260, 5496.13, 0}; direction = 294; onFire = 0; };
 	class Object17 { type = "Rubbish3"; position[] = {5261.09, 5497.18, 0}; direction = 296; onFire = 0; };
 	class Object18 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {4918.11, 5604.05, 0}; direction = 316; onFire = 0; };
@@ -1803,7 +1814,7 @@ class Pulkovo {
 	class Object23 { type = "RoadBarrier_long"; position[] = {4922.39, 5602.3, 0}; direction = 129; onFire = 0; };
 	class Object24 { type = "Land_CncBlock_D"; position[] = {4891.77, 5651.35, 0}; direction = 151; onFire = 0; };
 	class Object25 { type = "Rubbish5"; position[] = {4945.94, 5581.84, 0}; direction = 109; onFire = 0; };
-	class Object26 { type = "Land_Misc_Rubble_EP1"; position[] = {4860.22, 5646.08, 0}; direction = 271; onFire = 0; };
+//	class Object26 { type = "Land_Misc_Rubble_EP1"; position[] = {4860.22, 5646.08, 0}; direction = 271; onFire = 0; };
 	class Object27 { type = "UAZWreck"; position[] = {4959.42, 5579.8, 0}; direction = 278; onFire = 0; };
 	class Object28 { type = "SKODAWreck"; position[] = {5259, 5495.88, 0}; direction = 282; onFire = 0; };
 	class Object29 { type = "Rubbish4"; position[] = {5246.62, 5496.07, 0}; direction = 100; onFire = 0; };
@@ -1811,11 +1822,11 @@ class Pulkovo {
 	class Object31 { type = "Rubbish3"; position[] = {4937.22, 5588.23, 0}; direction = 293; onFire = 0; };
 	class Object32 { type = "UralWreck"; position[] = {4936.74, 5589.61, 0}; direction = 301; onFire = 0; };
 	class Object33 { type = "SKODAWreck"; position[] = {5253.01, 5497.66, 0}; direction = 116; onFire = 1.22821; };
-	class Object34 { type = "Land_Misc_Rubble_EP1"; position[] = {4759.83, 6095.54, 0}; direction = 149; onFire = 0; };
+//	class Object34 { type = "Land_Misc_Rubble_EP1"; position[] = {4759.83, 6095.54, 0}; direction = 149; onFire = 0; };
 	class Object35 { type = "Land_CncBlock_Stripes"; position[] = {4982.48, 5578.71, 0}; direction = 99; onFire = 0; };
 	class Object36 { type = "UralWreck"; position[] = {5257.87, 5492.04, 0}; direction = 286; onFire = 0; };
 	class Object37 { type = "HMMWVWreck"; position[] = {4927.65, 5596.69, 0}; direction = 127; onFire = 0; };
-	class Object38 { type = "Land_Misc_Rubble_EP1"; position[] = {4916.11, 5601.61, 0}; direction = 313; onFire = 0; };
+//	class Object38 { type = "Land_Misc_Rubble_EP1"; position[] = {4916.11, 5601.61, 0}; direction = 313; onFire = 0; };
 	class Object39 { type = "datsun02Wreck"; position[] = {4757.7, 6081.87, 0}; direction = 162; onFire = 2.07426; };
 	class Object40 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {4882.13, 5652.25, 0}; direction = 66; onFire = 0; };
 	class Object41 { type = "Rubbish1"; position[] = {4946.83, 5577.21, 0}; direction = 104; onFire = 0; };
@@ -1856,7 +1867,7 @@ class Vyshnoye {
 	class Object18 { type = "Rubbish2"; position[] = {6588.8, 6114.63, 0}; direction = 346; onFire = 0; };
 	class Object19 { type = "SKODAWreck"; position[] = {6452.46, 6173.28, 0}; direction = 279; onFire = 0; };
 	class Object20 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {6583.61, 6022.65, 0}; direction = 140; onFire = 0; };
-	class Object21 { type = "Land_Misc_Rubble_EP1"; position[] = {6589.22, 6030.38, 0}; direction = 201; onFire = 0; };
+//	class Object21 { type = "Land_Misc_Rubble_EP1"; position[] = {6589.22, 6030.38, 0}; direction = 201; onFire = 0; };
 	class Object22 { type = "Rubbish2"; position[] = {6756.31, 5605.84, 0}; direction = 12; onFire = 0; };
 	class Object23 { type = "Rubbish1"; position[] = {6751.35, 5605.88, 0}; direction = 0; onFire = 0; };
 	class Object24 { type = "HMMWVWreck"; position[] = {6466.96, 6162.91, 0}; direction = 104; onFire = 0; };
@@ -1913,7 +1924,7 @@ class Elektrozavodsk {
 	class Object17 { type = "Rubbish5"; position[] = {10485, 2394.96, 0}; direction = 236; onFire = 0; };
 	class Object18 { type = "RoadBarrier_long"; position[] = {10833.5, 2324.03, 0}; direction = 353; onFire = 0; };
 	class Object19 { type = "UralWreck"; position[] = {10344, 1859.68, 0}; direction = 5; onFire = 0.974504; };
-	class Object20 { type = "Land_Misc_Rubble_EP1"; position[] = {10240.2, 2415.51, 0}; direction = 230; onFire = 0; };
+//	class Object20 { type = "Land_Misc_Rubble_EP1"; position[] = {10240.2, 2415.51, 0}; direction = 230; onFire = 0; };
 	class Object21 { type = "Rubbish4"; position[] = {10046.6, 1823.23, 0}; direction = 354; onFire = 0; };
 	class Object22 { type = "Land_CncBlock_Stripes"; position[] = {9988.18, 1788.74, 0}; direction = 268; onFire = 0; };
 	class Object23 { type = "HMMWVWreck"; position[] = {10837.5, 2449.59, 0}; direction = 0; onFire = 0; };
@@ -1958,7 +1969,7 @@ class Elektrozavodsk {
 	class Object62 { type = "UAZWreck"; position[] = {10015.3, 1794.51, 0}; direction = 269; onFire = 0; };
 	class Object63 { type = "SKODAWreck"; position[] = {10030.1, 1998.34, 0}; direction = 158; onFire = 0; };
 	class Object64 { type = "UralWreck"; position[] = {10401.2, 2432.56, 0}; direction = 321; onFire = 0; };
-	class Object65 { type = "Land_Misc_Rubble_EP1"; position[] = {10025.2, 2009.13, 0}; direction = 160; onFire = 0; };
+//	class Object65 { type = "Land_Misc_Rubble_EP1"; position[] = {10025.2, 2009.13, 0}; direction = 160; onFire = 0; };
 	class Object66 { type = "RoadBarrier_long"; position[] = {10248.8, 2127.94, 0}; direction = 174; onFire = 0; };
 	class Object67 { type = "hiluxWreck"; position[] = {10031.1, 1869.28, 0}; direction = 278; onFire = 0; };
 	class Object68 { type = "datsun02Wreck"; position[] = {10598.2, 2399.01, 0}; direction = 70; onFire = 0; };
@@ -1990,7 +2001,7 @@ class Elektrozavodsk {
 	class Object94 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {10117.9, 1857.48, 0}; direction = 3; onFire = 0; };
 	class Object95 { type = "datsun02Wreck"; position[] = {10827.9, 2324.22, 0}; direction = 82; onFire = 0; };
 	class Object96 { type = "Rubbish3"; position[] = {10963.6, 2730.64, 0}; direction = 31; onFire = 0; };
-	class Object97 { type = "Land_Misc_Rubble_EP1"; position[] = {9981.43, 1791.66, 0}; direction = 87; onFire = 0; };
+//	class Object97 { type = "Land_Misc_Rubble_EP1"; position[] = {9981.43, 1791.66, 0}; direction = 87; onFire = 0; };
 	class Object98 { type = "Rubbish1"; position[] = {10032, 1979.11, 0}; direction = 167; onFire = 0; };
 	class Object99 { type = "Rubbish3"; position[] = {10149.8, 2179.64, 0}; direction = 174; onFire = 0; };
 	class Object100 { type = "Rubbish4"; position[] = {10246.8, 1923.75, 0}; direction = 285; onFire = 0; };
@@ -2008,7 +2019,7 @@ class Elektrozavodsk {
 	class Object112 { type = "Rubbish3"; position[] = {10175.7, 1885.39, 0}; direction = 192; onFire = 0; };
 	class Object113 { type = "UralWreck"; position[] = {10228, 1889.23, 0}; direction = 185; onFire = 0; };
 	class Object114 { type = "Land_CncBlock_Stripes"; position[] = {10471.3, 2568.82, 0}; direction = 30; onFire = 0; };
-	class Object115 { type = "Land_Misc_Rubble_EP1"; position[] = {10467.7, 2296.54, 0}; direction = 239; onFire = 0; };
+//	class Object115 { type = "Land_Misc_Rubble_EP1"; position[] = {10467.7, 2296.54, 0}; direction = 239; onFire = 0; };
 	class Object116 { type = "Fort_Barricade"; position[] = {10173.3, 1884.1, 0}; direction = 203; onFire = 0; };
 	class Object117 { type = "Rubbish5"; position[] = {10826.6, 2363.64, 0}; direction = 12; onFire = 0; };
 	class Object118 { type = "hiluxWreck"; position[] = {9684.11, 2167.77, 0}; direction = 261; onFire = 0; };
@@ -2064,7 +2075,7 @@ class Drozhino {
 	class Object40 { type = "Rubbish3"; position[] = {3566.49, 5077.76, 0}; direction = 64; onFire = 0; };
 	class Object41 { type = "Rubbish5"; position[] = {3345.16, 4924.92, 0}; direction = 214; onFire = 0; };
 	class Object42 { type = "Rubbish3"; position[] = {3333.74, 4920.92, 0}; direction = 214; onFire = 0; };
-	class Object43 { type = "Land_Misc_Rubble_EP1"; position[] = {3583.77, 5088.09, 0}; direction = 56; onFire = 0; };
+//	class Object43 { type = "Land_Misc_Rubble_EP1"; position[] = {3583.77, 5088.09, 0}; direction = 56; onFire = 0; };
 	class Object44 { type = "Rubbish2"; position[] = {3372.91, 4674.57, 0}; direction = 11; onFire = 0; };
 	class Object45 { type = "Rubbish5"; position[] = {3209.87, 5151.43, 0}; direction = 133; onFire = 0; };
 	class Object46 { type = "RoadBarrier_long"; position[] = {3348.1, 4928.93, 0}; direction = 32; onFire = 0; };
@@ -2137,8 +2148,8 @@ class Kamenka {
 	size = 190;
 	buildings = 50;
 		
-	class Object0 { type = "Land_Misc_Rubble_EP1"; position[] = {1789.86, 2207.96, 0}; direction = 267; onFire = 0; };
-	class Object1 { type = "Rubbish1"; position[] = {2010.11, 2255.66, 0}; direction = 258; onFire = 0; };
+//	class Object0 { type = "Land_Misc_Rubble_EP1"; position[] = {1789.86, 2207.96, 0}; direction = 267; onFire = 0; };
+//	class Object1 { type = "Rubbish1"; position[] = {2010.11, 2255.66, 0}; direction = 258; onFire = 0; };
 	class Object2 { type = "datsun02Wreck"; position[] = {1885.84, 2241.39, 0}; direction = 75; onFire = 0; };
 	class Object3 { type = "Rubbish2"; position[] = {1900.47, 2126.99, 0}; direction = 248; onFire = 0; };
 	class Object4 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {1887.36, 2121.82, 0}; direction = 256; onFire = 0; };
@@ -2151,41 +2162,41 @@ class Kamenka {
 	class Object11 { type = "SKODAWreck"; position[] = {1922.7, 2249.06, 0}; direction = 75; onFire = 0; };
 	class Object12 { type = "Rubbish3"; position[] = {1788.39, 2321.24, 0}; direction = 297; onFire = 0; };
 	class Object13 { type = "Land_CncBlock_Stripes"; position[] = {1897.72, 2124.94, 0}; direction = 257; onFire = 0; };
-	class Object14 { type = "Land_Misc_Rubble_EP1"; position[] = {1832.72, 2222.36, 0}; direction = 243; onFire = 0; };
+//	class Object14 { type = "Land_Misc_Rubble_EP1"; position[] = {1832.72, 2222.36, 0}; direction = 243; onFire = 0; };
 	class Object15 { type = "datsun02Wreck"; position[] = {1724.21, 2200.25, 0}; direction = 270; onFire = 0; };
 	class Object16 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {1887.72, 2121.9, 0}; direction = 242; onFire = 0; };
 	class Object17 { type = "Rubbish3"; position[] = {1908.35, 2256.4, 0}; direction = 353; onFire = 0; };
 	class Object18 { type = "Land_CncBlock_Stripes"; position[] = {1924.71, 2186.2, 0}; direction = 178; onFire = 0; };
-	class Object19 { type = "datsun01Wreck"; position[] = {1833.69, 2217.35, 0}; direction = 235; onFire = 0; };
+//	class Object19 { type = "datsun01Wreck"; position[] = {1833.69, 2217.35, 0}; direction = 235; onFire = 0; };
 	class Object20 { type = "Rubbish5"; position[] = {1724, 2196.93, 0}; direction = 266; onFire = 0; };
 	class Object21 { type = "hiluxWreck"; position[] = {1896.77, 2128.86, 0}; direction = 260; onFire = 2.7957; };
-	class Object22 { type = "Rubbish1"; position[] = {1667.81, 2219.29, 0}; direction = 295; onFire = 0; };
+//	class Object22 { type = "Rubbish1"; position[] = {1667.81, 2219.29, 0}; direction = 295; onFire = 0; };
 	class Object23 { type = "UralWreck"; position[] = {1910.42, 2246.76, 0}; direction = 86; onFire = 0; };
 	class Object24 { type = "datsun02Wreck"; position[] = {1840.53, 2109.83, 0}; direction = 252; onFire = 0; };
 	class Object25 { type = "SKODAWreck"; position[] = {1766.65, 2198.11, 0}; direction = 268; onFire = 0; };
-	class Object26 { type = "RoadBarrier_long"; position[] = {1963.21, 2252.58, 0}; direction = 85; onFire = 0; };
-	class Object27 { type = "datsun01Wreck"; position[] = {1895.29, 2282.24, 0}; direction = 114; onFire = 0; };
-	class Object28 { type = "Rubbish1"; position[] = {1884.24, 2125.88, 0}; direction = 260; onFire = 0; };
-	class Object29 { type = "Fort_Barricade"; position[] = {1992.74, 2251.31, 0}; direction = 267; onFire = 0; };
+//	class Object26 { type = "RoadBarrier_long"; position[] = {1963.21, 2252.58, 0}; direction = 85; onFire = 0; };
+//	class Object27 { type = "datsun01Wreck"; position[] = {1895.29, 2282.24, 0}; direction = 114; onFire = 0; };
+//	class Object28 { type = "Rubbish1"; position[] = {1884.24, 2125.88, 0}; direction = 260; onFire = 0; };
+//	class Object29 { type = "Fort_Barricade"; position[] = {1992.74, 2251.31, 0}; direction = 267; onFire = 0; };
 	class Object30 { type = "UAZWreck"; position[] = {1975.63, 2254.24, 0}; direction = 262; onFire = 0; };
 	class Object31 { type = "Land_CncBlock_Stripes"; position[] = {1835, 2105.69, 0}; direction = 247; onFire = 0; };
 	class Object32 { type = "Rubbish3"; position[] = {1909.83, 2244.14, 0}; direction = 85; onFire = 0; };
 	class Object33 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {1924.22, 2200.02, 0}; direction = 359; onFire = 0; };
-	class Object34 { type = "Fort_Barricade"; position[] = {1869.68, 2237.8, 0}; direction = 253; onFire = 0; };
+//	class Object34 { type = "Fort_Barricade"; position[] = {1869.68, 2237.8, 0}; direction = 253; onFire = 0; };
 	class Object35 { type = "Rubbish4"; position[] = {1949.95, 2236.97, 0}; direction = 172; onFire = 0; };
 	class Object36 { type = "HMMWVWreck"; position[] = {1680.41, 2214.21, 0}; direction = 285; onFire = 0; };
 	class Object37 { type = "Land_CncBlock_Stripes"; position[] = {1849.45, 2227.01, 0}; direction = 60; onFire = 0; };
 	class Object38 { type = "Land_CncBlock_D"; position[] = {1778.87, 2327.19, 0}; direction = 312; onFire = 0; };
 	class Object39 { type = "Rubbish2"; position[] = {1885.94, 2124.95, 0}; direction = 255; onFire = 0; };
-	class Object40 { type = "RoadBarrier_long"; position[] = {1790.48, 2202.61, 0}; direction = 263; onFire = 0; };
+//	class Object40 { type = "RoadBarrier_long"; position[] = {1790.48, 2202.61, 0}; direction = 263; onFire = 0; };
 	class Object41 { type = "SKODAWreck"; position[] = {1849.41, 2112.84, 0}; direction = 256; onFire = 0; };
 	class Object42 { type = "Rubbish3"; position[] = {1813.59, 2210.96, 0}; direction = 242; onFire = 0; };
 	class Object43 { type = "Rubbish5"; position[] = {2028.12, 2260.48, 0}; direction = 265; onFire = 0; };
 	class Object44 { type = "Land_CncBlock_D"; position[] = {1875.72, 2119.48, 0}; direction = 251; onFire = 0; };
 	class Object45 { type = "hiluxWreck"; position[] = {1930.87, 2210.44, 0}; direction = 35; onFire = 0; };
-	class Object46 { type = "RoadBarrier_long"; position[] = {1760.74, 2369.99, 0}; direction = 359; onFire = 0; };
-	class Object47 { type = "RoadBarrier_long"; position[] = {1792.62, 2207.17, 0}; direction = 251; onFire = 0; };
-	class Object48 { type = "datsun01Wreck"; position[] = {1743.87, 2194.8, 0}; direction = 251; onFire = 0; };
+//	class Object46 { type = "RoadBarrier_long"; position[] = {1760.74, 2369.99, 0}; direction = 359; onFire = 0; };
+//	class Object47 { type = "RoadBarrier_long"; position[] = {1792.62, 2207.17, 0}; direction = 251; onFire = 0; };
+//	class Object48 { type = "datsun01Wreck"; position[] = {1743.87, 2194.8, 0}; direction = 251; onFire = 0; };
 	class Object49 { type = "datsun02Wreck"; position[] = {1893.52, 2278.66, 0}; direction = 125; onFire = 0; };
 	};
 	
@@ -2208,7 +2219,7 @@ class Zelenogorsk {
 	class Object10 { type = "Rubbish3"; position[] = {2816.37, 5258.5, 0}; direction = 193; onFire = 0; };
 	class Object11 { type = "datsun02Wreck"; position[] = {2279.49, 5256.12, 0}; direction = 37; onFire = 0; };
 	class Object12 { type = "SKODAWreck"; position[] = {3006.45, 5588.66, 0}; direction = 213; onFire = 0; };
-	class Object13 { type = "Land_Misc_Rubble_EP1"; position[] = {2875.8, 4722.14, 0}; direction = 270; onFire = 0; };
+//	class Object13 { type = "Land_Misc_Rubble_EP1"; position[] = {2875.8, 4722.14, 0}; direction = 270; onFire = 0; };
 	class Object14 { type = "SKODAWreck"; position[] = {3349.42, 4931.75, 0}; direction = 32; onFire = 0; };
 	class Object15 { type = "Rubbish1"; position[] = {3212.39, 5156.73, 0}; direction = 121; onFire = 0; };
 	class Object16 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {2917.6, 5474.05, 0}; direction = 160; onFire = 0; };
@@ -2216,17 +2227,17 @@ class Zelenogorsk {
 	class Object18 { type = "SKODAWreck"; position[] = {2573.84, 5038.25, 0}; direction = 230; onFire = 0; };
 	class Object19 { type = "Rubbish3"; position[] = {2292.98, 5202.56, 0}; direction = 219; onFire = 0; };
 	class Object20 { type = "Rubbish2"; position[] = {3468.86, 4933.19, 0}; direction = 317; onFire = 0; };
-	class Object21 { type = "Land_Misc_Rubble_EP1"; position[] = {2129.37, 4746.8, 0}; direction = 239; onFire = 0; };
+//	class Object21 { type = "Land_Misc_Rubble_EP1"; position[] = {2129.37, 4746.8, 0}; direction = 239; onFire = 0; };
 	class Object22 { type = "datsun02Wreck"; position[] = {3316.04, 4920.68, 0}; direction = 106; onFire = 0; };
 	class Object23 { type = "Rubbish2"; position[] = {2234.08, 5141.77, 0}; direction = 269; onFire = 0; };
 	class Object24 { type = "SKODAWreck"; position[] = {2761.44, 5442.06, 0}; direction = 196; onFire = 0; };
-	class Object25 { type = "Fort_Barricade"; position[] = {2215.06, 5154.03, 0}; direction = 129; onFire = 0; };
+//	class Object25 { type = "Fort_Barricade"; position[] = {2215.06, 5154.03, 0}; direction = 129; onFire = 0; };
 	class Object26 { type = "Rubbish1"; position[] = {2831.18, 5463.18, 0}; direction = 204; onFire = 0; };
 	class Object27 { type = "datsun01Wreck"; position[] = {2214.82, 5153.37, 0}; direction = 122; onFire = 0; };
 	class Object28 { type = "Fort_Barricade"; position[] = {2722.08, 5128.01, 0}; direction = 112; onFire = 0; };
 	class Object29 { type = "datsun02Wreck"; position[] = {2731.03, 5062.87, 0}; direction = 110; onFire = 0; };
-	class Object30 { type = "Land_Misc_Rubble_EP1"; position[] = {3202.4, 5156.94, 0}; direction = 300; onFire = 0; };
-	class Object31 { type = "RoadBarrier_long"; position[] = {2710.59, 5162.58, 0}; direction = 201; onFire = 0; };
+//	class Object30 { type = "Land_Misc_Rubble_EP1"; position[] = {3202.4, 5156.94, 0}; direction = 300; onFire = 0; };
+//	class Object31 { type = "RoadBarrier_long"; position[] = {2710.59, 5162.58, 0}; direction = 201; onFire = 0; };
 	class Object32 { type = "Rubbish3"; position[] = {2659.46, 5487, 0}; direction = 363; onFire = 0; };
 	class Object33 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {2235.41, 5142.82, 0}; direction = 277; onFire = 0; };
 	class Object34 { type = "Rubbish1"; position[] = {2734.86, 5341.43, 0}; direction = 314; onFire = 0; };
@@ -2241,7 +2252,7 @@ class Zelenogorsk {
 	class Object43 { type = "HMMWVWreck"; position[] = {2646.94, 5928.29, 0}; direction = 330; onFire = 0; };
 	class Object44 { type = "Land_CncBlock_Stripes"; position[] = {3397.74, 4907.87, 0}; direction = 306; onFire = 0; };
 	class Object45 { type = "Rubbish1"; position[] = {2586.09, 4880.84, 0}; direction = 157; onFire = 0; };
-	class Object46 { type = "Land_Misc_Rubble_EP1"; position[] = {2661.45, 5575.91, 0}; direction = 8; onFire = 0; };
+//	class Object46 { type = "Land_Misc_Rubble_EP1"; position[] = {2661.45, 5575.91, 0}; direction = 8; onFire = 0; };
 	class Object47 { type = "datsun02Wreck"; position[] = {2589.71, 4850.21, 0}; direction = 165; onFire = 0; };
 	class Object48 { type = "Rubbish3"; position[] = {3129.71, 5196.39, 0}; direction = 283; onFire = 0; };
 	class Object49 { type = "Fort_Barricade"; position[] = {2224.11, 5152.66, 0}; direction = 122; onFire = 0; };
@@ -2260,7 +2271,7 @@ class Zelenogorsk {
 	class Object62 { type = "SKODAWreck"; position[] = {2234.22, 5141.31, 0}; direction = 288; onFire = 0; };
 	class Object63 { type = "Rubbish5"; position[] = {2625.31, 5070.09, 0}; direction = 242; onFire = 0; };
 	class Object64 { type = "datsun01Wreck"; position[] = {3397.79, 4906.4, 0}; direction = 308; onFire = 0; };
-	class Object65 { type = "Land_Misc_Rubble_EP1"; position[] = {2820.04, 5243.38, 0}; direction = 4; onFire = 0; };
+//	class Object65 { type = "Land_Misc_Rubble_EP1"; position[] = {2820.04, 5243.38, 0}; direction = 4; onFire = 0; };
 	class Object66 { type = "hiluxWreck"; position[] = {2225.07, 5151.34, 0}; direction = 113; onFire = 0; };
 	class Object67 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {2724.28, 5192.38, 0}; direction = 18; onFire = 0; };
 	class Object68 { type = "Land_CncBlock_D"; position[] = {2820.7, 5453.61, 0}; direction = 39; onFire = 0; };
@@ -2295,7 +2306,7 @@ class Zelenogorsk {
 	class Object97 { type = "Land_CncBlock_D"; position[] = {2873.83, 5410.22, 0}; direction = 22; onFire = 0; };
 	class Object98 { type = "HMMWVWreck"; position[] = {3405.79, 4901.33, 0}; direction = 138; onFire = 0; };
 	class Object99 { type = "RoadBarrier_long"; position[] = {2571.17, 5468.71, 0}; direction = 309; onFire = 0; };
-	class Object100 { type = "Land_Misc_Rubble_EP1"; position[] = {2977.69, 5391.37, 0}; direction = 245; onFire = 0; };
+//	class Object100 { type = "Land_Misc_Rubble_EP1"; position[] = {2977.69, 5391.37, 0}; direction = 245; onFire = 0; };
 	class Object101 { type = "RoadBarrier_long"; position[] = {2710.52, 5171.56, 0}; direction = 35; onFire = 0; };
 	class Object102 { type = "Fort_Barricade"; position[] = {3380.12, 4655.72, 0}; direction = 110; onFire = 0; };
 	class Object103 { type = "RoadBarrier_long"; position[] = {3203.18, 5158.52, 0}; direction = 308; onFire = 0; };
@@ -2308,7 +2319,7 @@ class Zelenogorsk {
 	class Object110 { type = "hiluxWreck"; position[] = {2933.69, 5462.58, 0}; direction = 271; onFire = 0; };
 	class Object111 { type = "UAZWreck"; position[] = {2818.23, 5207.27, 0}; direction = 164; onFire = 0; };
 	class Object112 { type = "datsun01Wreck"; position[] = {2631.99, 5953.54, 0}; direction = 158; onFire = 0; };
-	class Object113 { type = "Land_Misc_Rubble_EP1"; position[] = {2982.76, 5545.23, 0}; direction = 30; onFire = 0; };
+//	class Object113 { type = "Land_Misc_Rubble_EP1"; position[] = {2982.76, 5545.23, 0}; direction = 30; onFire = 0; };
 	class Object114 { type = "Rubbish3"; position[] = {2740.66, 5482.23, 0}; direction = 83; onFire = 0; };
 	class Object115 { type = "UralWreck"; position[] = {2485.74, 4965.89, 0}; direction = 227; onFire = 0; };
 	class Object116 { type = "HMMWVWreck"; position[] = {2804.95, 5374.23, 0}; direction = 117; onFire = 0; };
@@ -2334,9 +2345,9 @@ class Rogovo {
 	class Object8 { type = "Land_CncBlock_D"; position[] = {4503.69, 6417.18, 0}; direction = 260; onFire = 0; };
 	class Object9 { type = "Rubbish2"; position[] = {4555.73, 6448.38, 0}; direction = 58; onFire = 0; };
 	class Object10 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {4504.59, 6419.34, 0}; direction = 252; onFire = 0; };
-	class Object11 { type = "Land_Misc_Rubble_EP1"; position[] = {4457.16, 6412.48, 0}; direction = 259; onFire = 0; };
-	class Object12 { type = "Land_Misc_Rubble_EP1"; position[] = {4488.09, 6416.97, 0}; direction = 83; onFire = 0; };
-	class Object13 { type = "Land_Misc_Rubble_EP1"; position[] = {4386.39, 6452.27, 0}; direction = 122; onFire = 0; };
+//	class Object11 { type = "Land_Misc_Rubble_EP1"; position[] = {4457.16, 6412.48, 0}; direction = 259; onFire = 0; };
+//	class Object12 { type = "Land_Misc_Rubble_EP1"; position[] = {4488.09, 6416.97, 0}; direction = 83; onFire = 0; };
+//	class Object13 { type = "Land_Misc_Rubble_EP1"; position[] = {4386.39, 6452.27, 0}; direction = 122; onFire = 0; };
 	class Object14 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {4808.07, 6807.44, 0}; direction = 196; onFire = 0; };
 	class Object15 { type = "Rubbish1"; position[] = {4678.88, 6860.5, 0}; direction = 109; onFire = 0; };
 	class Object16 { type = "HMMWVWreck"; position[] = {4810.65, 6803.93, 0}; direction = 199; onFire = 0; };
@@ -2355,7 +2366,7 @@ class Rogovo {
 	class Object29 { type = "datsun01Wreck"; position[] = {4457.25, 6412.07, 0}; direction = 261; onFire = 0; };
 	class Object30 { type = "UAZWreck"; position[] = {4734.97, 6777.29, 0}; direction = 311; onFire = 0; };
 	class Object31 { type = "RoadBarrier_long"; position[] = {4762.59, 6760.32, 0}; direction = 22; onFire = 0; };
-	class Object32 { type = "Land_Misc_Rubble_EP1"; position[] = {4394.3, 6441.73, 0}; direction = 322; onFire = 0; };
+//	class Object32 { type = "Land_Misc_Rubble_EP1"; position[] = {4394.3, 6441.73, 0}; direction = 322; onFire = 0; };
 	class Object33 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {4618.62, 6883.97, 0}; direction = 291; onFire = 0; };
 	class Object34 { type = "datsun02Wreck"; position[] = {4395.51, 6443.21, 0}; direction = 331; onFire = 0.391354; };
 	class Object35 { type = "Rubbish4"; position[] = {4776.66, 6782.69, 0}; direction = 50; onFire = 0; };
@@ -2381,7 +2392,7 @@ class Guglovo {
 	size = 360;
 	buildings = 50;
 		
-	class Object0 { type = "Land_Misc_Rubble_EP1"; position[] = {8457.3, 6674.44, 0}; direction = 275; onFire = 0; };
+//	class Object0 { type = "Land_Misc_Rubble_EP1"; position[] = {8457.3, 6674.44, 0}; direction = 275; onFire = 0; };
 	class Object1 { type = "Rubbish1"; position[] = {8419.83, 6682.46, 0}; direction = 299; onFire = 0; };
 	class Object2 { type = "Rubbish1"; position[] = {8558.75, 6642.13, 0}; direction = 306; onFire = 0; };
 	class Object3 { type = "datsun01Wreck"; position[] = {8456.65, 6673.12, 0}; direction = 276; onFire = 0; };
@@ -2401,7 +2412,7 @@ class Guglovo {
 	class Object17 { type = "UralWreck"; position[] = {8543.34, 6652.35, 0}; direction = 308; onFire = 0; };
 	class Object18 { type = "hiluxWreck"; position[] = {8545.97, 6655.36, 0}; direction = 312; onFire = 0; };
 	class Object19 { type = "Rubbish4"; position[] = {8422.63, 6683.55, 0}; direction = 298; onFire = 0; };
-	class Object20 { type = "Land_Misc_Rubble_EP1"; position[] = {8529.76, 6663.13, 0}; direction = 320; onFire = 0; };
+//	class Object20 { type = "Land_Misc_Rubble_EP1"; position[] = {8529.76, 6663.13, 0}; direction = 320; onFire = 0; };
 	class Object21 { type = "Rubbish5"; position[] = {8422.73, 6683.72, 0}; direction = 292; onFire = 0; };
 	class Object22 { type = "Fort_Barricade"; position[] = {8512.34, 6677.14, 0}; direction = 264; onFire = 0; };
 	class Object23 { type = "SKODAWreck"; position[] = {8473.98, 6677.46, 0}; direction = 259; onFire = 0.743249; };
@@ -2409,14 +2420,14 @@ class Guglovo {
 	class Object25 { type = "HMMWVWreck"; position[] = {8557.9, 6640.14, 0}; direction = 306; onFire = 0; };
 	class Object26 { type = "UralWreck"; position[] = {8531.86, 6667.7, 0}; direction = 308; onFire = 0; };
 	class Object27 { type = "Rubbish1"; position[] = {8529.87, 6664.74, 0}; direction = 310; onFire = 0; };
-	class Object28 { type = "Land_Misc_Rubble_EP1"; position[] = {8033.02, 7056, 0}; direction = 46; onFire = 0; };
+//	class Object28 { type = "Land_Misc_Rubble_EP1"; position[] = {8033.02, 7056, 0}; direction = 46; onFire = 0; };
 	class Object29 { type = "Land_CncBlock_D"; position[] = {8420.92, 6686.46, 0}; direction = 291; onFire = 0; };
 	class Object30 { type = "Land_CncBlock_D"; position[] = {8512.74, 6685.51, 0}; direction = 312; onFire = 0; };
 	class Object31 { type = "HMMWVWreck"; position[] = {8419.25, 6682.25, 0}; direction = 298; onFire = 0; };
 	class Object32 { type = "datsun01Wreck"; position[] = {8405.04, 6696.3, 0}; direction = 317; onFire = 0; };
 	class Object33 { type = "RoadBarrier_long"; position[] = {8559.66, 6642.36, 0}; direction = 296; onFire = 0; };
 	class Object34 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {8527.82, 6663.68, 0}; direction = 316; onFire = 0; };
-	class Object35 { type = "Land_Misc_Rubble_EP1"; position[] = {8439.13, 6674.96, 0}; direction = 275; onFire = 0; };
+//	class Object35 { type = "Land_Misc_Rubble_EP1"; position[] = {8439.13, 6674.96, 0}; direction = 275; onFire = 0; };
 	class Object36 { type = "HMMWVWreck"; position[] = {8437.76, 6674.71, 0}; direction = 279; onFire = 0; };
 	class Object37 { type = "UAZWreck"; position[] = {8393.7, 6718.39, 0}; direction = 151; onFire = 0; };
 	class Object38 { type = "Land_CncBlock_Stripes"; position[] = {8530.68, 6662.18, 0}; direction = 302; onFire = 0; };
@@ -2424,7 +2435,7 @@ class Guglovo {
 	class Object40 { type = "Rubbish4"; position[] = {8574.67, 6631.39, 0}; direction = 313; onFire = 0; };
 	class Object41 { type = "hiluxWreck"; position[] = {8504.59, 6678.46, 0}; direction = 263; onFire = 0; };
 	class Object42 { type = "RoadBarrier_long"; position[] = {8420.34, 6684.28, 0}; direction = 295; onFire = 0; };
-	class Object43 { type = "Land_Misc_Rubble_EP1"; position[] = {8421.04, 6684.1, 0}; direction = 294; onFire = 0; };
+//	class Object43 { type = "Land_Misc_Rubble_EP1"; position[] = {8421.04, 6684.1, 0}; direction = 294; onFire = 0; };
 	class Object44 { type = "Rubbish2"; position[] = {8423.8, 6686.36, 0}; direction = 290; onFire = 0; };
 	class Object45 { type = "RoadBarrier_long"; position[] = {8576.4, 6632.22, 0}; direction = 297; onFire = 0; };
 	class Object46 { type = "HMMWVWreck"; position[] = {8510.97, 6674.68, 0}; direction = 274; onFire = 0; };
@@ -2444,7 +2455,7 @@ class Staroye {
 	class Object2 { type = "UAZWreck"; position[] = {9985.21, 5721.42, 0}; direction = 328; onFire = 0; };
 	class Object3 { type = "Land_CncBlock_Stripes"; position[] = {9881.2, 5472.42, 0}; direction = 114; onFire = 0; };
 	class Object4 { type = "datsun01Wreck"; position[] = {10142.2, 5389.9, 0}; direction = 186; onFire = 0; };
-	class Object5 { type = "Land_Misc_Rubble_EP1"; position[] = {10115, 5480.87, 0}; direction = 306; onFire = 0; };
+//	class Object5 { type = "Land_Misc_Rubble_EP1"; position[] = {10115, 5480.87, 0}; direction = 306; onFire = 0; };
 	class Object6 { type = "UralWreck"; position[] = {10247.7, 5463.29, 0}; direction = 89; onFire = 0; };
 	class Object7 { type = "hiluxWreck"; position[] = {10270, 5610.98, 0}; direction = 346; onFire = 0; };
 	class Object8 { type = "UralWreck"; position[] = {10276.5, 5725.1, 0}; direction = 203; onFire = 0; };
@@ -2479,7 +2490,7 @@ class Staroye {
 	class Object37 { type = "RoadBarrier_long"; position[] = {9904.75, 5462.98, 0}; direction = 278; onFire = 0; };
 	class Object38 { type = "Fort_Barricade"; position[] = {9904, 5467.44, 0}; direction = 272; onFire = 0; };
 	class Object39 { type = "Fort_Barricade"; position[] = {10137.4, 5415.99, 0}; direction = 183; onFire = 0; };
-	class Object40 { type = "Land_Misc_Rubble_EP1"; position[] = {10342, 5497.91, 0}; direction = 319; onFire = 0; };
+//	class Object40 { type = "Land_Misc_Rubble_EP1"; position[] = {10342, 5497.91, 0}; direction = 319; onFire = 0; };
 	class Object41 { type = "hiluxWreck"; position[] = {10261.9, 5729.16, 0}; direction = 108; onFire = 0; };
 	class Object42 { type = "SKODAWreck"; position[] = {9888.85, 5465.14, 0}; direction = 287; onFire = 0; };
 	class Object43 { type = "UralWreck"; position[] = {10278.9, 5580.35, 0}; direction = 337; onFire = 0; };
@@ -2509,13 +2520,13 @@ class Pavlovo {
 	class Object9 { type = "SKODAWreck"; position[] = {1657.63, 3972.98, 0}; direction = 350; onFire = 0; };
 	class Object10 { type = "datsun01Wreck"; position[] = {1700.5, 3821.94, 0}; direction = 166; onFire = 0; };
 	class Object11 { type = "hiluxWreck"; position[] = {1660.89, 3779.04, 0}; direction = 159; onFire = 0; };
-	class Object12 { type = "Land_Misc_Rubble_EP1"; position[] = {1696.71, 3810.73, 0}; direction = 352; onFire = 0; };
-	class Object13 { type = "Land_Misc_Rubble_EP1"; position[] = {1704.88, 3658.03, 0}; direction = 364; onFire = 0; };
+//	class Object12 { type = "Land_Misc_Rubble_EP1"; position[] = {1696.71, 3810.73, 0}; direction = 352; onFire = 0; };
+//	class Object13 { type = "Land_Misc_Rubble_EP1"; position[] = {1704.88, 3658.03, 0}; direction = 364; onFire = 0; };
 	class Object14 { type = "Rubbish5"; position[] = {1751.42, 3865.71, 0}; direction = 59; onFire = 0; };
 	class Object15 { type = "Rubbish4"; position[] = {1659.91, 3768.79, 0}; direction = 171; onFire = 0; };
 	class Object16 { type = "datsun02Wreck"; position[] = {1647.76, 3809.93, 0}; direction = 347; onFire = 0; };
 	class Object17 { type = "Rubbish2"; position[] = {1750.72, 3859.47, 0}; direction = 58; onFire = 0; };
-	class Object18 { type = "Land_Misc_Rubble_EP1"; position[] = {1662.31, 3756.6, 0}; direction = 344; onFire = 0; };
+//	class Object18 { type = "Land_Misc_Rubble_EP1"; position[] = {1662.31, 3756.6, 0}; direction = 344; onFire = 0; };
 	class Object19 { type = "Fort_Barricade"; position[] = {1755.33, 3863.3, 0}; direction = 67; onFire = 0; };
 	class Object20 { type = "Rubbish4"; position[] = {1669.38, 3908.2, 0}; direction = 334; onFire = 0; };
 	class Object21 { type = "Land_CncBlock_Stripes"; position[] = {1739.04, 3856.48, 0}; direction = 72; onFire = 0; };
@@ -2527,13 +2538,13 @@ class Pavlovo {
 	class Object27 { type = "Land_CncBlock_Stripes"; position[] = {1755.21, 3865.1, 0}; direction = 60; onFire = 0; };
 	class Object28 { type = "UralWreck"; position[] = {1706.22, 3787.81, 0}; direction = 155; onFire = 0; };
 	class Object29 { type = "Rubbish3"; position[] = {1666.93, 3801.13, 0}; direction = 249; onFire = 0; };
-	class Object30 { type = "Land_Misc_Rubble_EP1"; position[] = {1739.39, 3859.49, 0}; direction = 75; onFire = 0; };
+//	class Object30 { type = "Land_Misc_Rubble_EP1"; position[] = {1739.39, 3859.49, 0}; direction = 75; onFire = 0; };
 	class Object31 { type = "UAZWreck"; position[] = {1669.64, 3907.86, 0}; direction = 334; onFire = 0; };
 	class Object32 { type = "datsun01Wreck"; position[] = {1662.03, 3929.56, 0}; direction = 341; onFire = 0; };
 	class Object33 { type = "Rubbish5"; position[] = {1692.17, 4013.47, 0}; direction = 247; onFire = 0; };
 	class Object34 { type = "Land_CncBlock_Stripes"; position[] = {1706.67, 3796.73, 0}; direction = 337; onFire = 0; };
 	class Object35 { type = "hiluxWreck"; position[] = {1667.21, 3758.3, 0}; direction = 327; onFire = 0; };
-	class Object36 { type = "Land_Misc_Rubble_EP1"; position[] = {1683.03, 3867.21, 0}; direction = 163; onFire = 0; };
+//	class Object36 { type = "Land_Misc_Rubble_EP1"; position[] = {1683.03, 3867.21, 0}; direction = 163; onFire = 0; };
 	class Object37 { type = "UAZWreck"; position[] = {1688.63, 3810.83, 0}; direction = 263; onFire = 0; };
 	class Object38 { type = "Rubbish3"; position[] = {1693.6, 3845.45, 0}; direction = 159; onFire = 0; };
 	class Object39 { type = "Rubbish5"; position[] = {1705.1, 3683.91, 0}; direction = 3; onFire = 0; };
@@ -2619,7 +2630,7 @@ class StarySobor {
 	class Object3 { type = "SKODAWreck"; position[] = {5967.96, 7913.51, 0}; direction = 337; onFire = 0; };
 	class Object4 { type = "UralWreck"; position[] = {5912.88, 8014.92, 0}; direction = 335; onFire = 0; };
 	class Object5 { type = "datsun01Wreck"; position[] = {6212.47, 7666.29, 0}; direction = 124; onFire = 0; };
-	class Object6 { type = "Land_Misc_Rubble_EP1"; position[] = {6067.91, 7768.98, 0}; direction = 313; onFire = 0; };
+//	class Object6 { type = "Land_Misc_Rubble_EP1"; position[] = {6067.91, 7768.98, 0}; direction = 313; onFire = 0; };
 	class Object7 { type = "Rubbish5"; position[] = {6212.55, 7766.89, 0}; direction = 236; onFire = 0; };
 	class Object8 { type = "Rubbish1"; position[] = {6248.25, 7813.33, 0}; direction = 40; onFire = 0; };
 	class Object9 { type = "Land_CncBlock_D"; position[] = {6351.2, 7345.51, 0}; direction = 330; onFire = 0; };
@@ -2643,7 +2654,7 @@ class StarySobor {
 	class Object27 { type = "Land_CncBlock_D"; position[] = {6955.04, 7808.82, 0}; direction = 325; onFire = 0; };
 	class Object28 { type = "Rubbish3"; position[] = {6046.78, 7735.03, 0}; direction = 219; onFire = 0; };
 	class Object29 { type = "datsun02Wreck"; position[] = {5493.46, 8373.6, 0}; direction = 292; onFire = 0; };
-	class Object30 { type = "Land_Misc_Rubble_EP1"; position[] = {6204.89, 7673.92, 0}; direction = 117; onFire = 0; };
+//	class Object30 { type = "Land_Misc_Rubble_EP1"; position[] = {6204.89, 7673.92, 0}; direction = 117; onFire = 0; };
 	class Object31 { type = "Fort_Barricade"; position[] = {6043.56, 7800.58, 0}; direction = 153; onFire = 0; };
 	class Object32 { type = "Land_CncBlock_Stripes"; position[] = {6176.87, 8012.08, 0}; direction = 277; onFire = 0; };
 	class Object33 { type = "SKODAWreck"; position[] = {6033.42, 7818.75, 0}; direction = 337; onFire = 0; };
@@ -2654,10 +2665,10 @@ class StarySobor {
 	class Object38 { type = "UAZWreck"; position[] = {5530.78, 7281.7, 0}; direction = 105; onFire = 0; };
 	class Object39 { type = "Fort_Barricade"; position[] = {6057.79, 7754.31, 0}; direction = 207; onFire = 0; };
 	class Object40 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {6988.16, 7756.87, 0}; direction = 313; onFire = 0; };
-	class Object41 { type = "Land_Misc_Rubble_EP1"; position[] = {5963.26, 7929.98, 0}; direction = 334; onFire = 0; };
-	class Object42 { type = "Land_Misc_Rubble_EP1"; position[] = {6119.19, 7729.95, 0}; direction = 296; onFire = 0; };
+//	class Object41 { type = "Land_Misc_Rubble_EP1"; position[] = {5963.26, 7929.98, 0}; direction = 334; onFire = 0; };
+//	class Object42 { type = "Land_Misc_Rubble_EP1"; position[] = {6119.19, 7729.95, 0}; direction = 296; onFire = 0; };
 	class Object43 { type = "RoadBarrier_long"; position[] = {6014.29, 7698.08, 0}; direction = 216; onFire = 0; };
-	class Object44 { type = "Land_Misc_Rubble_EP1"; position[] = {7003.76, 7743.08, 0}; direction = 133; onFire = 0; };
+//	class Object44 { type = "Land_Misc_Rubble_EP1"; position[] = {7003.76, 7743.08, 0}; direction = 133; onFire = 0; };
 	class Object45 { type = "Fort_Barricade"; position[] = {6054.66, 7758.76, 0}; direction = 221; onFire = 0; };
 	class Object46 { type = "hiluxWreck"; position[] = {6015.17, 7845.02, 0}; direction = 320; onFire = 0; };
 	class Object47 { type = "Rubbish4"; position[] = {6247.75, 7632.78, 0}; direction = 144; onFire = 0; };
@@ -2667,20 +2678,20 @@ class StarySobor {
 	class Object51 { type = "Rubbish3"; position[] = {6021.74, 7835.36, 0}; direction = 138; onFire = 0; };
 	class Object52 { type = "UralWreck"; position[] = {6238.36, 7807.38, 0}; direction = 29; onFire = 0; };
 	class Object53 { type = "datsun01Wreck"; position[] = {6261.1, 7614.96, 0}; direction = 138; onFire = 0; };
-	class Object54 { type = "Land_Misc_Rubble_EP1"; position[] = {6022.65, 7836.12, 0}; direction = 157; onFire = 0; };
+//	class Object54 { type = "Land_Misc_Rubble_EP1"; position[] = {6022.65, 7836.12, 0}; direction = 157; onFire = 0; };
 	class Object55 { type = "Rubbish4"; position[] = {6041, 7798.36, 0}; direction = 157; onFire = 0; };
 	class Object56 { type = "Rubbish2"; position[] = {6138.68, 7720.64, 0}; direction = 126; onFire = 0; };
 	class Object57 { type = "Rubbish4"; position[] = {6927.19, 7888.16, 0}; direction = 343; onFire = 0; };
 	class Object58 { type = "Rubbish5"; position[] = {6995.72, 7751.51, 0}; direction = 304; onFire = 0; };
 	class Object59 { type = "Rubbish5"; position[] = {6526.7, 7502.67, 0}; direction = 87; onFire = 0; };
-	class Object60 { type = "Land_Misc_Rubble_EP1"; position[] = {7006.4, 7741.48, 0}; direction = 128; onFire = 0; };
+//	class Object60 { type = "Land_Misc_Rubble_EP1"; position[] = {7006.4, 7741.48, 0}; direction = 128; onFire = 0; };
 	class Object61 { type = "Land_CncBlock_Stripes"; position[] = {7072.18, 7682.23, 0}; direction = 263; onFire = 0; };
 	class Object62 { type = "Rubbish2"; position[] = {6138.31, 7721.12, 0}; direction = 119; onFire = 0; };
 	class Object63 { type = "UAZWreck"; position[] = {6987.31, 7759.4, 0}; direction = 320; onFire = 0; };
 	class Object64 { type = "UralWreck"; position[] = {6230.82, 7787.04, 0}; direction = 31; onFire = 0; };
 	class Object65 { type = "Land_CncBlock_D"; position[] = {6035.14, 7721.67, 0}; direction = 215; onFire = 0; };
 	class Object66 { type = "HMMWVWreck"; position[] = {7017.94, 7727.78, 0}; direction = 304; onFire = 2.86028; };
-	class Object67 { type = "Land_Misc_Rubble_EP1"; position[] = {5983.89, 7882.46, 0}; direction = 311; onFire = 0; };
+//	class Object67 { type = "Land_Misc_Rubble_EP1"; position[] = {5983.89, 7882.46, 0}; direction = 311; onFire = 0; };
 	class Object68 { type = "Land_CncBlock_D"; position[] = {6277.34, 7595.3, 0}; direction = 150; onFire = 0; };
 	class Object69 { type = "UAZWreck"; position[] = {6058.4, 7778.56, 0}; direction = 298; onFire = 0; };
 	class Object70 { type = "Land_CncBlock_Stripes"; position[] = {6035.61, 7721.92, 0}; direction = 221; onFire = 0; };
@@ -2688,7 +2699,7 @@ class StarySobor {
 	class Object72 { type = "datsun01Wreck"; position[] = {6016.12, 7693.76, 0}; direction = 216; onFire = 0; };
 	class Object73 { type = "Rubbish2"; position[] = {6938.13, 7849.52, 0}; direction = 343; onFire = 0; };
 	class Object74 { type = "hiluxWreck"; position[] = {6250.76, 7633.9, 0}; direction = 135; onFire = 0; };
-	class Object75 { type = "Land_Misc_Rubble_EP1"; position[] = {7006.06, 7743.78, 0}; direction = 128; onFire = 0; };
+//	class Object75 { type = "Land_Misc_Rubble_EP1"; position[] = {7006.06, 7743.78, 0}; direction = 128; onFire = 0; };
 	class Object76 { type = "RoadBarrier_long"; position[] = {6216.84, 7774.49, 0}; direction = 212; onFire = 0; };
 	class Object77 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {6181.04, 7736.84, 0}; direction = 237; onFire = 0; };
 	class Object78 { type = "UralWreck"; position[] = {6029.78, 7817.08, 0}; direction = 344; onFire = 0; };
@@ -2696,15 +2707,15 @@ class StarySobor {
 	class Object80 { type = "Rubbish3"; position[] = {5541.85, 7283.36, 0}; direction = 99; onFire = 0; };
 	class Object81 { type = "Rubbish4"; position[] = {7109.33, 7781.36, 0}; direction = 274; onFire = 0; };
 	class Object82 { type = "Fort_Barricade"; position[] = {7000.67, 7739.34, 0}; direction = 132; onFire = 0; };
-	class Object83 { type = "Land_Misc_Rubble_EP1"; position[] = {5949.45, 7961.72, 0}; direction = 156; onFire = 0; };
+//	class Object83 { type = "Land_Misc_Rubble_EP1"; position[] = {5949.45, 7961.72, 0}; direction = 156; onFire = 0; };
 	class Object84 { type = "Fort_Barricade"; position[] = {5972.81, 7900.51, 0}; direction = 319; onFire = 0; };
 	class Object85 { type = "Fort_Barricade"; position[] = {6979.36, 7767.81, 0}; direction = 316; onFire = 0; };
 	class Object86 { type = "Land_CncBlock_Stripes"; position[] = {6223.87, 7779.99, 0}; direction = 212; onFire = 0; };
 	class Object87 { type = "UAZWreck"; position[] = {6065.66, 7767.28, 0}; direction = 315; onFire = 0; };
 	class Object88 { type = "SKODAWreck"; position[] = {6117.23, 7731.51, 0}; direction = 307; onFire = 0; };
 	class Object89 { type = "Rubbish3"; position[] = {6355.41, 7381.19, 0}; direction = 195; onFire = 0; };
-	class Object90 { type = "Land_Misc_Rubble_EP1"; position[] = {6315.46, 7563.01, 0}; direction = 127; onFire = 0; };
-	class Object91 { type = "Land_Misc_Rubble_EP1"; position[] = {7108.99, 7694.71, 0}; direction = 64; onFire = 0; };
+//	class Object90 { type = "Land_Misc_Rubble_EP1"; position[] = {6315.46, 7563.01, 0}; direction = 127; onFire = 0; };
+//	class Object91 { type = "Land_Misc_Rubble_EP1"; position[] = {7108.99, 7694.71, 0}; direction = 64; onFire = 0; };
 	class Object92 { type = "hiluxWreck"; position[] = {6048.16, 7787.66, 0}; direction = 301; onFire = 0; };
 	class Object93 { type = "Land_CncBlock_D"; position[] = {6043.08, 7800.56, 0}; direction = 150; onFire = 0; };
 	class Object94 { type = "Rubbish4"; position[] = {6032.68, 7727.35, 0}; direction = 217; onFire = 0; };
@@ -2937,7 +2948,7 @@ class NovySobor {
 	class Object12 { type = "Rubbish1"; position[] = {7126.88, 7518.3, 0}; direction = 193; onFire = 0; };
 	class Object13 { type = "Rubbish2"; position[] = {7037.27, 7673.25, 0}; direction = 264; onFire = 0; };
 	class Object14 { type = "datsun01Wreck"; position[] = {7192.67, 7685.09, 0}; direction = 110; onFire = 0; };
-	class Object15 { type = "Land_Misc_Rubble_EP1"; position[] = {7212.16, 7676.91, 0}; direction = 280; onFire = 0; };
+//	class Object15 { type = "Land_Misc_Rubble_EP1"; position[] = {7212.16, 7676.91, 0}; direction = 280; onFire = 0; };
 	class Object16 { type = "UAZWreck"; position[] = {7212.2, 7674.2, 0}; direction = 282; onFire = 0; };
 	class Object17 { type = "datsun01Wreck"; position[] = {7125.99, 7517.62, 0}; direction = 185; onFire = 0; };
 	class Object18 { type = "Land_CncBlock_D"; position[] = {6960.94, 7793.18, 0}; direction = 339; onFire = 0; };
@@ -2965,7 +2976,7 @@ class NovySobor {
 	class Object40 { type = "Rubbish5"; position[] = {7151.53, 7696.73, 0}; direction = 88; onFire = 0; };
 	class Object41 { type = "Rubbish3"; position[] = {7119.68, 7494.45, 0}; direction = 348; onFire = 0; };
 	class Object42 { type = "datsun02Wreck"; position[] = {7114.52, 7619.9, 0}; direction = 127; onFire = 0; };
-	class Object43 { type = "Land_Misc_Rubble_EP1"; position[] = {6925.67, 7877.29, 0}; direction = 351; onFire = 0; };
+//	class Object43 { type = "Land_Misc_Rubble_EP1"; position[] = {6925.67, 7877.29, 0}; direction = 351; onFire = 0; };
 	class Object44 { type = "Land_CncBlock_D"; position[] = {7123.56, 7496, 0}; direction = 351; onFire = 0; };
 	class Object45 { type = "hiluxWreck"; position[] = {7167.96, 7690.64, 0}; direction = 106; onFire = 0; };
 	class Object46 { type = "Rubbish4"; position[] = {7224.94, 7672.23, 0}; direction = 89; onFire = 0; };
@@ -2981,8 +2992,8 @@ class Sosnovka {
 	buildings = 50;
 		
 	class Object0 { type = "Rubbish1"; position[] = {2649.64, 5916.66, 0}; direction = 328; onFire = 0; };
-	class Object1 { type = "Land_Misc_Rubble_EP1"; position[] = {2466.96, 6379.7, 0}; direction = 59; onFire = 0; };
-	class Object2 { type = "Land_Misc_Rubble_EP1"; position[] = {2575.76, 6338.53, 0}; direction = -3; onFire = 0; };
+//	class Object1 { type = "Land_Misc_Rubble_EP1"; position[] = {2466.96, 6379.7, 0}; direction = 59; onFire = 0; };
+//	class Object2 { type = "Land_Misc_Rubble_EP1"; position[] = {2575.76, 6338.53, 0}; direction = -3; onFire = 0; };
 	class Object3 { type = "UAZWreck"; position[] = {2942.3, 6621.75, 0}; direction = 252; onFire = 0.3042; };
 	class Object4 { type = "Rubbish1"; position[] = {2524.5, 6290.93, 0}; direction = 349; onFire = 0; };
 	class Object5 { type = "Land_CncBlock_D"; position[] = {2570.38, 6340, 0}; direction = 174; onFire = 0; };
@@ -2998,7 +3009,7 @@ class Sosnovka {
 	class Object15 { type = "datsun01Wreck"; position[] = {2527.58, 6357.6, 0}; direction = 173; onFire = 0; };
 	class Object16 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {2968.17, 6641.78, 0}; direction = 32; onFire = 0; };
 	class Object17 { type = "RoadBarrier_long"; position[] = {2929.55, 6621.76, 0}; direction = 78; onFire = 0; };
-	class Object18 { type = "Land_Misc_Rubble_EP1"; position[] = {2527.48, 6275.57, 0}; direction = 350; onFire = 0; };
+//	class Object18 { type = "Land_Misc_Rubble_EP1"; position[] = {2527.48, 6275.57, 0}; direction = 350; onFire = 0; };
 	class Object19 { type = "Rubbish3"; position[] = {2467.27, 6375.83, 0}; direction = 53; onFire = 0; };
 	class Object20 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {2568.11, 6374.79, 0}; direction = 130; onFire = 0; };
 	class Object21 { type = "Rubbish4"; position[] = {2502.96, 6380.97, 0}; direction = 265; onFire = 0; };
@@ -3022,7 +3033,7 @@ class Sosnovka {
 	class Object39 { type = "Rubbish2"; position[] = {2554.89, 6306.86, 0}; direction = 265; onFire = 0; };
 	class Object40 { type = "Rubbish4"; position[] = {2528.58, 6401.54, 0}; direction = 180; onFire = 0; };
 	class Object41 { type = "Rubbish3"; position[] = {2546.05, 6311.01, 0}; direction = 257; onFire = 0; };
-	class Object42 { type = "Land_Misc_Rubble_EP1"; position[] = {2626.28, 5952.86, 0}; direction = 158; onFire = 0; };
+//	class Object42 { type = "Land_Misc_Rubble_EP1"; position[] = {2626.28, 5952.86, 0}; direction = 158; onFire = 0; };
 	class Object43 { type = "Land_CncBlock_Stripes"; position[] = {2533.6, 6357.44, 0}; direction = 182; onFire = 0; };
 	class Object44 { type = "UralWreck"; position[] = {2533.02, 6309.68, 0}; direction = 253; onFire = 0; };
 	class Object45 { type = "Rubbish3"; position[] = {2528.43, 6369.29, 0}; direction = 362; onFire = 0; };
@@ -3053,7 +3064,7 @@ class Kamyshovo {
 	class Object12 { type = "datsun01Wreck"; position[] = {12050.7, 3544.34, 0}; direction = 351; onFire = 0.317081; };
 	class Object13 { type = "datsun01Wreck"; position[] = {11995.5, 3570.32, 0}; direction = 250; onFire = 0; };
 	class Object14 { type = "datsun01Wreck"; position[] = {12029.1, 3582.58, 0}; direction = 258; onFire = 0; };
-	class Object15 { type = "Land_Misc_Rubble_EP1"; position[] = {11965, 3480.31, 0}; direction = 84; onFire = 0; };
+//	class Object15 { type = "Land_Misc_Rubble_EP1"; position[] = {11965, 3480.31, 0}; direction = 84; onFire = 0; };
 	class Object16 { type = "Fort_Barricade"; position[] = {12178.7, 3507.04, 0}; direction = 88; onFire = 0; };
 	class Object17 { type = "Fort_Barricade"; position[] = {12100.9, 3498.36, 0}; direction = 75; onFire = 0; };
 	class Object18 { type = "Rubbish3"; position[] = {11981.2, 3480.06, 0}; direction = 87; onFire = 0; };
@@ -3071,7 +3082,7 @@ class Kamyshovo {
 	class Object30 { type = "datsun02Wreck"; position[] = {12224.1, 3546.28, 0}; direction = 89; onFire = 0; };
 	class Object31 { type = "hiluxWreck"; position[] = {12070.6, 3590.56, 0}; direction = 358; onFire = 0; };
 	class Object32 { type = "Land_CncBlock_Stripes"; position[] = {11920.8, 3467.04, 0}; direction = 84; onFire = 0; };
-	class Object33 { type = "Land_Misc_Rubble_EP1"; position[] = {12072.4, 3621.59, 0}; direction = 171; onFire = 0; };
+//	class Object33 { type = "Land_Misc_Rubble_EP1"; position[] = {12072.4, 3621.59, 0}; direction = 171; onFire = 0; };
 	class Object34 { type = "hiluxWreck"; position[] = {12178.4, 3502.37, 0}; direction = 74; onFire = 0; };
 	class Object35 { type = "UAZWreck"; position[] = {12079.2, 3489.68, 0}; direction = 73; onFire = 0; };
 	class Object36 { type = "Rubbish4"; position[] = {12201.5, 3506.68, 0}; direction = 82; onFire = 0; };
@@ -3079,7 +3090,7 @@ class Kamyshovo {
 	class Object38 { type = "RoadBarrier_long"; position[] = {12068.1, 3551.22, 0}; direction = 254; onFire = 0; };
 	class Object39 { type = "UAZWreck"; position[] = {12046.2, 3534.73, 0}; direction = 362; onFire = 0; };
 	class Object40 { type = "SKODAWreck"; position[] = {12067.4, 3619.61, 0}; direction = 160; onFire = 0; };
-	class Object41 { type = "Land_Misc_Rubble_EP1"; position[] = {12052.4, 3532.66, 0}; direction = 349; onFire = 0; };
+//	class Object41 { type = "Land_Misc_Rubble_EP1"; position[] = {12052.4, 3532.66, 0}; direction = 349; onFire = 0; };
 	class Object42 { type = "datsun02Wreck"; position[] = {12046.9, 3692.08, 0}; direction = 160; onFire = 0; };
 	class Object43 { type = "Land_CncBlock_Stripes"; position[] = {12055.6, 3681.43, 0}; direction = 336; onFire = 0; };
 	class Object44 { type = "HMMWVWreck"; position[] = {12032.4, 3720.57, 0}; direction = 320; onFire = 0; };
@@ -3113,7 +3124,7 @@ class Msta {
 	class Object14 { type = "SKODAWreck"; position[] = {11243, 5369.77, 0}; direction = 8; onFire = 0; };
 	class Object15 { type = "Land_CncBlock_Stripes"; position[] = {11408.2, 5559.36, 0}; direction = 312; onFire = 0; };
 	class Object16 { type = "hiluxWreck"; position[] = {11311.7, 5478.71, 0}; direction = 105; onFire = 0; };
-	class Object17 { type = "Land_Misc_Rubble_EP1"; position[] = {11296.8, 5481.76, 0}; direction = 280; onFire = 0; };
+//	class Object17 { type = "Land_Misc_Rubble_EP1"; position[] = {11296.8, 5481.76, 0}; direction = 280; onFire = 0; };
 	class Object18 { type = "datsun02Wreck"; position[] = {11281.2, 5484.01, 0}; direction = 296; onFire = 0; };
 	class Object19 { type = "hiluxWreck"; position[] = {11527.5, 5471.85, 0}; direction = 233; onFire = 0; };
 	class Object20 { type = "datsun01Wreck"; position[] = {11252.9, 5419.59, 0}; direction = 14; onFire = 0; };
@@ -3169,7 +3180,7 @@ class Kabanino {
 	class Object12 { type = "Rubbish1"; position[] = {5435.8, 8495.85, 0}; direction = 147; onFire = 0; };
 	class Object13 { type = "Rubbish3"; position[] = {5213.26, 8616.87, 0}; direction = 78; onFire = 0; };
 	class Object14 { type = "Rubbish1"; position[] = {5333.71, 8583.87, 0}; direction = 294; onFire = 0; };
-	class Object15 { type = "Land_Misc_Rubble_EP1"; position[] = {5353.56, 8578.3, 0}; direction = 113; onFire = 0; };
+//	class Object15 { type = "Land_Misc_Rubble_EP1"; position[] = {5353.56, 8578.3, 0}; direction = 113; onFire = 0; };
 	class Object16 { type = "Rubbish3"; position[] = {5211.86, 8620, 0}; direction = 62; onFire = 0; };
 	class Object17 { type = "Land_CncBlock_Stripes"; position[] = {5241.71, 8645.79, 0}; direction = 363; onFire = 0; };
 	class Object18 { type = "Rubbish1"; position[] = {5302.14, 8614.59, 0}; direction = 118; onFire = 0; };
@@ -3181,7 +3192,7 @@ class Kabanino {
 	class Object24 { type = "Land_CncBlock_Stripes"; position[] = {5195.8, 8609, 0}; direction = 61; onFire = 0; };
 	class Object25 { type = "datsun02Wreck"; position[] = {5374.55, 8563.74, 0}; direction = 107; onFire = 0; };
 	class Object26 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {5334.21, 8583.52, 0}; direction = 289; onFire = 0; };
-	class Object27 { type = "Land_Misc_Rubble_EP1"; position[] = {5336.5, 8588.97, 0}; direction = 289; onFire = 0; };
+//	class Object27 { type = "Land_Misc_Rubble_EP1"; position[] = {5336.5, 8588.97, 0}; direction = 289; onFire = 0; };
 	class Object28 { type = "HMMWVWreck"; position[] = {5350.56, 8754.05, 0}; direction = 284; onFire = 0; };
 	class Object29 { type = "Rubbish4"; position[] = {5184.94, 8601.31, 0}; direction = 53; onFire = 0; };
 	class Object30 { type = "HMMWVWreck"; position[] = {5240.02, 8645.44, 0}; direction = 358; onFire = 0; };
@@ -3195,7 +3206,7 @@ class Kabanino {
 	class Object38 { type = "Land_CncBlock_Stripes"; position[] = {5352.44, 8573.74, 0}; direction = 118; onFire = 0; };
 	class Object39 { type = "RoadBarrier_long"; position[] = {5351.09, 8578.4, 0}; direction = 107; onFire = 0; };
 	class Object40 { type = "Rubbish1"; position[] = {5319.68, 8769.39, 0}; direction = 29; onFire = 0; };
-	class Object41 { type = "Land_Misc_Rubble_EP1"; position[] = {5250.38, 8669.85, 0}; direction = 33; onFire = 0; };
+//	class Object41 { type = "Land_Misc_Rubble_EP1"; position[] = {5250.38, 8669.85, 0}; direction = 33; onFire = 0; };
 	class Object42 { type = "Rubbish4"; position[] = {5186.89, 8600.56, 0}; direction = 57; onFire = 0; };
 	class Object43 { type = "RoadBarrier_long"; position[] = {5241.38, 8626.47, 0}; direction = 367; onFire = 0; };
 	class Object44 { type = "datsun02Wreck"; position[] = {5213, 8618.54, 0}; direction = 72; onFire = 0; };
@@ -3245,7 +3256,7 @@ class Pustoshka {
 	class Object30 { type = "UralWreck"; position[] = {3103.88, 8036.29, 0}; direction = 25; onFire = 0; };
 	class Object31 { type = "Rubbish2"; position[] = {3041.56, 7925.78, 0}; direction = 290; onFire = 0; };
 	class Object32 { type = "SKODAWreck"; position[] = {3049.28, 7900.9, 0}; direction = 200; onFire = 0; };
-	class Object33 { type = "Land_Misc_Rubble_EP1"; position[] = {3101.99, 8022.25, 0}; direction = 28; onFire = 0; };
+//	class Object33 { type = "Land_Misc_Rubble_EP1"; position[] = {3101.99, 8022.25, 0}; direction = 28; onFire = 0; };
 	class Object34 { type = "hiluxWreck"; position[] = {3107.25, 7873.22, 0}; direction = 28; onFire = 0; };
 	class Object35 { type = "Fort_Barricade"; position[] = {3008.63, 7848.71, 0}; direction = 14; onFire = 0; };
 	class Object36 { type = "RoadBarrier_long"; position[] = {3213.38, 8073.49, 0}; direction = 292; onFire = 0; };
@@ -3255,7 +3266,7 @@ class Pustoshka {
 	class Object40 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {3044.51, 8004.12, 0}; direction = 309; onFire = 0; };
 	class Object41 { type = "UAZWreck"; position[] = {3089.55, 8000.63, 0}; direction = 13; onFire = 0; };
 	class Object42 { type = "datsun02Wreck"; position[] = {3040.94, 7818.8, 0}; direction = 135; onFire = 0; };
-	class Object43 { type = "Land_Misc_Rubble_EP1"; position[] = {3157.49, 7982.03, 0}; direction = 111; onFire = 0; };
+//	class Object43 { type = "Land_Misc_Rubble_EP1"; position[] = {3157.49, 7982.03, 0}; direction = 111; onFire = 0; };
 	class Object44 { type = "Fort_Barricade"; position[] = {2963.61, 7713.91, 0}; direction = 217; onFire = 0; };
 	class Object45 { type = "Rubbish2"; position[] = {3087.49, 7848.58, 0}; direction = 38; onFire = 0; };
 	class Object46 { type = "RoadBarrier_long"; position[] = {3061.52, 7925.86, 0}; direction = 19; onFire = 0; };
@@ -3283,7 +3294,7 @@ class Dolina {
 	class Object10 { type = "Rubbish5"; position[] = {11155.6, 6561.3, 0}; direction = 275; onFire = 0; };
 	class Object11 { type = "datsun02Wreck"; position[] = {11212.1, 6596.12, 0}; direction = 117; onFire = 1.52406; };
 	class Object12 { type = "UralWreck"; position[] = {11235.4, 6571.66, 0}; direction = 146; onFire = 0; };
-	class Object13 { type = "Land_Misc_Rubble_EP1"; position[] = {11014.7, 6657.07, 0}; direction = 95; onFire = 0; };
+//	class Object13 { type = "Land_Misc_Rubble_EP1"; position[] = {11014.7, 6657.07, 0}; direction = 95; onFire = 0; };
 	class Object14 { type = "SKODAWreck"; position[] = {11285, 6604.03, 0}; direction = 352; onFire = 0; };
 	class Object15 { type = "Rubbish5"; position[] = {11234.6, 6563.32, 0}; direction = 189; onFire = 0; };
 	class Object16 { type = "datsun01Wreck"; position[] = {11125.9, 6553.55, 0}; direction = 16; onFire = 0; };
@@ -3302,10 +3313,10 @@ class Dolina {
 	class Object29 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {11265.8, 6546.79, 0}; direction = 264; onFire = 0; };
 	class Object30 { type = "hiluxWreck"; position[] = {11130.2, 6560.22, 0}; direction = 12; onFire = 0; };
 	class Object31 { type = "hiluxWreck"; position[] = {11091.9, 6648.46, 0}; direction = 98; onFire = 0; };
-	class Object32 { type = "Land_Misc_Rubble_EP1"; position[] = {11241.1, 6553.62, 0}; direction = 87; onFire = 0; };
+//	class Object32 { type = "Land_Misc_Rubble_EP1"; position[] = {11241.1, 6553.62, 0}; direction = 87; onFire = 0; };
 	class Object33 { type = "Rubbish5"; position[] = {11315.2, 6567.29, 0}; direction = 63; onFire = 0; };
 	class Object34 { type = "UAZWreck"; position[] = {11243.3, 6548.29, 0}; direction = 89; onFire = 0; };
-	class Object35 { type = "Land_Misc_Rubble_EP1"; position[] = {11455.4, 6589.4, 0}; direction = 79; onFire = 0; };
+//	class Object35 { type = "Land_Misc_Rubble_EP1"; position[] = {11455.4, 6589.4, 0}; direction = 79; onFire = 0; };
 	class Object36 { type = "Rubbish3"; position[] = {11286.3, 6590.55, 0}; direction = 342; onFire = 0; };
 	class Object37 { type = "datsun01Wreck"; position[] = {11219, 6587.09, 0}; direction = 294; onFire = 0; };
 	class Object38 { type = "SKODAWreck"; position[] = {11292.5, 6556.68, 0}; direction = 56; onFire = 0; };
@@ -3342,7 +3353,7 @@ class Myshkino {
 	class Object11 { type = "Rubbish5"; position[] = {1910.04, 7517.94, 0}; direction = 345; onFire = 0; };
 	class Object12 { type = "Rubbish4"; position[] = {1950.47, 7300.23, 0}; direction = 37; onFire = 0; };
 	class Object13 { type = "datsun01Wreck"; position[] = {1999.47, 7309.56, 0}; direction = 321; onFire = 0; };
-	class Object14 { type = "Land_Misc_Rubble_EP1"; position[] = {1915.25, 7491.38, 0}; direction = 158; onFire = 0; };
+//	class Object14 { type = "Land_Misc_Rubble_EP1"; position[] = {1915.25, 7491.38, 0}; direction = 158; onFire = 0; };
 	class Object15 { type = "HMMWVWreck"; position[] = {2012.17, 7282.48, 0}; direction = 159; onFire = 0; };
 	class Object16 { type = "datsun01Wreck"; position[] = {2038.85, 7288.75, 0}; direction = 166; onFire = 0; };
 	class Object17 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {2040.48, 7283.67, 0}; direction = 165; onFire = 0; };
@@ -3363,7 +3374,7 @@ class Myshkino {
 	class Object32 { type = "UralWreck"; position[] = {2041.4, 7308.81, 0}; direction = 358; onFire = 0; };
 	class Object33 { type = "RoadBarrier_long"; position[] = {2053.57, 7321.21, 0}; direction = 99; onFire = 0; };
 	class Object34 { type = "Rubbish5"; position[] = {1953.47, 7375.62, 0}; direction = 335; onFire = 0; };
-	class Object35 { type = "Land_Misc_Rubble_EP1"; position[] = {2039.36, 7297.16, 0}; direction = 179; onFire = 0; };
+//	class Object35 { type = "Land_Misc_Rubble_EP1"; position[] = {2039.36, 7297.16, 0}; direction = 179; onFire = 0; };
 	class Object36 { type = "Rubbish5"; position[] = {2042.65, 7273.67, 0}; direction = 355; onFire = 0; };
 	class Object37 { type = "Rubbish1"; position[] = {1996.02, 7307.78, 0}; direction = 338; onFire = 0; };
 	class Object38 { type = "datsun01Wreck"; position[] = {2013.89, 7329.1, 0}; direction = 266; onFire = 0; };
@@ -3396,7 +3407,7 @@ class Tulga {
 	class Object7 { type = "Rubbish5"; position[] = {12827.8, 4457.17, 0}; direction = 255; onFire = 0; };
 	class Object8 { type = "Land_CncBlock_Stripes"; position[] = {12839.6, 4456.29, 0}; direction = 226; onFire = 0; };
 	class Object9 { type = "Rubbish4"; position[] = {12490.6, 4354.98, 0}; direction = 321; onFire = 0; };
-	class Object10 { type = "Land_Misc_Rubble_EP1"; position[] = {12829.1, 4457.25, 0}; direction = 75; onFire = 0; };
+//	class Object10 { type = "Land_Misc_Rubble_EP1"; position[] = {12829.1, 4457.25, 0}; direction = 75; onFire = 0; };
 	class Object11 { type = "Rubbish5"; position[] = {12685.2, 4398.29, 0}; direction = 84; onFire = 0; };
 	class Object12 { type = "Rubbish3"; position[] = {12824, 4457.5, 0}; direction = 262; onFire = 0; };
 	class Object13 { type = "Rubbish5"; position[] = {12885.5, 4459.5, 0}; direction = 317; onFire = 0; };
@@ -3407,7 +3418,7 @@ class Tulga {
 	class Object18 { type = "Rubbish3"; position[] = {12850.4, 4465.17, 0}; direction = 45; onFire = 0; };
 	class Object19 { type = "Rubbish2"; position[] = {12876.3, 4464.09, 0}; direction = 136; onFire = 0; };
 	class Object20 { type = "Rubbish4"; position[] = {12862.5, 4470.05, 0}; direction = 264; onFire = 0; };
-	class Object21 { type = "Land_Misc_Rubble_EP1"; position[] = {12514.6, 4337.23, 0}; direction = 294; onFire = 0; };
+//	class Object21 { type = "Land_Misc_Rubble_EP1"; position[] = {12514.6, 4337.23, 0}; direction = 294; onFire = 0; };
 	class Object22 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {12861.5, 4471.78, 0}; direction = 250; onFire = 0; };
 	class Object23 { type = "Rubbish3"; position[] = {12511.7, 4335.84, 0}; direction = 293; onFire = 0; };
 	class Object24 { type = "datsun01Wreck"; position[] = {12502.2, 4345.67, 0}; direction = 298; onFire = 0; };
@@ -3418,22 +3429,22 @@ class Tulga {
 	class Object29 { type = "Rubbish4"; position[] = {12884.1, 4456.58, 0}; direction = 305; onFire = 0; };
 	class Object30 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {12816.4, 4452.66, 0}; direction = 266; onFire = 0; };
 	class Object31 { type = "hiluxWreck"; position[] = {12851.6, 4463.23, 0}; direction = 49; onFire = 1.36759; };
-	class Object32 { type = "Land_Misc_Rubble_EP1"; position[] = {12885.7, 4461.49, 0}; direction = 310; onFire = 0; };
+//	class Object32 { type = "Land_Misc_Rubble_EP1"; position[] = {12885.7, 4461.49, 0}; direction = 310; onFire = 0; };
 	class Object33 { type = "SKODAWreck"; position[] = {12862.7, 4466.17, 0}; direction = 255; onFire = 0; };
 	class Object34 { type = "UralWreck"; position[] = {12604, 4404.64, 0}; direction = 285; onFire = 0; };
 	class Object35 { type = "Rubbish2"; position[] = {12874, 4467.17, 0}; direction = 69; onFire = 0; };
 	class Object36 { type = "Rubbish5"; position[] = {12682.6, 4396.38, 0}; direction = 89; onFire = 0; };
-	class Object37 { type = "Land_Misc_Rubble_EP1"; position[] = {12511.2, 4334.39, 0}; direction = 302; onFire = 0; };
+//	class Object37 { type = "Land_Misc_Rubble_EP1"; position[] = {12511.2, 4334.39, 0}; direction = 302; onFire = 0; };
 	class Object38 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {12828.9, 4457.01, 0}; direction = 89; onFire = 0; };
 	class Object39 { type = "Rubbish4"; position[] = {12847.8, 4465.37, 0}; direction = 50; onFire = 0; };
 	class Object40 { type = "Land_CncBlock_Stripes"; position[] = {12828.1, 4457.07, 0}; direction = 74; onFire = 0; };
 	class Object41 { type = "Rubbish2"; position[] = {12521.6, 4333.12, 0}; direction = 305; onFire = 0; };
-	class Object42 { type = "Land_Misc_Rubble_EP1"; position[] = {12817.8, 4456.35, 0}; direction = 265; onFire = 0; };
+//	class Object42 { type = "Land_Misc_Rubble_EP1"; position[] = {12817.8, 4456.35, 0}; direction = 265; onFire = 0; };
 	class Object43 { type = "HMMWVWreck"; position[] = {12620.6, 4400.84, 0}; direction = 282; onFire = 0; };
 	class Object44 { type = "UralWreck"; position[] = {12849.2, 4466.38, 0}; direction = 58; onFire = 0; };
 	class Object45 { type = "SKODAWreck"; position[] = {12883.7, 4458.98, 0}; direction = 305; onFire = 0; };
 	class Object46 { type = "SKODAWreck"; position[] = {12825, 4457.36, 0}; direction = 268; onFire = 0; };
-	class Object47 { type = "Land_Misc_Rubble_EP1"; position[] = {12841, 4457.74, 0}; direction = 234; onFire = 0; };
+//	class Object47 { type = "Land_Misc_Rubble_EP1"; position[] = {12841, 4457.74, 0}; direction = 234; onFire = 0; };
 	class Object48 { type = "hiluxWreck"; position[] = {12836.5, 4460.29, 0}; direction = 226; onFire = 0; };
 	class Object49 { type = "Fort_Barricade"; position[] = {12778.5, 4449.2, 0}; direction = 267; onFire = 0; };
 	};
@@ -3472,7 +3483,7 @@ class Vybor {
 	class Object25 { type = "SKODAWreck"; position[] = {3807.84, 8865.53, 0}; direction = 124; onFire = 0; };
 	class Object26 { type = "Rubbish3"; position[] = {3649.69, 8960.16, 0}; direction = 303; onFire = 0; };
 	class Object27 { type = "Rubbish1"; position[] = {4057.65, 8944.56, 0}; direction = 81; onFire = 0; };
-	class Object28 { type = "Land_Misc_Rubble_EP1"; position[] = {3105.68, 9262.93, 0}; direction = 276; onFire = 0; };
+//	class Object28 { type = "Land_Misc_Rubble_EP1"; position[] = {3105.68, 9262.93, 0}; direction = 276; onFire = 0; };
 	class Object29 { type = "Rubbish3"; position[] = {3661.71, 8579.58, 0}; direction = 219; onFire = 0; };
 	class Object30 { type = "Land_CncBlock_Stripes"; position[] = {4145.27, 8943.81, 0}; direction = 96; onFire = 0; };
 	class Object31 { type = "RoadBarrier_long"; position[] = {3667.47, 8218.05, 0}; direction = -3; onFire = 0; };
@@ -3572,10 +3583,10 @@ class Polana {
 	size = 430;
 	buildings = 50;
 		
-	class Object0 { type = "Land_Misc_Rubble_EP1"; position[] = {10556.7, 7873.13, 0}; direction = 192; onFire = 0; };
+//	class Object0 { type = "Land_Misc_Rubble_EP1"; position[] = {10556.7, 7873.13, 0}; direction = 192; onFire = 0; };
 	class Object1 { type = "Land_CncBlock_D"; position[] = {10591.7, 8010.18, 0}; direction = 200; onFire = 0; };
 	class Object2 { type = "Rubbish3"; position[] = {10812.6, 8124.75, 0}; direction = 85; onFire = 0; };
-	class Object3 { type = "Land_Misc_Rubble_EP1"; position[] = {10857.1, 8174.31, 0}; direction = 112; onFire = 0; };
+//	class Object3 { type = "Land_Misc_Rubble_EP1"; position[] = {10857.1, 8174.31, 0}; direction = 112; onFire = 0; };
 	class Object4 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {10608.4, 8533.51, 0}; direction = 168; onFire = 0; };
 	class Object5 { type = "UAZWreck"; position[] = {10712.8, 8100.23, 0}; direction = 303; onFire = 0; };
 	class Object6 { type = "UralWreck"; position[] = {10524.3, 7770.99, 0}; direction = 182; onFire = 0; };
@@ -3610,7 +3621,7 @@ class Polana {
 	class Object35 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {10669.2, 7949.98, 0}; direction = 99; onFire = 0; };
 	class Object36 { type = "hiluxWreck"; position[] = {10657.6, 7948.39, 0}; direction = 291; onFire = 0; };
 	class Object37 { type = "HMMWVWreck"; position[] = {10727.9, 8106.33, 0}; direction = 217; onFire = 0; };
-	class Object38 { type = "Land_Misc_Rubble_EP1"; position[] = {10652.3, 8112.97, 0}; direction = 325; onFire = 0; };
+//	class Object38 { type = "Land_Misc_Rubble_EP1"; position[] = {10652.3, 8112.97, 0}; direction = 325; onFire = 0; };
 	class Object39 { type = "Land_CncBlock_D"; position[] = {10615.8, 7963.83, 0}; direction = 238; onFire = 0; };
 	class Object40 { type = "UAZWreck"; position[] = {10674.6, 7946.17, 0}; direction = 115; onFire = 0; };
 	class Object41 { type = "UralWreck"; position[] = {10776.4, 8120.73, 0}; direction = 274; onFire = 0; };
@@ -3618,7 +3629,7 @@ class Polana {
 	class Object43 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {10764.7, 8123.08, 0}; direction = 273; onFire = 0; };
 	class Object44 { type = "datsun02Wreck"; position[] = {10575.3, 7984.21, 0}; direction = 30; onFire = 0; };
 	class Object45 { type = "datsun01Wreck"; position[] = {10683.4, 8100.99, 0}; direction = 57; onFire = 0; };
-	class Object46 { type = "Land_Misc_Rubble_EP1"; position[] = {10675.4, 7939.95, 0}; direction = 115; onFire = 0; };
+//	class Object46 { type = "Land_Misc_Rubble_EP1"; position[] = {10675.4, 7939.95, 0}; direction = 115; onFire = 0; };
 	class Object47 { type = "Rubbish2"; position[] = {10631, 7970.14, 0}; direction = 152; onFire = 0; };
 	class Object48 { type = "Rubbish2"; position[] = {10561.9, 7874.39, 0}; direction = 208; onFire = 0; };
 	class Object49 { type = "Land_CncBlock_D"; position[] = {10608.9, 8532.91, 0}; direction = 156; onFire = 0; };
@@ -3643,7 +3654,7 @@ class Gorka {
 	class Object10 { type = "Rubbish1"; position[] = {10262.4, 9537.25, 0}; direction = 33; onFire = 0; };
 	class Object11 { type = "SKODAWreck"; position[] = {9392.02, 8944.36, 0}; direction = 24; onFire = 0; };
 	class Object12 { type = "Land_CncBlock_D"; position[] = {9903.69, 8774.46, 0}; direction = 345; onFire = 0; };
-	class Object13 { type = "Land_Misc_Rubble_EP1"; position[] = {9267.57, 8803.87, 0}; direction = 233; onFire = 0; };
+//	class Object13 { type = "Land_Misc_Rubble_EP1"; position[] = {9267.57, 8803.87, 0}; direction = 233; onFire = 0; };
 	class Object14 { type = "Rubbish5"; position[] = {9717.2, 8889.75, 0}; direction = 189; onFire = 0; };
 	class Object15 { type = "Rubbish5"; position[] = {9410.08, 8962.18, 0}; direction = 52; onFire = 0; };
 	class Object16 { type = "datsun01Wreck"; position[] = {9484.96, 8822.02, 0}; direction = 83; onFire = 0; };
@@ -3653,7 +3664,7 @@ class Gorka {
 	class Object20 { type = "Rubbish1"; position[] = {9462.41, 8909.49, 0}; direction = 28; onFire = 0; };
 	class Object21 { type = "RoadBarrier_long"; position[] = {9368.5, 8845.23, 0}; direction = 28; onFire = 0; };
 	class Object22 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {9474.91, 8930.46, 0}; direction = 30; onFire = 0; };
-	class Object23 { type = "Land_Misc_Rubble_EP1"; position[] = {10362.6, 8936.54, 0}; direction = 257; onFire = 0; };
+//	class Object23 { type = "Land_Misc_Rubble_EP1"; position[] = {10362.6, 8936.54, 0}; direction = 257; onFire = 0; };
 	class Object24 { type = "datsun01Wreck"; position[] = {9649.17, 8830.34, 0}; direction = 181; onFire = 0; };
 	class Object25 { type = "Rubbish3"; position[] = {9464.3, 8906.49, 0}; direction = 31; onFire = 0; };
 	class Object26 { type = "RoadBarrier_long"; position[] = {10360.7, 8938.18, 0}; direction = 250; onFire = 0; };
@@ -3671,7 +3682,7 @@ class Gorka {
 	class Object38 { type = "datsun02Wreck"; position[] = {9428.27, 8954.33, 0}; direction = 171; onFire = 0; };
 	class Object39 { type = "Fort_Barricade"; position[] = {10391.4, 8946.92, 0}; direction = 239; onFire = 0; };
 	class Object40 { type = "datsun01Wreck"; position[] = {9474.1, 8919.69, 0}; direction = 30; onFire = 0; };
-	class Object41 { type = "Land_Misc_Rubble_EP1"; position[] = {10392.5, 8965.39, 0}; direction = 331; onFire = 0; };
+//	class Object41 { type = "Land_Misc_Rubble_EP1"; position[] = {10392.5, 8965.39, 0}; direction = 331; onFire = 0; };
 	class Object42 { type = "Land_CncBlock_D"; position[] = {10374.7, 8988.96, 0}; direction = 128; onFire = 0; };
 	class Object43 { type = "datsun01Wreck"; position[] = {9479.84, 8937.27, 0}; direction = 214; onFire = 0; };
 	class Object44 { type = "Rubbish2"; position[] = {10087.5, 8864.63, 0}; direction = 76; onFire = 0; };
@@ -3697,7 +3708,7 @@ class Gorka {
 	class Object64 { type = "SKODAWreck"; position[] = {9446.72, 8819.46, 0}; direction = 264; onFire = 0; };
 	class Object65 { type = "RoadBarrier_long"; position[] = {10395.4, 8963.94, 0}; direction = 326; onFire = 0; };
 	class Object66 { type = "Rubbish3"; position[] = {10262.2, 9537.38, 0}; direction = 41; onFire = 0; };
-	class Object67 { type = "Land_Misc_Rubble_EP1"; position[] = {10429, 8864.28, 0}; direction = 150; onFire = 0; };
+//	class Object67 { type = "Land_Misc_Rubble_EP1"; position[] = {10429, 8864.28, 0}; direction = 150; onFire = 0; };
 	class Object68 { type = "Rubbish1"; position[] = {9718.19, 8889.49, 0}; direction = 184; onFire = 0; };
 	class Object69 { type = "HMMWVWreck"; position[] = {9257.76, 8870.25, 0}; direction = 261; onFire = 0; };
 	class Object70 { type = "Fort_Barricade"; position[] = {10424.5, 8878.67, 0}; direction = 319; onFire = 0; };
@@ -3726,7 +3737,7 @@ class Gorka {
 	class Object93 { type = "UAZWreck"; position[] = {10301.1, 9569.01, 0}; direction = 171; onFire = 0.52708; };
 	class Object94 { type = "RoadBarrier_long"; position[] = {10390.3, 8948.77, 0}; direction = 231; onFire = 0; };
 	class Object95 { type = "hiluxWreck"; position[] = {9461.34, 8824.8, 0}; direction = 344; onFire = 0; };
-	class Object96 { type = "Land_Misc_Rubble_EP1"; position[] = {9458.92, 8838.68, 0}; direction = 151; onFire = 0; };
+//	class Object96 { type = "Land_Misc_Rubble_EP1"; position[] = {9458.92, 8838.68, 0}; direction = 151; onFire = 0; };
 	class Object97 { type = "Fort_Barricade"; position[] = {10362.7, 8942.6, 0}; direction = 247; onFire = 0; };
 	class Object98 { type = "Rubbish2"; position[] = {10345.9, 8936.23, 0}; direction = 251; onFire = 0; };
 	class Object99 { type = "Land_CncBlock_Stripes"; position[] = {9758.04, 8800.15, 0}; direction = 90; onFire = 0; };
@@ -3734,7 +3745,7 @@ class Gorka {
 	class Object101 { type = "Rubbish5"; position[] = {9250.5, 9664.14, 0}; direction = 251; onFire = 0; };
 	class Object102 { type = "UralWreck"; position[] = {10284.1, 9548.98, 0}; direction = 249; onFire = 0; };
 	class Object103 { type = "Rubbish4"; position[] = {9252.15, 8878.36, 0}; direction = 289; onFire = 0; };
-	class Object104 { type = "Land_Misc_Rubble_EP1"; position[] = {9588.62, 8808.3, 0}; direction = 104; onFire = 0; };
+//	class Object104 { type = "Land_Misc_Rubble_EP1"; position[] = {9588.62, 8808.3, 0}; direction = 104; onFire = 0; };
 	class Object105 { type = "datsun01Wreck"; position[] = {9786.04, 8807.04, 0}; direction = 91; onFire = 0; };
 	class Object106 { type = "Rubbish1"; position[] = {9515.54, 8822.3, 0}; direction = 101; onFire = 0; };
 	class Object107 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {9325.99, 9697.73, 0}; direction = 71; onFire = 0; };
@@ -3782,7 +3793,7 @@ class Orlovets {
 	class Object21 { type = "Land_CncBlock_D"; position[] = {12203.9, 7278.51, 0}; direction = 54; onFire = 0; };
 	class Object22 { type = "Land_CncBlock_D"; position[] = {12033.1, 7259.84, 0}; direction = 82; onFire = 0; };
 	class Object23 { type = "Rubbish1"; position[] = {12199.7, 7280.98, 0}; direction = 60; onFire = 0; };
-	class Object24 { type = "Land_Misc_Rubble_EP1"; position[] = {12189, 7272.23, 0}; direction = 57; onFire = 0; };
+//	class Object24 { type = "Land_Misc_Rubble_EP1"; position[] = {12189, 7272.23, 0}; direction = 57; onFire = 0; };
 	class Object25 { type = "hiluxWreck"; position[] = {11985, 7262.61, 0}; direction = 279; onFire = 1.82807; };
 	class Object26 { type = "Rubbish3"; position[] = {12013.4, 7258.36, 0}; direction = 255; onFire = 0; };
 	class Object27 { type = "hiluxWreck"; position[] = {12089.5, 7272.42, 0}; direction = 80; onFire = 0; };
@@ -3796,7 +3807,7 @@ class Orlovets {
 	class Object35 { type = "Rubbish2"; position[] = {12200.9, 7277.41, 0}; direction = 70; onFire = 0; };
 	class Object36 { type = "UAZWreck"; position[] = {12010.1, 7261.54, 0}; direction = 260; onFire = 0; };
 	class Object37 { type = "Rubbish5"; position[] = {12103.2, 7274.38, 0}; direction = 94; onFire = 0; };
-	class Object38 { type = "Land_Misc_Rubble_EP1"; position[] = {12137.2, 7269.09, 0}; direction = 99; onFire = 0; };
+//	class Object38 { type = "Land_Misc_Rubble_EP1"; position[] = {12137.2, 7269.09, 0}; direction = 99; onFire = 0; };
 	class Object39 { type = "datsun02Wreck"; position[] = {12323.1, 7336.5, 0}; direction = 17; onFire = 0; };
 	class Object40 { type = "datsun01Wreck"; position[] = {11964, 7268.38, 0}; direction = 297; onFire = 0; };
 	class Object41 { type = "Rubbish2"; position[] = {12101.1, 7276.25, 0}; direction = 91; onFire = 0; };
@@ -3843,10 +3854,10 @@ class Grishino {
 	class Object24 { type = "UralWreck"; position[] = {6187.92, 10345.4, 0}; direction = 358; onFire = 0; };
 	class Object25 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {5941.73, 10287.1, 0}; direction = 39; onFire = 0; };
 	class Object26 { type = "HMMWVWreck"; position[] = {5676.61, 10745, 0}; direction = 105; onFire = 0; };
-	class Object27 { type = "Land_Misc_Rubble_EP1"; position[] = {5837.49, 10712.4, 0}; direction = 295; onFire = 0; };
+//	class Object27 { type = "Land_Misc_Rubble_EP1"; position[] = {5837.49, 10712.4, 0}; direction = 295; onFire = 0; };
 	class Object28 { type = "Rubbish4"; position[] = {5984.76, 10344.2, 0}; direction = 204; onFire = 0; };
-	class Object29 { type = "Land_Misc_Rubble_EP1"; position[] = {6004.25, 10384.4, 0}; direction = 24; onFire = 0; };
-	class Object30 { type = "Land_Misc_Rubble_EP1"; position[] = {6074.05, 10467.8, 0}; direction = 88; onFire = 0; };
+//	class Object29 { type = "Land_Misc_Rubble_EP1"; position[] = {6004.25, 10384.4, 0}; direction = 24; onFire = 0; };
+//	class Object30 { type = "Land_Misc_Rubble_EP1"; position[] = {6074.05, 10467.8, 0}; direction = 88; onFire = 0; };
 	class Object31 { type = "Land_CncBlock_Stripes"; position[] = {5676.65, 10748.1, 0}; direction = 115; onFire = 0; };
 	class Object32 { type = "Land_CncBlock_Stripes"; position[] = {5961.49, 10666.3, 0}; direction = 285; onFire = 0; };
 	class Object33 { type = "Rubbish5"; position[] = {5676.5, 10747.9, 0}; direction = 108; onFire = 0; };
@@ -3880,18 +3891,18 @@ class Solnichniy {
 	class Object3 { type = "Rubbish2"; position[] = {13163, 6989.54, 0}; direction = 157; onFire = 0; };
 	class Object4 { type = "RoadBarrier_long"; position[] = {13087.7, 7080.43, 0}; direction = 173; onFire = 0; };
 	class Object5 { type = "UAZWreck"; position[] = {13467, 6287.58, 0}; direction = 185; onFire = 0; };
-	class Object6 { type = "Land_Misc_Rubble_EP1"; position[] = {13381.2, 6145.03, 0}; direction = 189; onFire = 0; };
+//	class Object6 { type = "Land_Misc_Rubble_EP1"; position[] = {13381.2, 6145.03, 0}; direction = 189; onFire = 0; };
 	class Object7 { type = "Land_CncBlock_D"; position[] = {13430.3, 6242.48, 0}; direction = 102; onFire = 0; };
 	class Object8 { type = "datsun02Wreck"; position[] = {13379.3, 6157.18, 0}; direction = 181; onFire = 0; };
-	class Object9 { type = "Land_Misc_Rubble_EP1"; position[] = {13425.8, 6266.9, 0}; direction = 8; onFire = 0; };
+//	class Object9 { type = "Land_Misc_Rubble_EP1"; position[] = {13425.8, 6266.9, 0}; direction = 8; onFire = 0; };
 	class Object10 { type = "Rubbish1"; position[] = {13092.7, 7033.44, 0}; direction = 166; onFire = 0; };
 	class Object11 { type = "Rubbish3"; position[] = {13411.7, 6611.41, 0}; direction = 343; onFire = 0; };
-	class Object12 { type = "Land_Misc_Rubble_EP1"; position[] = {13435.8, 6241.29, 0}; direction = 105; onFire = 0; };
+//	class Object12 { type = "Land_Misc_Rubble_EP1"; position[] = {13435.8, 6241.29, 0}; direction = 105; onFire = 0; };
 	class Object13 { type = "UAZWreck"; position[] = {13389.7, 6246.87, 0}; direction = 95; onFire = 0; };
 	class Object14 { type = "Rubbish5"; position[] = {13228.7, 5440.71, 0}; direction = 313; onFire = 0; };
 	class Object15 { type = "Rubbish4"; position[] = {13252.7, 6240.39, 0}; direction = 264; onFire = 0; };
 	class Object16 { type = "RoadBarrier_long"; position[] = {12851.5, 6219, 0}; direction = 61; onFire = 0; };
-	class Object17 { type = "Land_Misc_Rubble_EP1"; position[] = {13080.1, 7041.79, 0}; direction = 256; onFire = 0; };
+//	class Object17 { type = "Land_Misc_Rubble_EP1"; position[] = {13080.1, 7041.79, 0}; direction = 256; onFire = 0; };
 	class Object18 { type = "Rubbish3"; position[] = {13512.6, 6312.64, 0}; direction = 10; onFire = 0; };
 	class Object19 { type = "SKODAWreck"; position[] = {13098.5, 7032.83, 0}; direction = 165; onFire = 1.74517; };
 	class Object20 { type = "Rubbish1"; position[] = {13060.3, 7150.34, 0}; direction = 343; onFire = 0; };
@@ -3908,7 +3919,7 @@ class Solnichniy {
 	class Object31 { type = "hiluxWreck"; position[] = {13375.2, 6140.01, 0}; direction = -6; onFire = 0; };
 	class Object32 { type = "SKODAWreck"; position[] = {13383.2, 5465.93, 0}; direction = 4; onFire = 0; };
 	class Object33 { type = "Rubbish2"; position[] = {13215.9, 5451.78, 0}; direction = 306; onFire = 0; };
-	class Object34 { type = "Land_Misc_Rubble_EP1"; position[] = {12933.4, 5632.34, 0}; direction = 334; onFire = 0; };
+//	class Object34 { type = "Land_Misc_Rubble_EP1"; position[] = {12933.4, 5632.34, 0}; direction = 334; onFire = 0; };
 	class Object35 { type = "Land_CncBlock_D"; position[] = {12980.7, 6258.93, 0}; direction = 263; onFire = 0; };
 	class Object36 { type = "SKODAWreck"; position[] = {13108.1, 7158.22, 0}; direction = 158; onFire = 0; };
 	class Object37 { type = "HMMWVWreck"; position[] = {13085.8, 7061.64, 0}; direction = 154; onFire = 0; };
@@ -3917,8 +3928,8 @@ class Solnichniy {
 	class Object40 { type = "Fort_Barricade"; position[] = {13123, 7085.56, 0}; direction = 254; onFire = 0; };
 	class Object41 { type = "Rubbish1"; position[] = {12930, 6763.24, 0}; direction = 254; onFire = 0; };
 	class Object42 { type = "HMMWVWreck"; position[] = {13061, 7158.6, 0}; direction = 349; onFire = 0; };
-	class Object43 { type = "Land_Misc_Rubble_EP1"; position[] = {13432, 6327.33, 0}; direction = -1; onFire = 0; };
-	class Object44 { type = "Land_Misc_Rubble_EP1"; position[] = {13388, 5429.18, 0}; direction = 8; onFire = 0; };
+//	class Object43 { type = "Land_Misc_Rubble_EP1"; position[] = {13432, 6327.33, 0}; direction = -1; onFire = 0; };
+//	class Object44 { type = "Land_Misc_Rubble_EP1"; position[] = {13388, 5429.18, 0}; direction = 8; onFire = 0; };
 	class Object45 { type = "hiluxWreck"; position[] = {13062.8, 7152.61, 0}; direction = 347; onFire = 0; };
 	class Object46 { type = "Land_CncBlock_Stripes"; position[] = {12873.2, 6226.82, 0}; direction = 247; onFire = 0; };
 	class Object47 { type = "Rubbish5"; position[] = {13519.7, 6326.4, 0}; direction = 168; onFire = 0; };
@@ -3935,7 +3946,7 @@ class Solnichniy {
 	class Object58 { type = "datsun02Wreck"; position[] = {13393.4, 6358.11, 0}; direction = 269; onFire = 0; };
 	class Object59 { type = "RoadBarrier_long"; position[] = {13430.4, 6336.54, 0}; direction = 3; onFire = 0; };
 	class Object60 { type = "Rubbish5"; position[] = {13061, 7041.9, 0}; direction = 79; onFire = 0; };
-	class Object61 { type = "Land_Misc_Rubble_EP1"; position[] = {12907, 6758.09, 0}; direction = 80; onFire = 0; };
+//	class Object61 { type = "Land_Misc_Rubble_EP1"; position[] = {12907, 6758.09, 0}; direction = 80; onFire = 0; };
 	class Object62 { type = "Land_CncBlock_D"; position[] = {13071.5, 7044.59, 0}; direction = 267; onFire = 0; };
 	class Object63 { type = "UAZWreck"; position[] = {13058.9, 7151.47, 0}; direction = 350; onFire = 0; };
 	class Object64 { type = "Land_CncBlock_Stripes"; position[] = {13180.1, 7047.89, 0}; direction = 338; onFire = 0; };
@@ -3968,7 +3979,7 @@ class Solnichniy {
 	class Object91 { type = "hiluxWreck"; position[] = {13408.1, 6611.19, 0}; direction = 335; onFire = 0; };
 	class Object92 { type = "SKODAWreck"; position[] = {13399, 6353.29, 0}; direction = 269; onFire = 0; };
 	class Object93 { type = "Rubbish4"; position[] = {13248.7, 5431.53, 0}; direction = 277; onFire = 0; };
-	class Object94 { type = "Land_Misc_Rubble_EP1"; position[] = {13336.8, 6258.18, 0}; direction = 86; onFire = 0; };
+//	class Object94 { type = "Land_Misc_Rubble_EP1"; position[] = {13336.8, 6258.18, 0}; direction = 86; onFire = 0; };
 	class Object95 { type = "Rubbish2"; position[] = {13322.1, 6223.82, 0}; direction = 185; onFire = 0; };
 	class Object96 { type = "Rubbish4"; position[] = {13090.1, 7080.6, 0}; direction = 80; onFire = 0; };
 	class Object97 { type = "UAZWreck"; position[] = {13404.3, 6636.23, 0}; direction = 336; onFire = 0; };
@@ -3990,8 +4001,8 @@ class Solnichniy {
 	class Object113 { type = "Rubbish3"; position[] = {13097.5, 7041, 0}; direction = 168; onFire = 0; };
 	class Object114 { type = "SKODAWreck"; position[] = {13386.2, 5429.65, 0}; direction = -1; onFire = 0; };
 	class Object115 { type = "Land_CncBlock_Stripes"; position[] = {12946.8, 6757.34, 0}; direction = 162; onFire = 0; };
-	class Object116 { type = "Land_Misc_Rubble_EP1"; position[] = {13212.8, 5446.35, 0}; direction = 303; onFire = 0; };
-	class Object117 { type = "Land_Misc_Rubble_EP1"; position[] = {13321.8, 6246.04, 0}; direction = 178; onFire = 0; };
+//	class Object116 { type = "Land_Misc_Rubble_EP1"; position[] = {13212.8, 5446.35, 0}; direction = 303; onFire = 0; };
+//	class Object117 { type = "Land_Misc_Rubble_EP1"; position[] = {13321.8, 6246.04, 0}; direction = 178; onFire = 0; };
 	class Object118 { type = "hiluxWreck"; position[] = {13055.4, 7163.45, 0}; direction = 168; onFire = 0; };
 	class Object119 { type = "hiluxWreck"; position[] = {13312.5, 6316.76, 0}; direction = 365; onFire = 0; };
 	};
@@ -4026,14 +4037,14 @@ class Lopatino {
 	class Object21 { type = "datsun02Wreck"; position[] = {2698.72, 10003.5, 0}; direction = 1; onFire = 0; };
 	class Object22 { type = "Rubbish4"; position[] = {2482.37, 9653.14, 0}; direction = 271; onFire = 0; };
 	class Object23 { type = "Land_CncBlock_D"; position[] = {2673.16, 9924.25, 0}; direction = 40; onFire = 0; };
-	class Object24 { type = "Land_Misc_Rubble_EP1"; position[] = {2871.18, 9767.28, 0}; direction = 136; onFire = 0; };
+//	class Object24 { type = "Land_Misc_Rubble_EP1"; position[] = {2871.18, 9767.28, 0}; direction = 136; onFire = 0; };
 	class Object25 { type = "Rubbish1"; position[] = {2663.61, 9898.35, 0}; direction = 29; onFire = 0; };
 	class Object26 { type = "UralWreck"; position[] = {2739.78, 9958.2, 0}; direction = 193; onFire = 0; };
 	class Object27 { type = "Rubbish3"; position[] = {2673.96, 9915.36, 0}; direction = 207; onFire = 0; };
 	class Object28 { type = "UralWreck"; position[] = {2521.58, 9623.79, 0}; direction = 323; onFire = 0; };
 	class Object29 { type = "Land_CncBlock_Stripes"; position[] = {2722.31, 9934.34, 0}; direction = 21; onFire = 0; };
 	class Object30 { type = "Land_CncBlock_Stripes"; position[] = {2746.53, 10001, 0}; direction = 1; onFire = 0; };
-	class Object31 { type = "Land_Misc_Rubble_EP1"; position[] = {2679.91, 10072.8, 0}; direction = 141; onFire = 0; };
+//	class Object31 { type = "Land_Misc_Rubble_EP1"; position[] = {2679.91, 10072.8, 0}; direction = 141; onFire = 0; };
 	class Object32 { type = "Rubbish4"; position[] = {2808.28, 9944.74, 0}; direction = 306; onFire = 0; };
 	class Object33 { type = "SKODAWreck"; position[] = {2843.78, 9800.82, 0}; direction = 313; onFire = 0; };
 	class Object34 { type = "Rubbish2"; position[] = {2742.91, 9999.32, 0}; direction = -1; onFire = 0; };
@@ -4047,7 +4058,7 @@ class Lopatino {
 	class Object42 { type = "Rubbish4"; position[] = {2728.52, 10070.7, 0}; direction = 249; onFire = 0; };
 	class Object43 { type = "Rubbish5"; position[] = {2881.64, 9751.15, 0}; direction = 147; onFire = 0; };
 	class Object44 { type = "HMMWVWreck"; position[] = {2798.41, 9956.57, 0}; direction = 313; onFire = 0; };
-	class Object45 { type = "Land_Misc_Rubble_EP1"; position[] = {2822.39, 9922.68, 0}; direction = 39; onFire = 0; };
+//	class Object45 { type = "Land_Misc_Rubble_EP1"; position[] = {2822.39, 9922.68, 0}; direction = 39; onFire = 0; };
 	class Object46 { type = "Fort_Barricade"; position[] = {2697.56, 10040.8, 0}; direction = 343; onFire = 0; };
 	class Object47 { type = "Land_CncBlock_Stripes"; position[] = {2735.47, 9958.37, 0}; direction = 203; onFire = 0; };
 	class Object48 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {2856.23, 9785.84, 0}; direction = 135; onFire = 0; };
@@ -4061,7 +4072,7 @@ class Dubrovka {
 	buildings = 50;
 		
 	class Object0 { type = "Rubbish4"; position[] = {10295.8, 9553.77, 0}; direction = 186; onFire = 0; };
-	class Object1 { type = "Land_Misc_Rubble_EP1"; position[] = {10274.4, 9547.33, 0}; direction = 33; onFire = 0; };
+//	class Object1 { type = "Land_Misc_Rubble_EP1"; position[] = {10274.4, 9547.33, 0}; direction = 33; onFire = 0; };
 	class Object2 { type = "Rubbish1"; position[] = {10247.8, 9813.09, 0}; direction = 329; onFire = 0; };
 	class Object3 { type = "Rubbish1"; position[] = {10531.9, 9885.59, 0}; direction = 79; onFire = 0; };
 	class Object4 { type = "Land_CncBlock_Stripes"; position[] = {10559.8, 9619.06, 0}; direction = 115; onFire = 0; };
@@ -4078,7 +4089,7 @@ class Dubrovka {
 	class Object15 { type = "SKODAWreck"; position[] = {10355.3, 9813.09, 0}; direction = 257; onFire = 0; };
 	class Object16 { type = "Rubbish4"; position[] = {10545.7, 9668.81, 0}; direction = 189; onFire = 0; };
 	class Object17 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {10090, 10338.3, 0}; direction = 307; onFire = 0; };
-	class Object18 { type = "Land_Misc_Rubble_EP1"; position[] = {10541.3, 9668.7, 0}; direction = 199; onFire = 0; };
+//	class Object18 { type = "Land_Misc_Rubble_EP1"; position[] = {10541.3, 9668.7, 0}; direction = 199; onFire = 0; };
 	class Object19 { type = "Land_CncBlock_Stripes"; position[] = {10384.6, 9823.31, 0}; direction = 247; onFire = 0; };
 	class Object20 { type = "Land_CncBlock_Stripes"; position[] = {10476.4, 10054.6, 0}; direction = 5; onFire = 0; };
 	class Object21 { type = "Rubbish2"; position[] = {10592.5, 9908.6, 0}; direction = 70; onFire = 0; };
@@ -4098,7 +4109,7 @@ class Dubrovka {
 	class Object35 { type = "datsun01Wreck"; position[] = {10549.4, 9685.89, 0}; direction = 172; onFire = 0; };
 	class Object36 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {10261.9, 9536.52, 0}; direction = 40; onFire = 0; };
 	class Object37 { type = "UAZWreck"; position[] = {10262.6, 9536.59, 0}; direction = 33; onFire = 0; };
-	class Object38 { type = "Land_Misc_Rubble_EP1"; position[] = {10516.8, 9724.78, 0}; direction = 131; onFire = 0; };
+//	class Object38 { type = "Land_Misc_Rubble_EP1"; position[] = {10516.8, 9724.78, 0}; direction = 131; onFire = 0; };
 	class Object39 { type = "Rubbish2"; position[] = {10617.7, 9927.91, 0}; direction = 3; onFire = 0; };
 	class Object40 { type = "datsun01Wreck"; position[] = {10273, 9547.49, 0}; direction = 47; onFire = 0; };
 	class Object41 { type = "Fort_Barricade"; position[] = {10533.5, 9715.03, 0}; direction = 123; onFire = 0; };
@@ -4138,7 +4149,7 @@ class Nizhnoye {
 	class Object17 { type = "Rubbish2"; position[] = {12895.5, 8366.49, 0}; direction = 333; onFire = 0; };
 	class Object18 { type = "Fort_Barricade"; position[] = {13064.6, 8180.6, 0}; direction = 262; onFire = 0; };
 	class Object19 { type = "HMMWVWreck"; position[] = {12812.8, 8382.08, 0}; direction = 307; onFire = 0; };
-	class Object20 { type = "Land_Misc_Rubble_EP1"; position[] = {12968.7, 8130.91, 0}; direction = 153; onFire = 0; };
+//	class Object20 { type = "Land_Misc_Rubble_EP1"; position[] = {12968.7, 8130.91, 0}; direction = 153; onFire = 0; };
 	class Object21 { type = "HMMWVWreck"; position[] = {12829.7, 8046.86, 0}; direction = 245; onFire = 0; };
 	class Object22 { type = "UralWreck"; position[] = {12779.8, 8395.09, 0}; direction = 299; onFire = 0; };
 	class Object23 { type = "Rubbish1"; position[] = {12954.2, 8017.04, 0}; direction = 185; onFire = 0; };
@@ -4146,7 +4157,7 @@ class Nizhnoye {
 	class Object25 { type = "RoadBarrier_long"; position[] = {12916.9, 8353.86, 0}; direction = 250; onFire = 0; };
 	class Object26 { type = "Rubbish4"; position[] = {12761.1, 8421.08, 0}; direction = 186; onFire = 0; };
 	class Object27 { type = "Land_CncBlock_Stripes"; position[] = {13048.4, 8184, 0}; direction = 80; onFire = 0; };
-	class Object28 { type = "Land_Misc_Rubble_EP1"; position[] = {12798.9, 8387.22, 0}; direction = 109; onFire = 0; };
+//	class Object28 { type = "Land_Misc_Rubble_EP1"; position[] = {12798.9, 8387.22, 0}; direction = 109; onFire = 0; };
 	class Object29 { type = "Land_CncBlock_D"; position[] = {13015.8, 8223.89, 0}; direction = 173; onFire = 0; };
 	class Object30 { type = "Rubbish2"; position[] = {12971.8, 8036.94, 0}; direction = 282; onFire = 0; };
 	class Object31 { type = "Land_CncBlock_D"; position[] = {12857.3, 8052.88, 0}; direction = 80; onFire = 0; };
@@ -4185,7 +4196,7 @@ class Berezino {
 	class Object6 { type = "Land_CncBlock_D"; position[] = {11720.3, 9185.35, 0}; direction = 309; onFire = 0; };
 	class Object7 { type = "Fort_Barricade"; position[] = {12349.7, 9011.52, 0}; direction = 53; onFire = 0; };
 	class Object8 { type = "Rubbish5"; position[] = {12449.6, 9540.05, 0}; direction = 89; onFire = 0; };
-	class Object9 { type = "Land_Misc_Rubble_EP1"; position[] = {12205.2, 9450.31, 0}; direction = 60; onFire = 0; };
+//	class Object9 { type = "Land_Misc_Rubble_EP1"; position[] = {12205.2, 9450.31, 0}; direction = 60; onFire = 0; };
 	class Object10 { type = "Land_CncBlock_Stripes"; position[] = {12433.8, 9488.42, 0}; direction = -1; onFire = 0; };
 	class Object11 { type = "Rubbish2"; position[] = {11819.1, 9204.18, 0}; direction = 84; onFire = 0; };
 	class Object12 { type = "Land_CncBlock_D"; position[] = {12127, 9431.98, 0}; direction = 310; onFire = 0; };
@@ -4198,7 +4209,7 @@ class Berezino {
 	class Object19 { type = "HMMWVWreck"; position[] = {11957.4, 8955.81, 0}; direction = 176; onFire = 0; };
 	class Object20 { type = "datsun01Wreck"; position[] = {11974.3, 9164.62, 0}; direction = 242; onFire = 0; };
 	class Object21 { type = "SKODAWreck"; position[] = {12635.5, 9615.65, 0}; direction = 193; onFire = 0; };
-	class Object22 { type = "Land_Misc_Rubble_EP1"; position[] = {11894.7, 9076.54, 0}; direction = 48; onFire = 0; };
+//	class Object22 { type = "Land_Misc_Rubble_EP1"; position[] = {11894.7, 9076.54, 0}; direction = 48; onFire = 0; };
 	class Object23 { type = "hiluxWreck"; position[] = {11804.2, 8999.76, 0}; direction = 145; onFire = 0; };
 	class Object24 { type = "UAZWreck"; position[] = {12433.3, 9489.7, 0}; direction = -2; onFire = 0; };
 	class Object25 { type = "Rubbish4"; position[] = {11921.5, 9012.18, 0}; direction = 263; onFire = 0; };
@@ -4213,7 +4224,7 @@ class Berezino {
 	class Object34 { type = "UAZWreck"; position[] = {11793.7, 9018.71, 0}; direction = 143; onFire = 0; };
 	class Object35 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {12721.5, 9435.11, 0}; direction = 288; onFire = 0; };
 	class Object36 { type = "datsun01Wreck"; position[] = {12607.3, 9514.73, 0}; direction = 194; onFire = 0; };
-	class Object37 { type = "Land_Misc_Rubble_EP1"; position[] = {12212.1, 9489.94, 0}; direction = 107; onFire = 0; };
+//	class Object37 { type = "Land_Misc_Rubble_EP1"; position[] = {12212.1, 9489.94, 0}; direction = 107; onFire = 0; };
 	class Object38 { type = "Rubbish5"; position[] = {12261.5, 9523.68, 0}; direction = 119; onFire = 0; };
 	class Object39 { type = "Rubbish5"; position[] = {12038.4, 9103.72, 0}; direction = 126; onFire = 0; };
 	class Object40 { type = "Rubbish5"; position[] = {11963, 9154.02, 0}; direction = 41; onFire = 0; };
@@ -4227,13 +4238,13 @@ class Berezino {
 	class Object48 { type = "Rubbish5"; position[] = {12291.5, 8460.48, 0}; direction = 164; onFire = 0; };
 	class Object49 { type = "UralWreck"; position[] = {12046.6, 9093.79, 0}; direction = 319; onFire = 0; };
 	class Object50 { type = "Rubbish3"; position[] = {11804.6, 9007.59, 0}; direction = 148; onFire = 0; };
-	class Object51 { type = "Land_Misc_Rubble_EP1"; position[] = {12188.6, 9023.34, 0}; direction = 311; onFire = 0; };
+//	class Object51 { type = "Land_Misc_Rubble_EP1"; position[] = {12188.6, 9023.34, 0}; direction = 311; onFire = 0; };
 	class Object52 { type = "UralWreck"; position[] = {12639.7, 9667.95, 0}; direction = 188; onFire = 0; };
 	class Object53 { type = "Rubbish1"; position[] = {12309.6, 9488.21, 0}; direction = 264; onFire = 0; };
 	class Object54 { type = "datsun02Wreck"; position[] = {11961.4, 8956.19, 0}; direction = 181; onFire = 0.508984; };
 	class Object55 { type = "Rubbish1"; position[] = {12373.3, 9506.14, 0}; direction = 12; onFire = 0; };
 	class Object56 { type = "Land_CncBlock_Stripes"; position[] = {12038.3, 9089.71, 0}; direction = 216; onFire = 0; };
-	class Object57 { type = "Land_Misc_Rubble_EP1"; position[] = {12606.6, 9493.42, 0}; direction = 15; onFire = 0; };
+//	class Object57 { type = "Land_Misc_Rubble_EP1"; position[] = {12606.6, 9493.42, 0}; direction = 15; onFire = 0; };
 	class Object58 { type = "datsun02Wreck"; position[] = {12076, 9020.76, 0}; direction = 39; onFire = 0; };
 	class Object59 { type = "datsun02Wreck"; position[] = {12148.8, 9458.58, 0}; direction = 219; onFire = 0; };
 	class Object60 { type = "hiluxWreck"; position[] = {12323.8, 9596.52, 0}; direction = 14; onFire = 0; };
@@ -4255,7 +4266,7 @@ class Berezino {
 	class Object76 { type = "Rubbish2"; position[] = {11839.6, 9207.86, 0}; direction = 94; onFire = 0; };
 	class Object77 { type = "datsun01Wreck"; position[] = {12607.8, 9502.27, 0}; direction = 201; onFire = 0; };
 	class Object78 { type = "Rubbish5"; position[] = {11765.7, 9061.97, 0}; direction = 309; onFire = 0; };
-	class Object79 { type = "Land_Misc_Rubble_EP1"; position[] = {12128.8, 9429.16, 0}; direction = 309; onFire = 0; };
+//	class Object79 { type = "Land_Misc_Rubble_EP1"; position[] = {12128.8, 9429.16, 0}; direction = 309; onFire = 0; };
 	class Object80 { type = "Land_CncBlock_D"; position[] = {12610.3, 9514.47, 0}; direction = 194; onFire = 0; };
 	class Object81 { type = "Rubbish2"; position[] = {12031.1, 9075.55, 0}; direction = 226; onFire = 0; };
 	class Object82 { type = "Rubbish5"; position[] = {12122.6, 9438.95, 0}; direction = 322; onFire = 0; };
@@ -4276,7 +4287,7 @@ class Berezino {
 	class Object97 { type = "UAZWreck"; position[] = {11959.6, 8974.85, 0}; direction = 178; onFire = 0; };
 	class Object98 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {11920.7, 9100.71, 0}; direction = 218; onFire = 0; };
 	class Object99 { type = "Rubbish1"; position[] = {12339.6, 9604.85, 0}; direction = 277; onFire = 0; };
-	class Object100 { type = "Land_Misc_Rubble_EP1"; position[] = {11954.2, 9138.39, 0}; direction = 216; onFire = 0; };
+//	class Object100 { type = "Land_Misc_Rubble_EP1"; position[] = {11954.2, 9138.39, 0}; direction = 216; onFire = 0; };
 	class Object101 { type = "UAZWreck"; position[] = {12283.4, 9499.81, 0}; direction = 309; onFire = 0; };
 	class Object102 { type = "Land_CncBlock_Stripes"; position[] = {12352.2, 9601.69, 0}; direction = 264; onFire = 0; };
 	class Object103 { type = "Land_CncBlock_D"; position[] = {12168.6, 8887.66, 0}; direction = 193; onFire = 0; };
@@ -4284,7 +4295,7 @@ class Berezino {
 	class Object105 { type = "UAZWreck"; position[] = {12140.1, 9450.7, 0}; direction = 46; onFire = 0; };
 	class Object106 { type = "UAZWreck"; position[] = {12014.4, 9125.19, 0}; direction = 323; onFire = 0; };
 	class Object107 { type = "SKODAWreck"; position[] = {11933.3, 9120.1, 0}; direction = 225; onFire = 0; };
-	class Object108 { type = "Land_Misc_Rubble_EP1"; position[] = {12643.1, 9679.87, 0}; direction = 11; onFire = 0; };
+//	class Object108 { type = "Land_Misc_Rubble_EP1"; position[] = {12643.1, 9679.87, 0}; direction = 11; onFire = 0; };
 	class Object109 { type = "hiluxWreck"; position[] = {12054.8, 9165.88, 0}; direction = 326; onFire = 0; };
 	class Object110 { type = "Land_CncBlock_Stripes"; position[] = {12325.5, 9085.71, 0}; direction = 63; onFire = 0; };
 	class Object111 { type = "Rubbish1"; position[] = {12247.6, 9481.17, 0}; direction = 241; onFire = 0; };
@@ -4301,12 +4312,12 @@ class Berezino {
 	class Object122 { type = "Hedgehog_EP1"; position[] = {12026.8, 9106.19, 0}; direction = 0; onFire = 0; };
 	class Object123 { type = "Hedgehog_EP1"; position[] = {12033.5, 9109.21, 0}; direction = 0; onFire = 0; };
 	class Object124 { type = "Hedgehog_EP1"; position[] = {12023.4, 9105.04, 0}; direction = 0; onFire = 0; };
-	class Object125 { type = "Land_Misc_Rubble_EP1"; position[] = {12036.4, 9112.49, 0}; direction = 321; onFire = 0; };
+//	class Object125 { type = "Land_Misc_Rubble_EP1"; position[] = {12036.4, 9112.49, 0}; direction = 321; onFire = 0; };
 	class Object126 { type = "Body2"; position[] = {12025.9, 9101.76, 0}; direction = 89; onFire = 0; };
-	class Object127 { type = "Land_Misc_Rubble_EP1"; position[] = {12013.4, 9114.31, 0}; direction = 343; onFire = 0; };
+//	class Object127 { type = "Land_Misc_Rubble_EP1"; position[] = {12013.4, 9114.31, 0}; direction = 343; onFire = 0; };
 	class Object128 { type = "Rubbish1"; position[] = {12040.9, 9101.7, 0}; direction = 264; onFire = 0; };
 	class Object129 { type = "UAZWreck"; position[] = {12032.8, 9094.89, 0}; direction = 264; onFire = 0; };
-	class Object130 { type = "Land_Misc_Rubble_EP1"; position[] = {12018.9, 9132.05, 0}; direction = 259; onFire = 0; };
+//	class Object130 { type = "Land_Misc_Rubble_EP1"; position[] = {12018.9, 9132.05, 0}; direction = 259; onFire = 0; };
 	class Object131 { type = "Body1"; position[] = {12032.5, 9093.06, 0}; direction = 332; onFire = 0; };
 	class Object132 { type = "Rubbish1"; position[] = {12008.4, 9125.32, 0}; direction = 264; onFire = 0; };
 	class Object133 { type = "Land_BagFenceLong"; position[] = {12043.5, 9100.98, 0}; direction = 39; onFire = 0; };
@@ -4326,11 +4337,11 @@ class Berezino {
 	class Object147 { type = "Rubbish5"; position[] = {12031.5, 9079.97, 0}; direction = 264; onFire = 0; };
 	class Object148 { type = "Rubbish1"; position[] = {12040.4, 9079.21, 0}; direction = 264; onFire = 0; };
 	class Object149 { type = "Rubbish5"; position[] = {11992.6, 9097.28, 0}; direction = 264; onFire = 0; };
-	class Object150 { type = "Land_Misc_Rubble_EP1"; position[] = {12024.3, 9074.26, 0}; direction = 142; onFire = 0; };
-	class Object151 { type = "Land_Misc_Rubble_EP1"; position[] = {12002.1, 9146, 0}; direction = 142; onFire = 0; };
+//	class Object150 { type = "Land_Misc_Rubble_EP1"; position[] = {12024.3, 9074.26, 0}; direction = 142; onFire = 0; };
+//	class Object151 { type = "Land_Misc_Rubble_EP1"; position[] = {12002.1, 9146, 0}; direction = 142; onFire = 0; };
 	class Object152 { type = "Rubbish3"; position[] = {11984, 9133.1, 0}; direction = 264; onFire = 0; };
 	class Object153 { type = "Land_Fire_barrel"; position[] = {12013.1, 9159.39, 0}; direction = 0; onFire = 0; };
-	class Object154 { type = "Land_Misc_Rubble_EP1"; position[] = {12054.3, 9073.88, 0}; direction = 343; onFire = 0; };
+//	class Object154 { type = "Land_Misc_Rubble_EP1"; position[] = {12054.3, 9073.88, 0}; direction = 343; onFire = 0; };
 	class Object155 { type = "Land_BagFenceLong"; position[] = {12013, 9161.21, 0}; direction = 45; onFire = 0; };
 	class Object156 { type = "Body1"; position[] = {12014.8, 9064.65, 0}; direction = 257; onFire = 0; };
 	class Object157 { type = "Land_BagFenceLong"; position[] = {12015, 9163, 0}; direction = 223; onFire = 0; };
@@ -4353,14 +4364,14 @@ class Berezino {
 	class Object174 { type = "Body"; position[] = {11981, 9141.68, 0}; direction = 130; onFire = 0; };
 	class Object175 { type = "Body2"; position[] = {12000.9, 9066, 0}; direction = 330; onFire = 0; };
 	class Object176 { type = "Land_BagFenceLong"; position[] = {11989.1, 9154.88, 0}; direction = 312; onFire = 0; };
-	class Object177 { type = "Land_Misc_Rubble_EP1"; position[] = {12027.1, 9056.95, 0}; direction = 142; onFire = 0; };
+//	class Object177 { type = "Land_Misc_Rubble_EP1"; position[] = {12027.1, 9056.95, 0}; direction = 142; onFire = 0; };
 	class Object178 { type = "HMMWVWreck"; position[] = {12019.1, 9169.68, 0}; direction = 96; onFire = 0.259646; };
 	class Object179 { type = "Land_BagFenceLong"; position[] = {11985, 9152.74, 0}; direction = 42; onFire = 0; };
 	class Object180 { type = "Rubbish5"; position[] = {12012.9, 9170.08, 0}; direction = 264; onFire = 0; };
 	class Object181 { type = "Land_BagFenceLong"; position[] = {11988.7, 9158.63, 0}; direction = 224; onFire = 0; };
 	class Object182 { type = "Land_BagFenceLong"; position[] = {11983.6, 9153.96, 0}; direction = 42; onFire = 0; };
-	class Object183 { type = "Land_Misc_Rubble_EP1"; position[] = {12074.2, 9079.12, 0}; direction = 142; onFire = 0; };
-	class Object184 { type = "Land_Misc_Rubble_EP1"; position[] = {12027.7, 9173.92, 0}; direction = 259; onFire = 0; };
+//	class Object183 { type = "Land_Misc_Rubble_EP1"; position[] = {12074.2, 9079.12, 0}; direction = 142; onFire = 0; };
+//	class Object184 { type = "Land_Misc_Rubble_EP1"; position[] = {12027.7, 9173.92, 0}; direction = 259; onFire = 0; };
 	class Object185 { type = "Land_BagFenceLong"; position[] = {11982.2, 9155.23, 0}; direction = 42; onFire = 0; };
 	class Object186 { type = "Body1"; position[] = {12000.7, 9057.93, 0}; direction = 59; onFire = 0; };
 	class Object187 { type = "Land_ladder_half"; position[] = {11987.6, 9160.85, 0}; direction = 223; onFire = 0; };
@@ -4377,7 +4388,7 @@ class Berezino {
 	class Object198 { type = "Rubbish4"; position[] = {11996.3, 9173.1, 0}; direction = 226; onFire = 0; };
 	class Object199 { type = "Rubbish4"; position[] = {11971.7, 9153.36, 0}; direction = 226; onFire = 0; };
 	class Object200 { type = "Land_BagFenceLong"; position[] = {11997.3, 9176.01, 0}; direction = 319; onFire = 0; };
-	class Object201 { type = "Land_Misc_Rubble_EP1"; position[] = {11964.7, 9145.29, 0}; direction = 142; onFire = 0; };
+//	class Object201 { type = "Land_Misc_Rubble_EP1"; position[] = {11964.7, 9145.29, 0}; direction = 142; onFire = 0; };
 	class Object202 { type = "Land_BagFenceLong"; position[] = {11998.7, 9177.13, 0}; direction = 321; onFire = 0; };
 	class Object203 { type = "Rubbish1"; position[] = {12001.3, 9048.48, 0}; direction = 264; onFire = 0; };
 	class Object204 { type = "T72Wreck"; position[] = {11995.6, 9176.26, 0}; direction = 228; onFire = 0; };
@@ -4389,7 +4400,7 @@ class Berezino {
 	class Object210 { type = "Land_BagFenceEnd"; position[] = {11995.9, 9179.52, 0}; direction = 46; onFire = 0; };
 	class Object211 { type = "Land_BagFenceLong"; position[] = {11994.4, 9179.1, 0}; direction = 139; onFire = 0; };
 	class Object212 { type = "Land_BagFenceLong"; position[] = {11997.9, 9180.69, 0}; direction = 229; onFire = 0; };
-	class Object213 { type = "Land_Misc_Rubble_EP1"; position[] = {11954.5, 9097.67, 0}; direction = 343; onFire = 0; };
+//	class Object213 { type = "Land_Misc_Rubble_EP1"; position[] = {11954.5, 9097.67, 0}; direction = 343; onFire = 0; };
 	class Object214 { type = "Rubbish1"; position[] = {11977.6, 9168.52, 0}; direction = 264; onFire = 0; };
 	class Object215 { type = "Land_BagFenceLong"; position[] = {11995.7, 9180.28, 0}; direction = 139; onFire = 0; };
 	class Object216 { type = "Land_BagFenceCorner"; position[] = {11996.9, 9181.05, 0}; direction = 318; onFire = 0; };
@@ -4399,7 +4410,7 @@ class Berezino {
 	class Object220 { type = "Land_BagFenceLong"; position[] = {11951.6, 9130.33, 0}; direction = 223; onFire = 0; };
 	class Object221 { type = "Body2"; position[] = {11951.3, 9129.28, 0}; direction = 280; onFire = 0; };
 	class Object222 { type = "Body1"; position[] = {11950.6, 9129.58, 0}; direction = 42; onFire = 0; };
-	class Object223 { type = "Land_Misc_Rubble_EP1"; position[] = {12090.8, 9071, 0}; direction = 142; onFire = 0; };
+//	class Object223 { type = "Land_Misc_Rubble_EP1"; position[] = {12090.8, 9071, 0}; direction = 142; onFire = 0; };
 	class Object224 { type = "Hedgehog"; position[] = {12001, 9186.76, 0}; direction = 360; onFire = 0; };
 	class Object225 { type = "Rubbish1"; position[] = {11966.3, 9163.32, 0}; direction = 243; onFire = 0; };
 	class Object226 { type = "Land_BagFenceLong"; position[] = {11949.9, 9130.17, 0}; direction = 129; onFire = 0; };
@@ -4410,7 +4421,7 @@ class Berezino {
 	class Object231 { type = "Body1"; position[] = {11946.6, 9123.66, 0}; direction = 230; onFire = 0; };
 	class Object232 { type = "Land_fortified_nest_big"; position[] = {11989.6, 9185.03, 0}; direction = 229; onFire = 0; };
 	class Object233 { type = "Land_Antenna"; position[] = {11992.1, 9186.65, 0}; direction = 360; onFire = 0; };
-	class Object234 { type = "Land_Misc_Rubble_EP1"; position[] = {11950, 9141.2, 0}; direction = 142; onFire = 0; };
+//	class Object234 { type = "Land_Misc_Rubble_EP1"; position[] = {11950, 9141.2, 0}; direction = 142; onFire = 0; };
 	class Object235 { type = "Land_BagFenceLong"; position[] = {11945.6, 9122.92, 0}; direction = 38; onFire = 0; };
 	class Object236 { type = "Land_BagFenceLong"; position[] = {11945.4, 9124.7, 0}; direction = 132; onFire = 0; };
 	class Object237 { type = "HMMWVWreck"; position[] = {11965.7, 9170.85, 0}; direction = 164; onFire = 0; };
@@ -4428,26 +4439,26 @@ class Berezino {
 	class Object249 { type = "Hedgehog"; position[] = {11994.5, 9196.17, 0}; direction = 360; onFire = 0; };
 	class Object250 { type = "Land_BagFenceLong"; position[] = {11993, 9196.29, 0}; direction = 229; onFire = 0; };
 	class Object251 { type = "Body1"; position[] = {11960.8, 9174.45, 0}; direction = 270; onFire = 0; };
-	class Object252 { type = "Land_Misc_Rubble_EP1"; position[] = {11935.2, 9109.59, 0}; direction = 142; onFire = 0; };
+//	class Object252 { type = "Land_Misc_Rubble_EP1"; position[] = {11935.2, 9109.59, 0}; direction = 142; onFire = 0; };
 	class Object253 { type = "Land_BagFenceLong"; position[] = {11991.7, 9200.21, 0}; direction = 229; onFire = 0; };
 	class Object254 { type = "Body1"; position[] = {11932.5, 9111.03, 0}; direction = 162; onFire = 0.265427; };
 	class Object255 { type = "BRDMWreck"; position[] = {11988, 9200.31, 0}; direction = 229; onFire = 0.210118; };
 	class Object256 { type = "Rubbish1"; position[] = {12000.8, 9021.14, 0}; direction = 264; onFire = 0; };
 	class Object257 { type = "Rubbish1"; position[] = {11930.5, 9123.54, 0}; direction = 264; onFire = 0; };
 	class Object258 { type = "Hedgehog"; position[] = {11995.1, 9204.43, 0}; direction = 360; onFire = 0; };
-	class Object259 { type = "Land_Misc_Rubble_EP1"; position[] = {12002.3, 9206.93, 0}; direction = 142; onFire = 0; };
-	class Object260 { type = "Land_Misc_Rubble_EP1"; position[] = {12103.7, 9055.5, 0}; direction = 142; onFire = 0; };
+//	class Object259 { type = "Land_Misc_Rubble_EP1"; position[] = {12002.3, 9206.93, 0}; direction = 142; onFire = 0; };
+//	class Object260 { type = "Land_Misc_Rubble_EP1"; position[] = {12103.7, 9055.5, 0}; direction = 142; onFire = 0; };
 	class Object261 { type = "Land_BagFenceLong"; position[] = {11987.4, 9204.63, 0}; direction = 229; onFire = 0; };
 	class Object262 { type = "Land_BagFenceLong"; position[] = {11927.5, 9090.66, 0}; direction = 307; onFire = 0; };
 	class Object263 { type = "Body1"; position[] = {11926, 9096.48, 0}; direction = 15; onFire = 0; };
 	class Object264 { type = "Hedgehog"; position[] = {11987.9, 9208.23, 0}; direction = 360; onFire = 0; };
 	class Object265 { type = "Land_BagFenceLong"; position[] = {11926.2, 9088.85, 0}; direction = 309; onFire = 0; };
 	class Object266 { type = "Rubbish1"; position[] = {12030.1, 9009.33, 0}; direction = 264; onFire = 0; };
-	class Object267 { type = "Land_Misc_Rubble_EP1"; position[] = {11970.1, 9201.91, 0}; direction = 142; onFire = 0; };
+//	class Object267 { type = "Land_Misc_Rubble_EP1"; position[] = {11970.1, 9201.91, 0}; direction = 142; onFire = 0; };
 	class Object268 { type = "Rubbish1"; position[] = {11916.5, 9111.25, 0}; direction = 264; onFire = 0; };
 	class Object269 { type = "Land_fortified_nest_small"; position[] = {11919.3, 9088.24, 0}; direction = 40; onFire = 0; };
 	class Object270 { type = "Land_BagFenceLong"; position[] = {11918, 9091.34, 0}; direction = 39; onFire = 0; };
-	class Object271 { type = "Land_Misc_Rubble_EP1"; position[] = {11960.5, 9024.53, 0}; direction = 141; onFire = 0; };
+//	class Object271 { type = "Land_Misc_Rubble_EP1"; position[] = {11960.5, 9024.53, 0}; direction = 141; onFire = 0; };
 	class Object272 { type = "Body1"; position[] = {11918.4, 9087.74, 0}; direction = 230; onFire = 0; };
 	class Object273 { type = "Rubbish1"; position[] = {12120.8, 9048.48, 0}; direction = 264; onFire = 0; };
 	class Object274 { type = "Land_Fire_barrel"; position[] = {11911.8, 9101.2, 0}; direction = 0; onFire = 0; };
@@ -4461,7 +4472,7 @@ class Berezino {
 	class Object282 { type = "Body1"; position[] = {11903.2, 9063.17, 0}; direction = 300; onFire = 0; };
 	class Object283 { type = "Body1"; position[] = {11898.9, 9070.76, 0}; direction = 259; onFire = 0; };
 	class Object284 { type = "HMMWVWreck"; position[] = {11899.6, 9065.16, 0}; direction = 164; onFire = 0; };
-	class Object285 { type = "Land_Misc_Rubble_EP1"; position[] = {11903.9, 9054.89, 0}; direction = 343; onFire = 0; };
+//	class Object285 { type = "Land_Misc_Rubble_EP1"; position[] = {11903.9, 9054.89, 0}; direction = 343; onFire = 0; };
 	class Object286 { type = "Rubbish1"; position[] = {11900.1, 9057.63, 0}; direction = 243; onFire = 0; };
 	class Object287 { type = "Body1"; position[] = {11894.6, 9068.76, 0}; direction = 270; onFire = 0; };
 	class Object288 { type = "Body2"; position[] = {11894.3, 9062.65, 0}; direction = 258; onFire = 0; };
@@ -4469,7 +4480,7 @@ class Berezino {
 	class Object290 { type = "Rubbish5"; position[] = {11887.8, 9036.67, 0}; direction = 264; onFire = 0; };
 	class Object291 { type = "Hedgehog"; position[] = {11967.4, 9265.46, 0}; direction = 358; onFire = 0; };
 	class Object292 { type = "Rubbish5"; position[] = {11876.9, 9035.8, 0}; direction = 264; onFire = 0; };
-	class Object293 { type = "Land_Misc_Rubble_EP1"; position[] = {11861.3, 9044.67, 0}; direction = 142; onFire = 0; };
+//	class Object293 { type = "Land_Misc_Rubble_EP1"; position[] = {11861.3, 9044.67, 0}; direction = 142; onFire = 0; };
 	class Object294 { type = "Fort_RazorWire"; position[] = {11832.6, 9404.47, 0}; direction = 101; onFire = 0; };
 	class Object295 { type = "Land_Fire_barrel"; position[] = {12197.1, 9499.64, 0}; direction = 360; onFire = 0; };
 	class Object296 { type = "Misc_palletsfoiled_heap"; position[] = {12282.3, 9459.2, 0}; direction = 326; onFire = 0; };
@@ -4596,18 +4607,18 @@ class Gvozdno {
 		
 	class Object0 { type = "Land_CncBlock_Stripes"; position[] = {8870.29, 11630.5, 0}; direction = 289; onFire = 0; };
 	class Object1 { type = "Rubbish2"; position[] = {8201.03, 11599.4, 0}; direction = 215; onFire = 0; };
-	class Object2 { type = "Land_Misc_Rubble_EP1"; position[] = {8574.95, 11955.1, 0}; direction = 333; onFire = 0; };
+//	class Object2 { type = "Land_Misc_Rubble_EP1"; position[] = {8574.95, 11955.1, 0}; direction = 333; onFire = 0; };
 	class Object3 { type = "SKODAWreck"; position[] = {8586.9, 11909, 0}; direction = 323; onFire = 2.38013; };
 	class Object4 { type = "UAZWreck"; position[] = {8549.07, 11999.2, 0}; direction = 323; onFire = 0; };
-	class Object5 { type = "Land_Misc_Rubble_EP1"; position[] = {8580.47, 11922.5, 0}; direction = 342; onFire = 0; };
+//	class Object5 { type = "Land_Misc_Rubble_EP1"; position[] = {8580.47, 11922.5, 0}; direction = 342; onFire = 0; };
 	class Object6 { type = "HMMWVWreck"; position[] = {8539.83, 12019.5, 0}; direction = 118; onFire = 0; };
-	class Object7 { type = "Land_Misc_Rubble_EP1"; position[] = {8762.69, 11614.2, 0}; direction = 162; onFire = 0; };
-	class Object8 { type = "Land_Misc_Rubble_EP1"; position[] = {8440.75, 12065, 0}; direction = 275; onFire = 0; };
+//	class Object7 { type = "Land_Misc_Rubble_EP1"; position[] = {8762.69, 11614.2, 0}; direction = 162; onFire = 0; };
+//	class Object8 { type = "Land_Misc_Rubble_EP1"; position[] = {8440.75, 12065, 0}; direction = 275; onFire = 0; };
 	class Object9 { type = "Rubbish3"; position[] = {8780.66, 11573.1, 0}; direction = 319; onFire = 0; };
 	class Object10 { type = "Rubbish4"; position[] = {8843.5, 11637.4, 0}; direction = 104; onFire = 0; };
-	class Object11 { type = "Land_Misc_Rubble_EP1"; position[] = {8745.4, 11716.3, 0}; direction = 329; onFire = 0; };
+//	class Object11 { type = "Land_Misc_Rubble_EP1"; position[] = {8745.4, 11716.3, 0}; direction = 329; onFire = 0; };
 	class Object12 { type = "UralWreck"; position[] = {8471.92, 12052.8, 0}; direction = 204; onFire = 0; };
-	class Object13 { type = "Land_Misc_Rubble_EP1"; position[] = {8188.21, 11612.6, 0}; direction = 169; onFire = 0; };
+//	class Object13 { type = "Land_Misc_Rubble_EP1"; position[] = {8188.21, 11612.6, 0}; direction = 169; onFire = 0; };
 	class Object14 { type = "datsun01Wreck"; position[] = {8753.41, 11681.6, 0}; direction = 354; onFire = 0; };
 	class Object15 { type = "SKODAWreck"; position[] = {8747.43, 11648.1, 0}; direction = 268; onFire = 0; };
 	class Object16 { type = "Land_CncBlock_D"; position[] = {8586.27, 11925.4, 0}; direction = 347; onFire = 0; };
@@ -4616,7 +4627,7 @@ class Gvozdno {
 	class Object19 { type = "SKODAWreck"; position[] = {8774.18, 11580.2, 0}; direction = 132; onFire = 0; };
 	class Object20 { type = "UralWreck"; position[] = {8859.49, 11631, 0}; direction = 102; onFire = 0; };
 	class Object21 { type = "Rubbish1"; position[] = {8206.29, 11598.9, 0}; direction = 198; onFire = 0; };
-	class Object22 { type = "Land_Misc_Rubble_EP1"; position[] = {8774.21, 11650.5, 0}; direction = 91; onFire = 0; };
+//	class Object22 { type = "Land_Misc_Rubble_EP1"; position[] = {8774.21, 11650.5, 0}; direction = 91; onFire = 0; };
 	class Object23 { type = "datsun01Wreck"; position[] = {8869.49, 11632.9, 0}; direction = 289; onFire = 0; };
 	class Object24 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {8505.37, 12048.4, 0}; direction = 128; onFire = 0; };
 	class Object25 { type = "datsun02Wreck"; position[] = {8125.72, 11672.6, 0}; direction = 16; onFire = 0; };
@@ -4632,7 +4643,7 @@ class Gvozdno {
 	class Object35 { type = "Rubbish5"; position[] = {8585.4, 11923, 0}; direction = 352; onFire = 0; };
 	class Object36 { type = "Rubbish2"; position[] = {8565.93, 11972.5, 0}; direction = 347; onFire = 0; };
 	class Object37 { type = "datsun02Wreck"; position[] = {8600.75, 11890.9, 0}; direction = 321; onFire = 0; };
-	class Object38 { type = "Land_Misc_Rubble_EP1"; position[] = {8206.07, 11596.5, 0}; direction = 206; onFire = 0; };
+//	class Object38 { type = "Land_Misc_Rubble_EP1"; position[] = {8206.07, 11596.5, 0}; direction = 206; onFire = 0; };
 	class Object39 { type = "Rubbish4"; position[] = {8738.83, 11739.7, 0}; direction = 335; onFire = 0; };
 	class Object40 { type = "Fort_Barricade"; position[] = {8560.17, 11985.3, 0}; direction = 144; onFire = 0; };
 	class Object41 { type = "Rubbish2"; position[] = {8788.46, 11648.3, 0}; direction = 101; onFire = 0; };
@@ -4642,7 +4653,7 @@ class Gvozdno {
 	class Object45 { type = "SKODAWreck"; position[] = {8757.37, 11682.2, 0}; direction = 362; onFire = 0; };
 	class Object46 { type = "UralWreck"; position[] = {8421.59, 12070, 0}; direction = 294; onFire = 0; };
 	class Object47 { type = "RoadBarrier_long"; position[] = {8733.96, 11642.1, 0}; direction = 262; onFire = 0; };
-	class Object48 { type = "Land_Misc_Rubble_EP1"; position[] = {8763.87, 11630.2, 0}; direction = 176; onFire = 0; };
+//	class Object48 { type = "Land_Misc_Rubble_EP1"; position[] = {8763.87, 11630.2, 0}; direction = 176; onFire = 0; };
 	class Object49 { type = "Rubbish3"; position[] = {8480.12, 12052.7, 0}; direction = 113; onFire = 0; };
 	};
 	
@@ -4693,11 +4704,11 @@ class Petrovka {
 	class Object38 { type = "datsun02Wreck"; position[] = {4973.23, 12480.6, 0}; direction = 31; onFire = 0.297195; };
 	class Object39 { type = "Land_CncBlock_D"; position[] = {4926.51, 12540.8, 0}; direction = 277; onFire = 0; };
 	class Object40 { type = "UAZWreck"; position[] = {4998.88, 12505.9, 0}; direction = 314; onFire = 0; };
-	class Object41 { type = "Land_Misc_Rubble_EP1"; position[] = {4989.59, 12518.5, 0}; direction = 124; onFire = 0; };
+//	class Object41 { type = "Land_Misc_Rubble_EP1"; position[] = {4989.59, 12518.5, 0}; direction = 124; onFire = 0; };
 	class Object42 { type = "UAZWreck"; position[] = {4974.2, 12527.1, 0}; direction = 104; onFire = 0; };
-	class Object43 { type = "Land_Misc_Rubble_EP1"; position[] = {5071.69, 12460.6, 0}; direction = 280; onFire = 0; };
+//	class Object43 { type = "Land_Misc_Rubble_EP1"; position[] = {5071.69, 12460.6, 0}; direction = 280; onFire = 0; };
 	class Object44 { type = "datsun02Wreck"; position[] = {4988.42, 12518, 0}; direction = 115; onFire = 0; };
-	class Object45 { type = "Land_Misc_Rubble_EP1"; position[] = {4956.91, 12563.8, 0}; direction = 167; onFire = 0; };
+//	class Object45 { type = "Land_Misc_Rubble_EP1"; position[] = {4956.91, 12563.8, 0}; direction = 167; onFire = 0; };
 	class Object46 { type = "Land_CncBlock_Stripes"; position[] = {5071.86, 12464.1, 0}; direction = 283; onFire = 0; };
 	class Object47 { type = "UAZWreck"; position[] = {4962.18, 12564, 0}; direction = 171; onFire = 0; };
 	class Object48 { type = "Rubbish4"; position[] = {5200.47, 12426.1, 0}; direction = 147; onFire = 0; };
@@ -4710,7 +4721,7 @@ class Khelm {
 	size = 400;
 	buildings = 50;
 		
-	class Object0 { type = "Land_Misc_Rubble_EP1"; position[] = {12294.7, 10559.6, 0}; direction = 190; onFire = 0; };
+//	class Object0 { type = "Land_Misc_Rubble_EP1"; position[] = {12294.7, 10559.6, 0}; direction = 190; onFire = 0; };
 	class Object1 { type = "Land_CncBlock_Stripes"; position[] = {12257.6, 10928.4, 0}; direction = 334; onFire = 0; };
 	class Object2 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {12306.8, 10995.6, 0}; direction = 292; onFire = 0; };
 	class Object3 { type = "hiluxWreck"; position[] = {12312.2, 10927.5, 0}; direction = 214; onFire = 0; };
@@ -4756,8 +4767,8 @@ class Khelm {
 	class Object43 { type = "Land_CncBlock_Stripes"; position[] = {12305.3, 10910.9, 0}; direction = 176; onFire = 0; };
 	class Object44 { type = "datsun02Wreck"; position[] = {12299.4, 10828.6, 0}; direction = 358; onFire = 0; };
 	class Object45 { type = "RoadBarrier_long"; position[] = {12297.7, 10556.7, 0}; direction = 192; onFire = 0; };
-	class Object46 { type = "Land_Misc_Rubble_EP1"; position[] = {12322.6, 10948.8, 0}; direction = 169; onFire = 0; };
-	class Object47 { type = "Land_Misc_Rubble_EP1"; position[] = {12343.5, 10570.4, 0}; direction = 145; onFire = 0; };
+//	class Object46 { type = "Land_Misc_Rubble_EP1"; position[] = {12322.6, 10948.8, 0}; direction = 169; onFire = 0; };
+//	class Object47 { type = "Land_Misc_Rubble_EP1"; position[] = {12343.5, 10570.4, 0}; direction = 145; onFire = 0; };
 	class Object48 { type = "Rubbish1"; position[] = {12269.4, 10898.6, 0}; direction = 318; onFire = 0; };
 	class Object49 { type = "Rubbish4"; position[] = {12258.3, 10943.9, 0}; direction = 347; onFire = 0; };
 	};
@@ -4800,7 +4811,7 @@ class Krasnostav {
 	class Object29 { type = "Land_CncBlock_D"; position[] = {11109.7, 12291.4, 0}; direction = 37; onFire = 0; };
 	class Object30 { type = "Land_CncBlock_D"; position[] = {11608.6, 12424.3, 0}; direction = 188; onFire = 0; };
 	class Object31 { type = "datsun02Wreck"; position[] = {11035.2, 12379, 0}; direction = 128; onFire = 0; };
-	class Object32 { type = "Land_Misc_Rubble_EP1"; position[] = {11803.8, 12408.2, 0}; direction = 103; onFire = 0; };
+//	class Object32 { type = "Land_Misc_Rubble_EP1"; position[] = {11803.8, 12408.2, 0}; direction = 103; onFire = 0; };
 	class Object33 { type = "Rubbish3"; position[] = {10878.7, 12427.8, 0}; direction = 293; onFire = 0; };
 	class Object34 { type = "SKODAWreck"; position[] = {11177, 12224.6, 0}; direction = 298; onFire = 0; };
 	class Object35 { type = "datsun02Wreck"; position[] = {10884.6, 12389.3, 0}; direction = 40; onFire = 0; };
@@ -4809,7 +4820,7 @@ class Krasnostav {
 	class Object38 { type = "Land_CncBlock_D"; position[] = {11573.7, 12456.2, 0}; direction = 192; onFire = 0; };
 	class Object39 { type = "Land_CncBlock_Stripes"; position[] = {11039.9, 12413, 0}; direction = 122; onFire = 0; };
 	class Object40 { type = "hiluxWreck"; position[] = {11196.8, 12214.1, 0}; direction = 294; onFire = 0; };
-	class Object41 { type = "Land_Misc_Rubble_EP1"; position[] = {11571.4, 12458.5, 0}; direction = 208; onFire = 0; };
+//	class Object41 { type = "Land_Misc_Rubble_EP1"; position[] = {11571.4, 12458.5, 0}; direction = 208; onFire = 0; };
 	class Object42 { type = "Rubbish1"; position[] = {11038.4, 12410.5, 0}; direction = 112; onFire = 0; };
 	class Object43 { type = "hiluxWreck"; position[] = {11610, 12411.3, 0}; direction = 189; onFire = 0; };
 	class Object44 { type = "datsun01Wreck"; position[] = {11579.7, 12472.8, 0}; direction = 22; onFire = 0; };
@@ -4847,7 +4858,7 @@ class Krasnostav {
 	class Object76 { type = "HMMWVWreck"; position[] = {11258, 12152.1, 0}; direction = 7; onFire = 0; };
 	class Object77 { type = "UAZWreck"; position[] = {11590.5, 12404, 0}; direction = 278; onFire = 3.0413; };
 	class Object78 { type = "HMMWVWreck"; position[] = {10877.3, 12377.7, 0}; direction = 5; onFire = 0; };
-	class Object79 { type = "Land_Misc_Rubble_EP1"; position[] = {11095.4, 12326.7, 0}; direction = 310; onFire = 0; };
+//	class Object79 { type = "Land_Misc_Rubble_EP1"; position[] = {11095.4, 12326.7, 0}; direction = 310; onFire = 0; };
 	class Object80 { type = "UAZWreck"; position[] = {11863.8, 12429.6, 0}; direction = 16; onFire = 0; };
 	class Object81 { type = "Rubbish1"; position[] = {10897.1, 12400.8, 0}; direction = 236; onFire = 0; };
 	class Object82 { type = "Rubbish3"; position[] = {11945.7, 12055, 0}; direction = 109; onFire = 0; };
@@ -4881,7 +4892,7 @@ class Krasnostav {
 	class Object110 { type = "Rubbish3"; position[] = {11613.9, 12421.9, 0}; direction = 183; onFire = 0; };
 	class Object111 { type = "UralWreck"; position[] = {10734.4, 12426.8, 0}; direction = 81; onFire = 2.51815; };
 	class Object112 { type = "Land_CncBlock_Stripes"; position[] = {11810.1, 12407.8, 0}; direction = 296; onFire = 0; };
-	class Object113 { type = "Land_Misc_Rubble_EP1"; position[] = {11238.4, 12141.9, 0}; direction = 321; onFire = 0; };
+//	class Object113 { type = "Land_Misc_Rubble_EP1"; position[] = {11238.4, 12141.9, 0}; direction = 321; onFire = 0; };
 	class Object114 { type = "UralWreck"; position[] = {11007.9, 12336.3, 0}; direction = 237; onFire = 0; };
 	class Object115 { type = "hiluxWreck"; position[] = {10776.4, 12457.7, 0}; direction = 40; onFire = 0; };
 	class Object116 { type = "Land_Misc_Garb_Heap_EP1"; position[] = {10658.4, 12750, 0}; direction = 160; onFire = 0; };
@@ -4906,12 +4917,12 @@ class Olsha {
 	class Object7 { type = "Fort_Barricade"; position[] = {13358.7, 12899.5, 0}; direction = 339; onFire = 0; };
 	class Object8 { type = "SKODAWreck"; position[] = {13368, 12871.9, 0}; direction = 329; onFire = 0; };
 	class Object9 { type = "datsun02Wreck"; position[] = {13348.1, 12887.6, 0}; direction = 260; onFire = 0; };
-	class Object10 { type = "Land_Misc_Rubble_EP1"; position[] = {13384.7, 12837.7, 0}; direction = 298; onFire = 0; };
+//	class Object10 { type = "Land_Misc_Rubble_EP1"; position[] = {13384.7, 12837.7, 0}; direction = 298; onFire = 0; };
 	class Object11 { type = "Rubbish5"; position[] = {13381.6, 12834.7, 0}; direction = 298; onFire = 0; };
 	class Object12 { type = "HMMWVWreck"; position[] = {13355.6, 12901.2, 0}; direction = 337; onFire = 0; };
 	class Object13 { type = "datsun01Wreck"; position[] = {13382.3, 12838.3, 0}; direction = 300; onFire = 0; };
 	class Object14 { type = "Land_CncBlock_D"; position[] = {13349.2, 12826.5, 0}; direction = 15; onFire = 0; };
-	class Object15 { type = "Land_Misc_Rubble_EP1"; position[] = {13317.9, 12884.4, 0}; direction = 95; onFire = 0; };
+//	class Object15 { type = "Land_Misc_Rubble_EP1"; position[] = {13317.9, 12884.4, 0}; direction = 95; onFire = 0; };
 	class Object16 { type = "HMMWVWreck"; position[] = {12914.7, 12761.8, 0}; direction = 91; onFire = 0; };
 	class Object17 { type = "Rubbish3"; position[] = {13372.4, 12839.6, 0}; direction = 117; onFire = 0; };
 	class Object18 { type = "HMMWVWreck"; position[] = {13350.1, 12826.1, 0}; direction = 16; onFire = 0; };
@@ -4939,11 +4950,11 @@ class Olsha {
 	class Object40 { type = "datsun01Wreck"; position[] = {13379.9, 12835.1, 0}; direction = 313; onFire = 0; };
 	class Object41 { type = "SKODAWreck"; position[] = {13372.4, 12840.7, 0}; direction = 127; onFire = 0; };
 	class Object42 { type = "SKODAWreck"; position[] = {13320.1, 12883.1, 0}; direction = 94; onFire = 0; };
-	class Object43 { type = "Land_Misc_Rubble_EP1"; position[] = {13360.9, 12900.9, 0}; direction = 351; onFire = 0; };
+//	class Object43 { type = "Land_Misc_Rubble_EP1"; position[] = {13360.9, 12900.9, 0}; direction = 351; onFire = 0; };
 	class Object44 { type = "datsun01Wreck"; position[] = {13361.3, 12889.2, 0}; direction = 343; onFire = 0; };
-	class Object45 { type = "Land_Misc_Rubble_EP1"; position[] = {13351.7, 12913, 0}; direction = 177; onFire = 0; };
-	class Object46 { type = "Land_Misc_Rubble_EP1"; position[] = {13334.9, 12879.2, 0}; direction = 258; onFire = 0; };
+//	class Object45 { type = "Land_Misc_Rubble_EP1"; position[] = {13351.7, 12913, 0}; direction = 177; onFire = 0; };
+//	class Object46 { type = "Land_Misc_Rubble_EP1"; position[] = {13334.9, 12879.2, 0}; direction = 258; onFire = 0; };
 	class Object47 { type = "datsun02Wreck"; position[] = {13357.7, 12838.6, 0}; direction = 213; onFire = 0; };
 	class Object48 { type = "Rubbish4"; position[] = {13355.7, 12913.6, 0}; direction = 181; onFire = 0; };
-	class Object49 { type = "Land_Misc_Rubble_EP1"; position[] = {13332.4, 12882.3, 0}; direction = 253; onFire = 0; };
+//	class Object49 { type = "Land_Misc_Rubble_EP1"; position[] = {13332.4, 12882.3, 0}; direction = 253; onFire = 0; };
 	};
