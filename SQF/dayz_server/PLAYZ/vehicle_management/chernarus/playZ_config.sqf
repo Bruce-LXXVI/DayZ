@@ -43,7 +43,7 @@ PLAYZ_totalVehicles=200;
 
 // Fahrzeugklassen, die in ihrer Anzahl limitiert sind
 PLAYZ_limitedClasses = ["UH1H_DZ", "UH1H_2_DZ", "AH6X_DZ", "Mi17_DZ", "AN2_DZ", "AN2_2_DZ", "MH6J_DZ", "HMMWV_DZ", "SUV_DZ", "Offroad_DSHKM_INS", "Pickup_PK_INS"];
-PLAYZ_classLimits    = [1        , 1          , 2        , 2        , 2       , 2         , 1        , 3         , 3       , 3                  , 3];
+PLAYZ_classLimits    = [1        , 1          , 1        , 1        , 1       , 1         , 1        , 3         , 3       , 3                  , 3];
 
 
 ////////////////////////////////////////
