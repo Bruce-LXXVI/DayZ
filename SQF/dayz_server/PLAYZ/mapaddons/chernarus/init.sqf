@@ -12,3 +12,5 @@
 // Destroy Balota by Bruce <bruce@playz.rocks>
 //#include "destroy_balota.sqf"
 
+// Fix Topolko Dam Glitch
+#include "topolka_dam_fix.sqf"

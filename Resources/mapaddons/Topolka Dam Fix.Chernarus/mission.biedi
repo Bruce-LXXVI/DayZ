@@ -1,0 +1,62 @@
+class _prefix_0
+{
+	objectType="prefix";
+	class Arguments
+	{
+	};
+};
+class _center_0
+{
+	objectType="center";
+	class Arguments
+	{
+		SIDE="west";
+	};
+};
+class _group_0
+{
+	objectType="group";
+	class Arguments
+	{
+		CENTER="_center_0";
+	};
+};
+class _unit_0
+{
+	objectType="unit";
+	class Arguments
+	{
+		POSITION="[10355.48, 3609.7522, 2.4993117]";
+		GROUP="_group_0";
+		TYPE="Camo1_DZ";
+		SKILL="0.60000002";
+		PLAYER="true";
+		LEADER="true";
+	};
+};
+class _mine_0
+{
+	objectType="mine";
+	class Arguments
+	{
+		POSITION="[10360.012, 3649.989, -1.9073486e-005]";
+		TYPE="MineMine";
+	};
+};
+class _vehicle_20
+{
+	objectType="vehicle";
+	class Arguments
+	{
+		POSITION="[10299.095, 3659.8674, 2.4993041]";
+		TYPE="MAP_pond_big_01";
+		PARENT="";
+	};
+};
+class _postfix_0
+{
+	objectType="postfix";
+	class Arguments
+	{
+	};
+};
