@@ -7,7 +7,7 @@ PLAYZ_vehicle_spawns=
 
 
 /* Fahrzeuge Rebellen */
-//["290000001", "SUV_Camo_PLAYZ", [34.6, [11449.582, 11399.745, 0]], [[[], []], [["Pipebomb"], [1]], [[], []]], [["palivo",0],["motor",0],["karoserie",0],["wheel_1_1_steering",0],["wheel_1_2_steering",0],["wheel_2_1_steering",0],["wheel_2_2_steering",0]]],
+//["290000001", "SUV_Camo_PLAYZ", [34.6, [11449.582, 11399.745, 0]], [[[], []], [["PartEngine"], [1]], [[], []]], [["palivo",0],["motor",0],["karoserie",0],["wheel_1_1_steering",0],["wheel_1_2_steering",0],["wheel_2_1_steering",0],["wheel_2_2_steering",0]]],
 //["290000002", "HMMWV_DZ", [35.2, [11451.595, 11397.107, 0]], [[["AK_47_M"],[1]],[["PartWoodPile", "ItemBandage", "HandGrenade_west", "6Rnd_45ACP", "ItemEpinephrine", "8Rnd_B_Beneli_74Slug", "HandChemBlue", "8Rnd_B_Beneli_Pellets", "PartEngine", "17Rnd_9x19_glock17", "ItemTent"],[1,2,1,1,1,1,1,1,1,1,1]],[["DZ_CivilBackpack_EP1"],[1]]], [["palivo",0],["motor",0],["karoserie",0],["wheel_1_1_steering",0],["wheel_1_2_steering",0],["wheel_2_1_steering",0],["wheel_2_2_steering",0]]],
 //["290000003", "LandRover_TK_CIV_EP1", [-95.9, [11497.541, 11370.396, 0]], [[["AK_47_M"],[1]],[["PartWoodPile", "ItemBandage", "HandGrenade_west", "6Rnd_45ACP", "ItemEpinephrine", "8Rnd_B_Beneli_74Slug", "HandChemBlue", "8Rnd_B_Beneli_Pellets", "PartEngine", "17Rnd_9x19_glock17", "ItemTent"],[1,2,1,1,1,1,1,1,1,1,1]],[["DZ_CivilBackpack_EP1"],[1]]], [["palivo",0],["motor",0],["karoserie",0],["wheel_1_1_steering",0],["wheel_1_2_steering",0],["wheel_2_1_steering",0],["wheel_2_2_steering",0]]],
 //["290000004", "M1030_US_DES_EP1", [-150, [11415.463, 11348.72, 0]], [[[], []], [["ItemJerrycan"], [1]], [[], []]], [["motor",0]]],
@@ -18,7 +18,7 @@ PLAYZ_vehicle_spawns=
 
 /* Stary Map Addon */
 ["290000100", "tractorOld", [360, [6357.04, 7778.56, 0]], [], [["palivo",0],["motor",0],["karoserie",0],["wheel_1_1_steering",1],["wheel_1_2_steering",0],["wheel_2_1_steering",0],["wheel_2_2_steering",0]]],
-//["290000101", "SUV_Pink_PLAYZ", [196,[4894.26, 2264.53, 0]], [[[], []], [["Pipebomb"], [1]], [[], []]], [["palivo",0],["motor",0],["karoserie",0],["wheel_1_1_steering",0],["wheel_1_2_steering",0],["wheel_2_1_steering",0],["wheel_2_2_steering",0]]],
+//["290000101", "SUV_Pink_PLAYZ", [196,[4894.26, 2264.53, 0]], [[[], []], [["PartEngine"], [1]], [[], []]], [["palivo",0],["motor",0],["karoserie",0],["wheel_1_1_steering",0],["wheel_1_2_steering",0],["wheel_2_1_steering",0],["wheel_2_2_steering",0]]],
 //["290000102", "UH1H_Red_PLAYZ", [14,[13308.511,3227.0215,0]], [[[], []], [["ItemSodaPeppsy"], [5]], [[], []]], [["motor",0],["elektronika",1],["mala vrtule",0],["velka vrtule",0]]],
 
 
@@ -91,7 +91,7 @@ PLAYZ_vehicle_spawns=
 ["215653764", "Volha_2_TK_CIV_EP1", [18,[10827.634, 2701.5688,0]], [[[], []], [["ItemSodaPeppsy", "FoodCanFrankBeans"], [3, 3]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
 ["206218531", "Volha_1_TK_CIV_EP1", [222,[5165.7231,2375.7642,0]], [[[], []], [["ItemSodaPeppsy", "FoodCanBakedBeans"], [3, 3]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
 ["204131366", "Volha_2_TK_CIV_EP1", [207,[1740.8503,3622.6938,0]], [[[], []], [["ItemSodaPeppsy", "FoodCanFrankBeans"], [3, 3]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
-//["202001240", "SUV_DZ", [123,[1807.15,8671.75,0]], [[[], []], [["Pipebomb"], [1]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
+//["202001240", "SUV_DZ", [123,[1807.15,8671.75,0]], [[[], []], [["PartEngine"], [1]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
 ["257612106", "car_sedan", [222,[12360.468, 10817.882,0]], [[[], []], [["ItemFlashlight", "ItemMap"], [1, 1]], [["DZ_ALICE_Pack_EP1"], [1]]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
 
 ["224272110", "BAF_Offroad_D", [162,[3702.04,6044.3101,0]], [[[],[]],[["HandGrenade_West","SmokeShell","SmokeShellRed","SmokeShellYellow","SmokeShellGreen","ItemWaterbottle","30Rnd_556x45_Stanag","20Rnd_762x51_DMR","ItemTent"],[10,1,1,1,1,1,20,10,1]],[[],[]]], [["glass1",1],["glass2",1],["glass3",1],["motor",0.8],["palivo",0.8],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1],["sklo predni P",1],["sklo predni L",1],["karoserie",1],["wheel_1_4_steering",1],["wheel_2_4_steering",1],["wheel_1_3_steering",1],["wheel_2_3_steering",1],["glass4",1]]],
@@ -106,7 +106,7 @@ PLAYZ_vehicle_spawns=
 //["236533865", "Offroad_DSHKM_INS", [363,[5337.62,8656.55,0]], [[[],[]],[[],[]],[[],[]]], [["glass1",1],["glass2",1],["glass3",1],["motor",0.8],["palivo",0.8],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1],["karoserie",1],["glass4",1]]],
 //["216462967", "Offroad_DSHKM_INS", [-169,[4625.61,9675.62,0]], [[[],[]],[[],[]],[[],[]]], [["glass1",1],["glass2",1],["glass3",1],["motor",0.8],["palivo",0.8],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1],["karoserie",1],["glass4",1]]],
 ["225522944", "HMMWV_DZ", [90,[5279.56,5519.67,0]], [[["AK_47_M"],[1]],[["PartWoodPile", "ItemBandage", "HandGrenade_west", "6Rnd_45ACP", "ItemEpinephrine", "8Rnd_B_Beneli_74Slug", "HandChemBlue", "8Rnd_B_Beneli_Pellets", "PartEngine", "17Rnd_9x19_glock17", "ItemTent"],[1,2,1,1,1,1,1,1,1,1,1]],[["DZ_CivilBackpack_EP1"],[1]]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
-["202001241", "SUV_DZ", [356,[9157.16,11019.5,0]], [[[], []], [["Pipebomb"], [1]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
+["202001241", "SUV_DZ", [356,[9157.16,11019.5,0]], [[[], []], [["PartEngine"], [1]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
 ["230728145", "UAZ_Unarmed_TK_EP1", [128,[6406.39,6555.3,0]], [[[], []], [["20Rnd_762x51_DMR"], [5]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
 ["201775294", "Tractor", [234,[5210.2,4204.39,0]], [[[], []], [["ItemWire", "ItemJerrycan"], [1, 1]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
 
@@ -270,9 +270,9 @@ PLAYZ_vehicle_spawns=
 ],
 
 
-
-["258000051", "AN2_DZ",    [122, [10137.8680, 12049.3760, 0]], [], []],
-["258000052", "AN2_2_DZ",  [122, [10137.8680, 12049.3760, 0]], [], []],
+// Black Mountain
+//["258000051", "AN2_DZ",    [122, [10137.8680, 12049.3760, 0]], [], []],
+//["258000052", "AN2_2_DZ",  [122, [10137.8680, 12049.3760, 0]], [], []],
 ["258000053", "MH6J_DZ",   [122, [10137.8680, 12049.3760, 0]], 
 	[[[],[]],[["1Rnd_Smoke_M203", "7Rnd_45ACP_1911", "30Rnd_556x45_StanagSD", "200Rnd_556x45_M249", "FoodCanPasta", "15Rnd_W1866_Slug", "5x_22_LR_17_HMR", "15Rnd_9x19_M9SD", "17Rnd_9x19_glock17", "100Rnd_762x51_M240", "6Rnd_45ACP", "8Rnd_9x18_Makarov"],[2,1,1,1,1,1,1,1,1,1,1,1]],[["DZ_Backpack_EP1"],[1]]], 
 	[["motor",1],["elektronika",1],["mala vrtule",1],["velka vrtule",1]]
@@ -547,6 +547,7 @@ PLAYZ_vehicle_spawns=
 
 
 
+// NE Airfield Hangar
 ["258000161", "AN2_DZ",    [ 22, [12009.9040, 12636.7320, 0]], [], []],
 ["258000162", "AN2_2_DZ",  [ 22, [12009.9040, 12636.7320, 0]], [], []],
 ["258000163", "MH6J_DZ",   [ 22, [12009.9040, 12636.7320, 0]], 
@@ -748,6 +749,7 @@ PLAYZ_vehicle_spawns=
 
 
 
+// Lesnoy Khrebet (Östlich von Novy Sobor)
 ["258000241", "AN2_DZ",    [312, [ 8056.3900,  8133.5400, 0]], [], []],
 ["258000242", "AN2_2_DZ",  [312, [ 8056.3900,  8133.5400, 0]], [], []],
 ["258000243", "MH6J_DZ",   [312, [ 8056.3900,  8133.5400, 0]], 
@@ -924,6 +926,7 @@ PLAYZ_vehicle_spawns=
 
 
 
+// Novy Lug (SO Gvozdno)
 ["258000311", "AN2_DZ",    [309, [ 9422.3300, 10961.2000, 0]], [], []],
 ["258000312", "AN2_2_DZ",  [309, [ 9422.3300, 10961.2000, 0]], [], []],
 ["258000313", "MH6J_DZ",   [309, [ 9422.3300, 10961.2000, 0]], 
