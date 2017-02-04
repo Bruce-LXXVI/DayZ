@@ -77,6 +77,10 @@ if (!isDedicated) then
 	player_spawnCheck = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\player_spawnCheck.sqf";
 	zombie_generate = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\zombie_generate.sqf";
 	
+	// Quick fix for vehicle get out glitch
+	//DZE_AntiWallLimit = 3; // Number of activations before player_antiWall kills player for glitching attempt. Lower is stricter, but may result in false positives.
+	//player_antiWall = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\player_antiWall.sqf";
+	vehicle_getOut = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\vehicle_getOut.sqf";
 };
 
 
