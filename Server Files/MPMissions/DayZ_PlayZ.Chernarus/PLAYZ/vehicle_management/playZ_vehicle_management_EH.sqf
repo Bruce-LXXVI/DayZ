@@ -12,6 +12,7 @@ PZVM_logname="[PZVM]";
 PZVM_fnc_handleVehicleManagement={
 	//diag_log format ["%1 vehicle management event handler %2", PZVM_logname, _this];
 	_this call fnc_veh_ResetEH;
+	player reveal _this;
 };
 
 "PZVM_handleVehicleManagement" addPublicVariableEventHandler {(_this select 1) call PZVM_fnc_handleVehicleManagement};
