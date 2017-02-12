@@ -80,6 +80,7 @@ if (_finished) then {
 	_veh setVariable ["PlayZ_salvage_disabled", 1, true];
 	clearMagazineCargoGlobal _veh;
 	clearWeaponCargoGlobal _veh;
+	_veh call fnc_veh_ResetEH;
 
 
 	PVDZ_obj_Publish = [0, _veh, [round getDir _veh, _pos], []];
