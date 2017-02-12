@@ -96,6 +96,9 @@ _newVeh setvelocity [0,0,1];
 _newVeh setFuel _fuel;
 _newVeh call fnc_veh_ResetEH;
 
+PZVM_handleVehicleManagement=_newVeh;
+publicVariable "PZVM_handleVehicleManagement";
+
 diag_log format ["%1 SPAWNING ===> veh=%2 | type=%6 | damage=%3 | pos=%4 | posGps=%5", PLAYZ_logname, _newVeh, _damage, getPosASL _newVeh, (mapGridPosition getPos _newVeh), _type];
 diag_log format ["%1 objectID=%2 | objectUID=%3", PLAYZ_logname, _newVeh getVariable ["ObjectID","0"], _objectUID];
 
