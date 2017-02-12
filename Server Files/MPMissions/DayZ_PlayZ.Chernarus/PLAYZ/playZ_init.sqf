@@ -55,6 +55,9 @@ if (!isDedicated) then
 	// Initialize playZ virtual classnames player event handler
 	execVM "PLAYZ\virtual_classnames\playZ_virtual_classnames_player_EH.sqf";
 
+	// Initialize playZ vehicle management event handler
+	execVM "PLAYZ\vehicle_management\playZ_vehicle_management_EH.sqf";
+
 	// Initialize debug monitor
 	execVM "PLAYZ\debug_monitor\playZ_debug_monitor.sqf";
 
