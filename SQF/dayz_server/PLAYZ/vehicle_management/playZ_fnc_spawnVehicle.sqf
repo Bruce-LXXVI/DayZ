@@ -98,8 +98,10 @@ if( !(_newVeh isKindOf "TrapItems") && !(_newVeh iskindof "DZ_buildables") && (!
 		if( (_rndmode > 20) && (_rndmode < 90) ) then { _dam=(round (random 100)) / 100; };
 	};
 	
+	// Spawn fully repaired
 	if( PLAYZ_staticSpawnFullyRepaired ) then { _dam=0; };
 	
+	// Don't explode on spawn
 	if( (_selection in dayZ_explosiveParts and _dam > 0.8) && (!(_newVeh isKindOf "Air")) ) then { _dam=0.8; };
 	
 	[_newVeh,_selection,_dam] call fnc_veh_setFixServer;
