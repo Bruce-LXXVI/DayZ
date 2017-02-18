@@ -62,6 +62,11 @@ PLAYZ_staticSpawnAlwaysEmpty=true;
 // Static spawn Fahrzeuge sind immer voll repariert
 PLAYZ_staticSpawnFullyRepaired=false;
 
+// Static spawn Fahrzeuge in zufälligem Zustand
+PLAYZ_staticSpawnRandomCondition=true;
+
+
+
 ////////////////////////////////////////
 // Dynamische spawns aktivieren.
 // NOT IMPEMENTED!

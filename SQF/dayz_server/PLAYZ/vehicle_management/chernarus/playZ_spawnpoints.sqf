@@ -17,14 +17,14 @@ PLAYZ_vehicle_spawns=
 //["290000008", "Ural_CDF", [83.5, [11383.561, 11390.43, 0]], [[[], []], [["PartWheel", "ItemToolbox", "ItemTankTrap"], [1, 1, 1]], [[], []]], [["palivo",0],["motor",0],["karoserie",0],["wheel_1_1_steering",0],["wheel_1_2_steering",0],["wheel_2_1_steering",0],["wheel_2_2_steering",0]]],
 
 /* Stary Map Addon */
-["290000100", "tractorOld", [360, [6357.04, 7778.56, 0]], [], [["palivo",0],["motor",0],["karoserie",0],["wheel_1_1_steering",1],["wheel_1_2_steering",0],["wheel_2_1_steering",0],["wheel_2_2_steering",0]]],
+//["290000100", "tractorOld", [360, [6357.04, 7778.56, 0]], [], [["palivo",0],["motor",0],["karoserie",0],["wheel_1_1_steering",1],["wheel_1_2_steering",0],["wheel_2_1_steering",0],["wheel_2_2_steering",0]]],
 //["290000101", "SUV_Pink_PLAYZ", [196,[4894.26, 2264.53, 0]], [[[], []], [["PartEngine"], [1]], [[], []]], [["palivo",0],["motor",0],["karoserie",0],["wheel_1_1_steering",0],["wheel_1_2_steering",0],["wheel_2_1_steering",0],["wheel_2_2_steering",0]]],
 //["290000102", "UH1H_Red_PLAYZ", [14,[13308.511,3227.0215,0]], [[[], []], [["ItemSodaPeppsy"], [5]], [[], []]], [["motor",0],["elektronika",1],["mala vrtule",0],["velka vrtule",0]]],
 
 
 
 
-
+["230000100", "tractorOld", [360, [6357.04, 7778.56, 0]], [], [["palivo",0],["motor",0],["karoserie",0],["wheel_1_1_steering",1],["wheel_1_2_steering",0],["wheel_2_1_steering",0],["wheel_2_2_steering",0]]],
 
 ["230728533", "UAZ_Unarmed_TK_EP1", [0,[12140.168, 12622.802,0]], [[[], []], [["20Rnd_762x51_DMR"], [5]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
 
@@ -282,18 +282,18 @@ PLAYZ_vehicle_spawns=
 	[[["Binocular"],[1]],[["TrashJackDaniels","FoodCanFrankBeans"],[1,1]],[[],[]]], 
 	[["glass1",1],["glass2",1],["glass3",1],["glass4",1],["glass5",1],["NEtrup",1.1998],["motor",1],["elektronika",1],["mala vrtule",1],["velka vrtule",1],["munice",1.07084],["sklo predni P",1.04818],["sklo predni L",1.11816],["glass6",1.0402]]
 ],
-["258000055", "UH1H_DZ",   [122, [10137.8680, 12049.3760, 0]], 
-	[[[], []], [["ItemSodaPeppsy"], [5]], [[], []]], 
-	[["motor",1],["elektronika",1],["mala vrtule",1],["velka vrtule",1]]
-],
-["258000056", "UH1H_2_DZ", [122, [10137.8680, 12049.3760, 0]], 
-	[[[], []], [["ItemSodaPeppsy"], [5]], [[], []]], 
-	[["motor",1],["elektronika",1],["mala vrtule",1],["velka vrtule",1]]
-],
-["258000057", "Mi17_DZ",   [122, [10137.8680, 12049.3760, 0]], 
-	[[[],[]],[["ItemSodaMtngreen"],[2]],[[],[]]], 
-	[["glass1",1],["glass2",1],["glass3",1],["glass4",1],["glass5",1],["NEtrup",1.1998],["motor",1],["elektronika",1],["mala vrtule",1],["velka vrtule",1],["munice",1.07084],["sklo predni P",1.04818],["sklo predni L",1.11816],["glass6",1.0402]]
-],
+//["258000055", "UH1H_DZ",   [122, [10137.8680, 12049.3760, 0]], 
+//	[[[], []], [["ItemSodaPeppsy"], [5]], [[], []]], 
+//	[["motor",1],["elektronika",1],["mala vrtule",1],["velka vrtule",1]]
+//],
+//["258000056", "UH1H_2_DZ", [122, [10137.8680, 12049.3760, 0]], 
+//	[[[], []], [["ItemSodaPeppsy"], [5]], [[], []]], 
+//	[["motor",1],["elektronika",1],["mala vrtule",1],["velka vrtule",1]]
+//],
+//["258000057", "Mi17_DZ",   [122, [10137.8680, 12049.3760, 0]], 
+//	[[[],[]],[["ItemSodaMtngreen"],[2]],[[],[]]], 
+//	[["glass1",1],["glass2",1],["glass3",1],["glass4",1],["glass5",1],["NEtrup",1.1998],["motor",1],["elektronika",1],["mala vrtule",1],["velka vrtule",1],["munice",1.07084],["sklo predni P",1.04818],["sklo predni L",1.11816],["glass6",1.0402]]
+//],
 
 
 
@@ -475,8 +475,9 @@ PLAYZ_vehicle_spawns=
 
 
 
-["258000131", "AN2_DZ",    [310, [ 6365.7402,  7795.3501, 0]], [], []],
-["258000132", "AN2_2_DZ",  [310, [ 6365.7402,  7795.3501, 0]], [], []],
+// Stary sobor (Zelte)
+//["258000131", "AN2_DZ",    [310, [ 6365.7402,  7795.3501, 0]], [], []],
+//["258000132", "AN2_2_DZ",  [310, [ 6365.7402,  7795.3501, 0]], [], []],
 ["258000133", "MH6J_DZ",   [310, [ 6365.7402,  7795.3501, 0]], 
 	[[[],[]],[["1Rnd_Smoke_M203", "7Rnd_45ACP_1911", "30Rnd_556x45_StanagSD", "200Rnd_556x45_M249", "FoodCanPasta", "15Rnd_W1866_Slug", "5x_22_LR_17_HMR", "15Rnd_9x19_M9SD", "17Rnd_9x19_glock17", "100Rnd_762x51_M240", "6Rnd_45ACP", "8Rnd_9x18_Makarov"],[2,1,1,1,1,1,1,1,1,1,1,1]],[["DZ_Backpack_EP1"],[1]]], 
 	[["motor",1],["elektronika",1],["mala vrtule",1],["velka vrtule",1]]
@@ -807,6 +808,7 @@ PLAYZ_vehicle_spawns=
 
 
 
+// Pustoshka (Hof auf dem Feld)
 ["258000261", "AN2_DZ",    [ 62, [ 3621.5000,  6988.8800, 0]], [], []],
 ["258000262", "AN2_2_DZ",  [ 62, [ 3621.5000,  6988.8800, 0]], [], []],
 ["258000263", "MH6J_DZ",   [ 62, [ 3621.5000,  6988.8800, 0]], 
