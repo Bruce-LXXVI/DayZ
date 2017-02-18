@@ -79,7 +79,7 @@ PLAYZ_vehicle_spawns=
 
 ["205023176", "UralCivil", [338,[1890.9952, 12417.333, 0]], [[[], []], [["PartWheel", "ItemToolbox", "ItemTankTrap"], [1, 1, 1]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
 ["205023177", "Ural_INS", [286,[1558.88, 4892.04, 0]], [[[], []], [["PartWheel", "ItemToolbox", "ItemTankTrap"], [1, 1, 1]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
-["205023178", "Ural_CDF", [190,[9609.86, 10430.0, 0]], [[[], []], [["PartWheel", "ItemToolbox", "ItemTankTrap"], [1, 1, 1]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
+["205023178", "UralCivil2", [190,[9609.86, 10430.0, 0]], [[[], []], [["PartWheel", "ItemToolbox", "ItemTankTrap"], [1, 1, 1]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
 
 ["246395206", "car_hatchback", [226,[1975.1283, 9150.0195,0]], [[["LeeEnfield"], [1]], [["5x_22_LR_17_HMR"], [3]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
 ["276906508", "car_hatchback", [315,[7429.4849,5157.8682,0]], [[["LeeEnfield"], [1]], [["5x_22_LR_17_HMR"], [3]], [[], []]], [["palivo",1],["motor",1],["karoserie",1],["wheel_1_1_steering",1],["wheel_1_2_steering",1],["wheel_2_1_steering",1],["wheel_2_2_steering",1]]],
@@ -889,6 +889,7 @@ PLAYZ_vehicle_spawns=
 
 
 
+// Wilderness (N Lopatino)
 ["258000291", "AN2_DZ",    [  1, [ 2747.9200, 11649.8000, 0]], [], []],
 ["258000292", "AN2_2_DZ",  [  1, [ 2747.9200, 11649.8000, 0]], [], []],
 ["258000293", "MH6J_DZ",   [  1, [ 2747.9200, 11649.8000, 0]], 
