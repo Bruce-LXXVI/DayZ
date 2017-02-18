@@ -576,10 +576,10 @@ PLAYZ_vehicle_spawns=
 	[[[], []], [["ItemSodaPeppsy"], [5]], [[], []]], 
 	[["motor",1],["elektronika",1],["mala vrtule",1],["velka vrtule",1]]
 ],
-["258000167", "Mi17_DZ",   [ 22, [12009.9040, 12636.7320, 0]], 
-	[[[],[]],[["ItemSodaMtngreen"],[2]],[[],[]]], 
-	[["glass1",1],["glass2",1],["glass3",1],["glass4",1],["glass5",1],["NEtrup",1.1998],["motor",1],["elektronika",1],["mala vrtule",1],["velka vrtule",1],["munice",1.07084],["sklo predni P",1.04818],["sklo predni L",1.11816],["glass6",1.0402]]
-],
+//["258000167", "Mi17_DZ",   [ 22, [12009.9040, 12636.7320, 0]], 
+//	[[[],[]],[["ItemSodaMtngreen"],[2]],[[],[]]], 
+//	[["glass1",1],["glass2",1],["glass3",1],["glass4",1],["glass5",1],["NEtrup",1.1998],["motor",1],["elektronika",1],["mala vrtule",1],["velka vrtule",1],["munice",1.07084],["sklo predni P",1.04818],["sklo predni L",1.11816],["glass6",1.0402]]
+//],
 
 
 
