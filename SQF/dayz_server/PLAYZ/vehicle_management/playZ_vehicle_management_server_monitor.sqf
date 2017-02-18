@@ -237,12 +237,12 @@ while {true} do {
 					diag_log format ["%1 static spawn %2 (UID=%3): player near", PLAYZ_logname, _x select 1, _x select 0];
 				} else {
 					if(_type in _classnameOverlimit) then {
-						diag_log format ["%1 static spawn %2 (UID=%3): class over limit", PLAYZ_logname, _x select 1, _x select 0];
+						//diag_log format ["%1 static spawn %2 (UID=%3): class over limit", PLAYZ_logname, _x select 1, _x select 0];
 					} else {
 						if(_vehiceNear) then {
 							diag_log format ["%1 static spawn %2 (UID=%3): vehicle near", PLAYZ_logname, _x select 1, _x select 0];
 						} else {
-							diag_log format ["%1 static spawn %2 (UID=%3): added to list", PLAYZ_logname, _x select 1, _x select 0];
+							//diag_log format ["%1 static spawn %2 (UID=%3): added to list", PLAYZ_logname, _x select 1, _x select 0];
 							_staticVehSpawns = _staticVehSpawns + [_x];
 						};
 					};

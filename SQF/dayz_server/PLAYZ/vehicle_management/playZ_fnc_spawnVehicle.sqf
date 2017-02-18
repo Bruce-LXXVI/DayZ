@@ -87,8 +87,21 @@ if( !(_newVeh isKindOf "TrapItems") && !(_newVeh iskindof "DZ_buildables") && (!
 	private ["_selection", "_dam"];
 	_selection = _x select 0;
 	_dam = _x select 1;
-	if ((_selection in dayZ_explosiveParts and _dam > 0.8) && (!(_newVeh isKindOf "Air"))) then {_dam = 0.8};
+	
+	// Use randomizer if part is definied as fully damaged by configuration (playZ_spawnpoints.sqf)
+	if( PLAYZ_staticSpawnRandomCondition && (_dam == 1) ) then
+	{
+		private ["_rndmode"];
+		_rndmode=round (random 100);
+		if( _rndmode >= 90 ) then { _dam=0; };
+		if( _rndmode <= 20 ) then { _dam=1; };
+		if( (_rndmode > 20) && (_rndmode < 90) ) then { _dam=(round (random 100)) / 100; };
+	};
+	
 	if( PLAYZ_staticSpawnFullyRepaired ) then { _dam=0; };
+	
+	if( (_selection in dayZ_explosiveParts and _dam > 0.8) && (!(_newVeh isKindOf "Air")) ) then { _dam=0.8; };
+	
 	[_newVeh,_selection,_dam] call fnc_veh_setFixServer;
 } forEach _hitpoints;
 
