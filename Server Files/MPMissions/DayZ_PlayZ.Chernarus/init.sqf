@@ -14,7 +14,7 @@ dayz_ForcefullmoonNights = false; // Forces night time to be full moon.
 dayz_randomMaxFuelAmount = 250; //Puts a random amount of fuel in all fuel stations.
 
 //DayZMod presets
-dayz_presets = "Custom"; //"Custom","Classic","Vanilla","Elite"
+dayz_presets = "Vanilla"; //"Custom","Classic","Vanilla","Elite"
 
 //Only need to edit if you are running a custom server.
 if (dayz_presets == "Custom") then {
@@ -29,6 +29,7 @@ if (dayz_presets == "Custom") then {
 	dayz_OpenTarget_TimerTicks = 60 * 10; //how long can a player be freely attacked for after attacking someone unprovoked
 	dayz_nutritionValuesSystem = true; //Enables nutrition system
 	dayz_classicBloodBagSystem = false; // removes all blood type bloodbags (not implmented yet)
+	dayz_enableFlies = true; // Enable flies on dead bodies (negatively impacts FPS).
 };
 
 //Temp settings
@@ -64,8 +65,6 @@ progressLoadingScreen 0.1;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\medical\setup_functions_med.sqf";
 progressLoadingScreen 0.15;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";
-progressLoadingScreen 0.2;
-call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\BIS_Effects\init.sqf";
 progressLoadingScreen 0.25;
 
 
@@ -81,23 +80,25 @@ if (dayz_REsec == 1) then {call compile preprocessFileLineNumbers "\z\addons\day
 execVM "\z\addons\dayz_code\system\DynamicWeatherEffects.sqf";
 
 if (isServer) then {
+	//if (dayz_POIs && (toLower worldName == "chernarus")) then {call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\mission\chernarus\poi\init.sqf";};
 	//execVM "\z\addons\dayz_server\system\server_monitor.sqf";
 	execVM "\z\addons\dayz_server\PLAYZ\system\server_monitor.sqf";
+	
+	//Get the server to setup what waterholes are going to be infected and then broadcast to everyone.
 	if (dayz_infectiousWaterholes && (toLower worldName == "chernarus")) then {execVM "\z\addons\dayz_code\system\mission\chernarus\infectiousWaterholes\init.sqf";};
+	
+	// Lootable objects from CfgTownGeneratorDefault.hpp
+	if (dayz_townGenerator) then { execVM "\z\addons\dayz_code\system\mission\chernarus\MainLootableObjects.sqf"; };
 };
-
-//Must be global spawned, so players don't fall through buildings (might be best to spilt these to important, not important)
-//if (dayz_POIs && (toLower worldName == "chernarus")) then { execVM "\z\addons\dayz_code\system\mission\chernarus\poi\init.sqf"; };
-// Lootable objects from CfgTownGeneratorDefault.hpp
-if (dayz_townGenerator) then { execVM "\z\addons\dayz_code\system\mission\chernarus\LegacyTownGenerator\MainLootableObjects.sqf"; };
 
 if (!isDedicated) then {
 	if (dayz_antiWallHack != 0) then {
 		//Enables Map Plug items
-		execVM "\z\addons\dayz_code\system\mission\chernarus\security\init.sqf";
-		//Enables Plant lib fixes
-		call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\antihack.sqf";
+		if (toLower worldName == "chernarus") then { execVM "\z\addons\dayz_code\system\mission\chernarus\antiwallhack.sqf"; };
 	};
+	
+	//Enables Plant lib fixes
+	execVM "\z\addons\dayz_code\system\antihack.sqf";
 	
 	if (toLower(worldName) == "chernarus") then {
 		diag_log "WARNING: Clearing annoying benches from Chernarus";
@@ -105,11 +106,8 @@ if (!isDedicated) then {
 		([4654,9595,0] nearestObject 145260) setDamage 1;
 	};
 	
-	if (dayz_enableRules) then { execVM "rules.sqf"; };
-	if (!isNil "dayZ_serverName") then { execVM "\z\addons\dayz_code\system\watermark.sqf"; };
-	execVM "\z\addons\dayz_code\compile\client_plantSpawner.sqf";
-	//execFSM "\z\addons\dayz_code\system\player_monitor.fsm";
-	execFSM "PLAYZ\dayz_code\system\player_monitor.fsm";
+	if (dayz_townGenerator) then { execVM "\z\addons\dayz_code\compile\client_plantSpawner.sqf"; };
+	execFSM "\z\addons\dayz_code\system\player_monitor.fsm";
 	waitUntil {scriptDone progress_monitor};
 	cutText ["","BLACK IN", 3];
 	3 fadeSound 1;

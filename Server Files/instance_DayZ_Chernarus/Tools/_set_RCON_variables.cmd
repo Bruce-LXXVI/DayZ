@@ -18,6 +18,6 @@ set RCON="%MYDIR%\BERCon.exe" -host "%RCON_HOST%" -port "%RCON_PORT%" -pw "%RCON
 
 set INST_NAME=instance_DayZ_Chernarus
 set MISSION_NAME=DayZ_PlayZ.Chernarus
-set SERVER_MOD_NAME=@Hive_DayZ_188
+set SERVER_MOD_NAME=@Hive_DayZ_189
 
 

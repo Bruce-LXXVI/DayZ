@@ -9,7 +9,7 @@ call "%MYDIR%\_MOVE_Logs.cmd"
 cd "%A2OADIR%\"
 
 
-start "arma2 SERVER %INST_NAME%" "arma2oaserver.exe" -port=2302 "-config=%INST_NAME%\server.cfg" "-cfg=%INST_NAME%\basic.cfg" "-profiles=%INST_NAME%" "-name=%INST_NAME%" "-pid=%INST_NAME%\%INST_NAME%.pid" "-ranking=%INST_NAME%\%INST_NAME%_ranking.log" "-mod=%A2DIR%;EXPANSION;ca;@DayZ_188;@Hive_DayZ_188"
+start "arma2 SERVER %INST_NAME%" "arma2oaserver.exe" -port=2302 "-config=%INST_NAME%\server.cfg" "-cfg=%INST_NAME%\basic.cfg" "-profiles=%INST_NAME%" "-name=%INST_NAME%" "-pid=%INST_NAME%\%INST_NAME%.pid" "-ranking=%INST_NAME%\%INST_NAME%_ranking.log" "-mod=%A2DIR%;EXPANSION;ca;@DayZ_189;@Hive_DayZ_189"
 
 
 sleep 35

@@ -1,18 +1,31 @@
 respawn = "BASE";
-respawndelay = 5;
+respawnDelay = 0;
+respawnDialog = 0;
 onLoadMission= "DayZ Chernarus";
 OnLoadIntro = "Welcome to Chernarus";
 OnLoadIntroTime = False;
 OnLoadMissionTime = False;
 disabledAI = true;
+
+/*
+	Disable global, side, command and system chat. MOTD and admin say have exception and will show in global.
+	Channel number correspondence:
+	0 = Global
+	1 = Side
+	2 = Command
+	3 = Group
+	4 = Vehicle
+	5 = Direct
+	6 = System
+*/
 disableChannels[] = {0,2,6};
+
 enableItemsDropping = 0;
 onPauseScript = "";
 briefing = 0;
 debriefing = 0;
 
-//loadScreen = "\z\addons\dayz_code\gui\loadingscreen.paa";
-loadScreen = "PLAYZ\dayz_code\gui\loadingscreen10.jpg";
+loadScreen = "\z\addons\dayz_code\gui\loadingscreen.paa";
 
 class Header
 {
@@ -25,30 +38,4 @@ aiKills = 1;
 diagRadio = 1;
 diagHit = 1;
 
-
-//#include "\z\addons\dayz_code\gui\description.hpp"
-// DZGM 
-#include "PLAYZ\dayz_code\gui\description.hpp"
-#include "PLAYZ\dayz_code\gui\dzgm\extra_rc.hpp"
-#include "dzgm\groupManagement.hpp"
-
-// PlayZ Classnames
-#include "PLAYZ\Configs\CfgVehiclesPlayZ.hpp"
-
-// Epoch Admin Tools
-#include "PLAYZ\admintools\dialog.hpp"
-
-// ESS
-//#include "spawn\class.hpp"
-//#include "spawn\halo.hpp"
-//#include "spawn\spawn.hpp"
-
-// Base building
-//#include "PLAYZ\dayz_buildings\config.cpp"
-
-// Loot Tables
-#include "PLAYZ\dayz_code\Configs\CfgLoot\CfgLoot.hpp"
-
-// Customized Town Generator
-#include "PLAYZ\dayz_code\Configs\CfgTownGenerator\CfgTownGeneratorChernarus.hpp"
-
+#include "\z\addons\dayz_code\gui\description.hpp"

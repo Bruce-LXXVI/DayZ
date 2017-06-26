@@ -8,7 +8,7 @@ del "%MYDIR%\..\ArmA2OA.RPT"
 cd "%A2OADIR%\"
 
 
-start "arma2 CLIENT" "%STEAMPATH%\steam.exe" -applaunch 33930 -client "-profiles=%INST_NAME%" "-name=__HC__" "-mod=%A2DIR%;EXPANSION;ca;@DayZ_188" -nosound -connect=127.0.0.1 -password=5000
+start "arma2 CLIENT" "%STEAMPATH%\steam.exe" -applaunch 33930 -client "-profiles=%INST_NAME%" "-name=__HC__" "-mod=%A2DIR%;EXPANSION;ca;@DayZ_189" -nosound -connect=127.0.0.1 -password=5000
 
 
 

@@ -237,7 +237,6 @@ UPDATE `tOption` SET `optvalue` = '2016-03-12 11:45' WHERE `optname`='dbversion'
 
 -- ------------------------------------------------------------------------
 -- 2016-12-02 01:00
-INSERT INTO `event_scheduler` (`id`, `System`, `LastRun`) VALUES (NULL, 'playZ_restart_scheduler', NULL);
 DROP EVENT `playZ_restart_scheduler`;
 DELIMITER ;;
 CREATE EVENT `playZ_restart_scheduler` ON SCHEDULE EVERY 1 DAY STARTS '2016-01-01 05:55:00' ON COMPLETION NOT PRESERVE ENABLE DO
@@ -258,6 +257,70 @@ END;;
 DELIMITER ;
 UPDATE `tOption` SET `optvalue` = '2016-12-02 01:00' WHERE `optname`='dbversion';
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- ------------------------------------------------------------------------
+-- 2017-06-26 00:00
+INSERT INTO `event_scheduler` (`id`, `System`, `LastRun`) VALUES (NULL, 'playZ_restart_scheduler', NULL);
+DROP EVENT `playZ_restart_scheduler`;
+DELIMITER ;;
+CREATE EVENT `playZ_restart_scheduler` ON SCHEDULE EVERY 1 DAY STARTS '2016-01-01 05:55:00' ON COMPLETION NOT PRESERVE ENABLE DO
+BEGIN
+
+  UPDATE `event_scheduler` SET `LastRun` = NOW() WHERE `System` = "playZ_restart_scheduler";
+
+  DELETE FROM `object_data` WHERE `ObjectUID` >= 280000000 AND `ObjectUID` < 290000000;
+
+  # temp. fix for the bike problem
+  DELETE FROM `object_data` WHERE `Classname` LIKE 'Old_bike_%' AND `ObjectID` < 200000000;
+
+  # FIX ObjectIDs
+  ALTER TABLE `object_data` AUTO_INCREMENT=3000000001;
+  UPDATE `object_data` SET `ObjectID`=`ObjectID` + 3000000001, `last_updated`=`last_updated`;
+
+END;;
+DELIMITER ;
+
+DROP PROCEDURE IF EXISTS `pPlayZ_UID2ID`;
+DELIMITER ;;
+CREATE PROCEDURE `pPlayZ_UID2ID`(IN `i` INT)
+    MODIFIES SQL DATA
+BEGIN
+# Server instance ID.
+#-----------------------------------------------
+	DECLARE sInstance VARCHAR(8) DEFAULT i;
+#-----------------------------------------------
+#Last Ran
+  UPDATE `event_scheduler` SET `LastRun` = NOW() WHERE `System` = "pPlayZ_UID2ID";
+#Starts setting ID
+  UPDATE `object_data` 
+  SET
+    `ObjectID`=fPlayZ_generateID(i, `ObjectUID`),
+    `last_updated`=`last_updated`
+  WHERE
+    `Instance`=sInstance
+    AND
+    (`ObjectID`<300000 OR `ObjectID`>=2147483647);
+END ;;
+DELIMITER ;
+
+UPDATE `tOption` SET `optvalue` = '2017-06-26 00:00' WHERE `optname`='dbversion';
 
 
 
@@ -334,7 +397,6 @@ ALTER TABLE `object_data` CHANGE `Hitpoints` `Hitpoints` LONGTEXT NOT NULL;
 ALTER TABLE `object_data_deleted` CHANGE `Hitpoints` `Hitpoints` LONGTEXT NOT NULL;
 
 # FIX ObjectIDs
-ALTER TABLE object_data AUTO_INCREMENT=3000000001;
-UPDATE object_data SET ObjectID=ObjectID+3000000001;
-
+ALTER TABLE `object_data` AUTO_INCREMENT=3000000001;
+UPDATE `object_data` SET `ObjectID`=`ObjectID` + 3000000001, `last_updated`=`last_updated`;
 
