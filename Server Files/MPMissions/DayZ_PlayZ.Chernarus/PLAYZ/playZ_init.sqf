@@ -23,15 +23,19 @@ if( PLAYZ_worldname == "chernarus" ) then
 	if (dayz_POIs) then
 	{
 		// Original POI (some modified)
-		[] execVM "\z\addons\dayz_code\system\mission\chernarus\poi\DevilsFarm.sqf";
-		[] execVM "\z\addons\dayz_code\system\mission\chernarus\poi\NEA.sqf";
 		[] execVM "\z\addons\dayz_code\system\mission\chernarus\poi\C130Crash.sqf";
 		[] execVM "\z\addons\dayz_code\system\mission\chernarus\poi\ChernoBuildings.sqf";
 		[] execVM "PLAYZ\dayz_code\system\mission\chernarus\poi\DeadForest.sqf";
+		[] execVM "\z\addons\dayz_code\system\mission\chernarus\poi\DevilsFarm.sqf";
+		[] execVM "\z\addons\dayz_code\system\mission\chernarus\poi\ElektroWells.sqf";
+		[] execVM "\z\addons\dayz_code\system\mission\chernarus\poi\GvozdnoMilitaryBase.sqf";
 		[] execVM "PLAYZ\dayz_code\system\mission\chernarus\poi\KomyshovoRoadblock.sqf";
 		[] execVM "\z\addons\dayz_code\system\mission\chernarus\poi\MilitaryAirpoort.sqf";
+		[] execVM "\z\addons\dayz_code\system\mission\chernarus\poi\NEA.sqf";
+		[] execVM "\z\addons\dayz_code\system\mission\chernarus\poi\NWATentCamp.sqf";
+		[] execVM "\z\addons\dayz_code\system\mission\chernarus\poi\Shakhovka.sqf";
+		[] execVM "\z\addons\dayz_code\system\mission\chernarus\poi\Trains.sqf";
 		[] execVM "PLAYZ\dayz_code\system\mission\chernarus\poi\ZelenogorskBuildings.sqf";
-		[] execVM "\z\addons\dayz_code\system\mission\chernarus\poi\Twains.sqf";
 	};
 };
 
@@ -83,7 +87,7 @@ if (!isDedicated) then
 	// Quick fix for vehicle get out glitch
 	//DZE_AntiWallLimit = 3; // Number of activations before player_antiWall kills player for glitching attempt. Lower is stricter, but may result in false positives.
 	//player_antiWall = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\player_antiWall.sqf";
-	vehicle_getOut = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\vehicle_getOut.sqf";
+	//vehicle_getOut = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\vehicle_getOut.sqf";
 };
 
 
