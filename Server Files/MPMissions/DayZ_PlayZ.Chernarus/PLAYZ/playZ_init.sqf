@@ -18,25 +18,7 @@ DZ_KeyDown_EH = compile preprocessFileLineNumbers "PLAYZ\dayz_code\compile\keybo
 
 if( PLAYZ_worldname == "chernarus" ) then
 {
-	([4654,9595,0] nearestObject 143992) setDamage 1;
-	
-	if (dayz_POIs) then
-	{
-		// Original POI (some modified)
-		[] execVM "\z\addons\dayz_code\system\mission\chernarus\poi\C130Crash.sqf";
-		[] execVM "\z\addons\dayz_code\system\mission\chernarus\poi\ChernoBuildings.sqf";
-		[] execVM "PLAYZ\dayz_code\system\mission\chernarus\poi\DeadForest.sqf";
-		[] execVM "\z\addons\dayz_code\system\mission\chernarus\poi\DevilsFarm.sqf";
-		[] execVM "\z\addons\dayz_code\system\mission\chernarus\poi\ElektroWells.sqf";
-		[] execVM "\z\addons\dayz_code\system\mission\chernarus\poi\GvozdnoMilitaryBase.sqf";
-		[] execVM "PLAYZ\dayz_code\system\mission\chernarus\poi\KomyshovoRoadblock.sqf";
-		[] execVM "\z\addons\dayz_code\system\mission\chernarus\poi\MilitaryAirpoort.sqf";
-		[] execVM "\z\addons\dayz_code\system\mission\chernarus\poi\NEA.sqf";
-		[] execVM "\z\addons\dayz_code\system\mission\chernarus\poi\NWATentCamp.sqf";
-		[] execVM "\z\addons\dayz_code\system\mission\chernarus\poi\Shakhovka.sqf";
-		[] execVM "\z\addons\dayz_code\system\mission\chernarus\poi\Trains.sqf";
-		[] execVM "PLAYZ\dayz_code\system\mission\chernarus\poi\ZelenogorskBuildings.sqf";
-	};
+	//([4654,9595,0] nearestObject 143992) setDamage 1;
 };
 
 
@@ -107,9 +89,36 @@ if (isServer) then
 	{
 		// Initialize Public Bus Route
 		//[true] execVM "\z\addons\dayz_server\PLAYZ\busroute\chernarus\init_bus.sqf";
-
+		
+		
+		
+		
+		if (dayz_POIs) then
+		{
+			// Original POI (some modified)
+			call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\mission\chernarus\poi\C130Crash.sqf";
+			call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\mission\chernarus\poi\ChernoBuildings.sqf";
+			call compile preprocessFileLineNumbers "PLAYZ\dayz_code\system\mission\chernarus\poi\DeadForest.sqf";
+			call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\mission\chernarus\poi\DevilsFarm.sqf";
+			call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\mission\chernarus\poi\ElektroWells.sqf";
+			call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\mission\chernarus\poi\GvozdnoMilitaryBase.sqf";
+			call compile preprocessFileLineNumbers "PLAYZ\dayz_code\system\mission\chernarus\poi\KomyshovoRoadblock.sqf";
+			call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\mission\chernarus\poi\MilitaryAirpoort.sqf";
+			call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\mission\chernarus\poi\NEA.sqf";
+			call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\mission\chernarus\poi\NWATentCamp.sqf";
+			call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\mission\chernarus\poi\Shakhovka.sqf";
+			call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\mission\chernarus\poi\Trains.sqf";
+			call compile preprocessFileLineNumbers "PLAYZ\dayz_code\system\mission\chernarus\poi\ZelenogorskBuildings.sqf";
+		};
+		
+		
+		
 		// Custom mapaddons
-		[] execVM "\z\addons\dayz_server\PLAYZ\mapaddons\chernarus\init.sqf";
+		call compile preprocessFileLineNumbers "\z\addons\dayz_server\PLAYZ\mapaddons\chernarus\init.sqf";
+		
+		
+		
+		
 	};
 	
 	// Initialize Spawn Tables
