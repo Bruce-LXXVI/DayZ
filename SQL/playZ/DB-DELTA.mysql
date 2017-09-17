@@ -229,12 +229,10 @@ UPDATE `tOption` SET `optvalue` = '2016-03-12 11:45' WHERE `optname`='dbversion'
 
 
 
-
-
-
-
-
-
+-- ------------------------------------------------------------------------
+-- ------------------------------------------------------------------------
+-- ------------------------------------------------------------------------
+-- ------------------------------------------------------------------------
 -- ------------------------------------------------------------------------
 -- 2016-12-02 01:00
 DROP EVENT `playZ_restart_scheduler`;
@@ -260,24 +258,13 @@ UPDATE `tOption` SET `optvalue` = '2016-12-02 01:00' WHERE `optname`='dbversion'
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-- ------------------------------------------------------------------------
+-- ------------------------------------------------------------------------
+-- ------------------------------------------------------------------------
+-- ------------------------------------------------------------------------
 -- ------------------------------------------------------------------------
 -- 2017-06-26 00:00
-INSERT INTO `event_scheduler` (`id`, `System`, `LastRun`) VALUES (NULL, 'playZ_restart_scheduler', NULL);
+REPLACE INTO `event_scheduler` (`id`, `System`, `LastRun`) VALUES (NULL, 'playZ_restart_scheduler', NULL);
 DROP EVENT `playZ_restart_scheduler`;
 DELIMITER ;;
 CREATE EVENT `playZ_restart_scheduler` ON SCHEDULE EVERY 1 DAY STARTS '2016-01-01 05:55:00' ON COMPLETION NOT PRESERVE ENABLE DO
@@ -325,7 +312,350 @@ UPDATE `tOption` SET `optvalue` = '2017-06-26 00:00' WHERE `optname`='dbversion'
 
 
 
+-- ------------------------------------------------------------------------
+-- ------------------------------------------------------------------------
+-- ------------------------------------------------------------------------
+-- ------------------------------------------------------------------------
+-- ------------------------------------------------------------------------
+-- 2017-09-17 15:00
+DROP EVENT IF EXISTS `playZ_1min_scheduler`;
+DELIMITER ;;
+CREATE EVENT `playZ_1min_scheduler` ON SCHEDULE EVERY 1 MINUTE STARTS '2015-07-25 00:00:00' ON COMPLETION NOT PRESERVE ENABLE DO
+BEGIN
+	REPLACE INTO `event_scheduler` (`System`, `LastRun`) VALUES ('playZ_1min_scheduler', NOW());
+	
+	CALL `pPlayZ_UID2ID`('1');
+	
+END ;;
+DELIMITER ;
 
+DROP PROCEDURE IF EXISTS `pPlayZ_Cleanup`;
+DELIMITER ;;
+CREATE PROCEDURE `pPlayZ_Cleanup`()
+BEGIN
+	# Last run
+	REPLACE INTO `event_scheduler` (`System`, `LastRun`) VALUES ('pPlayZ_Cleanup', NOW());
+
+	# outofbounds cleanup
+	#CALL pPlayZ_CleanupOOB();
+
+	# remove damaged objects
+	DELETE FROM object_data WHERE CharacterID != 0 AND Damage >= 1;
+
+	# remove damaged vehicles
+	DELETE FROM object_data
+	WHERE CharacterID = 0
+		AND Damage >= 1
+		#AND SYSDATE() > DATE(last_updated) + INTERVAL 24 HOUR
+	;
+
+	# remove empty tents and stashes older than seven days
+	DELETE
+	FROM object_data
+	WHERE (Classname LIKE 'TentStorage%' OR Classname LIKE 'StashSmall%' OR Classname LIKE 'StashMedium%' OR Classname LIKE 'DomeTentStorage%')
+		AND DATE(last_updated) < CURDATE() - INTERVAL 7 DAY
+		AND Inventory = '[[[],[]],[[],[]],[[],[]]]';
+	
+	DELETE
+	FROM object_data
+	WHERE (Classname LIKE 'TentStorage%' OR Classname LIKE 'StashSmall%' OR Classname LIKE 'StashMedium%' OR Classname LIKE 'DomeTentStorage%')
+		AND DATE(last_updated) < CURDATE() - INTERVAL 7 DAY
+		AND Inventory = '[]';
+
+	# remove barbed wire older than two days
+	DELETE
+	FROM object_data
+	WHERE Classname = 'Wire_cat1'
+		AND DATE(last_updated) < CURDATE() - INTERVAL 2 DAY;
+
+	# remove Tank Traps older than fifteen days
+	DELETE
+	FROM object_data
+	WHERE Classname = 'Hedgehog_DZ'
+		AND DATE(last_updated) < CURDATE() - INTERVAL 15 DAY;
+
+	# remove Sandbags older than twenty days
+	DELETE
+	FROM object_data
+	WHERE Classname = 'Sandbag1_DZ'
+		AND DATE(last_updated) < CURDATE() - INTERVAL 20 DAY;
+
+	# remove Traps older than five days
+	DELETE
+	FROM object_data
+	WHERE Classname IN ('BearTrap_DZ', 'TrapBearTrapFlare', 'TrapBearTrapSmoke', 'Trap_Cans', 'TrapTripwireFlare', 'TrapTripwireGrenade', 'TrapTripwireSmoke')
+		AND DATE(last_updated) < CURDATE() - INTERVAL 5 DAY; 
+
+	# remove incomplete gates after 1 Day
+	#DELETE
+	#FROM object_data
+	#WHERE (Classname = 'WoodenGate_foundation')
+	#	AND DATE(last_updated) < CURDATE() - INTERVAL 1 Day;
+
+	# remove incomplete fences after 1 Day
+	#DELETE
+	#FROM object_data
+	#WHERE (Classname = 'WoodenFence_1_foundation')
+	#	AND DATE(last_updated) < CURDATE() - INTERVAL 1 Day;  
+
+	# remove incomplete fences after 3 Dayz
+	#DELETE
+	#FROM object_data
+	#WHERE (Classname = 'WoodenFence_1_frame' or Classname = 'WoodenFence_quaterpanel' or Classname = 'WoodenFence_halfpanel' or Classname = 'WoodenFence_thirdpanel')
+	#	AND DATE(last_updated) < CURDATE() - INTERVAL 3 Day; 
+
+	# remove dead players from data table after 90 days
+	DELETE
+	FROM character_data
+	WHERE Alive=0 AND DATE(last_updated) < CURDATE() - INTERVAL 90 Day; 
+
+	# Remove Bad Data
+	DELETE
+	FROM object_data
+	WHERE Classname like '%_base';
+
+	# Remove wire if the owner has died
+	#DELETE
+	#FROM object_data
+	#LEFT JOIN character_data ON object_data.CharacterID = character_data.CharacterID
+	#WHERE object_data.Classname = 'Wire_cat1'
+	#	AND character_data.CharacterID IS NOT NULL
+	#	AND character_data.Alive = 0;
+
+	# remove Base_Fire_DZ older than 5 days
+	DELETE
+	FROM object_data
+	WHERE Classname = 'Base_Fire_DZ'
+		AND DATE(last_updated) < CURDATE() - INTERVAL 5 DAY;
+
+END ;;
+DELIMITER ;
+
+DROP PROCEDURE IF EXISTS `pPlayZ_CleanupBase`;
+DELIMITER ;;
+CREATE PROCEDURE `pPlayZ_CleanupBase`()
+BEGIN
+	# Last run
+	REPLACE INTO `event_scheduler` (`System`, `LastRun`) VALUES ('pPlayZ_CleanupBase', NOW());
+
+# PlayZ special: no maintenance if modified in the last 30 days
+	UPDATE `object_data` `o`
+	SET
+		`o`.`last_updated`=`o`.`last_updated`,
+		`o`.`Hitpoints`='["NO-Maintenance"]'
+	WHERE
+		`Classname` IN (
+				'WoodenFence_1', 'WoodenFence_2', 'WoodenFence_3', 'WoodenFence_4', 'WoodenFence_5', 'WoodenFence_6', 'WoodenFence_7',
+				'WoodenGate_1', 'WoodenGate_2', 'WoodenGate_3', 'WoodenGate_4',
+				'WoodenFence_1_frame', 'WoodenFence_quaterpanel', 'WoodenFence_halfpanel', 'WoodenFence_thirdpanel'
+				)
+		AND `o`.`Hitpoints` IN ('[]', '["Maintenance"]')
+		AND `o`.`last_updated` > CURDATE() - INTERVAL 32 DAY
+		;
+
+
+# PlayZ special: no maintenance if player logged in the last 30 days
+	UPDATE `object_data` `o`
+	LEFT JOIN `player_login` `pl` ON `pl`.`CharacterID`=`o`.`CharacterID` OR `o`.`Inventory` LIKE CONCAT('%"', `pl`.`PlayerUID`, '"%')
+	SET
+		`o`.`last_updated`=`o`.`last_updated`,
+		`o`.`Hitpoints`='["NO-Maintenance"]'
+	WHERE
+		`Classname` IN (
+				'WoodenFence_1', 'WoodenFence_2', 'WoodenFence_3', 'WoodenFence_4', 'WoodenFence_5', 'WoodenFence_6', 'WoodenFence_7',
+				'WoodenGate_1', 'WoodenGate_2', 'WoodenGate_3', 'WoodenGate_4',
+				'WoodenFence_1_frame', 'WoodenFence_quaterpanel', 'WoodenFence_halfpanel', 'WoodenFence_thirdpanel'
+				)
+		AND `o`.`Hitpoints` IN ('[]', '["Maintenance"]')
+		AND `pl`.`datestamp` > CURDATE() - INTERVAL 32 DAY
+		AND `pl`.`Action` = 0
+		;
+
+
+	# Start Maintenance 1-4 Mode
+	UPDATE
+		object_data 
+			SET Hitpoints = '["Maintenance"]'
+				WHERE Classname IN ('WoodenFence_1', 'WoodenFence_2', 'WoodenFence_3', 'WoodenFence_4')
+				AND DATE(last_updated) < CURDATE() - INTERVAL 7 DAY
+				AND Hitpoints = '[]';
+
+	# Start Maintenance 5-7 Mode
+	UPDATE
+		object_data 
+			SET Hitpoints = '["Maintenance"]'
+				WHERE Classname IN ('WoodenFence_5', 'WoodenFence_6', 'WoodenFence_7')
+				AND DATE(last_updated) < CURDATE() - INTERVAL 14 DAY
+				AND Hitpoints = '[]';
+
+	# Check WoodenFence_1_foundation
+	UPDATE
+		object_data
+			SET Classname = 'WoodenFence_1_foundation'
+				WHERE Classname = 'WoodenFence_1_frame'
+				AND Hitpoints = '["Maintenance"]'
+				AND DATE(last_updated) < CURDATE() - INTERVAL 3 DAY;
+
+	# Check WoodenFence_1_frame
+	UPDATE
+		object_data
+			SET Classname = 'WoodenFence_1_frame'
+				WHERE Classname = 'WoodenFence_quaterpanel'
+				AND Hitpoints = '["Maintenance"]'
+				AND DATE(last_updated) < CURDATE() - INTERVAL 3 DAY;
+
+	# Check WoodenFence_halfpanel
+	UPDATE
+		object_data
+			SET Classname = 'WoodenFence_quaterpanel'
+				WHERE Classname = 'WoodenFence_halfpanel'
+				AND Hitpoints = '["Maintenance"]'
+				AND DATE(last_updated) < CURDATE() - INTERVAL 3 DAY;
+				
+	# Check WoodenFence_thirdpanel
+	UPDATE
+		object_data
+			SET Classname = 'WoodenFence_halfpanel'
+				WHERE Classname = 'WoodenFence_thirdpanel'
+				AND Hitpoints = '["Maintenance"]'
+				AND DATE(last_updated) < CURDATE() - INTERVAL 3 DAY;
+				 
+	# Check fence 1
+	UPDATE
+		object_data
+			SET Classname = 'WoodenFence_thirdpanel'
+				WHERE Classname = 'WoodenFence_1'
+				AND Hitpoints = '["Maintenance"]'
+				AND DATE(last_updated) < CURDATE() - INTERVAL 3 DAY;
+	# Check fence 2
+	UPDATE
+		object_data
+			SET Classname = 'WoodenFence_1'
+				WHERE Classname = 'WoodenFence_2'
+				AND Hitpoints = '["Maintenance"]'
+				AND DATE(last_updated) < CURDATE() - INTERVAL 3 DAY;
+	# Check fence 3
+	UPDATE
+		object_data
+			SET Classname = 'WoodenFence_2'
+				WHERE Classname = 'WoodenFence_3'
+				AND Hitpoints = '["Maintenance"]'
+				AND DATE(last_updated) < CURDATE() - INTERVAL 3 DAY;
+	# Check fence 4
+	UPDATE
+		object_data
+			SET Classname = 'WoodenFence_3'
+				WHERE Classname = 'WoodenFence_4'
+				AND Hitpoints = '["Maintenance"]'
+				AND DATE(last_updated) < CURDATE() - INTERVAL 3 DAY;
+	# Check fence 5
+	UPDATE
+		object_data
+			SET Classname = 'WoodenFence_4'
+				WHERE Classname = 'WoodenFence_5'
+				AND Hitpoints = '["Maintenance"]'
+				AND DATE(last_updated) < CURDATE() - INTERVAL 6 DAY;
+	# Check fence 6
+	UPDATE
+		object_data
+			SET Classname = 'WoodenFence_5'
+				WHERE Classname = 'WoodenFence_6'
+				AND Hitpoints = '["Maintenance"]'
+				AND DATE(last_updated) < CURDATE() - INTERVAL 6 DAY;
+	# Check fence 7
+	UPDATE
+		object_data
+			SET Classname = 'WoodenFence_6'
+				WHERE Classname = 'WoodenFence_7'
+				AND Hitpoints = '["Maintenance"]'
+				AND DATE(last_updated) < CURDATE() - INTERVAL 6 DAY;
+
+
+	# DayZ_WoodenGates = ["WoodenGate_1","WoodenGate_2","WoodenGate_3","WoodenGate_4"];
+	# Start Maintenance Mode Gates
+	UPDATE
+		object_data 
+			SET Hitpoints = '["Maintenance"]'
+				WHERE Classname IN ('WoodenGate_1', 'WoodenGate_2', 'WoodenGate_3', 'WoodenGate_4')
+				AND DATE(last_updated) < CURDATE() - INTERVAL 7 DAY
+				AND Hitpoints = '[]';
+
+	# Check WoodenGate_1
+	UPDATE
+		object_data
+			SET Classname = 'WoodenGate_foundation'
+				WHERE Classname = 'WoodenGate_1'
+				AND Hitpoints = '["Maintenance"]'
+				AND DATE(last_updated) < CURDATE() - INTERVAL 3 DAY;
+				
+	# Check WoodenGate_2
+	UPDATE
+		object_data
+			SET Classname = 'WoodenGate_1'
+				WHERE Classname = 'WoodenGate_2'
+				AND Hitpoints = '["Maintenance"]'
+				AND DATE(last_updated) < CURDATE() - INTERVAL 3 DAY;
+				
+	# Check WoodenGate_3
+	UPDATE
+		object_data
+			SET Classname = 'WoodenGate_2'
+				WHERE Classname = 'WoodenGate_3'
+				AND Hitpoints = '["Maintenance"]'
+				AND DATE(last_updated) < CURDATE() - INTERVAL 3 DAY;
+				
+	# Check WoodenGate_4
+	UPDATE
+		object_data
+			SET Classname = 'WoodenGate_3'
+				WHERE Classname = 'WoodenGate_4'
+				AND Hitpoints = '["Maintenance"]'
+				AND DATE(last_updated) < CURDATE() - INTERVAL 3 DAY;
+
+
+# PlayZ special: reset Hitpoints to normal
+	UPDATE `object_data` `o`
+	SET
+		`o`.`last_updated`=`o`.`last_updated`,
+		`o`.`Hitpoints`='[]'
+	WHERE
+		`Classname` IN (
+				'WoodenFence_1', 'WoodenFence_2', 'WoodenFence_3', 'WoodenFence_4', 'WoodenFence_5', 'WoodenFence_6', 'WoodenFence_7',
+				'WoodenGate_1', 'WoodenGate_2', 'WoodenGate_3', 'WoodenGate_4',
+				'WoodenFence_1_frame', 'WoodenFence_quaterpanel', 'WoodenFence_halfpanel', 'WoodenFence_thirdpanel'
+				)
+		AND Hitpoints = '["NO-Maintenance"]';
+
+END ;;
+DELIMITER ;
+
+DROP EVENT IF EXISTS `playZ_restart_scheduler`;
+DELIMITER ;;
+CREATE EVENT `playZ_restart_scheduler` ON SCHEDULE EVERY 1 DAY STARTS '2016-01-01 05:55:00' ON COMPLETION NOT PRESERVE ENABLE DO
+BEGIN
+	# last run
+	REPLACE INTO `event_scheduler` (`System`, `LastRun`) VALUES ('playZ_restart_scheduler', NOW());
+
+	DELETE FROM `object_data` WHERE `ObjectUID` >= 280000000 AND `ObjectUID` < 290000000;
+
+	# temp. fix for the bike problem
+	DELETE FROM `object_data` WHERE `Classname` LIKE 'Old_bike_%' AND `ObjectID` < 200000000;
+
+	CALL pPlayZ_Cleanup();
+	CALL pPlayZ_CleanupBase();
+
+	# FIX ObjectIDs
+	ALTER TABLE `object_data` AUTO_INCREMENT=3000000001;
+	UPDATE `object_data` SET `ObjectID`=`ObjectID` + 3000000001, `last_updated`=`last_updated`;
+
+END;;
+DELIMITER ;
+
+ALTER TABLE `object_data` ADD INDEX(`CharacterID`);
+ALTER TABLE `player_login` ADD INDEX(`Action`);
+DELETE FROM `event_scheduler` WHERE `System` IN ('playZ_restart_scheduler', 'playZ_1min_scheduler', 'pPlayZ_Cleanup', 'pPlayZ_CleanupBase');
+
+UPDATE `tOption` SET `optvalue` = '2017-09-17 15:00' WHERE `optname`='dbversion';
 
 
 
