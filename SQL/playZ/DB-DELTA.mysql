@@ -449,7 +449,7 @@ BEGIN
 				'WoodenGate_1', 'WoodenGate_2', 'WoodenGate_3', 'WoodenGate_4',
 				'WoodenFence_1_frame', 'WoodenFence_quaterpanel', 'WoodenFence_halfpanel', 'WoodenFence_thirdpanel'
 				)
-		AND `o`.`Hitpoints` IN ('[]', '["Maintenance"]')
+		AND `o`.`Hitpoints` = '[]'
 		AND `o`.`last_updated` > CURDATE() - INTERVAL 32 DAY
 		;
 
@@ -656,6 +656,119 @@ ALTER TABLE `player_login` ADD INDEX(`Action`);
 DELETE FROM `event_scheduler` WHERE `System` IN ('playZ_restart_scheduler', 'playZ_1min_scheduler', 'pPlayZ_Cleanup', 'pPlayZ_CleanupBase');
 
 UPDATE `tOption` SET `optvalue` = '2017-09-17 15:00' WHERE `optname`='dbversion';
+
+
+
+
+
+-- ------------------------------------------------------------------------
+-- ------------------------------------------------------------------------
+-- ------------------------------------------------------------------------
+-- ------------------------------------------------------------------------
+-- ------------------------------------------------------------------------
+-- 2017-09-23 23:45
+DROP PROCEDURE IF EXISTS `pPlayZ_Cleanup`;
+DELIMITER ;;
+CREATE PROCEDURE `pPlayZ_Cleanup`()
+BEGIN
+	# Last run
+	REPLACE INTO `event_scheduler` (`System`, `LastRun`) VALUES ('pPlayZ_Cleanup', NOW());
+
+	# outofbounds cleanup
+	#CALL pPlayZ_CleanupOOB();
+
+	# remove damaged objects
+	DELETE FROM object_data WHERE CharacterID != 0 AND Damage >= 1;
+
+	# remove damaged vehicles after 24h
+	DELETE FROM object_data WHERE CharacterID = 0 AND Damage >= 1
+		AND SYSDATE() > DATE(last_updated) + INTERVAL 24 HOUR
+	;
+
+	# remove empty tents and stashes older than seven days
+	DELETE
+	FROM object_data
+	WHERE (Classname LIKE 'TentStorage%' OR Classname LIKE 'StashSmall%' OR Classname LIKE 'StashMedium%' OR Classname LIKE 'DomeTentStorage%')
+		AND DATE(last_updated) < CURDATE() - INTERVAL 7 DAY
+		AND Inventory = '[[[],[]],[[],[]],[[],[]]]';
+	
+	DELETE
+	FROM object_data
+	WHERE (Classname LIKE 'TentStorage%' OR Classname LIKE 'StashSmall%' OR Classname LIKE 'StashMedium%' OR Classname LIKE 'DomeTentStorage%')
+		AND DATE(last_updated) < CURDATE() - INTERVAL 7 DAY
+		AND Inventory = '[]';
+
+	# remove barbed wire older than two days
+	DELETE
+	FROM object_data
+	WHERE Classname = 'Wire_cat1'
+		AND DATE(last_updated) < CURDATE() - INTERVAL 2 DAY;
+
+	# remove Tank Traps older than fifteen days
+	DELETE
+	FROM object_data
+	WHERE Classname = 'Hedgehog_DZ'
+		AND DATE(last_updated) < CURDATE() - INTERVAL 15 DAY;
+
+	# remove Sandbags older than twenty days
+	DELETE
+	FROM object_data
+	WHERE Classname = 'Sandbag1_DZ'
+		AND DATE(last_updated) < CURDATE() - INTERVAL 20 DAY;
+
+	# remove Traps older than five days
+	DELETE
+	FROM object_data
+	WHERE Classname IN ('BearTrap_DZ', 'TrapBearTrapFlare', 'TrapBearTrapSmoke', 'Trap_Cans', 'TrapTripwireFlare', 'TrapTripwireGrenade', 'TrapTripwireSmoke')
+		AND DATE(last_updated) < CURDATE() - INTERVAL 5 DAY; 
+
+	# remove incomplete gates after 1 Day
+	#DELETE
+	#FROM object_data
+	#WHERE (Classname = 'WoodenGate_foundation')
+	#	AND DATE(last_updated) < CURDATE() - INTERVAL 1 Day;
+
+	# remove incomplete fences after 1 Day
+	#DELETE
+	#FROM object_data
+	#WHERE (Classname = 'WoodenFence_1_foundation')
+	#	AND DATE(last_updated) < CURDATE() - INTERVAL 1 Day;  
+
+	# remove incomplete fences after 3 Dayz
+	#DELETE
+	#FROM object_data
+	#WHERE (Classname = 'WoodenFence_1_frame' or Classname = 'WoodenFence_quaterpanel' or Classname = 'WoodenFence_halfpanel' or Classname = 'WoodenFence_thirdpanel')
+	#	AND DATE(last_updated) < CURDATE() - INTERVAL 3 Day; 
+
+	# remove dead players from data table after 90 days
+	#DELETE
+	#FROM character_data
+	#WHERE Alive=0 AND DATE(last_updated) < CURDATE() - INTERVAL 90 Day; 
+
+	# Remove Bad Data
+	DELETE
+	FROM object_data
+	WHERE Classname like '%_base';
+
+	# Remove wire if the owner has died
+	#DELETE
+	#FROM object_data
+	#LEFT JOIN character_data ON object_data.CharacterID = character_data.CharacterID
+	#WHERE object_data.Classname = 'Wire_cat1'
+	#	AND character_data.CharacterID IS NOT NULL
+	#	AND character_data.Alive = 0;
+
+	# remove Base_Fire_DZ older than 5 days
+	DELETE
+	FROM object_data
+	WHERE Classname = 'Base_Fire_DZ'
+		AND DATE(last_updated) < CURDATE() - INTERVAL 5 DAY;
+
+END ;;
+DELIMITER ;
+UPDATE `tOption` SET `optvalue` = '2017-09-23 23:45' WHERE `optname`='dbversion';
+
+
 
 
 
