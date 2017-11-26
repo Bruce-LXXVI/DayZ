@@ -17,5 +17,13 @@
 #include "kamenka_shop.sqf"
 
 
+// Fuel ladders
+#include "fuel_ladders.sqf"
+
+
 // Fix Topolko Dam Glitch
 #include "topolka_dam_fix.sqf"
+
+
+
+
