@@ -61,7 +61,7 @@ class _vehicle_5
 	objectType="vehicle";
 	class Arguments
 	{
-		POSITION="[9500.5479, 2004.4343, 0.1214041]";
+		POSITION="[9497.0332, 2001.7411, 0.1214041]";
 		TYPE="Land_Misc_Scaffolding";
 		AZIMUT="-85.042961";
 		PARENT="";
@@ -94,7 +94,7 @@ class _vehicle_135
 	objectType="vehicle";
 	class Arguments
 	{
-		POSITION="[3647.6501, 8966.1533, 0.37240848]";
+		POSITION="[3644.8743, 8965.7178, 0.37240848]";
 		TYPE="Land_Misc_Scaffolding";
 		AZIMUT="-49.55698";
 		PARENT="";
@@ -160,86 +160,9 @@ class _vehicle_182
 	objectType="vehicle";
 	class Arguments
 	{
-		POSITION="[12956.354, 10039.589, 3.4809113e-005]";
-		TYPE="MAP_IndPipe2_big_9";
-		AZIMUT="377.30157";
-		PARENT="";
-	};
-};
-class _vehicle_185
-{
-	objectType="vehicle";
-	class Arguments
-	{
-		POSITION="[12955.49, 10036.948, 6.1035156e-005]";
-		TYPE="MAP_IndPipe2_big_9";
-		AZIMUT="378.05096";
-		PARENT="";
-	};
-};
-class _vehicle_188
-{
-	objectType="vehicle";
-	class Arguments
-	{
-		POSITION="[12977.972, 10051.158, 1.9073486e-006]";
-		TYPE="MAP_IndPipe2_big_9";
-		AZIMUT="377.39764";
-		PARENT="";
-	};
-};
-class _vehicle_191
-{
-	objectType="vehicle";
-	class Arguments
-	{
-		POSITION="[12980.62, 10059.626, 0.091075078]";
-		TYPE="MAP_IndPipe2_big_9";
-		AZIMUT="377.39215";
-		PARENT="";
-	};
-};
-class _vehicle_193
-{
-	objectType="vehicle";
-	class Arguments
-	{
-		POSITION="[12976.141, 10044.443, 0.026668467]";
-		TYPE="MAP_IndPipe2_bigL_L";
-		AZIMUT="107.21413";
-		PARENT="";
-	};
-};
-class _vehicle_194
-{
-	objectType="vehicle";
-	class Arguments
-	{
-		POSITION="[12960.021, 10046.836, 3.8146973e-006]";
-		TYPE="MAP_IndPipe2_bigL_R";
-		AZIMUT="17.159672";
-		PARENT="";
-	};
-};
-class _vehicle_199
-{
-	objectType="vehicle";
-	class Arguments
-	{
-		POSITION="[12983.396, 10068.215, 0.1523582]";
-		TYPE="MAP_IndPipe2_big_9";
-		AZIMUT="377.85907";
-		PARENT="";
-	};
-};
-class _vehicle_202
-{
-	objectType="vehicle";
-	class Arguments
-	{
-		POSITION="[12967.058, 10045.553, 8.5830688e-006]";
-		TYPE="MAP_IndPipe2_big_9";
-		AZIMUT="467.53708";
+		POSITION="[12984.235, 10073.198, 3.4809113e-005]";
+		TYPE="Land_Ladder";
+		AZIMUT="459.95682";
 		PARENT="";
 	};
 };
