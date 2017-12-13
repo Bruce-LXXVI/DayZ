@@ -420,7 +420,7 @@ helpQueue = []; // Initialize help queue
 ["8Rnd_9x18_Makarov", 20],
 ["8Rnd_9x18_MakarovSD", 20],
 ["30Rnd_9x19_UZI", 20],
-["30Rnd_9x19_UZI_SD", 20],
+//["30Rnd_9x19_UZI_SD", 20],
 ["6Rnd_45ACP", 20],
 
 
