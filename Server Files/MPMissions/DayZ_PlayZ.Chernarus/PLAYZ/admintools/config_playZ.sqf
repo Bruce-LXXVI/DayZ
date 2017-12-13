@@ -100,7 +100,7 @@
 	AllowSuicide = false;
 		
 	// Allow players to use the movement menu (dance)
-	AllowMovementMenu = true;
+	AllowMovementMenu = false;
 
 	/* 
 		Allow players to open a help ticket with the admins.
