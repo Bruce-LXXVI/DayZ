@@ -38,16 +38,16 @@ copy %ClientCode%\credits.txt %Deploy%\%ModName%\
 
 
 net use \\TESTSERVER\dayz_mod /user:administrator Ad.1234
-mkdir "\\TESTSERVER\dayz_mod\@DayZ_189\Addons"
-copy "%Deploy%\%ModName%\*" "\\TESTSERVER\dayz_mod\@DayZ_189\"
-copy "%Deploy%\%ModName%\Addons\*" "\\TESTSERVER\dayz_mod\@DayZ_189\Addons\"
+mkdir "\\TESTSERVER\dayz_mod\@DayZ_190\Addons"
+copy "%Deploy%\%ModName%\*" "\\TESTSERVER\dayz_mod\@DayZ_190\"
+copy "%Deploy%\%ModName%\Addons\*" "\\TESTSERVER\dayz_mod\@DayZ_190\Addons\"
 
-mkdir "C:\Program Files (x86)\Steam\steamapps\common\ARMA 2 Operation Arrowhead\@DayZ_189\addons"
-copy "%Deploy%\%ModName%\*" "C:\Program Files (x86)\Steam\steamapps\common\ARMA 2 Operation Arrowhead\@DayZ_189\"
-copy "%Deploy%\%ModName%\Addons\*" "C:\Program Files (x86)\Steam\steamapps\common\ARMA 2 Operation Arrowhead\@DayZ_189\addons\"
+mkdir "C:\Program Files (x86)\Steam\steamapps\common\ARMA 2 Operation Arrowhead\@DayZ_190\addons"
+copy "%Deploy%\%ModName%\*" "C:\Program Files (x86)\Steam\steamapps\common\ARMA 2 Operation Arrowhead\@DayZ_190\"
+copy "%Deploy%\%ModName%\Addons\*" "C:\Program Files (x86)\Steam\steamapps\common\ARMA 2 Operation Arrowhead\@DayZ_190\addons\"
 
-mkdir "\\r2\c$\Program Files (x86)\Steam\steamapps\common\ARMA 2 Operation Arrowhead\@DayZ_189\addons"
-copy "%Deploy%\%ModName%\*" "\\r2\c$\Program Files (x86)\Steam\steamapps\common\ARMA 2 Operation Arrowhead\@DayZ_189\"
-copy "%Deploy%\%ModName%\Addons\*" "\\r2\c$\Program Files (x86)\Steam\steamapps\common\ARMA 2 Operation Arrowhead\@DayZ_189\addons\"
+mkdir "\\r2\c$\Program Files (x86)\Steam\steamapps\common\ARMA 2 Operation Arrowhead\@DayZ_190\addons"
+copy "%Deploy%\%ModName%\*" "\\r2\c$\Program Files (x86)\Steam\steamapps\common\ARMA 2 Operation Arrowhead\@DayZ_190\"
+copy "%Deploy%\%ModName%\Addons\*" "\\r2\c$\Program Files (x86)\Steam\steamapps\common\ARMA 2 Operation Arrowhead\@DayZ_190\addons\"
 
 

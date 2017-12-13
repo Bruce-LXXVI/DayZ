@@ -14,6 +14,6 @@ mkdir "%Deploy%"
 
 
 net use \\TESTSERVER\dayz_mod /user:administrator Ad.1234
-copy "%Deploy%\dayz_server.pbo" \\TESTSERVER\dayz_mod\@Hive_DayZ_189\Addons\
+copy "%Deploy%\dayz_server.pbo" \\TESTSERVER\dayz_mod\@Hive_DayZ_190\Addons\
 
 
