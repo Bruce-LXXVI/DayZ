@@ -120,7 +120,7 @@ diag_log format ["%1 objectID=%2 | objectUID=%3", PLAYZ_logname, _newVeh getVari
 //dayz_serverObjectMonitor set [count dayz_serverObjectMonitor, _newVeh];
 [_newVeh, "position", true] spawn server_updateObject;
 
-PVDZ_obj_Publish = [_ownerID, _newVeh, [round getDir _newVeh, getPosATL _newVeh], _inventory, _hitpoints, _objectUID, damage _newVeh, fuel _newVeh];
+PVDZ_obj_Publish = [_ownerID, _newVeh, [round getDir _newVeh, getPosATL _newVeh], _inventory, player, dayz_authKey, _hitpoints, _objectUID, damage _newVeh, fuel _newVeh];
 publicVariableServer "PVDZ_obj_Publish";
 diag_log [diag_ticktime, PLAYZ_logname, " New Networked object, request to save to hive. PVDZ_obj_Publish:", PVDZ_obj_Publish];
 

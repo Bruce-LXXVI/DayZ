@@ -17,3 +17,6 @@ DayZ_SafeObjects = DayZ_SafeObjects + ["WoodenGate_1","WoodenGate_2","WoodenGate
 DayZ_SafeObjects set [count DayZ_SafeObjects,"ParachuteC"];
 
 
+if (isServer) then {
+	dayz_authKey = "PLAYZ_SERVER";
+}

@@ -34,7 +34,8 @@ base_fireMonitor = compile preprocessFileLineNumbers "\z\addons\dayz_code\system
 //server_systemCleanup = compile preprocessFileLineNumbers "\z\addons\dayz_server\system\server_cleanup.sqf";
 spawnComposition = compile preprocessFileLineNumbers "ca\modules\dyno\data\scripts\objectMapper.sqf"; //"\z\addons\dayz_code\compile\object_mapper.sqf";
 server_sendToClient = compile preprocessFileLineNumbers "\z\addons\dayz_server\eventHandlers\server_sendToClient.sqf";
-server_verifySender = compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\server_verifySender.sqf";
+//server_verifySender = compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\server_verifySender.sqf";
+server_verifySender = compile preprocessFileLineNumbers "\z\addons\dayz_server\PLAYZ\compile\server_verifySender.sqf";
 
 server_sendKey = compile preprocessFileLineNumbers "\z\addons\dayz_server\eventHandlers\server_sendKey.sqf";
 

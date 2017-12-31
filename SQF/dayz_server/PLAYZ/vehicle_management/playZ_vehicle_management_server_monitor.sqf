@@ -144,11 +144,11 @@ while {true} do {
 					diag_log format ["%1 DELETING ===> veh=%2 | damage=%3 | pos=%4 | posGps=%5", PLAYZ_logname, _x, _damage, _pos, mapGridPosition _pos];
 					diag_log format ["%1 objectID=%2 | objectUID=%3", PLAYZ_logname, _objectID, _objectUID];
 
-					deleteVehicle _x;
-					_x = objNull;
-					PVDZ_obj_Destroy = [_objectID,_objectUID];
+					PVDZ_obj_Destroy = [_objectID,_objectUID,player,_x,dayz_authKey];
 					publicVariableServer "PVDZ_obj_Destroy";
 					diag_log [diag_ticktime, PLAYZ_logname, " Networked object, request to destroy", PVDZ_obj_Destroy];
+					deleteVehicle _x;
+					_x = objNull;
 					_iVehDeleted = _iVehDeleted + 1;
 				} else {
 					diag_log format ["%1 Not deleted: %2", PLAYZ_logname, _x];

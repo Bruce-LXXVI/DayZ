@@ -83,7 +83,7 @@ if (_finished) then {
 	_veh call fnc_veh_ResetEH;
 
 
-	PVDZ_obj_Publish = [0, _veh, [round getDir _veh, _pos], []];
+	PVDZ_obj_Publish = [0, _veh, [round getDir _veh, _pos], [], player, dayz_authKey];
 	publicVariable "PVDZ_obj_Publish";
 
 

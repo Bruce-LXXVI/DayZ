@@ -45,9 +45,10 @@ if (_finished) then {
 	
 	_objectID = _ct getVariable ["ObjectID", "0"];
 	_objectUID = _ct getVariable ["ObjectUID", "0"];
-	PVDZE_obj_Delete = [_objectID, _objectUID, (name _player)];
-	publicVariableServer "PVDZE_obj_Delete";
-
+	
+	PVDZ_obj_Destroy = [_objectID,_objectUID,player,_ct,dayz_authKey];
+	publicVariableServer "PVDZ_obj_Destroy";
+	
 	deleteVehicle _ct;
 	if(RequirePartsBike) then {
 		_player addMagazine "PartGeneric";

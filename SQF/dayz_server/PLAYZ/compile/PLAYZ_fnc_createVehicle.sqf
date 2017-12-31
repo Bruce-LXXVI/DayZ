@@ -165,7 +165,7 @@ if(!_isTemp) then {
 	[_newVeh, "position", true] spawn server_updateObject;
 };
 
-PVDZ_obj_Publish = [_ownerID, _newVeh, [round getDir _newVeh, getPosATL _newVeh], _inventory, _hitpoints, _objectUID, damage _newVeh, fuel _newVeh];
+PVDZ_obj_Publish = [_ownerID, _newVeh, [round getDir _newVeh, getPosATL _newVeh], _inventory, player, dayz_authKey, _hitpoints, _objectUID, damage _newVeh, fuel _newVeh];
 publicVariableServer "PVDZ_obj_Publish";
 diag_log format ["%1 %2 New Networked object, request to save to hive. PVDZ_obj_Publish=%3", PLAYZ_logname, diag_ticktime, PVDZ_obj_Publish];
 

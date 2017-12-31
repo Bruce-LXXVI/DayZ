@@ -97,7 +97,7 @@ if ( 1==1 ) then {
 		
 		_veh call fnc_veh_ResetEH;
 
-		PVDZ_obj_Publish = [0, _veh, [round getDir _veh, _location], _inventory, _array, _veh getVariable["objectUID", "0"], damage _veh, fuel _veh];
+		PVDZ_obj_Publish = [0, _veh, [round getDir _veh, _location], _inventory, player, dayz_authKey, _array, _veh getVariable["objectUID", "0"], damage _veh, fuel _veh];
 		publicVariable "PVDZ_obj_Publish";
 		diag_log format ["[EAT]: New Networked object, request to save to hive. PVDZ_obj_Publish: %1", PVDZ_obj_Publish];
 

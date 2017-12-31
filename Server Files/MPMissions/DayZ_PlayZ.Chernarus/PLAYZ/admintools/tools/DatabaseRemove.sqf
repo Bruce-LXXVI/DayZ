@@ -33,19 +33,19 @@ _objectUID = _obj getVariable["ObjectUID","0"];
 			usageLogger = format["%1 %2 -- has deleted object: %3 ID:%4 UID:%5 from database",name _player,getPlayerUID _player,_text,_objectID,_objectUID];
 			[] spawn {publicVariable "usageLogger";};
 		};
-
+		
 		cutText ["Object deleted from database", "PLAIN DOWN",1];
-
-
-		PVDZ_obj_Destroy = [_objectID,_objectUID];
+		
+		
+		PVDZ_obj_Destroy = [_objectID,_objectUID,player,_obj,dayz_authKey];
 		publicVariableServer "PVDZ_obj_Destroy";
-
+		
 		//PVDZE_obj_Delete = [_objectID,_objectUID,(name player)];
 		//publicVariableServer "PVDZE_obj_Delete";
-
+		
 		if (isServer) then {
 			//PVDZE_obj_Delete call server_deleteObj;
-			PVDZ_obj_Delete call server_deleteObj;
+			PVDZ_obj_Delete call server_deleteObjDirect;
 		};
 		deletevehicle _obj; 
 		breakout "exit";
