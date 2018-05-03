@@ -237,6 +237,15 @@ if (dayz_townGenerator) then {
 
 createCenter civilian;
 if (isDedicated) then {endLoadingScreen;};
+
+/* PLAYZ WAI */
+//[] ExecVM "\z\addons\dayz_server\WAI\init.sqf";
+/* PLAYZ WAI */
+
+/* PLAYZ DZAI */
+[] call compile preprocessFileLineNumbers "\z\addons\dayz_server\DZAI\init\dzai_initserver.sqf";
+/* PLAYZ DZAI */
+
 allowConnection = true;
 sm_done = true;
 publicVariable "sm_done";

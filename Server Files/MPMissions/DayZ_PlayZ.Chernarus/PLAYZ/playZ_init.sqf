@@ -31,7 +31,7 @@ if (!isDedicated) then
 	[] execVM "PLAYZ\admintools\Activate.sqf";
 
 	// Initialize DZAI Client module
-	//_nul = [] execVM "PLAYZ\DZAI_Client\dzai_initclient.sqf";
+	_nul = [] execVM "DZAI_Client\dzai_initclient.sqf";
 
 	// Initialize Group Management
 	execVM "dzgm\init.sqf";
