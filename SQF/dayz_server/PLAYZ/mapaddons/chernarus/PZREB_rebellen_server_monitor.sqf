@@ -26,10 +26,10 @@ PZREB_logname="[PZREB]";
 //waitUntil{ !isNil "DZAI_spawn_vehicle" };
 //uiSleep 100; 
 waitUntil{initialized};
-uiSleep 100;
+//uiSleep 100;
 
 PZREB_waitTimeBeforeNextRun=120;
-PZREB_playerDistance=500;
+PZREB_playerDistance=200;
 //PZREB_groupunittype=["BAF_Soldier_L_DDPM"];
 PZREB_groupunittype=["Survivor2_DZ", "SurvivorW2_DZ", "Bandit1_DZ", "BanditW1_DZ", "Camo1_DZ", "Sniper1_DZ", "BAF_Soldier_L_DDPM"];
 diag_log format ["%1 PZREB_groupunittype=%2.", PZREB_logname, PZREB_groupunittype];
@@ -190,11 +190,9 @@ PZREB_fnc_setupGroup = {
 
 
 // Check if players are near group spawns
-_waitMissionStart = true;
+_waitMissionStart = false;
 while { _waitMissionStart } do {
-	uiSleep PZREB_waitTimeBeforeNextRun;
 	_waitMissionStart = false;
-	
 	{
 		private ["_playerNear", "_grpNo", "_grpPos"];
 		_grpNo	= _x select 0;
@@ -206,6 +204,8 @@ while { _waitMissionStart } do {
 			_waitMissionStart = true;
 		};
 	} forEach PZREB_groups;
+	
+	uiSleep PZREB_waitTimeBeforeNextRun;
 };
 
 
