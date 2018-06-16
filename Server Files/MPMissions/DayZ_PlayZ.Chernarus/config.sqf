@@ -10,7 +10,7 @@ dayz_enableRules = true; //Enables a nice little news/rules feed on player login
 dayz_quickSwitch = false; //Turns on forced animation for weapon switch. (hotkeys 1,2,3) False = enable animations, True = disable animations
 dayz_POIs = true;
 dayz_infectiousWaterholes = true;
-dayz_ForcefullmoonNights = false; // Forces night time to be full moon.
+dayz_ForcefullmoonNights = true; // Forces night time to be full moon.
 dayz_randomMaxFuelAmount = 250; //Puts a random amount of fuel in all fuel stations.
 
 //DayZMod presets
