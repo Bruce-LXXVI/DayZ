@@ -889,6 +889,29 @@ UPDATE `tOption` SET `optvalue` = '2017-11-25 20:39' WHERE `optname`='dbversion'
 
 
 
+-- ------------------------------------------------------------------------
+-- ------------------------------------------------------------------------
+-- ------------------------------------------------------------------------
+-- ------------------------------------------------------------------------
+-- ------------------------------------------------------------------------
+-- 2018-05-15 22:50
+INSERT INTO `object_classes` (`Classname`, `Chance`, `MaxNum`, `Damage`, `Type`) VALUES ('MetalFence_1', '0', '0', '0', 'fence');
+INSERT INTO `object_classes` (`Classname`, `Chance`, `MaxNum`, `Damage`, `Type`) VALUES ('MetalFence_2', '0', '0', '0', 'fence');
+INSERT INTO `object_classes` (`Classname`, `Chance`, `MaxNum`, `Damage`, `Type`) VALUES ('MetalFence_3', '0', '0', '0', 'fence');
+INSERT INTO `object_classes` (`Classname`, `Chance`, `MaxNum`, `Damage`, `Type`) VALUES ('MetalFence_4', '0', '0', '0', 'fence');
+INSERT INTO `object_classes` (`Classname`, `Chance`, `MaxNum`, `Damage`, `Type`) VALUES ('MetalFence_5', '0', '0', '0', 'fence');
+INSERT INTO `object_classes` (`Classname`, `Chance`, `MaxNum`, `Damage`, `Type`) VALUES ('MetalFence_6', '0', '0', '0', 'fence');
+INSERT INTO `object_classes` (`Classname`, `Chance`, `MaxNum`, `Damage`, `Type`) VALUES ('MetalFence_7', '0', '0', '0', 'fence');
+INSERT INTO `object_classes` (`Classname`, `Chance`, `MaxNum`, `Damage`, `Type`) VALUES ('MetalFence_halfpanel', '0', '0', '0', 'fence');
+INSERT INTO `object_classes` (`Classname`, `Chance`, `MaxNum`, `Damage`, `Type`) VALUES ('MetalFence_quarterpanel', '0', '0', '0', 'fence');
+INSERT INTO `object_classes` (`Classname`, `Chance`, `MaxNum`, `Damage`, `Type`) VALUES ('MetalFence_thirdpanel', '0', '0', '0', 'fence');
+INSERT INTO `object_classes` (`Classname`, `Chance`, `MaxNum`, `Damage`, `Type`) VALUES ('CamoNet_DZ', '0', '0', '0', 'CamoNet');
+UPDATE `tOption` SET `optvalue` = '2018-05-15 22:50' WHERE `optname`='dbversion';
+
+
+
+
+
 
 
 
