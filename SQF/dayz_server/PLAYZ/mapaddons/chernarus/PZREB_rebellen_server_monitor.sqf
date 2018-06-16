@@ -12,6 +12,7 @@ private [ "_directoryAsArray"
 		, "_totalAi"
 		, "_aliveAiPercent"
 		, "_waitMissionStart"
+		, "_playerNear"
 
 ];
 
@@ -31,15 +32,15 @@ waitUntil{initialized};
 uiSleep 15;
 
 PZREB_waitTimeBeforeNextRun=120;
-PZREB_playerDistance=200;
+PZREB_playerDistance=400;
 //PZREB_groupunittype=["BAF_Soldier_L_DDPM"];
 PZREB_involvedPlayers=[];
-PZREB_tools=["Binocular", "Binocular_Vector", "ItemCompass", "ItemCrowbar", "ItemEtool", "ItemFishingPole", "ItemFlashlight", "ItemFlashlightRed", "ItemGPS", "ItemHatchet_DZE", "ItemKnife", "ItemMap", "ItemMatchbox_DZE", "ItemRadio", "ItemSledge", "ItemToolbox", "ItemWatch", "NVGoggles"];
+PZREB_tools=["Binocular", "Binocular_Vector", "ItemCompass", "ItemCrowbar", "ItemEtool", "ItemFishingPole", "ItemFlashlight", "ItemFlashlightRed", "ItemGPS", "ItemHatchet", "ItemKnife", "ItemMap", "ItemMatchbox_DZE", "ItemRadio", "ItemSledge", "ItemToolbox", "ItemWatch", "NVGoggles"];
 PZREB_loot=["FoodSteakCooked", "ItemAntibiotic", "ItemBandage", "ItemSodaMdew"];
 PZREB_backpacks=["NONE", "NONE", "DZ_CivilBackpack_EP1", "DZ_Backpack_EP1", "DZ_British_ACU"];
 PZREB_weapons=["M4A1_GL_Holo_FL_DZ", "M16A4_CCO_FL_DZ", "AK_47_M", "M4A1_HWS_GL_camo", "AKS_74_kobra", "G36K_Camo_SD_DZ", "G17_DZ", "M40A3_Gh_DZ", "M249_CCO_DZ", "FNFAL_DZ", "DMR_DZ", "PKM_DZ", "AKM_PSO1_DZ", "CZ550_DZ"];
 PZREB_groupunittype=["Survivor2_DZ", "SurvivorW2_DZ", "Bandit1_DZ", "BanditW1_DZ", "Camo1_DZ", "Sniper1_DZ", "BAF_Soldier_L_DDPM"];
-diag_log format ["%1 PZREB_groupunittype=%2.", PZREB_logname, PZREB_groupunittype];
+PZREB_homePos=[11442.5, 11349.3, 317.320];
 PZREB_groups=[
 //	Gruppe,	Spawnpunkt/WP1,					Einheiten
 
@@ -74,6 +75,15 @@ PZREB_directory = toString _directoryAsArray;
 diag_log format ["%1 Initializing using base path %2.", PZREB_logname, PZREB_directory];
 
 
+PZREB_fnc_findGroupDef = {
+	private ["_grpNum", "_grpDef"];
+	_grpNum = _this select 0;
+	_grpDef = objNull;
+	{ if( _x select 0 == _grpNum ) then { _grpDef=_x; }; } count PZREB_groups;
+	_grpDef
+};
+
+
 PZREB_fnc_setupUnit = {
 	private ["_unit", "_weapon", "_magazine"];
 	//diag_log format ["%1 setting up %2", PZREB_logname, _this];
@@ -86,16 +96,18 @@ PZREB_fnc_setupUnit = {
 	_unit enableAI "FSM";
 	_unit setCaptive true;
 	_unit allowDamage true;
+	_unit setBehaviour "AWARE";
+	_unit setSkill 0.7;
 	
 	
 	_unit addEventHandler ["killed", {
-		private ["_unit", "_killer"];
+		private ["_unit", "_killer", "_killerName"];
 		_unit = _this select 0;
 		_killer = _this select 1;
 		(group _unit) setCombatMode "RED";
 		diag_log format ["%1 AI %2 killed by %3", PZREB_logname, (_unit getVariable ["bodyName", "unknown"]), (name _killer)];
 		
-		if( !(_killer in PZREB_involvedPlayers) ) then {
+		if( isPlayer _killer && !(_killer in PZREB_involvedPlayers) ) then {
 			PZREB_involvedPlayers set [count PZREB_involvedPlayers, _killer];
 		}
 	}];
@@ -135,16 +147,21 @@ PZREB_fnc_setupUnit = {
 
 
 PZREB_fnc_setupGroup = {
-	private ["_group", "_type", "_unit", "_wp1", "_units", "_WPs", "_wp", "_wpType", "_vehType", "_veh"];
+	private ["_group", "_grpNum", "_type", "_unit", "_wp1", "_units", "_WPs", "_wp", "_wpType", "_vehType", "_veh"];
 	diag_log format ["%1 Creating group %2", PZREB_logname, (_this select 0)];
 	
+	_grpNum = _this select 0;
 	_wp1 = (_this select 1) select 0;
 	_wpType = (_this select 1) select 1;
 	_units = _this select 2;
 	if( count _this >= 4 ) then {_WPs = _this select 3;} else {_WPs = [];};
 	if( count _this >= 5 ) then {_vehType = _this select 4;} else {_vehType = "";};
 	
-	_group = createGroup EAST;
+	if( typeName _grpNum == "GROUP" ) then {
+		_group = _grpNum;
+	} else {
+		_group = createGroup EAST;
+	};
 	
 	
 	_group allowFleeing 0;
@@ -153,13 +170,8 @@ PZREB_fnc_setupGroup = {
 		//diag_log format ["%1 Creating one unit of type %2 at %3", PZREB_logname, _type, (mapGridPosition _wp1)];
 		_unit = _group createUnit [_type, _wp1, [], 2, "NONE"];
 		[_unit] call PZREB_fnc_setupUnit;
-		//_unit addweapon "M16A4_CCO_FL_DZ";
-		//_unit addMagazine "30Rnd_556x45_Stanag";
-		//_unit addMagazine "30Rnd_556x45_Stanag";
-		//_unit addMagazine "30Rnd_556x45_Stanag";
-		//_unit addMagazine "30Rnd_556x45_Stanag";
 	};
-
+	
 	// Add vehicle if desired
 	if( _vehType != "" ) then {
 		diag_log format ["%1 Creating one vehicle of type %2 at %3", PZREB_logname, _vehType, (mapGridPosition _wp1)];
@@ -197,6 +209,20 @@ PZREB_fnc_setupGroup = {
 			};
 		} forEach (units _group);
 		
+		
+		_veh addEventHandler ["hit", {
+			private ["_veh", "_killer"];
+			_veh = _this select 0;
+			_killer = _this select 1;
+			(group _veh) setCombatMode "RED";
+			diag_log format ["%1 AI vehicle %2 hit by %3", PZREB_logname, _veh, (name _killer)];
+			
+			if( isPlayer _killer && !(_killer in PZREB_involvedPlayers) ) then {
+				PZREB_involvedPlayers set [count PZREB_involvedPlayers, _killer];
+			}
+		}];
+		
+		
 		_veh setVehicleLock "LOCKED";
 	} else {
 		_veh=objNull;
@@ -219,31 +245,11 @@ PZREB_fnc_setupGroup = {
 	
 	_group setSpeedMode "NORMAL";
 	_group setCombatMode "GREEN";
-	//_group setBehaviour "AWARE";
 	
 	
 	[_group, _veh]
 };
 
-
-// Check if players are near group spawns
-_waitMissionStart = false;
-while { _waitMissionStart } do {
-	_waitMissionStart = false;
-	{
-		private ["_playerNear", "_grpNo", "_grpPos"];
-		_grpNo	= _x select 0;
-		_grpPos	= ((_x select 1) select 0);
-		_playerNear = ({isPlayer _x} count (_grpPos nearEntities [["CAManBase","Land","Air"], PZREB_playerDistance]) > 0);
-	
-		if(_playerNear) then {
-			diag_log format ["%1 player within %2m of group %3 spawn.", PZREB_logname, PZREB_playerDistance, _grpNo];
-			_waitMissionStart = true;
-		};
-	} forEach PZREB_groups;
-	
-	uiSleep PZREB_waitTimeBeforeNextRun;
-};
 
 
 _totalAi=0;
@@ -260,19 +266,28 @@ _vehicles=[];
 } forEach PZREB_groups;
 
 
+
 _numOfAi=-1;
 _numOfVeh=-1;
 _aliveAiPercent=100;
 while { PZREB_isActive } do {
 	_numOfAi=0;
 	_numOfVeh=0;
+	_playerNear=false;
 	diag_log format ["%1 ======================================================", PZREB_logname];
 	//diag_log format ["%1 _group1=%2 | _group2=%2 | _group3=%2 | _group4=%2 | _group5=%2 | ", PZREB_logname, (count units _group1), (count units _group2), (count units _group3), (count units _group4), (count units _group5)];
 	
-	// Count alive AI
+	// Count alive AI and activate groups if player near
 	{
-		{ if( !alive _x ) then { [_x] joinSilent grpNull;};} count units (_x select 1);
-		_numOfAi = _numOfAi + count units (_x select 1);
+		private ["_groupNum", "_group", "_playerNearGroup"];
+		_groupNum = (_x select 0);
+		_group = (_x select 1);
+		
+		{ if( !alive _x ) then { [_x] joinSilent grpNull;};} count units _group;
+		_numOfAi = _numOfAi + count units _group;
+		
+		_playerNearGroup = ({isPlayer _x} count (getPos leader _group nearEntities [["CAManBase","Land","Air"], PZREB_playerDistance]) > 0);
+		if( _playerNearGroup ) then { _group setCombatMode "YELLOW"; _playerNear=true; };
 	} count _groups;
 	_aliveAiPercent=(round ((1000 * _numOfAi) / _totalAi)) / 10;
 	diag_log format ["%1 %2/%3 AI alive (%4%5)", PZREB_logname, _numOfAi, _totalAi, _aliveAiPercent, "%"];
@@ -298,35 +313,71 @@ while { PZREB_isActive } do {
 	} count _vehicles;
 	diag_log format ["%1 %2 vehicles alive", PZREB_logname, _numOfVeh];
 	
+	
+	
 	{
+		private ["_groupNum", "_group"];
 		_groupNum = (_x select 0);
 		_group = (_x select 1);
 		
-		// 2 AI killed: set group 41 to RED and all other to YELLOW
-		if( (_totalAi - _numOfAi) >= 2 ) then {
-			if( _groupNum == 41 ) then {
+		if( _playerNear || (count PZREB_involvedPlayers > 0) ) then {
+			// PLAYER NEAR ATLEAST ONE GROUP
+			// 2 AI killed: set group 41 to RED and all other to YELLOW
+			if( (_totalAi - _numOfAi) >= 2 ) then {
+				if( _groupNum == 41 ) then {
+					_group setCombatMode "RED";
+					{ _x setBehaviour "COMBAT"; } count units _group;
+				} else {
+					if( combatMode _group in ["BLUE", "GREEN", "WHITE"] ) then {
+						_group setCombatMode "YELLOW";
+						{ _x setBehaviour "AWARE"; } count units _group;
+					};
+				};
+			};
+			
+			// 10% AI killed: set all groups to RED/COMBAT
+			if( _aliveAiPercent < 90 ) then {
 				_group setCombatMode "RED";
-				(leader _group) setBehaviour "COMBAT";
-			} else {
-				if( combatMode _group in ["BLUE", "GREEN", "WHITE"] ) then {
-					_group setCombatMode "YELLOW";
+				{ _x setBehaviour "COMBAT"; } count units _group;
+			};
+			
+			// 80% AI killed: set all groups to RED/COMBAT and send to base
+			if( _aliveAiPercent < 20 ) then {
+				_group setCombatMode "RED";
+				{ _x setBehaviour "STEALTH"; } count units _group;
+				_wp = _group addWaypoint [PZREB_homePos, 10];
+				_wp setWaypointType "MOVE";
+			};
+			
+		} else {
+			// NO PLAYERS NEAR GROUPS
+			_group setCombatMode "GREEN";
+			{ _x setBehaviour "AWARE"; } count units _group;
+			
+			if( _totalAi < _numOfAi ) then {
+				_groupDef = _groupNum call PZREB_fnc_findGroupDef;
+				if( (count units _group) < (_groupDef select 2) ) then {
+					diag_log format ["%1 group %2: is not complete", PZREB_logname, _groupNum];
+					_result = _groupDef call PZREB_fnc_setupGroup;    // returns [<group>, <vehicle>]
+					if( !isNull (_result select 1) ) then {
+						_vehicles set [count _vehicles, [(_x select 0), _result select 1]];
+					};
 				};
 			};
 		};
-		
-		
-		// 10% AI killed: set all groups to RED
-		if( _aliveAiPercent < 90 ) then {
-			_group setCombatMode "RED";
-			(leader _group) setBehaviour "COMBAT";
-		};
-		
 		
 		diag_log format ["%1 group %2 = %3 | GPS=%4 | combatMode=%5 | behaviour=%6", PZREB_logname, _groupNum, count units _group, mapGridPosition getPos leader _group, combatMode _group, behaviour (leader _group)];
 	} count _groups;
 	
 	
-	
+	// remove logged off players from list
+	_tmp=PZREB_involvedPlayers;
+	PZREB_involvedPlayers=[];
+	{
+		if( isPlayer _x && !(_x in PZREB_involvedPlayers) ) then {
+			PZREB_involvedPlayers set [count PZREB_involvedPlayers, _x];
+		}
+	} count _tmp;
 	
 	if(_numOfAi == 0) then {
 		// Alle AI tot
@@ -335,6 +386,5 @@ while { PZREB_isActive } do {
 		PZREB_isActive=false;
 	};
 	diag_log format ["%1 players: %2", PZREB_logname, PZREB_involvedPlayers];
-	
 	uiSleep PZREB_waitTimeBeforeNextRun;
 };
