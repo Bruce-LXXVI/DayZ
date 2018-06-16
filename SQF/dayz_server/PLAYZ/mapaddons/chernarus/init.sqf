@@ -25,5 +25,8 @@
 #include "topolka_dam_fix.sqf"
 
 
+// by Larry/Philipp Trautmann <Trautmann400@web.de>
+#include "PZREB_rebellen.sqf"
+
 
 
