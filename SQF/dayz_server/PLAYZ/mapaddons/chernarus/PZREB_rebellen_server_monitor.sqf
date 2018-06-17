@@ -35,8 +35,9 @@ PZREB_waitTimeBeforeNextRun=120;
 PZREB_playerDistance=400;
 //PZREB_groupunittype=["BAF_Soldier_L_DDPM"];
 PZREB_involvedPlayers=[];
-PZREB_tools=["Binocular", "Binocular_Vector", "ItemCompass", "ItemCrowbar", "ItemEtool", "ItemFishingPole", "ItemFlashlight", "ItemFlashlightRed", "ItemGPS", "ItemHatchet", "ItemKnife", "ItemMap", "ItemMatchbox_DZE", "ItemRadio", "ItemSledge", "ItemToolbox", "ItemWatch", "NVGoggles"];
-PZREB_loot=["FoodSteakCooked", "ItemAntibiotic", "ItemBandage", "ItemSodaMdew"];
+PZREB_tools=["Binocular", "Binocular_Vector", "ItemCompass", "ItemCrowbar", "ItemEtool", "ItemFishingPole", "ItemFlashlightRed", "ItemGPS", "ItemHatchet",
+"ItemKnife", "ItemMap", "ItemMatchbox", "ItemRadio", "ItemSledgeHammer", "ItemToolbox", "ItemWatch", "NVGoggles", "ItemShovel", "ItemPickaxe", "ItemToolbox"];
+PZREB_loot=["FoodSteakCooked", "ItemAntibiotic", "ItemBandage", "ItemSodaMdew", "ItemAntibacterialWipe", "equip_nails", "equip_duct_tape", "FoodPistachio", "ItemScrews", "ItemWaterBottleSafe", "FoodCanBakedBeans"];
 PZREB_backpacks=["NONE", "NONE", "DZ_CivilBackpack_EP1", "DZ_Backpack_EP1", "DZ_British_ACU"];
 PZREB_weapons=["M4A1_GL_Holo_FL_DZ", "M16A4_CCO_FL_DZ", "AK_47_M", "M4A1_HWS_GL_camo", "AKS_74_kobra", "G36K_Camo_SD_DZ", "G17_DZ", "M40A3_Gh_DZ", "M249_CCO_DZ", "FNFAL_DZ", "DMR_DZ", "PKM_DZ", "AKM_PSO1_DZ", "CZ550_DZ"];
 PZREB_groupunittype=["Survivor2_DZ", "SurvivorW2_DZ", "Bandit1_DZ", "BanditW1_DZ", "Camo1_DZ", "Sniper1_DZ", "BAF_Soldier_L_DDPM"];
