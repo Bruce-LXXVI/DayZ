@@ -50,7 +50,7 @@
 		Give players an actions menu? (dance, deploy bike/mozzie, flip car)
 		Default: true
 	*/
-	ActionMenuPlayers = true;
+	ActionMenuPlayers = false;
 
 	/*
 		Give admins the same action menu above? (not really needed unless you are a playing admin)

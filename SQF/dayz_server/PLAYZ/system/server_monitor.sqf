@@ -125,6 +125,23 @@ if (_status == "ObjectStreamStart") then {
 			//Pending change to new fence models\Layout
 		};
 		
+		/*
+			This is to change the UH1H chopper to the changed gunner view.
+		*/
+		if (_type in ["UH1H_DZ","UH1H_2_DZ","UH1H_GUN_DZ","UH1H2_GUN_DZ"]) then {
+			if (dayz_updatedGunnerViewUH1H) then {
+				switch (_type) do {
+					case "UH1H_GUN_DZ": { _type = "UH1H_DZ"; };
+					case "UH1H2_GUN_DZ": { _type = "UH1H_2_DZ"; };
+				};
+			} else {
+				switch (_type) do {
+					case "UH1H_DZ": { _type = "UH1H_GUN_DZ"; };
+					case "UH1H_2_DZ": { _type = "UH1H2_GUN_DZ"; };
+				};
+			};
+		};
+		
 		//Create it
 		_object = createVehicle [_type, _pos, [], 0, if (_type in DayZ_nonCollide) then {"NONE"} else {"CAN_COLLIDE"}];
 		
@@ -295,13 +312,13 @@ publicVariable "sm_done";
 [] execVM "\z\addons\dayz_server\compile\server_spawnCarePackages.sqf";
 [] execVM "\z\addons\dayz_server\compile\server_spawnCrashSites.sqf";
 
-if (dayz_townGenerator) then {execVM "\z\addons\dayz_server\system\lit_fireplaces.sqf";};
+execVM "\z\addons\dayz_server\system\lit_fireplaces.sqf";
 
 "PVDZ_sec_atp" addPublicVariableEventHandler {
 	_x = _this select 1;
 	switch (1==1) do {
-		case (typeName (_x select 0) == "SCALAR") : { // just some logs from the client
-			diag_log (toString _x);
+		case (typeName _x == "STRING") : { // just some logs from the client
+			diag_log _x;
 		};
 		case (count _x == 2) : { // wrong side
 			diag_log format["P1ayer %1 reports possible 'side' hack. Server may be compromised!",(_x select 1) call fa_plr2Str];
@@ -311,7 +328,7 @@ if (dayz_townGenerator) then {execVM "\z\addons\dayz_server\system\lit_fireplace
 			_source = _x select 1;
 			if (!isNull _source) then {
 				diag_log format ["P1ayer %1 hit by %2 %3 from %4 meters in %5 for %6 damage",
-					_unit call fa_plr2Str, _source call fa_plr2Str, toString (_x select 2), _x select 3, _x select 4, _x select 5];
+					_unit call fa_plr2Str, if (!isPlayer _source && alive _source) then {"AI"} else {_source call fa_plr2Str}, _x select 2, _x select 3, _x select 4, _x select 5];
 				if (_unit getVariable ["bodyName",""] == "") then {
 					_unit setVariable ["noatlf4", diag_ticktime]; // server-side "not in combat" test, if player is not already dead
 				};

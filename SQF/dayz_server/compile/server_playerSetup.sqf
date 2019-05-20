@@ -161,7 +161,6 @@ if (count _stats > 0) then {
 };
 
 if (_randomSpot) then {
-	private ["_counter","_position","_isNear","_isZero","_mkr"];
 	if (!isDedicated) then {endLoadingScreen;};
 	_IslandMap = (toLower worldName in ["caribou","cmr_ovaron","dayznogova","dingor","dzhg","fallujah","fapovo","fdf_isle1_a","isladuala","lingor","mbg_celle2","namalsk","napf","oring","panthera2","ruegen","sara","sauerland","smd_sahrani_a2","tasmania2010","tavi","trinity","utes"]);
 
@@ -208,13 +207,12 @@ if (_randomSpot) then {
 //record player pos locally for server checking
 _playerObj setVariable ["characterID",_characterID,true];
 _playerObj setVariable ["humanity",_humanity,true];
-_playerObj setVariable ["lastPos",getPosATL _playerObj];
+_playerObj setVariable ["lastPos",_position];
 
 _clientID = owner _playerObj;
 _randomKey = [];
-_randomInput = toArray "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$^*";
 for "_i" from 0 to 12 do {
-	_randomKey set [count _randomKey, (_randomInput call BIS_fnc_selectRandom)];
+	_randomKey set [_i, (ceil(random 128)) + 256]; //Latin Extended-A characters not filtered in publicvariableval.txt
 };
 _randomKey = toString _randomKey;
 _findIndex = dayz_serverPUIDArray find _playerID;
