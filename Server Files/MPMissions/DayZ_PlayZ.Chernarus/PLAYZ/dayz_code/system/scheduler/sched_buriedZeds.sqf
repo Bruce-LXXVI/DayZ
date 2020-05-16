@@ -61,7 +61,7 @@ sched_buriedZeds = {
 /* PLAYZ LOOT */
 _config = (missionConfigFile >> "CfgLoot" >> "Buildings" >> (typeOf _b) >> "zedPos");
 if(!isClass _config) then {
-	_config = configFile >> "CfgLoot" >> "Buildings" >> (typeOf _b) >> "zedPos";
+					_config = configFile >> "CfgLoot" >> "Buildings" >> (typeOf _b) >> "zedPos";
 };
 /* PLAYZ LOOT */
 

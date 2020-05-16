@@ -74,7 +74,12 @@ if (!isDedicated) then {
 	execVM "\z\addons\dayz_code\system\antihack.sqf";
 	
 	if (dayz_townGenerator) then { execVM "\z\addons\dayz_code\compile\client_plantSpawner.sqf"; };
-	execFSM "\z\addons\dayz_code\system\player_monitor.fsm";
+	
+	/* PLAYZ remove street debris */
+	//execFSM "\z\addons\dayz_code\system\player_monitor.fsm";
+	execFSM "PLAYZ\dayz_code\system\player_monitor.fsm";
+	/* PLAYZ remove street debris */
+	
 	waitUntil {scriptDone progress_monitor};
 	cutText ["","BLACK IN", 3];
 	3 fadeSound 1;
