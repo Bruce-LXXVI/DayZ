@@ -4,6 +4,8 @@
 	//Replace 111111111 with your ID. 
 	SuperAdminList = [
 	"76561198110330059", // Bruce
+	"76561198373059082", // Dexter
+	"76561198195290546", // Alice
 	//"76561198077752978", // Spitzkopflarry
 	"999999999" // <player name>
 	];

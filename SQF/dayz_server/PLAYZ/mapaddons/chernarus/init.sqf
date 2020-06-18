@@ -26,7 +26,7 @@
 
 
 // by Larry/Philipp Trautmann <Trautmann400@web.de>
-#include "PZREB_rebellen.sqf"
+//#include "PZREB_rebellen.sqf"
 
 
 
